@@ -43,7 +43,7 @@ export default function WestVancouverAreaPage() {
         description="Your West Vancouver home deserves painters who understand luxury finishes, premium coatings, and flawless application. Whether it's interior walls and trim with museum-quality prep, exterior paint formulated for coastal exposure, or spray-finished cabinetry that looks professionally crafted, we bring the same meticulous attention to every detail. We work with your design vision, collaborate with interior designers, and deliver the calibre of finish that West Vancouver homeowners expect. High-end results. On time. On budget."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting for West Vancouver luxury homes"
       />
 
@@ -152,7 +152,7 @@ export default function WestVancouverAreaPage() {
         description="From Ambleside waterfront to British Properties estates, Shape of Paint delivers the high-end finishes and professional service that West Vancouver homes deserve. Contact us for your free estimate — let's talk about bringing your home to life."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting for West Vancouver homes"
       />
     </>

@@ -12,34 +12,34 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint Instagram post 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint Instagram post 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint Instagram post 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint Instagram post 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint Instagram post 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint Instagram post 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint Instagram post 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint Instagram post 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint Instagram post 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint Instagram post 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint Instagram post 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint Instagram post 6" },
 ];
 
 const portfolioCategories = [
   {
     title: "Interiors",
     href: "/services/interior",
-    image: "/images/interior.jpg",
+    image: "/images/interior.webp",
   },
   {
     title: "Exteriors",
     href: "/services/exterior",
-    image: "/images/exterior.jpg",
+    image: "/images/exterior.webp",
   },
   {
     title: "Cabinets",
     href: "/services/cabinets",
-    image: "/images/cabinets.jpg",
+    image: "/images/cabinets.webp",
   },
   {
     title: "Custom Projects",
     href: "/contact/estimate",
-    image: "/images/custom-project.jpg",
+    image: "/images/custom-project.webp",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
         description="Gabe started Shape of Paint with a simple belief: homeowners deserve craftsmanship, not shortcuts. After years perfecting coatings, faux finishes, and spray application, he built a company around meticulous prep, transparent communication, and results that speak for themselves. Today, designers and homeowners across Vancouver trust Gabe and his crew with their most detailed projects."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/about-founder.jpg"
+        image="/images/about-founder.webp"
         imageAlt="Gabe Penner, Co-Founder of Shape of Paint"
       />
 

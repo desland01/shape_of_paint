@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
 ];
 
 export default function ContactPage() {

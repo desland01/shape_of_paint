@@ -43,7 +43,7 @@ export default function NewWestminsterAreaPage() {
         description="Your New Westminster home has its own personality. Maybe it's a period character home with crown moulding and hardwood that needs careful, detailed work. Maybe it's a modern Queensborough condo with clean lines and bright spaces. Or maybe it's a Sapperton family home that needs a complete refresh. We adapt our technique to your space — meticulous prep, premium coatings, and finishes that last. From walls and ceilings to trim, baseboards, cabinets, and exterior siding, we handle every detail. You pick the colours. We handle the rest."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting in New Westminster homes"
       />
 
@@ -146,7 +146,7 @@ export default function NewWestminsterAreaPage() {
         description="From Queens Park heritage homes to Queensborough waterfront properties, we're ready to paint your home with the care and precision it deserves. Get your free estimate today — no pressure, no sales pitch, just honest advice and professional service."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting services in New Westminster"
       />
     </>

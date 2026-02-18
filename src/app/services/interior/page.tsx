@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
 ];
 
 export default function InteriorPaintingPage() {
@@ -65,7 +65,7 @@ export default function InteriorPaintingPage() {
         description="Whether it's a single accent wall or a full-home repaint, our team delivers the kind of finish that changes how a room feels. Clean lines. Smooth surfaces. Colours that look as good in person as they did on the swatch. Vancouver homeowners and designers trust us with their most detailed interior projects."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior-work.jpg"
+        image="/images/interior-work.webp"
         imageAlt="Interior painting project by Shape of Paint"
       />
 

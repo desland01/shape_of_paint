@@ -43,7 +43,7 @@ export default function PittMeadowsAreaPage() {
         description="Your Pitt Meadows home deserves painters who understand the local climate and your neighborhood's unique needs. We handle interior walls, ceilings, and cabinets with flawless finishes. For exteriors, we use premium coatings rated for heavy rain, moisture, and harsh BC sun exposure. From Central Pitt Meadows to the quieter areas near Golden Ears, we deliver craftsmanship on every project."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Professional interior painting in Pitt Meadows"
       />
 
@@ -119,7 +119,7 @@ export default function PittMeadowsAreaPage() {
         description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Pitt Meadows"
       />
     </>

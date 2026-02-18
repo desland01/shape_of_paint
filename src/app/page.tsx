@@ -13,37 +13,37 @@ import { siteConfig } from "@/config/site";
 
 const heroImages = [
   {
-    src: "/images/hero-1.jpg",
+    src: "/images/hero-1.webp",
     alt: "Beautiful interior painting by Shape of Paint",
   },
   {
-    src: "/images/hero-2.jpg",
+    src: "/images/hero-2.webp",
     alt: "Kitchen cabinet refinishing",
   },
   {
-    src: "/images/hero-3.jpg",
+    src: "/images/hero-3.webp",
     alt: "Elegant entryway painting",
   },
 ];
 
 const galleryImages = [
-  { src: "/images/portfolio-1.jpg", alt: "Shape of Paint portfolio project 1" },
-  { src: "/images/portfolio-2.jpg", alt: "Shape of Paint portfolio project 2" },
-  { src: "/images/portfolio-3.jpg", alt: "Shape of Paint portfolio project 3" },
-  { src: "/images/portfolio-4.jpg", alt: "Shape of Paint portfolio project 4" },
-  { src: "/images/portfolio-5.jpg", alt: "Shape of Paint portfolio project 5" },
-  { src: "/images/portfolio-6.jpg", alt: "Shape of Paint portfolio project 6" },
-  { src: "/images/portfolio-7.jpg", alt: "Shape of Paint portfolio project 7" },
-  { src: "/images/portfolio-8.jpg", alt: "Shape of Paint portfolio project 8" },
+  { src: "/images/portfolio-1.webp", alt: "Shape of Paint portfolio project 1" },
+  { src: "/images/portfolio-2.webp", alt: "Shape of Paint portfolio project 2" },
+  { src: "/images/portfolio-3.webp", alt: "Shape of Paint portfolio project 3" },
+  { src: "/images/portfolio-4.webp", alt: "Shape of Paint portfolio project 4" },
+  { src: "/images/portfolio-5.webp", alt: "Shape of Paint portfolio project 5" },
+  { src: "/images/portfolio-6.webp", alt: "Shape of Paint portfolio project 6" },
+  { src: "/images/portfolio-7.webp", alt: "Shape of Paint portfolio project 7" },
+  { src: "/images/portfolio-8.webp", alt: "Shape of Paint portfolio project 8" },
 ];
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint Instagram post 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint Instagram post 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint Instagram post 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint Instagram post 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint Instagram post 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint Instagram post 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint Instagram post 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint Instagram post 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint Instagram post 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint Instagram post 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint Instagram post 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint Instagram post 6" },
 ];
 
 export default function HomePage() {
@@ -82,7 +82,7 @@ export default function HomePage() {
         description="Interior, exterior, cabinets, or custom finishes — our team brings years of hands-on experience to every project. We work alongside designers and specialty trades so you get expert advice, not guesswork. The result? A finish that looks better and lasts longer than you expected."
         ctaText="See Our Interior Work"
         ctaHref="/services/interior"
-        image="/images/design-services.jpg"
+        image="/images/design-services.webp"
         imageAlt="Shape of Paint design consulting"
       />
 
@@ -99,7 +99,7 @@ export default function HomePage() {
         description="Why rip out perfectly good cabinets? Our spray-finished cabinet painting gives your kitchen a factory-fresh look at a fraction of the replacement cost. Most projects are done in 5–7 days with minimal disruption to your daily life."
         ctaText="See Cabinet Transformations"
         ctaHref="/contact/estimate"
-        image="/images/cabinet-finish.jpg"
+        image="/images/cabinet-finish.webp"
         imageAlt="Cabinet spray finish by Shape of Paint"
         reversed
       />
@@ -114,7 +114,7 @@ export default function HomePage() {
         description="Tell us about your project and we'll get back to you within 2 business days with a firm quote — no surprises, no hidden fees. The price we quote is the price you pay."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/about-team.jpg"
+        image="/images/about-team.webp"
         imageAlt="Contact Shape of Paint"
       />
 

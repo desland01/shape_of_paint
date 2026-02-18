@@ -43,7 +43,7 @@ export default function RichmondAreaPage() {
         description="Your Richmond home faces specific challenges — moisture from proximity to water, diverse architectural styles, and the need for finishes that last. We handle interior walls, ceilings, trim, and baseboards with flawless precision. On the exterior, we use premium coatings engineered for BC's coastal climate, protecting your siding, stucco, and trim for years. From Steveston to Ironwood to Broadmoor, we're the Richmond painters homeowners and designers recommend."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Professional exterior painting services in Richmond BC"
       />
 
@@ -122,7 +122,7 @@ export default function RichmondAreaPage() {
         description="Schedule a no-obligation free estimate with Shape of Paint. We'll visit your home, discuss your vision, and provide a firm quote with no surprises. Join hundreds of Richmond homeowners and designers who've trusted us with their most important spaces."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting project in Richmond BC home"
       />
     </>

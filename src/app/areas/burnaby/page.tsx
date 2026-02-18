@@ -42,7 +42,7 @@ export default function BurnabyAreaPage() {
         description="From charming Burnaby Heights heritage homes with heritage wood trim to modern Metrotown condos to Brentwood's mid-century character properties — we understand Burnaby's diverse neighbourhoods and housing styles. We prep like professionals, apply like artists, and finish with precision on every project."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting service in Burnaby BC"
       />
 
@@ -114,7 +114,7 @@ export default function BurnabyAreaPage() {
         description="Request a free painting estimate. We'll visit your home, listen to your vision, answer questions, and provide a firm quote — no pressure, no surprises. Call 604-353-7378 or fill out our online form to get started."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting in Burnaby BC"
       />
     </>

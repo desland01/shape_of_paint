@@ -44,7 +44,7 @@ export default function PortMoodyAreaPage() {
         description="We paint walls, ceilings, trim, siding, decks, and cabinets — using premium coatings formulated for BC's moisture and weather. From single-room refreshes to full-exterior renovations, our team brings attention to detail on every project. You choose the colours and style. We handle everything else — prep, application, cleanup, and your satisfaction."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Moody, BC"
       />
 
@@ -129,7 +129,7 @@ export default function PortMoodyAreaPage() {
         description="Get a free, no-obligation estimate for your painting project. We'll visit your home, listen to your vision, offer expert colour advice, and provide a firm quote with no hidden fees. From consultation to final walkthrough, we're committed to your satisfaction."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting project in Port Moody, BC"
       />
     </>

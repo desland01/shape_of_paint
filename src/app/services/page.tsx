@@ -53,7 +53,7 @@ export default function ServicesPage() {
         description="Tell us about your project and we'll recommend the right approach — no pressure, no obligation. Most estimates take less than 24 hours."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/about-team.jpg"
+        image="/images/about-team.webp"
         imageAlt="Shape of Paint team at work in Vancouver"
       />
     </>

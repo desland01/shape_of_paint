@@ -75,21 +75,21 @@ export const siteConfig = {
       description:
         "Walls, ceilings, trim, baseboards, fireplaces, and staircases — flawless finishes that transform every room. You pick the colours. We handle the rest.",
       href: "/services/interior",
-      image: "/images/interior.jpg",
+      image: "/images/interior.webp",
     },
     {
       title: "Exterior Painting",
       description:
         "Siding, stucco, trim, soffits, and decks — premium coatings built for Vancouver rain and BC weather. Your home stays protected for years.",
       href: "/services/exterior",
-      image: "/images/exterior.jpg",
+      image: "/images/exterior.webp",
     },
     {
       title: "Cabinet Painting",
       description:
         "Fine-finish spray results that outperform factory cabinets. No renovation, no disruption, no compromise on quality.",
       href: "/services/cabinets",
-      image: "/images/cabinets.jpg",
+      image: "/images/cabinets.webp",
     },
   ],
   testimonials: [

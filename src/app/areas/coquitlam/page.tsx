@@ -68,7 +68,7 @@ export default function CoquitlamAreaPage() {
         description="We know Coquitlam's unique mix of new builds and established homes. We handle everything from state-of-the-art finishes in Burke Mountain new construction to carefully restoring heritage details in Maillardville. Whether your home sits on a quiet street near Austin Heights or overlooks the Evergreen Extension SkyTrain corridor, we bring the same level of precision and care to every project. We understand what matters to Coquitlam homeowners: quality craftsmanship, reliable timelines, and painters you can trust in your home."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Professional interior painting in Coquitlam home"
         reversed={false}
       />
@@ -133,7 +133,7 @@ export default function CoquitlamAreaPage() {
         description="Get a free, no-obligation estimate from Shape of Paint. We'll visit your home, listen to your vision, and show you exactly what's possible."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting in Coquitlam BC"
       />
     </>

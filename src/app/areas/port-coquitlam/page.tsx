@@ -43,7 +43,7 @@ export default function PortCoquitlamAreaPage() {
         description="Whether your Port Coquitlam home was built in the 70s or last year, it deserves expert care. We handle interior walls, ceilings, and cabinets with flawless finishes that transform how you live. For exteriors, we use premium coatings that stand up to heavy rain, moisture, and harsh BC sun — protecting your investment for years. From Citadel Heights to Shaughnessy to Downtown PoCo, we bring craftsmanship to every neighborhood."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Port Coquitlam"
       />
 
@@ -122,7 +122,7 @@ export default function PortCoquitlamAreaPage() {
         description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise to PoCo homeowners."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Coquitlam"
       />
     </>

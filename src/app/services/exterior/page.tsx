@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
 ];
 
 export default function ExteriorPaintingPage() {
@@ -54,7 +54,7 @@ export default function ExteriorPaintingPage() {
         description="Vancouver's rain, moisture, and temperature swings destroy cheap paint jobs in 2–3 years. Our process starts with thorough surface prep — power washing, scraping, sanding, caulking, and priming every surface before a single coat goes on. We use premium exterior-grade coatings selected specifically for the West Coast climate. The result? A finish that protects your home and looks great 7–10 years from now."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Exterior painting project by Shape of Paint"
       />
 

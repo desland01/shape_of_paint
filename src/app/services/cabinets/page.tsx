@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.jpg", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.jpg", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.jpg", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.jpg", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.jpg", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.jpg", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
+  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
+  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
+  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
+  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
+  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
 ];
 
 const cabinetFaqItems = [
@@ -54,29 +54,29 @@ const cabinetFaqItems = [
 ];
 
 const galleryImages = [
-  { src: "/images/cabinet-1.jpg", alt: "White kitchen cabinet spray finish" },
+  { src: "/images/cabinet-1.webp", alt: "White kitchen cabinet spray finish" },
   {
-    src: "/images/cabinet-2.jpg",
+    src: "/images/cabinet-2.webp",
     alt: "Before and after kitchen cabinet painting",
   },
   {
-    src: "/images/cabinet-3.jpg",
+    src: "/images/cabinet-3.webp",
     alt: "Bathroom vanity cabinet refinishing",
   },
   {
-    src: "/images/cabinet-4.jpg",
+    src: "/images/cabinet-4.webp",
     alt: "Grey kitchen cabinets with new hardware",
   },
   {
-    src: "/images/cabinet-5.jpg",
+    src: "/images/cabinet-5.webp",
     alt: "Cabinet doors drying after spray application",
   },
-  { src: "/images/cabinet-6.jpg", alt: "Custom stained oak kitchen cabinets" },
+  { src: "/images/cabinet-6.webp", alt: "Custom stained oak kitchen cabinets" },
   {
-    src: "/images/cabinet-7.jpg",
+    src: "/images/cabinet-7.webp",
     alt: "Island cabinet painting in Vancouver kitchen",
   },
-  { src: "/images/cabinet-8.jpg", alt: "Completed cabinet painting project" },
+  { src: "/images/cabinet-8.webp", alt: "Completed cabinet painting project" },
 ];
 
 export default function CabinetPaintingPage() {
@@ -185,7 +185,7 @@ export default function CabinetPaintingPage() {
         description="Your cabinets aren't old. They just look old. A full kitchen cabinet replacement runs $20,000–$35,000 in Vancouver and gives you mass-produced factory doors. Our HVLP spray finish delivers a smoother, more refined result for $4,500–$7,500 — with unlimited custom colours and a glass-smooth surface that factory simply cannot replicate. No demolition. No plumbing disconnections. No countertop removal. Just a master-quality finish that transforms your kitchen in 5–7 business days. Our spray finish is why designers spec us by name."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/cabinets.jpg"
+        image="/images/cabinets.webp"
         imageAlt="Before and after cabinet painting by Shape of Paint"
       />
 

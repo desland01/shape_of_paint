@@ -44,7 +44,7 @@ export default function LangleyAreaPage() {
         description="We paint walls, ceilings, trim, siding, stucco, and cabinets. From single-room updates to full-house renovations, our crew brings craftsmanship and attention to detail on every project. You pick the colours and style. We handle the prep, application, and cleanup — leaving your home looking brand new."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Langley, BC"
       />
 
@@ -129,7 +129,7 @@ export default function LangleyAreaPage() {
         description="Get a free, no-obligation estimate for your painting project. We'll visit your home, assess your needs, and provide a firm quote with no hidden charges. From colour consultation to final walkthrough, we're here to make your vision real."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting project in Langley, BC"
       />
     </>

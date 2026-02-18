@@ -46,7 +46,7 @@ export default function NorthVancouverAreaPage() {
         description="Your home sits in the shadow of Grouse Mountain. You get incredible views. You also get constant moisture, rain, and humidity that breaks down cheap paint systems. We use premium coatings rated for harsh coastal climates. We prep wood, stucco, and vinyl siding the right way. The result: paint that actually protects your investment and looks incredible for a decade or more. That's the North Vancouver difference."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/exterior.jpg"
+        image="/images/exterior.webp"
         imageAlt="Professional exterior painting in North Vancouver"
       />
 
@@ -118,7 +118,7 @@ export default function NorthVancouverAreaPage() {
         description="Get a free estimate from licensed, insured painters who understand North Shore homes."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
-        image="/images/interior.jpg"
+        image="/images/interior.webp"
         imageAlt="Interior painting in North Vancouver"
       />
     </>
