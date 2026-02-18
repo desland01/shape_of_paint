@@ -3,6 +3,17 @@
 > Cloned from https://www.whiteoakpainting.com on 2026-02-18.
 > Stack: Next.js 16 + Tailwind CSS v4 + shadcn/ui + Framer Motion
 
+## Delegation
+
+**Default to `/orchestrator` for everything.** The only exception is a truly trivial task (1 file, 1 obvious change) which gets a single subagent with no plan file.
+
+| Complexity | Signal | Approach |
+|------------|--------|----------|
+| Trivial | 1 file, single obvious change | 1 subagent, no plan file |
+| Everything else | 2+ files, any ambiguity, any multi-step work | Activate `/orchestrator` with parallel batches |
+
+If in doubt, use `/orchestrator`. Err on the side of orchestration.
+
 ## Project Map
 
 ```
