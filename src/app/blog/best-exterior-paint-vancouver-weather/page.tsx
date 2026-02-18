@@ -1,0 +1,252 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
+
+export const metadata: Metadata = {
+  title: "Best Exterior Paint for Vancouver Weather (2026) | Shape of Paint",
+  description:
+    "Find the best exterior paint for Vancouver's rain, humidity, and mildew. Compare Benjamin Moore Aura Exterior vs Sherwin-Williams Duration and learn what works.",
+};
+
+export default function BestExteriorPaintPage() {
+  return (
+    <BlogPostLayout
+      title="Best Exterior Paint for Vancouver's Rain and Moisture"
+      date="2026-02-18"
+      readingTime="7 min read"
+    >
+      <p>
+        Choosing the best exterior paint for Vancouver weather is not the same
+        as choosing paint for a dry climate. Vancouver gets roughly 1,200 mm of
+        rain per year. Humidity hovers between 70% and 90% for months at a
+        time. Mildew grows on north-facing walls like it is paying rent. If you
+        pick the wrong product, your fresh paint job will look tired within 2
+        to 3 years.
+      </p>
+
+      <p>
+        Here is what actually works on Vancouver homes — based on thousands of
+        projects across the Lower Mainland, not just the label on the can.
+      </p>
+
+      <h2>Why Vancouver Is Hard on Exterior Paint</h2>
+
+      <p>
+        Three things destroy exterior paint faster in Vancouver than almost
+        anywhere else in Canada.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Persistent moisture.</strong> Rain, fog, and dew keep
+          surfaces damp for weeks at a time. Moisture gets behind paint films
+          and causes peeling, blistering, and adhesion failure.
+        </li>
+        <li>
+          <strong>Mildew and algae growth.</strong> Vancouver&apos;s mild
+          winters mean mildew never fully dies off. North-facing walls and
+          shaded areas turn green or black within a year if the paint does not
+          contain mildewcide.
+        </li>
+        <li>
+          <strong>UV exposure in summer.</strong> From May through August,
+          south-facing walls get intense sun. Cheap paint chalks and fades.
+          Good paint holds its colour for 10 to 15 years.
+        </li>
+      </ul>
+
+      <h2>Acrylic Latex vs. Oil-Based Paint</h2>
+
+      <p>
+        For Vancouver exteriors, 100% acrylic latex paint wins every time.
+        Here is why.
+      </p>
+
+      <p>
+        Acrylic latex is flexible. It expands and contracts with temperature
+        swings without cracking. It breathes, allowing trapped moisture to
+        escape through the film instead of bubbling underneath. It resists
+        mildew better than oil. It cleans up with water. And modern acrylic
+        formulas bond to surfaces just as well as oil ever did.
+      </p>
+
+      <p>
+        Oil-based paint creates a harder, less flexible film. In Vancouver&apos;s
+        constant moisture cycles, that rigidity leads to cracking and peeling
+        within 4 to 6 years. Oil also yellows over time, especially on
+        north-facing walls that get less sun. There is no reason to use oil on
+        exterior walls in this climate.
+      </p>
+
+      <p>
+        The one exception: oil-based primer still has a role on bare wood and
+        heavily stained surfaces, where its penetrating adhesion outperforms
+        latex primers. But the topcoat should always be acrylic.
+      </p>
+
+      <h2>Top Products for Vancouver Exteriors</h2>
+
+      <h3>Benjamin Moore Aura Exterior</h3>
+
+      <p>
+        Aura Exterior uses Color Lock technology that resists fading and
+        provides excellent moisture resistance. It self-primes on most
+        surfaces in good condition and offers outstanding hide in a single
+        coat, though two coats are always recommended for durability. A gallon
+        runs about $85 to $95 at Vancouver retailers.
+      </p>
+
+      <p>
+        Best for: wood siding, Hardie board, previously painted surfaces in
+        good condition. Available in flat, low lustre, satin, and semi-gloss.
+      </p>
+
+      <h3>Sherwin-Williams Duration Exterior</h3>
+
+      <p>
+        Duration is a thick, self-priming acrylic with PermaLast technology
+        for long-lasting colour and finish. It goes on heavy and builds a
+        thick film that holds up well against Vancouver rain. Excellent
+        adhesion on chalky and weathered surfaces. A gallon runs about $80 to
+        $90.
+      </p>
+
+      <p>
+        Best for: wood siding, cement board, aluminum, and surfaces with
+        moderate chalking or weathering. Available in flat, satin, and
+        semi-gloss.
+      </p>
+
+      <h3>Benjamin Moore Regal Select Exterior</h3>
+
+      <p>
+        Regal Select is a step down from Aura in price but still delivers
+        strong mildew resistance and colour retention. A solid mid-range
+        choice for homeowners watching their budget. A gallon runs about $65
+        to $75.
+      </p>
+
+      <p>
+        Best for: budget-conscious projects on homes in decent condition with
+        minimal prep needs.
+      </p>
+
+      <h2>Mildew-Resistant Formulas Matter Here</h2>
+
+      <p>
+        Every premium exterior paint contains mildewcide. But in Vancouver,
+        standard mildewcide levels are often not enough. Look for paints
+        explicitly marketed for high-humidity or coastal climates. Both Aura
+        Exterior and Duration contain elevated levels of mildewcide compared
+        to their interior counterparts.
+      </p>
+
+      <p>
+        For homes surrounded by trees or with walls that stay shaded most of
+        the day, ask your painter about adding supplemental mildewcide to the
+        paint at the mixing stage. Most paint stores can do this for a few
+        dollars per gallon. It makes a real difference on north-facing walls.
+      </p>
+
+      <h2>Primer Is Not Optional</h2>
+
+      <p>
+        Even self-priming paints need a dedicated primer coat in these
+        situations:
+      </p>
+
+      <ul>
+        <li>Bare wood that has never been painted</li>
+        <li>Surfaces with heavy staining, tannin bleed, or knots</li>
+        <li>Stucco or masonry with efflorescence (white salt deposits)</li>
+        <li>Any surface where existing paint has been fully stripped</li>
+        <li>Colour changes from very dark to very light or vice versa</li>
+      </ul>
+
+      <p>
+        For stucco in Vancouver, a bonding primer designed for masonry is
+        essential. It penetrates the porous surface and gives the topcoat
+        something to grip. Without it, paint peels off stucco within 2 years
+        in this climate.
+      </p>
+
+      <h2>Elastomeric Coatings for Stucco</h2>
+
+      <p>
+        If your home has stucco — and roughly 40% of Vancouver homes do —
+        consider an elastomeric coating. These are thick, rubber-like paints
+        that stretch up to 300% without cracking. They bridge hairline cracks
+        in stucco and create a waterproof membrane that keeps rain out.
+      </p>
+
+      <p>
+        Elastomeric coatings cost more per gallon ($90 to $120) and require
+        more product per square foot. But they last 15 to 20 years on stucco
+        in Vancouver conditions. Standard paint on stucco rarely lasts more
+        than 7 to 10 years. The timing of your project matters too — read our
+        guide on the{" "}
+        <Link
+          href="/blog/best-time-exterior-painting-bc"
+          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+        >
+          best time to paint your house exterior in BC
+        </Link>{" "}
+        to make sure conditions are right for any coating.
+      </p>
+
+      <h2>Sheen Recommendations</h2>
+
+      <p>
+        Sheen affects both appearance and performance. Here is what works
+        best in Vancouver.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Flat:</strong> Hides surface imperfections. Good for stucco
+          bodies. But flat finishes hold dirt and mildew more easily, so they
+          need washing more often.
+        </li>
+        <li>
+          <strong>Satin (eggshell):</strong> The best all-around choice for
+          Vancouver. Slight sheen sheds water better than flat. Resists
+          mildew adhesion. Easy to clean. Looks great on siding and stucco.
+        </li>
+        <li>
+          <strong>Semi-gloss:</strong> Best for trim, doors, fascia, and
+          railings. High moisture resistance. Easy to wipe clean. Too shiny
+          for large wall surfaces on most homes.
+        </li>
+      </ul>
+
+      <p>
+        Most Vancouver exterior projects use satin on the body and semi-gloss
+        on the trim. That combination gives you the best balance of
+        appearance, durability, and moisture resistance.
+      </p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>
+        Vancouver weather demands premium acrylic latex paint with built-in
+        mildew resistance. Benjamin Moore Aura Exterior and Sherwin-Williams
+        Duration are the top picks. Use a dedicated primer on bare or
+        problem surfaces. Choose satin sheen for walls and semi-gloss for
+        trim. And if you have stucco, seriously consider an elastomeric
+        coating.
+      </p>
+
+      <p>
+        Want help choosing the right product for your home? Learn more about
+        our{" "}
+        <Link
+          href="/services/exterior"
+          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+        >
+          exterior painting in Vancouver
+        </Link>{" "}
+        — we will walk you through exactly what your walls need.
+      </p>
+    </BlogPostLayout>
+  );
+}

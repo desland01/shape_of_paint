@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SERVICE_NAME}} in {{CITY}} | {{COMPANY_NAME}}</title>
+  <meta name="description" content="{{SERVICE_NAME}} in {{CITY}} - {{VALUE_PROP}}. {{CTA_TEXT}}. Call {{PHONE_NUMBER}} for your free estimate.">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts - Replace with your chosen fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       VARIABLES - Customize colors here
+       ============================================ */
+    :root {
+      --color-primary: #1e40af;      /* Blue - adjust to brand */
+      --color-primary-dark: #1e3a8a;
+      --color-accent: #f59e0b;       /* Orange/Gold for CTAs */
+      --color-accent-dark: #d97706;
+      --color-text: #1f2937;
+      --color-text-light: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f9fafb;
+      --color-success: #10b981;
+      --font-main: 'Inter', system-ui, sans-serif;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+      --radius: 8px;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      line-height: 1.6;
+      background: var(--color-bg);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ============================================
+       STICKY HEADER
+       ============================================ */
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-primary);
+      color: white;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: var(--shadow-md);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-accent);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .header-phone:hover {
+      background: var(--color-accent-dark);
+    }
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .hero {
+      padding-top: 80px; /* Account for sticky header */
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 100px 1rem 3rem;
+      background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 120px 2rem 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .hero-content h1 span {
+      color: var(--color-primary);
+    }
+
+    .hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .stars {
+      color: #fbbf24;
+      letter-spacing: 2px;
+    }
+
+    .hero-phone-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .hero-benefit {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+
+    .hero-benefit svg {
+      color: var(--color-success);
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       LEAD FORM
+       ============================================ */
+    .lead-form-container {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 1.5rem;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-header h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-header p {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    }
+
+    .form-group input::placeholder {
+      color: #9ca3af;
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: white;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius);
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-dark);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    .form-trust {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 0.5rem;
+    }
+
+    /* ============================================
+       BENEFITS STRIP
+       ============================================ */
+    .benefits-strip {
+      background: var(--color-primary);
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .benefit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .benefit-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* ============================================
+       TESTIMONIALS
+       ============================================ */
+    .testimonials {
+      padding: 4rem 1rem;
+      background: var(--color-bg-alt);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: var(--color-text-light);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+
+    /* ============================================
+       FAQ SECTION
+       ============================================ */
+    .faq {
+      padding: 4rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem 0;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: inherit;
+    }
+
+    .faq-question:hover {
+      color: var(--color-primary);
+    }
+
+    .faq-answer {
+      padding-bottom: 1.25rem;
+      color: var(--color-text-light);
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+      transition: transform 0.2s;
+    }
+
+    /* ============================================
+       FINAL CTA
+       ============================================ */
+    .final-cta {
+      background: var(--color-primary);
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    .final-cta p {
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (min-width: 480px) {
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn-cta-primary {
+      background: var(--color-accent);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: background 0.2s;
+    }
+
+    .btn-cta-primary:hover {
+      background: var(--color-accent-dark);
+    }
+
+    .btn-cta-secondary {
+      background: transparent;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 1.125rem;
+      border: 2px solid white;
+      transition: background 0.2s;
+    }
+
+    .btn-cta-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-areas {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .license-info {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  </style>
+
+  <!-- Google Analytics - Replace UA-XXXXX with your ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script> -->
+
+  <!-- Schema.org LocalBusiness Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{COMPANY_NAME}}",
+    "description": "{{SERVICE_NAME}} in {{CITY}}",
+    "telephone": "{{PHONE_NUMBER}}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{CITY}}",
+      "addressRegion": "{{STATE}}",
+      "addressCountry": "US"
+    },
+    "areaServed": ["{{CITY}}", "{{NEARBY_CITY_1}}", "{{NEARBY_CITY_2}}"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{{RATING}}",
+      "reviewCount": "{{REVIEW_COUNT}}"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky-header">
+    <div class="logo">{{COMPANY_NAME}}</div>
+    <a href="tel:{{PHONE_NUMBER_RAW}}" class="header-phone">
+      📞 {{PHONE_NUMBER}}
+    </a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>{{SERVICE_NAME}} in <span>{{CITY}}</span> – {{VALUE_PROP}}</h1>
+      
+      <div class="hero-rating">
+        <span class="stars">★★★★★</span>
+        <span>{{RATING}} on Google ({{REVIEW_COUNT}} reviews)</span>
+      </div>
+      
+      <a href="tel:{{PHONE_NUMBER_RAW}}" class="hero-phone-large">
+        📞 Call Now: {{PHONE_NUMBER}}
+      </a>
+      
+      <div class="hero-benefits">
+        <div class="hero-benefit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Licensed & Insured
+        </div>
+        <div class="hero-benefit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          {{UNIQUE_BENEFIT_1}}
+        </div>
+        <div class="hero-benefit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          {{UNIQUE_BENEFIT_2}}
+        </div>
+      </div>
+    </div>
+
+    <!-- LEAD FORM -->
+    <div class="lead-form-container">
+      <div class="form-header">
+        <h2>Get Your Free Estimate</h2>
+        <p>No obligation • Same-day response</p>
+      </div>
+      
+      <form class="lead-form" action="{{FORM_ACTION}}" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <select name="service">
+            <option value="">Select Service Type</option>
+            <option value="{{SERVICE_OPTION_1}}">{{SERVICE_OPTION_1}}</option>
+            <option value="{{SERVICE_OPTION_2}}">{{SERVICE_OPTION_2}}</option>
+            <option value="{{SERVICE_OPTION_3}}">{{SERVICE_OPTION_3}}</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Get My Free Quote →</button>
+        <p class="form-trust">🔒 Your information is secure and never shared</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- BENEFITS STRIP -->
+  <section class="benefits-strip">
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🛡️</div>
+        <h3>Licensed & Insured</h3>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">✓</div>
+        <h3>{{UNIQUE_BENEFIT_1}}</h3>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">⭐</div>
+        <h3>{{YEARS_EXPERIENCE}}+ Years Experience</h3>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📋</div>
+        <h3>Free Estimates</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>What Our Customers Say</h2>
+      <p>Trusted by homeowners throughout {{CITY}} and surrounding areas</p>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"{{TESTIMONIAL_1_TEXT}}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{TESTIMONIAL_1_INITIAL}}</div>
+          <div class="author-info">
+            <strong>{{TESTIMONIAL_1_NAME}}</strong>
+            <span>{{TESTIMONIAL_1_LOCATION}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"{{TESTIMONIAL_2_TEXT}}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{TESTIMONIAL_2_INITIAL}}</div>
+          <div class="author-info">
+            <strong>{{TESTIMONIAL_2_NAME}}</strong>
+            <span>{{TESTIMONIAL_2_LOCATION}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"{{TESTIMONIAL_3_TEXT}}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{TESTIMONIAL_3_INITIAL}}</div>
+          <div class="author-info">
+            <strong>{{TESTIMONIAL_3_NAME}}</strong>
+            <span>{{TESTIMONIAL_3_LOCATION}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-item active">
+      <button class="faq-question">
+        How much does {{SERVICE_NAME_LOWER}} cost?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        {{FAQ_PRICING_ANSWER}}
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        How long does the process take?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        {{FAQ_TIMELINE_ANSWER}}
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        Are you licensed and insured?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        {{FAQ_LICENSE_ANSWER}}
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        What areas do you serve?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        {{FAQ_SERVICE_AREA_ANSWER}}
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you offer a warranty?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        {{FAQ_WARRANTY_ANSWER}}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Get your free, no-obligation estimate today.</p>
+    <div class="cta-buttons">
+      <a href="tel:{{PHONE_NUMBER_RAW}}" class="btn-cta-primary">
+        📞 Call {{PHONE_NUMBER}}
+      </a>
+      <a href="#hero" class="btn-cta-secondary">
+        Request Quote Online
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="service-areas">
+        Proudly serving {{CITY}}, {{NEARBY_CITY_1}}, {{NEARBY_CITY_2}}, and surrounding areas
+      </p>
+      <div class="footer-links">
+        <a href="{{MAIN_SITE_URL}}">Main Website</a>
+        <a href="{{PRIVACY_URL}}">Privacy Policy</a>
+      </div>
+      <p class="license-info">
+        License #{{LICENSE_NUMBER}} | © {{CURRENT_YEAR}} {{COMPANY_NAME}}
+      </p>
+    </div>
+  </footer>
+
+  <!-- FAQ ACCORDION SCRIPT -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- CONVERSION TRACKING - Replace with your tracking codes -->
+  <!-- Google Ads Conversion Tracking -->
+  <!-- <script>
+    // Form submission tracking
+    document.querySelector('.lead-form').addEventListener('submit', function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-XXXXXXXXXX/XXXXXXXXXXXXXX'
+      });
+    });
+  </script> -->
+
+</body>
+</html>

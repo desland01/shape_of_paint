@@ -1,0 +1,571 @@
+[     384ms] [ERROR] Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. # @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:3127
+[     385ms] [ERROR] Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. # @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:3127
+[     385ms] [ERROR] Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. # @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:3127
+[  901937ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  902144ms] Error: Invalid src prop (https://placehold.co/600x800/E8E4DE/1A1A1A?text=Living+Room) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[  902315ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  902483ms] Error: Invalid src prop (https://placehold.co/800x600/E8E4DE/1A1A1A?text=Design+Services) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[  905530ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__c0b99d65._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  905530ms] [WARNING] The resource http://localhost:3000/_next/static/media/e8f2fbee2754df70-s.p.9b7a96b4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  905530ms] [WARNING] The resource http://localhost:3000/_next/static/media/a3264cb69f626630-s.p.952f628b.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  906524ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  906673ms] Error: Invalid src prop (https://placehold.co/800x600/E8E4DE/1A1A1A?text=Design+Services) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[  909678ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__c0b99d65._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  909678ms] [WARNING] The resource http://localhost:3000/_next/static/media/e8f2fbee2754df70-s.p.9b7a96b4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  909678ms] [WARNING] The resource http://localhost:3000/_next/static/media/a3264cb69f626630-s.p.952f628b.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[  911104ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  911270ms] Error: Invalid src prop (https://placehold.co/800x600/E8E4DE/1A1A1A?text=Design+Services) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[  914143ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  914305ms] Error: Invalid src prop (https://placehold.co/800x600/D4CFC7/1A1A1A?text=Cabinet+Refinishing) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[  917414ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  917599ms] Error: Invalid src prop (https://placehold.co/800x600/E8E4DE/1A1A1A?text=Contact+Us) on `next/image`, hostname "placehold.co" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:2771:49)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:216:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/8f644_46065075._.js:629:27)
+    at http://localhost:3000/_next/static/chunks/8f644_46065075._.js:3104:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_react-dom_0d02fc25._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/8f644_next_dist_compiled_b1ebef79._.js:2647:64)
+[ 2129765ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/services/cabinets?_rsc=nzv0z:0
+[ 2129849ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/services/cabinets:0
+[ 2133604ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/services?_rsc=1e9w2:0
+[ 2133675ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/services:0
+[ 3330956ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 3331882ms] [WARNING] Image with src "/images/ig-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 3389892ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 3389931ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 3390798ms] [WARNING] Image with src "/images/ig-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 3441828ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 3441841ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 3442431ms] [WARNING] Image with src "/images/ig-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4445808ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4446442ms] [WARNING] Image with src "/images/ig-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4689096ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4689205ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 4702165ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4702252ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 4721956ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 4943136ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5597248ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5597258ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5609363ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5609378ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5625733ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5689306ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5697449ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5697483ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5697488ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5704336ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5704354ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5710305ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5780246ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5785479ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5797433ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5798045ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5798049ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5798052ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5799320ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5806934ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5806951ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5816516ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5816597ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5824056ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5824197ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 5902125ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 5902135ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6021813ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6021889ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6058367ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6058375ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6097694ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6097709ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6140376ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6160969ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6160978ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6172774ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6172974ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6173090ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6175430ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6175447ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6255471ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6255595ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6285227ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6285244ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6337397ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6362207ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6417141ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/about?_rsc=1cdo5:0
+[ 6417422ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6437370ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6505728ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 6510411ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 8117583ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/?_rsc=1ch6o:0
+[ 8118329ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="/Paint-For...">
+          <SegmentTrieNode>
+          <HomePage>
+            <Hero>
+            <FounderQuote>
+            <VideoTestimonial>
+            <ServicesGrid>
+            <CTABanner>
+            <HomePage>
+              <FeatureSection eyebrow="Design Exp..." heading={"More tha..."} description="Interior, ..." ...>
+                <section className="py-16 md:p...">
+                  <div className="mx-auto ma...">
+                    <div className="grid items...">
+                      <div>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll delay={0.2}>
+                          <motion.div className="" initial={{opacity:0,y:24}} whileInView={{opacity:1,x:0,y:0}} ...>
+                            <div className="" style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                              <p
++                               className="mb-6 text-base md:text-lg font-light leading-relaxed text-text-secondary"
+-                               className="mb-6 text-sm font-light leading-relaxed text-text-secondary"
+                              >
++                               Interior, exterior, cabinets, or custom finishes — our team brings years of hands-on ex...
+                        ...
+                      ...
+            <PortfolioGallery>
+            <HomePage>
+              <FeatureSection eyebrow="Cabinet Pa..." heading="New-lookin..." description="Why rip ou..." ...>
+                <section className="py-16 md:p...">
+                  <div className="mx-auto ma...">
+                    <div className={"grid ite..."}>
+                      <div>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll>
+                        <AnimateOnScroll delay={0.2}>
+                          <motion.div className="" initial={{opacity:0,y:24}} whileInView={{opacity:1,x:0,y:0}} ...>
+                            <div className="" style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                              <p
++                               className="mb-6 text-base md:text-lg font-light leading-relaxed text-text-secondary"
+-                               className="mb-6 text-sm font-light leading-relaxed text-text-secondary"
+                              >
++                               Why rip out perfectly good cabinets? Our spray-finished cabinet painting gives your kit...
+                        ...
+                      ...
+            ...
+        ...
+      ...
+ @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:3127
+[ 8118405ms] [WARNING] Image with src "/images/hero-2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
+[ 8290728ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=bJBvRr4Y2qjOLeSQJGUHG' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/8f644_next_dist_client_ec04e091._.js:10878
+[ 8292497ms] [WARNING] Image with src "/images/hero-2.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/8f644_next_dist_5726d9de._.js:2297
