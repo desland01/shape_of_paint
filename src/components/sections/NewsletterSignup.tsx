@@ -43,7 +43,7 @@ export function NewsletterSignup() {
                 />
                 <Button
                   type="submit"
-                  className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-6 text-xs font-medium uppercase tracking-[0.15em]"
+                  className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-6 text-sm font-medium uppercase tracking-[0.15em] min-h-[48px]"
                 >
                   Subscribe
                 </Button>

@@ -4,9 +4,10 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
+import { TrustBar } from "@/components/shared/TrustBar";
 import { Button } from "@/components/ui/button";
+import { SlideUp } from "@/components/ui/motion";
 
 interface HeroProps {
   eyebrow: string;
@@ -16,81 +17,95 @@ interface HeroProps {
   images: { src: string; alt: string }[];
 }
 
+const STAGGER_DELAY = 0.1;
+
 export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps) {
   const prefersReducedMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  // H1 stays solid until CTA starts entering from below (~35% progress),
-  // then fades out. CTA enters viewport bottom at ~50% progress (100vh scroll
-  // into a 200vh section), so there is a brief overlap where CTA is rising
-  // while H1 is fading — giving the "push through" effect with no hard collision.
-  const h1Opacity = useTransform(scrollYProgress, [0, 0.35, 0.6], [1, 1, 0]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
 
   return (
-    <section ref={sectionRef} className="relative" style={{ height: "200vh" }}>
+    <section
+      ref={sectionRef}
+      className="relative -mt-20 flex min-h-svh flex-col items-center justify-center"
+    >
+      {/* Full-bleed background image with subtle parallax on desktop */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={prefersReducedMotion ? undefined : { scale: imageScale }}
+      >
+        {images[0] && (
+          <Image
+            src={images[0].src}
+            alt={images[0].alt}
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        )}
+      </motion.div>
 
-      {/* ── Sticky frame: 3-col images + H1 overlay ────────────────────── */}
-      {/* This entire block sticks to the top of the viewport while the user
-          scrolls through the 200vh section. Images fill the frame; H1 floats
-          on top with a transparent (no background) overlay. */}
-      <div className="sticky top-0 z-0 h-screen overflow-hidden">
+      {/* Top gradient for header readability */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-32 bg-gradient-to-b from-black/50 to-transparent"
+        aria-hidden="true"
+      />
 
-        {/* 3-col image grid fills the full sticky viewport */}
-        <div className="absolute inset-0 grid grid-cols-3">
-          {images.map((img, i) => (
-            <div key={i} className="relative overflow-hidden">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover object-top"
-                priority={i === 0}
-                sizes="33vw"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Dark gradient overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/70 via-black/30 to-black/10"
+        aria-hidden="true"
+      />
 
-        {/* H1 card — transparent background, text only, fades on scroll */}
-        <motion.div
-          style={prefersReducedMotion ? undefined : { opacity: h1Opacity }}
-          className="absolute inset-x-0 top-0 z-10 px-6 pt-16 text-center md:pt-24"
-        >
-          <motion.h1
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-4xl font-bold leading-tight tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-7xl lg:leading-[1.1]"
-          >
+      {/* Content block */}
+      <div className="relative z-10 w-full max-w-4xl px-6 pb-24 pt-28 text-center md:pb-0 md:pt-0">
+        <SlideUp delay={0 * STAGGER_DELAY}>
+          <Eyebrow className="mb-4 text-white">{eyebrow}</Eyebrow>
+        </SlideUp>
+
+        <SlideUp delay={1 * STAGGER_DELAY}>
+          <h1 className="mx-auto max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-7xl lg:leading-[1.1]">
             {headline}
-          </motion.h1>
-        </motion.div>
+          </h1>
+        </SlideUp>
+
+        <SlideUp delay={2 * STAGGER_DELAY}>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
+            Professional house painters serving Vancouver and the Lower Mainland
+          </p>
+        </SlideUp>
+
+        {/* CTA row */}
+        <SlideUp delay={3 * STAGGER_DELAY}>
+          <div className="mt-8 flex flex-col items-center gap-4 md:flex-row md:justify-center">
+            <Button
+              asChild
+              className="min-h-[48px] w-full rounded-none bg-cta px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] text-cta-foreground hover:bg-cta-hover md:w-auto"
+            >
+              <Link href={ctaHref}>{ctaText}</Link>
+            </Button>
+
+            <a
+              href="tel:6043537378"
+              className="text-sm font-medium text-white underline-offset-4 transition-colors hover:text-white/80 hover:underline"
+            >
+              604-353-7378
+            </a>
+          </div>
+        </SlideUp>
+
+        {/* Trust bar */}
+        <SlideUp delay={4 * STAGGER_DELAY}>
+          <TrustBar variant="light" className="mt-6 justify-center" />
+        </SlideUp>
       </div>
-
-      {/* ── Spacer ─────────────────────────────────────────────────────── */}
-      {/* Pushes the CTA card to ~100vh below the initial viewport so it is
-          off-screen on first load. User scrolls ~100vh before CTA enters
-          from the bottom (at scrollYProgress ≈ 0.5). */}
-      <div style={{ height: "100vh" }} aria-hidden="true" />
-
-      {/* ── CTA card — transparent background, scrolls naturally upward ── */}
-      {/* z-20 ensures it paints on top of the sticky image frame as it rises.
-          No background colour — text floats directly over the images. */}
-      <div className="relative z-20 px-6 pb-24 text-center">
-        <DecorativeIcon variant="feather" className="mb-6" size={40} />
-        <Eyebrow className="mb-6 text-white">{eyebrow}</Eyebrow>
-        <Button
-          asChild
-          className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-8 py-3 text-xs font-medium uppercase tracking-[0.2em]"
-        >
-          <Link href={ctaHref}>{ctaText}</Link>
-        </Button>
-      </div>
-
     </section>
   );
 }

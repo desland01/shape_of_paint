@@ -29,7 +29,7 @@ export function Footer() {
             <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em]">
               Company
             </h5>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3">
               {siteConfig.footerLinks.links.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -47,7 +47,7 @@ export function Footer() {
             <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em]">
               Services
             </h5>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3">
               {siteConfig.footerLinks.recommendations.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -65,7 +65,7 @@ export function Footer() {
             <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em]">
               Service Areas
             </h5>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3">
               {siteConfig.footerLinks.areas.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -83,7 +83,7 @@ export function Footer() {
             <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em]">
               Legal
             </h5>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3">
               {siteConfig.footerLinks.legal.map((link) => (
                 <li key={link.href}>
                   <Link

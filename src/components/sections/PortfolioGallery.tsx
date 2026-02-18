@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { SlideUp, ScaleIn } from "@/components/ui/motion";
 
 interface GalleryImage {
   src: string;
@@ -32,29 +32,29 @@ export function PortfolioGallery({
     <>
       <section className="bg-background py-16 md:py-24 lg:py-32">
         <div className="mx-auto max-w-[1200px] px-6 text-center md:px-8">
-          <AnimateOnScroll>
+          <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.1}>
+          </SlideUp>
+          <SlideUp delay={0.1}>
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.15}>
+          </SlideUp>
+          <SlideUp delay={0.15}>
             <h2 className="mb-4 text-3xl font-semibold md:text-4xl lg:text-5xl">{heading}</h2>
-          </AnimateOnScroll>
+          </SlideUp>
           {subtitle && (
-            <AnimateOnScroll delay={0.2}>
+            <SlideUp delay={0.2}>
               <p className="mx-auto mb-12 max-w-[600px] text-lg font-normal leading-relaxed text-text-secondary">
                 {subtitle}
               </p>
-            </AnimateOnScroll>
+            </SlideUp>
           )}
 
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+          <div className="grid grid-cols-2 gap-[3px] md:grid-cols-4">
             {images.map((img, i) => (
-              <AnimateOnScroll key={i} delay={i * 0.1} direction="none">
+              <ScaleIn key={i} delay={i * 0.06}>
                 <button
                   onClick={() => setSelectedImage(img)}
-                  className="relative aspect-square w-full overflow-hidden"
+                  className="relative aspect-square w-full overflow-hidden cursor-pointer"
                 >
                   <Image
                     src={img.src}
@@ -64,7 +64,7 @@ export function PortfolioGallery({
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </button>
-              </AnimateOnScroll>
+              </ScaleIn>
             ))}
           </div>
         </div>
@@ -82,7 +82,7 @@ export function PortfolioGallery({
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute right-4 top-4 text-white"
+              className="absolute right-4 top-4 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-white"
               aria-label="Close lightbox"
             >
               <X className="h-8 w-8" />

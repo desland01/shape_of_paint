@@ -40,16 +40,14 @@ export function ContactCTA({
                 {description}
               </p>
             </AnimateOnScroll>
-            <AnimateOnScroll delay={0.2}>
-              <Link
-                href={ctaHref}
-                className="text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
-              >
-                {ctaText}
-              </Link>
-            </AnimateOnScroll>
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
+            >
+              {ctaText}
+            </Link>
           </div>
-          <AnimateOnScroll direction="right" delay={0.2}>
+          <AnimateOnScroll direction="right" delay={0.2} scale>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={image}

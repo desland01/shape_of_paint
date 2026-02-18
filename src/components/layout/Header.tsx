@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X, PaintBucket } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -9,13 +10,33 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  const isTransparent = pathname === "/" && !scrolled;
 
   return (
-    <header className="relative z-50 w-full bg-background">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        isTransparent ? "bg-transparent" : "bg-background/95 backdrop-blur-sm"
+      )}
+    >
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
           <PaintBucket className="h-5 w-5 text-accent-gold" strokeWidth={1.5} />
-          <span className="text-sm font-medium uppercase tracking-[0.2em] text-foreground">
+          <span
+            className={cn(
+              "text-sm font-medium uppercase tracking-[0.2em] transition-colors duration-300",
+              isTransparent ? "text-white" : "text-foreground"
+            )}
+          >
             {siteConfig.name}
           </span>
         </Link>
@@ -25,28 +46,58 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
+              className={cn(
+                "text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:opacity-60",
+                isTransparent ? "text-white/90" : "text-foreground"
+              )}
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
+        <Link
+          href="/contact/estimate"
+          className={cn(
+            "hidden md:inline-flex items-center px-5 py-2 text-xs font-medium uppercase tracking-widest min-h-[48px] transition-colors",
+            isTransparent
+              ? "border border-white text-white hover:bg-white/10"
+              : "bg-foreground text-background hover:bg-foreground/90"
+          )}
+        >
+          Free Estimate
+        </Link>
+
+        <a
+          href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+          className={cn(
+            "mr-1 py-2 px-3 min-h-[48px] flex items-center text-sm font-medium transition-colors duration-300 md:hidden",
+            isTransparent ? "text-white" : "text-foreground"
+          )}
+        >
+          {siteConfig.phone}
+        </a>
+
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden"
+          className="p-3 -mr-3 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? (
-            <X className="h-6 w-6" />
+            <X className={cn("h-6 w-6 transition-colors duration-300", isTransparent && "text-white")} />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu className={cn("h-6 w-6 transition-colors duration-300", isTransparent && "text-white")} />
           )}
         </button>
       </div>
 
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
-        <div className="h-px bg-border-subtle" />
+        <div
+          className={cn(
+            "h-px bg-border-subtle transition-opacity duration-300",
+            isTransparent && "opacity-0"
+          )}
+        />
       </div>
 
       <AnimatePresence>
@@ -76,7 +127,7 @@ export function Header() {
                       key={child.href}
                       href={child.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-2 pl-4 text-xs font-normal tracking-[0.1em] text-text-secondary transition-opacity hover:opacity-60"
+                      className="block py-3 pl-4 text-sm font-normal tracking-[0.1em] text-text-secondary transition-opacity hover:opacity-60"
                     >
                       {child.label}
                     </Link>

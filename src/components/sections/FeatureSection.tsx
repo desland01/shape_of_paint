@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { cn } from "@/lib/utils";
+import { SlideUp, ScaleIn } from "@/components/ui/motion";
 
 interface FeatureSectionProps {
   eyebrow: string;
@@ -45,35 +45,30 @@ export function FeatureSection({
           )}
         >
           <div>
-            <AnimateOnScroll>
+            <SlideUp>
               <DecorativeIcon variant="leaf" className="mb-4" />
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.1}>
+            </SlideUp>
+            <SlideUp delay={0.1}>
               <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.15}>
+            </SlideUp>
+            <SlideUp delay={0.15}>
               <h3 className="mb-4 text-2xl font-semibold md:text-3xl">
                 {heading}
               </h3>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.2}>
+            </SlideUp>
+            <SlideUp delay={0.2}>
               <p className="mb-6 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
                 {description}
               </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.25}>
-              <Link
-                href={ctaHref}
-                className="text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
-              >
-                {ctaText}
-              </Link>
-            </AnimateOnScroll>
+            </SlideUp>
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
+            >
+              {ctaText}
+            </Link>
           </div>
-          <AnimateOnScroll
-            direction={reversed ? "left" : "right"}
-            delay={0.2}
-          >
+          <ScaleIn delay={0.2}>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={image}
@@ -83,7 +78,7 @@ export function FeatureSection({
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-          </AnimateOnScroll>
+          </ScaleIn>
         </div>
       </div>
     </section>

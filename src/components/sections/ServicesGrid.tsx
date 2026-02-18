@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 
 interface Service {
   title: string;
@@ -21,7 +21,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {services.map((service, i) => (
-            <AnimateOnScroll key={service.title} delay={i * 0.15}>
+            <SlideUp key={service.title} delay={i * 0.15}>
               <div className="group flex flex-col md:block">
                 {/* Mobile: title + description first, then image */}
                 <h3 className="mb-3 text-2xl font-semibold md:hidden">
@@ -48,12 +48,12 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 </p>
                 <Link
                   href={service.href}
-                  className="hidden text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60 md:inline-block"
+                  className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
                 >
                   {service.title}
                 </Link>
               </div>
-            </AnimateOnScroll>
+            </SlideUp>
           ))}
         </div>
       </div>
