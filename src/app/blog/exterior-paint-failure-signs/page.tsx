@@ -5,7 +5,7 @@ import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 export const metadata: Metadata = {
   title: "How to Spot Exterior Paint Failure Before It's Too Late | Shape of Paint",
   description:
-    "Learn to identify peeling, flaking, bubbling, chalking, and mildew on your home's exterior. Spot paint failure early and save thousands on repairs.",
+    "Learn to identify peeling, flaking, bubbling, chalking, and mildew on your home's exterior. Spot paint failure early and protect your home before damage spreads.",
 };
 
 export default function ExteriorPaintFailureSignsPage() {
@@ -159,7 +159,7 @@ export default function ExteriorPaintFailureSignsPage() {
       <p>
         UV radiation breaks down pigments. Organic pigments (used in bright
         reds, blues, and greens) fade faster than inorganic pigments (earth
-        tones, whites, greys). Low-quality paints use cheaper pigments that
+        tones, whites, greys). Lower-grade paints use inferior pigments that
         fade in 3 to 5 years. Premium paints with UV-resistant formulas hold
         colour for 10 to 15 years.
       </p>
@@ -275,7 +275,7 @@ export default function ExteriorPaintFailureSignsPage() {
         months or years before it becomes a serious problem. Peeling,
         bubbling, chalking, fading, mildew, and cracking each tell you
         something specific about what went wrong and what needs to happen
-        next. Catch it early and you save thousands.
+        next. Catch it early and you protect your home from far costlier damage down the road.
       </p>
 
       <p>

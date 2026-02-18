@@ -84,7 +84,7 @@ export default function StuccoVsSidingPage() {
       </p>
 
       <p>
-        If budget is tight, a high-quality 100% acrylic latex in flat or
+        For stucco in good condition with no recurring cracks, a high-quality 100% acrylic latex in flat or
         satin sheen works well on stucco that is in good condition with no
         recurring crack problems.
       </p>
@@ -155,7 +155,7 @@ export default function StuccoVsSidingPage() {
         >
           full exterior painting cost guide for Vancouver
         </Link>{" "}
-        for what to budget.
+        for a detailed cost breakdown.
       </p>
 
       <h2>Painting Hardie Board (Fibre Cement)</h2>
@@ -205,7 +205,7 @@ export default function StuccoVsSidingPage() {
         </li>
         <li>
           <strong>Painting over rot.</strong> Rotten wood does not hold
-          paint. Replace it first. A $200 board replacement saves a $2,000
+          paint. Replace it first. A $200 board replacement prevents a $2,000
           repaint.
         </li>
         <li>

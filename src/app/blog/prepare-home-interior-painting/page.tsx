@@ -16,7 +16,7 @@ export default function PrepareHomeInteriorPaintingPage() {
       readingTime="6 min read"
     >
       <p>
-        Knowing how to prepare for interior painting saves you time, stress, and money. A
+        Knowing how to prepare for interior painting ensures a smoother project and a better result. A
         well-prepped home means the crew can start painting on day one instead of spending
         half the morning moving furniture and patching holes. Most painting projects go 20%
         to 30% faster when the homeowner handles basic preparation ahead of time.
@@ -46,8 +46,8 @@ export default function PrepareHomeInteriorPaintingPage() {
       <p>
         Large furniture like sofas, beds, and dressers can stay in the room. Professional
         painters will move them to the center and cover them with plastic sheeting. But if
-        you can move them yourself, it saves the crew 30 to 60 minutes per room. Some
-        painters reduce your quote by 5% to 10% if rooms are fully cleared.
+        you can move them yourself, it gives the crew unobstructed access to every
+        surface from the start — which means cleaner lines and faster turnaround.
       </p>
 
       <h2>Wall Prep: What to Check Before the Crew Arrives</h2>

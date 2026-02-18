@@ -175,7 +175,7 @@ export default function Level5FinishPage() {
       <p>
         Most homeowners choose level 5 for the main living areas and bedrooms where flat
         paint and natural light matter most. Hallways, closets, and utility rooms stay at
-        level 4. This targeted approach saves money while still delivering a premium result
+        level 4. This targeted approach focuses the investment where it matters most, delivering a premium result
         where it counts.
       </p>
 

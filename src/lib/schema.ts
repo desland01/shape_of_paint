@@ -10,7 +10,7 @@ export function generateLocalBusinessSchema() {
     url: siteConfig.url,
     telephone: "+1-604-353-7378",
     email: siteConfig.email,
-    priceRange: "$$",
+    priceRange: "$$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,

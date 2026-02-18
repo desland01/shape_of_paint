@@ -110,7 +110,7 @@ export default function PortCoquitlamAreaPage() {
                 >
                   Cabinet Painting
                 </Link>
-                — Kitchen and bathroom cabinets sprayed to a showroom finish. Save thousands without renovation hassle.
+                — Kitchen and bathroom cabinets sprayed to a showroom finish. Designer-quality results without the renovation.
               </li>
             </ul>
           </div>

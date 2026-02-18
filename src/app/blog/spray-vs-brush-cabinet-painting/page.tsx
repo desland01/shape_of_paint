@@ -159,8 +159,8 @@ export default function SprayVsBrushCabinetPage() {
 
       <p>
         Many general painters do not own spray equipment or have the setup to use it
-        properly. That is why they offer brush-and-roller on cabinets. It is cheaper for
-        them but worse for you. If a painter quotes cabinets and does not mention spray
+        properly. That is why they offer brush-and-roller on cabinets. It requires
+        less equipment on their end — but the result is far worse for you. If a painter quotes cabinets and does not mention spray
         finishing, keep looking.
       </p>
 

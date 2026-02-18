@@ -50,7 +50,7 @@ export default function BestExteriorPaintPage() {
         </li>
         <li>
           <strong>UV exposure in summer.</strong> From May through August,
-          south-facing walls get intense sun. Cheap paint chalks and fades.
+          south-facing walls get intense sun. Inferior paint chalks and fades.
           Good paint holds its colour for 10 to 15 years.
         </li>
       </ul>
@@ -122,12 +122,12 @@ export default function BestExteriorPaintPage() {
       <p>
         Regal Select is a step down from Aura in price but still delivers
         strong mildew resistance and colour retention. A solid mid-range
-        choice for homeowners watching their budget. A gallon runs about $65
+        choice for well-maintained homes. A gallon runs about $65
         to $75.
       </p>
 
       <p>
-        Best for: budget-conscious projects on homes in decent condition with
+        Best for: well-maintained homes in decent condition with
         minimal prep needs.
       </p>
 

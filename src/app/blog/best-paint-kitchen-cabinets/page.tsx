@@ -190,7 +190,7 @@ export default function BestPaintKitchenCabinetsPage() {
         >
           cabinet painting vs. replacing guide
         </Link>{" "}
-        breaks down the savings in detail.
+        breaks down the investment in detail.
       </p>
 
       <h2>The Bottom Line</h2>

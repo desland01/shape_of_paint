@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import type { BlogPost } from "@/config/blog";
@@ -52,16 +53,12 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
           </div>
 
           <div className="relative order-first aspect-4/3 overflow-hidden rounded-sm md:order-last">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={post.image}
               alt={post.imageAlt}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-              onError={(e) => {
-                const target = e.currentTarget;
-                target.src = `https://placehold.co/640x480/E8E4DE/6B6B6B?text=${encodeURIComponent(post.category)}`;
-              }}
+              fill
+              sizes="(max-width: 768px) 100vw, 320px"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </Link>

@@ -95,7 +95,7 @@ export default function InteriorPaintingPage() {
           <Link href="/services/cabinets" className="font-semibold text-foreground transition-opacity hover:opacity-70">
             cabinet painting services
           </Link>{" "}
-          deliver a factory-quality spray finish at a fraction of the cost of replacing.
+          deliver a designer-quality spray finish that outperforms factory replacements.
         </p>
       </SectionWrapper>
 

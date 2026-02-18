@@ -214,7 +214,7 @@ H1: Exterior Painting in Vancouver
 | **Title Tag** | `Cabinet Painting Vancouver BC | Shape of Paint` (47 chars) |
 | **H1** | Cabinet Painting in Vancouver |
 | **URL** | `/services/cabinets` |
-| **Meta Description** | `Professional cabinet painting in Vancouver. Spray-finished kitchen & bathroom cabinets that look brand new. Save thousands vs. replacing. Free estimate.` (153 chars) |
+| **Meta Description** | `Professional cabinet painting in Vancouver. Designer-quality spray finishes for kitchens that deserve better than factory. Free estimate.` (148 chars) |
 | **Body Content** | "cabinet painting vancouver" in first 100 words. Emphasize spray finish quality. |
 
 **TF-IDF Related Terms to Include:**
@@ -226,7 +226,7 @@ H1: Exterior Painting in Vancouver
 - Benjamin Moore Advance, lacquer, enamel
 - wood grain, MDF, laminate, thermofoil
 - colour change, white cabinets, modern look
-- cost savings, fraction of the price, vs. replacing
+- fine finish, artisan finish, master craftsmanship, bespoke, designer-grade, custom colour, luxury kitchen
 
 **H2/H3 Structure:**
 ```
@@ -558,7 +558,7 @@ hello@shapeofpaint.com
     "https://facebook.com/shapeofpaint",
     "https://www.google.com/maps/place/Shape+of+Paint"
   ],
-  "priceRange": "$$"
+  "priceRange": "$$$"
 }
 ```
 

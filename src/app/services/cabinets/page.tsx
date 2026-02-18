@@ -13,7 +13,7 @@ import { generateFAQSchema, generateServiceSchema, generateBreadcrumbSchema } fr
 export const metadata: Metadata = {
   title: "Cabinet Painting Vancouver BC",
   description:
-    "Professional cabinet painting in Vancouver. Spray-finished kitchen & bathroom cabinets that look brand new. Save thousands vs. replacing. Free estimate.",
+    "Professional cabinet painting in Vancouver. Designer-quality spray finishes for kitchens that deserve better than factory. Free estimate.",
 };
 
 const instagramImages = [
@@ -39,7 +39,7 @@ const cabinetFaqItems = [
   {
     question: "What's the difference between painting and refacing?",
     answer:
-      "Refacing replaces the doors and veneers — typically $15,000–$25,000 for a standard kitchen. Painting keeps your existing doors and boxes, transforming them with a factory-quality spray finish for $4,500–$7,500. Same visual impact, fraction of the cost.",
+      "Refacing replaces the doors and veneers — typically $15,000–$25,000 for a standard kitchen. Painting keeps your existing doors and boxes, transforming them with a master spray finish for $4,500–$7,500. Same visual impact, superior customization, and a finer finish than factory.",
   },
   {
     question: "Do you use brushes or spray?",
@@ -85,7 +85,7 @@ export default function CabinetPaintingPage() {
     generateServiceSchema({
       name: "Cabinet Painting",
       description:
-        "Professional cabinet painting in Vancouver. Spray-finished kitchen and bathroom cabinets that look brand new at a fraction of the cost of replacing.",
+        "Professional cabinet painting in Vancouver. Designer-quality HVLP spray finishes that deliver a result factory cabinets cannot match.",
       url: `${siteConfig.url}/services/cabinets`,
     })
   );
@@ -105,7 +105,7 @@ export default function CabinetPaintingPage() {
 
       <PageHero
         heading="Cabinet Painting in Vancouver"
-        description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that look factory-new — at a fraction of the cost of replacing."
+        description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that deliver a smoother, more refined result than factory replacements."
       />
 
       <SectionWrapper>
@@ -123,7 +123,7 @@ export default function CabinetPaintingPage() {
           Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
           factory-quality coating in any colour you choose. Swap out your
           hardware while we&apos;re at it and your kitchen looks like a
-          $30,000 remodel for a fraction of the price.
+          $30,000 remodel — with a finish quality that often surpasses factory.
         </p>
 
         <h3 className="mb-3 mt-6 text-xl font-medium">
@@ -180,9 +180,9 @@ export default function CabinetPaintingPage() {
       </SectionWrapper>
 
       <FeatureSection
-        eyebrow="Save Thousands"
-        heading="Cabinet Painting vs. Replacing — Why Paint Wins"
-        description="Your cabinets aren't old. They just look old. A full kitchen cabinet replacement runs $20,000–$35,000 in Vancouver. Our spray finish delivers the same visual transformation for $4,500–$7,500 — saving you $12,000–$18,000 without the 6-week renovation timeline. No demolition. No plumbing disconnections. No countertop removal. Just a factory-quality finish that makes your kitchen look brand new in 5–7 business days. We're not the cheapest cabinet painters in Vancouver. But our spray finish is why designers spec us by name."
+        eyebrow="Artisan Finish"
+        heading="Cabinet Painting vs. Replacing — Why the Finish Matters More"
+        description="Your cabinets aren't old. They just look old. A full kitchen cabinet replacement runs $20,000–$35,000 in Vancouver and gives you mass-produced factory doors. Our HVLP spray finish delivers a smoother, more refined result for $4,500–$7,500 — with unlimited custom colours and a glass-smooth surface that factory simply cannot replicate. No demolition. No plumbing disconnections. No countertop removal. Just a master-quality finish that transforms your kitchen in 5–7 business days. Our spray finish is why designers spec us by name."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/cabinets.jpg"

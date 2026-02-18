@@ -83,7 +83,7 @@ export default function ExteriorPaintingPage() {
           <Link href="/services/cabinets" className="font-semibold text-foreground transition-opacity hover:opacity-70">
             spray-finished cabinet painting
           </Link>{" "}
-          that transforms tired kitchens for a fraction of the cost of replacing.
+          that delivers a designer-quality finish factory replacements cannot match.
         </p>
       </SectionWrapper>
 

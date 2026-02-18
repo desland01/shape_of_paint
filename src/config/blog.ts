@@ -13,15 +13,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Cabinet Painting vs. Replacing: Which Saves You More in Vancouver?",
+    title: "Cabinet Painting vs. Replacing: Why a Master Spray Finish Beats Factory Every Time",
     href: "/blog/cabinet-painting-vs-replacing",
     date: "2026-02-18",
     excerpt:
-      "Compare cabinet painting vs replacing costs in Vancouver. Painting saves $10K–$24K over full replacement. Learn which option is right for your kitchen.",
+      "A master spray finish delivers a smoother, more customizable result than factory replacement cabinets. Compare finish quality, cost, timelines, and disruption in Vancouver.",
     category: "Cabinet Painting",
     readingTime: "6 min read",
-    image: "/images/blog/cabinet-painting-vs-replacing.jpg",
-    imageAlt: "Side-by-side comparison of painted cabinets vs new cabinet installation",
+    image: "/images/cabinets.jpg",
+    imageAlt: "Freshly painted kitchen cabinets by Shape of Paint",
   },
   {
     title: "Kitchen Cabinet Painting Cost in Vancouver (2026 Guide)",
@@ -31,8 +31,8 @@ export const blogPosts: BlogPost[] = [
       "Kitchen cabinet painting in Vancouver costs $3,500 to $7,000 for a typical kitchen. Get a full 2026 cost breakdown by cabinet count, finish type, and prep work.",
     category: "Cabinet Painting",
     readingTime: "7 min read",
-    image: "/images/blog/kitchen-cabinet-cost.jpg",
-    imageAlt: "Freshly painted white kitchen cabinets in a Vancouver home",
+    image: "/images/cabinet-finish.jpg",
+    imageAlt: "Spray-finished kitchen cabinets in a Vancouver home",
   },
   {
     title: "Spray vs. Brush: Why Spray-Finished Cabinets Look Better",
@@ -42,8 +42,8 @@ export const blogPosts: BlogPost[] = [
       "Spray finishing delivers a factory-smooth result that brushwork can't match. Learn why professional spray painting is the gold standard for kitchen cabinets.",
     category: "Cabinet Painting",
     readingTime: "6 min read",
-    image: "/images/blog/spray-vs-brush.jpg",
-    imageAlt: "Close-up of spray-finished cabinet door showing smooth, even finish",
+    image: "/images/portfolio-1.jpg",
+    imageAlt: "Close-up of spray-finished cabinet door showing smooth finish",
   },
   {
     title: "How to Choose the Best Paint for Kitchen Cabinets",
@@ -53,8 +53,8 @@ export const blogPosts: BlogPost[] = [
       "Compare Benjamin Moore Advance vs Sherwin-Williams Emerald Urethane for kitchen cabinets. Plus primer options, sheen recommendations, and what actually lasts.",
     category: "Cabinet Painting",
     readingTime: "7 min read",
-    image: "/images/blog/best-paint-cabinets.jpg",
-    imageAlt: "Professional paint cans and supplies for cabinet painting project",
+    image: "/images/portfolio-2.jpg",
+    imageAlt: "Professional cabinet painting project by Shape of Paint",
   },
   {
     title: "Cabinet Refinishing vs. Refacing: What's the Difference?",
@@ -64,8 +64,8 @@ export const blogPosts: BlogPost[] = [
       "Refinishing keeps your existing doors and paints them. Refacing replaces the door fronts. One costs half as much. Learn which approach makes sense for your kitchen.",
     category: "Cabinet Painting",
     readingTime: "6 min read",
-    image: "/images/blog/refinishing-vs-refacing.jpg",
-    imageAlt: "Before and after cabinet refinishing transformation",
+    image: "/images/portfolio-3.jpg",
+    imageAlt: "Cabinet refinishing transformation by Shape of Paint",
   },
   {
     title: "Interior Painting Cost in Vancouver: What to Expect in 2026",
@@ -75,8 +75,8 @@ export const blogPosts: BlogPost[] = [
       "Interior painting costs $3–$6 per square foot for walls and $4–$8 with ceilings and trim. A typical 1,500 sq ft Vancouver home runs $2,000 to $5,000.",
     category: "Interior Painting",
     readingTime: "9 min read",
-    image: "/images/blog/interior-cost.jpg",
-    imageAlt: "Professional painter cutting in along ceiling line in a Vancouver living room",
+    image: "/images/interior.jpg",
+    imageAlt: "Professional interior painting in a Vancouver living room",
   },
   {
     title: "How to Choose the Right Interior Paint Colours for Vancouver Homes",
@@ -86,8 +86,8 @@ export const blogPosts: BlogPost[] = [
       "Vancouver's overcast light changes how colours read on your walls. Learn which undertones work in north-facing rooms, how to test samples, and the colours homeowners love most.",
     category: "Interior Painting",
     readingTime: "7 min read",
-    image: "/images/blog/interior-colours.jpg",
-    imageAlt: "Paint colour fan deck spread across a table with natural Vancouver light",
+    image: "/images/design-services.jpg",
+    imageAlt: "Interior paint colour selection for a Vancouver home",
   },
   {
     title: "Level 5 Drywall Finish: Why It Matters for Your Vancouver Home",
@@ -97,8 +97,8 @@ export const blogPosts: BlogPost[] = [
       "A Level 5 finish eliminates joint banding and surface imperfections that show up under raking light. Learn when you need it and what it costs in Vancouver.",
     category: "Interior Painting",
     readingTime: "8 min read",
-    image: "/images/blog/level-5-finish.jpg",
-    imageAlt: "Smooth Level 5 drywall finish ready for premium paint application",
+    image: "/images/interior-work.jpg",
+    imageAlt: "Smooth wall finish ready for premium paint application",
   },
   {
     title: "Low-VOC Paint Options for Vancouver Families",
@@ -108,8 +108,8 @@ export const blogPosts: BlogPost[] = [
       "Low-VOC and zero-VOC paints eliminate harmful fumes without sacrificing durability. Compare the best options from Benjamin Moore, Sherwin-Williams, and more.",
     category: "Interior Painting",
     readingTime: "6 min read",
-    image: "/images/blog/low-voc-paint.jpg",
-    imageAlt: "Family safely enjoying a freshly painted nursery with low-VOC paint",
+    image: "/images/portfolio-4.jpg",
+    imageAlt: "Freshly painted room using low-VOC paint products",
   },
   {
     title: "How to Prepare Your Home for Interior Painting",
@@ -119,8 +119,8 @@ export const blogPosts: BlogPost[] = [
       "Proper prep makes the difference between a paint job that lasts 3 years and one that lasts 10. Here's exactly what to do before your painting crew arrives.",
     category: "Interior Painting",
     readingTime: "7 min read",
-    image: "/images/blog/prepare-interior.jpg",
-    imageAlt: "Room prepared for painting with furniture moved and surfaces taped",
+    image: "/images/portfolio-5.jpg",
+    imageAlt: "Room prepared for professional interior painting",
   },
   {
     title: "How Much Does It Cost to Paint a House Exterior in Vancouver?",
@@ -130,8 +130,8 @@ export const blogPosts: BlogPost[] = [
       "Exterior house painting in Vancouver costs $5,000 to $20,000 depending on size, siding type, and prep work needed. Get accurate 2026 pricing for your home.",
     category: "Exterior Painting",
     readingTime: "7 min read",
-    image: "/images/blog/exterior-cost.jpg",
-    imageAlt: "Professional painters on scaffolding painting a Vancouver home exterior",
+    image: "/images/exterior.jpg",
+    imageAlt: "Professional exterior house painting in Vancouver",
   },
   {
     title: "Best Exterior Paint for Vancouver's Rain and Moisture",
@@ -141,8 +141,8 @@ export const blogPosts: BlogPost[] = [
       "Vancouver gets 166 rain days a year. The wrong exterior paint fails in 3 years. Learn which products actually stand up to BC's coastal moisture.",
     category: "Exterior Painting",
     readingTime: "7 min read",
-    image: "/images/blog/exterior-paint-weather.jpg",
-    imageAlt: "Well-maintained painted home exterior withstanding Vancouver rain",
+    image: "/images/hero-1.jpg",
+    imageAlt: "Well-maintained painted home exterior in Vancouver",
   },
   {
     title: "When Is the Best Time to Paint Your House Exterior in BC?",
@@ -152,8 +152,8 @@ export const blogPosts: BlogPost[] = [
       "The ideal window for exterior painting in BC is May through September. But timing depends on more than temperature. Learn the factors that determine your best start date.",
     category: "Exterior Painting",
     readingTime: "6 min read",
-    image: "/images/blog/best-time-exterior.jpg",
-    imageAlt: "Sunny day exterior painting in progress during BC's dry season",
+    image: "/images/hero-3.jpg",
+    imageAlt: "Exterior painting in progress during BC's dry season",
   },
   {
     title: "Stucco vs. Siding: Exterior Painting Differences in Vancouver",
@@ -163,19 +163,19 @@ export const blogPosts: BlogPost[] = [
       "Stucco and siding require different prep, primers, and application techniques. Learn how painting approach changes based on your home's cladding material.",
     category: "Exterior Painting",
     readingTime: "9 min read",
-    image: "/images/blog/stucco-vs-siding.jpg",
-    imageAlt: "Split view showing stucco and siding exterior painting techniques",
+    image: "/images/portfolio-6.jpg",
+    imageAlt: "Exterior painting techniques on Vancouver home",
   },
   {
     title: "How to Spot Exterior Paint Failure Before It's Too Late",
     href: "/blog/exterior-paint-failure-signs",
     date: "2026-02-04",
     excerpt:
-      "Peeling, chalking, blistering, and alligatoring are signs your exterior paint is failing. Catch these early and save thousands on repairs. Here's what to look for.",
+      "Peeling, chalking, blistering, and alligatoring are signs your exterior paint is failing. Catch these early and protect your home before damage spreads. Here's what to look for.",
     category: "Exterior Painting",
     readingTime: "8 min read",
-    image: "/images/blog/paint-failure-signs.jpg",
-    imageAlt: "Close-up of peeling exterior paint showing signs of paint failure",
+    image: "/images/portfolio-7.jpg",
+    imageAlt: "Exterior paint inspection on a Vancouver home",
   },
 ];
 

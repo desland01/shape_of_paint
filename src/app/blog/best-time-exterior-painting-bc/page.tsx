@@ -130,7 +130,7 @@ export default function BestTimeExteriorPaintingPage() {
 
       <p>
         Too cold, too wet, too dark. Even low-temperature paints struggle in
-        November and December. Save your money and wait for spring.
+        November and December. Wait for spring and protect your investment.
       </p>
 
       <h2>Morning Dew Is a Hidden Problem</h2>

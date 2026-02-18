@@ -87,7 +87,7 @@ export const siteConfig = {
     {
       title: "Cabinet Painting",
       description:
-        "Spray-finished kitchen and bathroom cabinets that look brand new — at a fraction of the cost of replacing. Save thousands without the renovation headache.",
+        "Fine-finish spray results that outperform factory cabinets. No renovation, no disruption, no compromise on quality.",
       href: "/services/cabinets",
       image: "/images/cabinets.jpg",
     },
