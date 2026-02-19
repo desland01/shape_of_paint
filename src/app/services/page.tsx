@@ -55,7 +55,7 @@ export default function ServicesPage() {
         heading="Not sure where to start?"
         description="Share a few details about your home and we'll recommend the right approach. Most estimates are ready within 24 hours."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/about-team.webp"
         imageAlt="Shape of Paint team at work in Vancouver"
       />

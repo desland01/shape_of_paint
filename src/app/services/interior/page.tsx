@@ -66,7 +66,7 @@ export default function InteriorPaintingPage() {
         heading="Results you'll notice the moment you walk in"
         description="Whether it's one accent wall or your whole home, our team delivers clean lines and smooth surfaces. Colours that look as good on the wall as they did on the swatch. The kind of work you notice the moment you walk in. Vancouver homeowners and designers trust us with their most detailed interior projects."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior-work.webp"
         imageAlt="Interior painting project by Shape of Paint"
       />

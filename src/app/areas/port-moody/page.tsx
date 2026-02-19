@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "House Painters Port Moody BC | Shape of Paint",
@@ -44,7 +43,7 @@ export default function PortMoodyAreaPage() {
         heading="Interior & Exterior Painting Built for Coastal Living"
         description="We paint walls, ceilings, trim, siding, decks, and cabinets — using professional-grade coatings built for BC's moisture and weather. From a single room to a full exterior, our team brings care to every project. You choose the colours and style. We handle everything else — prep, painting, cleanup, and your satisfaction."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Moody, BC"
       />
@@ -129,7 +128,7 @@ export default function PortMoodyAreaPage() {
         heading="Ready to Paint Your Port Moody Home?"
         description="Get a free estimate for your painting project. We'll visit your home, listen to your ideas, offer colour advice, and give you a firm quote with no hidden fees. From first call to final walkthrough, your satisfaction is our goal."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project in Port Moody, BC"
       />

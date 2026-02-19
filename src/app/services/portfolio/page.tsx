@@ -86,7 +86,7 @@ export default function PortfolioPage() {
         heading="Ready to transform your space?"
         description="Whether it's a single room or a complete exterior, we'd love to show you what's possible. Get your free estimate and join the portfolio."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/contact-cta.webp"
         imageAlt="Shape of Paint team at work"
       />

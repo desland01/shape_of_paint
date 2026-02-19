@@ -58,8 +58,8 @@ export function FeatureSection({
     shouldReduceMotion
       ? [0, 0, 0, 0, 0, 0]
       : reversed
-        ? [-60, -28, -18, -16, -15, -15]
-        : [60, 28, 18, 16, 15, 15]
+        ? [-83, -35, -20, -17, -15, -15]
+        : [83, 35, 20, 17, 15, 15]
   );
   const imageScale = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [1, 1] : [1, 1.1]);
 

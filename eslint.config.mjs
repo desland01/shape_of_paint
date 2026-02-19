@@ -13,6 +13,13 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // Allow natural apostrophes/quotes in long-form marketing copy while still
+      // protecting JSX-breaking characters.
+      "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+    },
+  },
 ]);
 
 export default eslintConfig;

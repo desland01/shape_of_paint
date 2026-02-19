@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Painters Burnaby BC | Shape of Paint",
@@ -42,7 +41,7 @@ export default function BurnabyAreaPage() {
         heading="Expert Painters for Every Burnaby Home"
         description="From Burnaby Heights heritage homes with original wood trim to modern Metrotown condos to Brentwood's mid-century character properties — we know Burnaby's neighbourhoods and housing styles. We prep right, paint right, and finish with care on every project."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting service in Burnaby BC"
       />
@@ -114,7 +113,7 @@ export default function BurnabyAreaPage() {
         heading="Ready to transform your Burnaby home?"
         description="Request a free painting estimate. We'll visit your home, listen to your vision, answer questions, and provide a firm quote — no pressure, no surprises. Call 604-353-7378 or fill out our online form to get started."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting in Burnaby BC"
       />

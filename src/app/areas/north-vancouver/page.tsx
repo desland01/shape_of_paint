@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Painters North Vancouver BC | Shape of Paint",
@@ -46,7 +45,7 @@ export default function NorthVancouverAreaPage() {
         heading="Built for North Shore Weather"
         description="Your home sits in the shadow of Grouse Mountain. You get incredible views. You also get constant moisture, rain, and humidity that breaks down cheap paint systems. We use professional-grade coatings rated for harsh coastal climates. We prep wood, stucco, and vinyl siding the right way. The result: paint that protects your investment and looks great for a decade or more. That's the North Vancouver difference."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting in North Vancouver"
       />
@@ -118,7 +117,7 @@ export default function NorthVancouverAreaPage() {
         heading="Ready to transform your North Vancouver home?"
         description="Get a free estimate from licensed, insured painters who understand North Shore homes."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting in North Vancouver"
       />

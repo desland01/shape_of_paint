@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -37,9 +38,18 @@ export function Header() {
         isTransparent ? "bg-transparent" : "bg-background/95 backdrop-blur-sm"
       )}
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-8">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/images/logo-icon.png" className="h-[50px] w-auto" alt="" aria-hidden="true" />
+          <Image
+            src="/images/logo-icon.png"
+            width={50}
+            height={50}
+            className="h-10 w-auto md:h-[50px]"
+            alt=""
+            aria-hidden="true"
+            unoptimized
+            priority
+          />
           <span
             className={cn(
               "text-sm font-medium uppercase tracking-[0.2em] transition-colors duration-300",
@@ -65,27 +75,30 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
-          href="/contact/estimate"
-          className={cn(
-            "hidden md:inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-widest min-h-[48px] transition-colors",
-            isTransparent
-              ? "rounded-[9px] border border-white text-white hover:bg-white/10"
-              : "rounded-[9px] border border-cta bg-cta text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
-          )}
-        >
-          Free Estimate
-        </Link>
-
-        <a
-          href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
-          className={cn(
-            "mr-1 py-2 px-3 min-h-[48px] flex items-center text-sm font-medium transition-colors duration-300 md:hidden",
-            isTransparent ? "text-white" : "text-foreground"
-          )}
-        >
-          {siteConfig.phone}
-        </a>
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+            className={cn(
+              "text-sm font-medium tracking-wide transition-colors duration-300",
+              isTransparent
+                ? "text-white/80 hover:text-white"
+                : "text-text-secondary hover:text-foreground"
+            )}
+          >
+            {siteConfig.phone}
+          </a>
+          <Link
+            href="/contact#contact-form"
+            className={cn(
+              "inline-flex items-center px-5 py-2 text-sm font-semibold uppercase tracking-widest min-h-[48px] transition-colors",
+              isTransparent
+                ? "rounded-[9px] border border-white text-white hover:bg-white/10"
+                : "rounded-[9px] border border-cta bg-cta text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+            )}
+          >
+            Free Estimate
+          </Link>
+        </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -125,7 +138,7 @@ export function Header() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "block py-3 text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300",
+                      "block min-h-[48px] py-3.5 text-base font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300",
                       "children" in item && "font-semibold"
                     )}
                   >
@@ -136,7 +149,7 @@ export function Header() {
                       key={child.href}
                       href={child.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-3 pl-4 text-sm font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
+                      className="block min-h-[48px] py-3.5 pl-4 text-base font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
                     >
                       {child.label}
                     </Link>

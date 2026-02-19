@@ -3,6 +3,7 @@ import "./globals.css";
 import "yet-another-react-lightbox/styles.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { siteConfig } from "@/config/site";
 import { generateLocalBusinessSchema } from "@/lib/schema";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileCTABar />
         {/* <!-- CHAT_WIDGET --> */}
       </body>
     </html>

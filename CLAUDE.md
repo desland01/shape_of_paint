@@ -144,12 +144,56 @@ src/
 
 ### Animations
 
+The project has two animation systems — use the newer motion primitives for new work:
+
+**Motion primitives** (`src/components/ui/motion.tsx`) — preferred:
+
+| Component | Use for |
+|-----------|---------|
+| `<SlideUp delay={0.1}>` | Text, headings, CTAs entering viewport |
+| `<FadeIn delay={0.1}>` | Subtle opacity-only entrance |
+| `<ScaleIn delay={0.1}>` | Images (subtle scale 1.02 → 1) |
+| `<StaggerContainer staggerChildren={0.1}>` | Card grids, lists |
+| `<HoverScale scale={1.03}>` | Card/image hover |
+| `<ScrollZoom scale={1.1}>` | Background image parallax |
+
+All primitives automatically disable on `prefers-reduced-motion`. Easing: `cubic-bezier(0.25, 0.46, 0.45, 0.94)` matched from whiteoakpainting.com.
+
+**Legacy** (`<AnimateOnScroll>` from `shared/`) — still used in older sections, don't remove.
+
 | "I want to..." | Do this |
 |-----------------|---------|
-| Disable all animations | Remove `<AnimateOnScroll>` wrappers or set `initial={false}` on motion components. |
-| Adjust timing | Edit `duration` and `delay` props on `<AnimateOnScroll>`. Default: 0.6s duration. |
-| Add animation to element | Wrap with `<AnimateOnScroll direction="up" delay={0.1}>`. |
-| Reference original timing | See `_reference/animations.md` for target site animation specs. |
+| Add entrance animation | Wrap with `<SlideUp delay={0.1}>` or `<ScaleIn>` for images |
+| Stagger a grid | Wrap grid in `<StaggerContainer>`, children use `<SlideUp>` |
+| Add parallax to image | Wrap image container in `<ScrollZoom scale={1.1}>` |
+| Reference timing | See `_reference/animations.md` |
+
+## Patterns & Gotchas
+
+**Header transparency:** `isTransparent = pathname === "/" && !scrolled`. Only the homepage gets the see-through header over the hero. All inner pages get a solid header immediately.
+
+**Hero negative margin:** Hero uses `-mt-20` to pull up behind the sticky header so the image fills to the very top of the viewport. If header height changes, update this.
+
+**Touch targets:** All interactive elements (buttons, links, nav items) must have `min-h-[48px]` for mobile accessibility. Don't remove these.
+
+**Max content width:** `max-w-[1200px]` with `px-6 md:px-8` padding. Used in Header, Footer, and most sections.
+
+**CTA button exact spec:**
+```
+rounded-[9px] border border-cta bg-cta text-cta-foreground
+transition-[background-color,box-shadow,border-color] duration-[400ms]
+[transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]
+hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]
+```
+Use plain `<Link>` not shadcn `<Button>` — shadcn overrides hover colors.
+
+**Decorative illustrations:** Inline SVG, not image files (see `WatercolorPeony` in Testimonials). This keeps them colorable and avoids extra HTTP requests.
+
+**TrustBar content is hardcoded** in `src/components/shared/TrustBar.tsx` (4.9/5, 200+ reviews, Licensed & Insured). Update manually when real data is available.
+
+**Font license:** `globals.css` notes "License required for production use: Eros Regular + Proxima Vara." These are extracted from whiteoakpainting.com. Replace with licensed fonts before launching for a client.
+
+**Section backgrounds alternate:** `--background` (#FFFCF8 warm off-white) and `--warm` (#F5F0EA warm cream). Avoid pure white `#FFFFFF` — it looks cold against the brand palette.
 
 ## Placeholder Tokens
 

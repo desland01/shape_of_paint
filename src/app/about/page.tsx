@@ -39,7 +39,7 @@ const portfolioCategories = [
   },
   {
     title: "Custom Projects",
-    href: "/contact/estimate",
+    href: "/contact#contact-form",
     image: "/images/custom-project.webp",
   },
 ];
@@ -82,7 +82,7 @@ export default function AboutPage() {
         heading="Gabe Penner — Master Painter & Finishing Specialist"
         description="Gabe started Shape of Paint with one belief: good painting starts long before the first coat. After years perfecting coatings, faux finishes, and spray work, he built a company around thorough prep, clear communication, and finishes that hold up to close inspection. Today, designers and homeowners across Vancouver trust Gabe and his crew with their most detailed projects."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/about-founder.webp"
         imageAlt="Gabe Penner, Co-Founder of Shape of Paint"
       />

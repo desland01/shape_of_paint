@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "House Painters Port Coquitlam BC | Shape of Paint",
@@ -43,7 +42,7 @@ export default function PortCoquitlamAreaPage() {
         heading="Painting That Honors Your Home"
         description="Whether your Port Coquitlam home was built in the 70s or last year, it deserves expert care. We handle interior walls, ceilings, and cabinets with smooth finishes that change how your home feels. For exteriors, we use professional-grade coatings that stand up to heavy rain and BC sun — protecting your home for years. From Citadel Heights to Shaughnessy to Downtown PoCo, we bring quality to every neighborhood."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Port Coquitlam"
       />
@@ -122,7 +121,7 @@ export default function PortCoquitlamAreaPage() {
         heading="Ready to Transform Your Port Coquitlam Home?"
         description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise to PoCo homeowners."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Coquitlam"
       />

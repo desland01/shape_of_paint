@@ -65,7 +65,7 @@ export const siteConfig = {
       href: "/contact",
       children: [
         { label: "Contact Us", href: "/contact" },
-        { label: "Free Estimate", href: "/contact/estimate" },
+        { label: "Free Estimate", href: "/contact#contact-form" },
       ],
     },
   ],
@@ -136,7 +136,7 @@ export const siteConfig = {
       { label: "Interior Painting", href: "/services/interior" },
       { label: "Exterior Painting", href: "/services/exterior" },
       { label: "Cabinets", href: "/services/cabinets" },
-      { label: "Free Estimate", href: "/contact/estimate" },
+      { label: "Free Estimate", href: "/contact#contact-form" },
       { label: "FAQ", href: "/contact/faq" },
       { label: "Contact", href: "/contact" },
     ],

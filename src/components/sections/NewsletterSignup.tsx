@@ -32,17 +32,24 @@ export function NewsletterSignup() {
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-3"
               >
-                <Input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="rounded-none border-border-subtle bg-transparent text-base h-11"
-                />
+                <div className="flex flex-col gap-1 text-left">
+                  <label htmlFor="newsletter-email" className="text-sm font-medium text-text-secondary">
+                    Email address
+                  </label>
+                  <Input
+                    id="newsletter-email"
+                    type="email"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    autoComplete="email"
+                    className="rounded-none border-border-subtle bg-transparent text-base h-12"
+                  />
+                </div>
                 <button
                   type="submit"
-                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-foreground transition-all duration-[400ms] rounded-[12px] text-sm px-4 py-3 font-normal tracking-wide min-h-[44px]"
+                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-foreground transition-all duration-[400ms] rounded-[12px] text-base px-4 py-3 font-normal tracking-wide min-h-12"
                 >
                   Subscribe
                 </button>

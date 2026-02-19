@@ -55,7 +55,7 @@ export default function ExteriorPaintingPage() {
         heading="Exterior paint built to last in Vancouver"
         description="Vancouver rain, moisture, and temperature swings destroy bad paint jobs fast. Our process starts with power washing, scraping, sanding, caulking, and priming every surface. Then we apply professional-grade coatings made for the West Coast climate. Your finish will look great 7-10 years from now."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project by Shape of Paint"
       />

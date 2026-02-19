@@ -58,7 +58,7 @@ export default function HomePage() {
         eyebrow="Vancouver's Trusted House Painters"
         headline="Vancouver house painters who care about the finish as much as you do"
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         images={heroImages}
       />
 
@@ -78,7 +78,7 @@ export default function HomePage() {
       <CTABanner
         headline="Every project begins with a conversation"
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <FeatureSection
@@ -103,7 +103,7 @@ export default function HomePage() {
         heading="Your kitchen, reimagined — without a full renovation"
         description="Spray-finished cabinet painting gives your kitchen a smooth, factory-quality feel at a fraction of the replacement cost. Most projects wrap in 5–7 days with minimal disruption to your daily routine."
         ctaText="Explore Cabinet Refinishing"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/cabinet-finish.webp"
         imageAlt="Cabinet spray finish by Shape of Paint"
         reversed
@@ -118,7 +118,7 @@ export default function HomePage() {
         heading="Let's talk about what your home could feel like"
         description="Reach out and we'll get back to you within 2 business days with a firm quote. No surprises, no hidden fees. The price we quote is the price you pay."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/about-team.webp"
         imageAlt="Contact Shape of Paint"
       />
@@ -126,7 +126,7 @@ export default function HomePage() {
       <CTABanner
         headline="47 families on the North Shore trusted us with their homes last year. Yours could be next."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <InstagramGrid

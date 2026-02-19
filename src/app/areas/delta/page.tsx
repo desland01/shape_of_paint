@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Painters Delta BC | Interior & Exterior | Shape of Paint",
@@ -43,7 +42,7 @@ export default function DeltaAreaPage() {
         heading="Interior & Exterior Painting for Your Delta Home"
         description="Your Delta home deserves painters who know the area. Interior work includes smooth wall finishes, expert trim, and colours that fit your space. Exterior work uses professional-grade coatings built for Delta's marine climate — protecting Tsawwassen oceanfront homes, Ladner heritage properties, and North Delta residences. We handle siding, stucco, trim, decks, and soffits with the same care that keeps homeowners coming back."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting services in Delta BC"
       />
@@ -120,7 +119,7 @@ export default function DeltaAreaPage() {
         heading="Ready to Transform Your Delta Home?"
         description="Schedule a free estimate with Shape of Paint. We'll visit your home in Ladner, Tsawwassen, North Delta, or anywhere in Delta. We'll talk about your project and give you a firm quote with no surprises. Hundreds of Delta homeowners already trust us with their homes."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project in Delta BC home"
       />

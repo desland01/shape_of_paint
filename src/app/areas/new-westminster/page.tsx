@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Painters New Westminster BC | Shape of Paint",
@@ -43,7 +42,7 @@ export default function NewWestminsterAreaPage() {
         heading="Heritage Details, Modern Precision"
         description="Your New Westminster home has its own personality. Maybe it's a character home with crown moulding that needs careful work. Maybe it's a modern Queensborough condo with clean lines. Or a Sapperton family home that needs a full refresh. We match our approach to your space — thorough prep, professional-grade coatings, and finishes that last. Walls, ceilings, trim, cabinets, exterior siding — we handle it all. You pick the colours. We handle the rest."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting in New Westminster homes"
       />
@@ -146,7 +145,7 @@ export default function NewWestminsterAreaPage() {
         heading="Ready to Transform Your New Westminster Home?"
         description="From Queens Park heritage homes to Queensborough waterfront properties, we're ready to paint your home with the care and precision it deserves. Get your free estimate today — no pressure, no sales pitch, just honest advice and professional service."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting services in New Westminster"
       />

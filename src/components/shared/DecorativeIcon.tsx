@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface DecorativeIconProps {
@@ -13,13 +14,14 @@ export function DecorativeIcon({
 }: DecorativeIconProps) {
   return (
     <div className={cn("flex items-center justify-center", className)}>
-      <img
+      <Image
         src="/images/logo-icon.png"
         width={size}
         height={size}
         alt=""
         aria-hidden="true"
         className={cn(variant === "feather" && "opacity-60")}
+        unoptimized
       />
     </div>
   );

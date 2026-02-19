@@ -4,7 +4,6 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Painters Richmond BC | Interior & Exterior | Shape of Paint",
@@ -44,7 +43,7 @@ export default function RichmondAreaPage() {
         heading="Interior & Exterior Painting for Your Richmond Home"
         description="Your Richmond home faces real challenges — moisture from nearby water, different building styles, and the need for finishes that last. We handle interior walls, ceilings, trim, and baseboards with care. On the exterior, we use professional-grade coatings built for BC's coastal climate. Your siding, stucco, and trim stay protected for years. From Steveston to Ironwood to Broadmoor, we're the Richmond painters homeowners recommend."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting services in Richmond BC"
       />
@@ -123,7 +122,7 @@ export default function RichmondAreaPage() {
         heading="Ready to Transform Your Richmond Home?"
         description="Schedule a free estimate with Shape of Paint. We'll visit your home, talk about your project, and give you a firm quote with no surprises. Hundreds of Richmond homeowners already trust us with their homes."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting project in Richmond BC home"
       />

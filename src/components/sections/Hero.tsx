@@ -46,6 +46,7 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             sizes="100vw"
           />
         )}
@@ -81,24 +82,22 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
           </p>
         </SlideUp>
 
-        {/* CTA row */}
-        <SlideUp immediate delay={3 * STAGGER_DELAY}>
-          <div className="mt-8 flex flex-col items-center gap-4 md:flex-row md:justify-center">
-            <Link
-              href={ctaHref}
-              className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] md:w-auto"
-            >
-              {ctaText}
-            </Link>
+        {/* CTA row — no animation gate: renders immediately for instant conversion access */}
+        <div className="mt-8 flex flex-col items-center gap-4 md:flex-row md:justify-center">
+          <Link
+            href={ctaHref}
+            className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-base font-semibold uppercase tracking-[0.2em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] md:w-auto"
+          >
+            {ctaText}
+          </Link>
 
-            <a
-              href="tel:6043537378"
-              className="text-sm font-medium text-white underline-offset-4 transition-colors hover:text-white/80 hover:underline"
-            >
-              604-353-7378
-            </a>
-          </div>
-        </SlideUp>
+          <a
+            href="tel:6043537378"
+            className="inline-flex min-h-[48px] items-center text-sm font-medium text-white underline-offset-4 transition-colors hover:text-white/80 hover:underline"
+          >
+            604-353-7378
+          </a>
+        </div>
 
         {/* Trust bar */}
         <SlideUp immediate delay={4 * STAGGER_DELAY}>

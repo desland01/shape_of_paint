@@ -186,7 +186,7 @@ export default function CabinetPaintingPage() {
         heading="Cabinet Painting vs. Replacing — Why the Finish Matters More"
         description="Your cabinets aren't old. They just look old. A full kitchen replacement runs $20,000-$35,000 in Vancouver. You get mass-produced factory doors. Our HVLP spray finish costs $4,500-$7,500 and looks smoother than factory. Any colour you want. Glass-smooth surface. No demolition. No plumbing work. No countertop removal. Your kitchen transforms in 5-7 business days. That's why designers spec us by name."
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
         image="/images/cabinets.webp"
         imageAlt="Before and after cabinet painting by Shape of Paint"
       />

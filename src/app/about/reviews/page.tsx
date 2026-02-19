@@ -70,7 +70,7 @@ export default function ReviewsPage() {
       <CTABanner
         headline="Ready to be our next happy customer?"
         ctaText="Get Your Free Estimate"
-        ctaHref="/contact/estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <InstagramGrid
