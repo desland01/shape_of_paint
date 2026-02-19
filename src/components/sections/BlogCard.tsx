@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SlideUp } from "@/components/ui/motion";
+import { ScrollZoom, SlideUp } from "@/components/ui/motion";
 import type { BlogPost } from "@/config/blog";
 import { formatBlogDate } from "@/config/blog";
 
@@ -52,15 +52,17 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
             </div>
           </div>
 
-          <div className="relative order-first aspect-4/3 overflow-hidden rounded-sm md:order-last">
-            <Image
-              src={post.image}
-              alt={post.imageAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, 320px"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          </div>
+          <ScrollZoom className="order-first rounded-sm md:order-last">
+            <div className="relative aspect-4/3">
+              <Image
+                src={post.image}
+                alt={post.imageAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, 320px"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+          </ScrollZoom>
         </Link>
       </article>
     </SlideUp>

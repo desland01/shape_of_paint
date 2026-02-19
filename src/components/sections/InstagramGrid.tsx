@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SlideUp } from "@/components/ui/motion";
+import { SlideUp, ScrollZoom } from "@/components/ui/motion";
 
 interface InstagramGridProps {
   instagramUrl: string;
@@ -25,21 +25,22 @@ export function InstagramGrid({ instagramUrl, images }: InstagramGridProps) {
         <div className="mx-auto max-w-[1200px] px-6 md:px-10">
           <div className="grid grid-cols-3 md:grid-cols-6 items-center gap-2 md:gap-3">
             {images.slice(0, 6).map((img, i) => (
-              <Link
-                key={i}
-                href={instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group relative ${aspectRatios[i] || "aspect-square"} overflow-hidden transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  sizes="(max-width: 768px) 33vw, 16vw"
-                />
-              </Link>
+              <ScrollZoom key={i} className={`${aspectRatios[i] || "aspect-square"} transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}>
+                <Link
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative block h-full"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 33vw, 16vw"
+                  />
+                </Link>
+              </ScrollZoom>
             ))}
           </div>
         </div>

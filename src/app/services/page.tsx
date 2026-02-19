@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
+import { ScrollZoom } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -24,15 +25,17 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-3 md:gap-8">
             {siteConfig.services.map((service) => (
               <Link key={service.title} href={service.href} className="group">
-                <div className="relative mb-6 aspect-[4/3] overflow-hidden hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
+                <ScrollZoom>
+                  <div className="relative mb-6 aspect-[4/3] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </ScrollZoom>
                 <h2 className="mb-3 text-2xl font-normal leading-[1.2] md:text-3xl">
                   {service.title}
                 </h2>

@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import type { Slide } from "yet-another-react-lightbox";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
-import { SlideUp } from "@/components/ui/motion";
+import { ScrollZoom, SlideUp } from "@/components/ui/motion";
 
 interface GalleryImage {
   src: string;
@@ -101,21 +101,25 @@ export function PortfolioGallery({
                 className={`flex flex-col gap-5${isOdd ? " md:mt-[50px]" : ""}`}
               >
                 {column.map(({ image, index }, itemIndex) => (
-                  <button
+                  <ScrollZoom
                     key={`${image.src}-${index}`}
-                    type="button"
-                    onClick={() => openLightboxAt(index)}
-                    className={`group relative ${aspects[itemIndex] ?? "aspect-square"} w-full cursor-pointer overflow-hidden transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}
-                    aria-label={`View ${image.alt}`}
+                    className={`${aspects[itemIndex] ?? "aspect-square"} w-full transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}
                   >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
-                  </button>
+                    <button
+                      type="button"
+                      onClick={() => openLightboxAt(index)}
+                      className="group relative h-full w-full cursor-pointer"
+                      aria-label={`View ${image.alt}`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </button>
+                  </ScrollZoom>
                 ))}
               </div>
             );

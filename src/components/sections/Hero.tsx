@@ -27,7 +27,7 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
     offset: ["start start", "end start"],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   return (
     <section
@@ -65,24 +65,24 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
 
       {/* Content block */}
       <div className="relative z-10 w-full max-w-4xl px-6 pb-24 pt-28 text-center md:pb-0 md:pt-0">
-        <SlideUp delay={0 * STAGGER_DELAY}>
+        <SlideUp immediate delay={0 * STAGGER_DELAY}>
           <Eyebrow className="mb-4 text-white">{eyebrow}</Eyebrow>
         </SlideUp>
 
-        <SlideUp delay={1 * STAGGER_DELAY}>
+        <SlideUp immediate delay={1 * STAGGER_DELAY}>
           <h1 className="mx-auto max-w-3xl text-4xl font-normal leading-[1.15] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-[80px]">
             {headline}
           </h1>
         </SlideUp>
 
-        <SlideUp delay={2 * STAGGER_DELAY}>
+        <SlideUp immediate delay={2 * STAGGER_DELAY}>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
             Professional house painters serving Vancouver and the Lower Mainland
           </p>
         </SlideUp>
 
         {/* CTA row */}
-        <SlideUp delay={3 * STAGGER_DELAY}>
+        <SlideUp immediate delay={3 * STAGGER_DELAY}>
           <div className="mt-8 flex flex-col items-center gap-4 md:flex-row md:justify-center">
             <Link
               href={ctaHref}
@@ -101,7 +101,7 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
         </SlideUp>
 
         {/* Trust bar */}
-        <SlideUp delay={4 * STAGGER_DELAY}>
+        <SlideUp immediate delay={4 * STAGGER_DELAY}>
           <TrustBar variant="light" className="mt-6 justify-center" />
         </SlideUp>
       </div>

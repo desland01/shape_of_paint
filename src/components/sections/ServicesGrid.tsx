@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SlideUp } from "@/components/ui/motion";
+import { SlideUp, ScrollZoom } from "@/components/ui/motion";
 
 interface Service {
   title: string;
@@ -30,15 +30,17 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:hidden">
                   {service.description}
                 </p>
-                <Link href={service.href} className="relative mb-6 block aspect-[4/3] overflow-hidden hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </Link>
+                <ScrollZoom>
+                  <Link href={service.href} className="relative mb-6 block aspect-[4/3] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </Link>
+                </ScrollZoom>
                 {/* Desktop: title + description + link below image */}
                 <h3 className="mb-3 hidden text-2xl font-normal md:block">
                   {service.title}

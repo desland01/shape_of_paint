@@ -11,9 +11,9 @@ import { SlideUp } from "@/components/ui/motion";
 
 export function getParallaxConfig() {
   return {
-    textCard: { outputRange: [30, -30] as [number, number] },
+    textCard: { outputRange: [50, -50] as [number, number] },
     image: { outputRange: [50, -50] as [number, number] },
-    blob: { outputRange: [80, -80] as [number, number] },
+    blob: { outputRange: [-90, 90] as [number, number] },
   };
 }
 
@@ -51,7 +51,17 @@ export function FeatureSection({
 
   const textCardY = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [0, 0] : parallax.textCard.outputRange);
   const imageY = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [0, 0] : parallax.image.outputRange);
-  const blobY = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [0, 0] : parallax.blob.outputRange);
+  const blobY = useTransform(scrollYProgress, [0, 0.3, 1], shouldReduceMotion ? [0, 0, 0] : [-210, -90, -90]);
+  const blobX = useTransform(
+    scrollYProgress,
+    [0, 0.075, 0.15, 0.225, 0.3, 1],
+    shouldReduceMotion
+      ? [0, 0, 0, 0, 0, 0]
+      : reversed
+        ? [-60, -28, -18, -16, -15, -15]
+        : [60, 28, 18, 16, 15, 15]
+  );
+  const imageScale = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [1, 1] : [1, 1.1]);
 
   return (
     <section
@@ -82,7 +92,7 @@ export function FeatureSection({
           >
             <div className="relative overflow-visible">
               {/* Watercolor splash — prominent organic painterly element */}
-              <motion.div style={{ y: blobY }} className={cn(
+              <motion.div style={{ y: blobY, x: blobX }} className={cn(
                   "absolute z-[2] pointer-events-none",
                   reversed
                     ? "-top-8 -left-8 md:-top-12 md:-left-12"
@@ -116,7 +126,7 @@ export function FeatureSection({
                 </svg>
               </motion.div>
               {/* Image container with subtle shadow */}
-              <div className="relative z-[1] aspect-[4/3] overflow-hidden shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
+              <motion.div style={{ scale: imageScale }} className="relative z-[1] aspect-[4/3] overflow-hidden shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
                 <Image
                   src={image}
                   alt={imageAlt}
@@ -124,7 +134,7 @@ export function FeatureSection({
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 58vw"
                 />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 

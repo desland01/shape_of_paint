@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SlideUp } from "@/components/ui/motion";
+import { SlideUp, ScrollZoom } from "@/components/ui/motion";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 
 interface PageHeroProps {
@@ -29,13 +29,15 @@ export function PageHero({
     >
       {hasImage && (
         <>
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-          />
+          <ScrollZoom className="absolute inset-0">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              priority
+              style={{ objectFit: "cover" }}
+            />
+          </ScrollZoom>
           <div className="absolute inset-0 bg-black/50" />
         </>
       )}
@@ -43,13 +45,13 @@ export function PageHero({
       <div
         className={`mx-auto max-w-[700px] px-6 md:px-8${hasImage ? " relative z-10" : ""}`}
       >
-        <SlideUp>
+        <SlideUp immediate>
           <DecorativeIcon
             variant="leaf"
             className={`mb-6${hasImage ? " brightness-0 invert" : ""}`}
           />
         </SlideUp>
-        <SlideUp delay={0.1}>
+        <SlideUp immediate delay={0.1}>
           <h1
             className={`mb-4 text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl${hasImage ? " text-white" : ""}`}
           >
@@ -57,7 +59,7 @@ export function PageHero({
           </h1>
         </SlideUp>
         {description && (
-          <SlideUp delay={0.2}>
+          <SlideUp immediate delay={0.2}>
             <p
               className={`text-lg md:text-xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
             >

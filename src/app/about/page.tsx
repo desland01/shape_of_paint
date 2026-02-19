@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
+import { ScrollZoom } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -94,15 +95,17 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {portfolioCategories.map((cat) => (
               <Link key={cat.title} href={cat.href} className="group">
-                <div className="relative mb-3 aspect-[3/2] overflow-hidden">
-                  <Image
-                    src={cat.image}
-                    alt={cat.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
+                <ScrollZoom>
+                  <div className="relative mb-3 aspect-[3/2]">
+                    <Image
+                      src={cat.image}
+                      alt={cat.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                </ScrollZoom>
                 <p className="text-sm font-medium">{cat.title}</p>
               </Link>
             ))}

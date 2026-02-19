@@ -1,8 +1,10 @@
 "use client";
 
-import { motion, HTMLMotionProps, useReducedMotion, Variants } from "framer-motion";
+import { motion, HTMLMotionProps, useReducedMotion, Variants, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useRef } from "react";
+
+type ScrollOffset = NonNullable<Parameters<typeof useScroll>[0]>["offset"];
 
 // Duration and easing constants from _reference/animations.md
 const DURATION_DEFAULT = 0.5; // 400-600ms
@@ -16,14 +18,15 @@ interface MotionProps extends HTMLMotionProps<"div"> {
   className?: string;
   delay?: number;
   duration?: number;
+  immediate?: boolean;
 }
 
-export function FadeIn({ children, className, delay = 0, duration = DURATION_DEFAULT, ...props }: MotionProps) {
+export function FadeIn({ children, className, delay = 0, duration = DURATION_DEFAULT, immediate, ...props }: MotionProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const variants: Variants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { duration, delay, ease: EASE_DEFAULT }
     }
@@ -33,11 +36,14 @@ export function FadeIn({ children, className, delay = 0, duration = DURATION_DEF
     return <div className={className}>{children}</div>;
   }
 
+  const animationProps = immediate
+    ? { animate: "visible" as const }
+    : { whileInView: "visible" as const, viewport: { once: true, amount: 0.1 } };
+
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      {...animationProps}
       variants={variants}
       className={className}
       {...props}
@@ -47,13 +53,13 @@ export function FadeIn({ children, className, delay = 0, duration = DURATION_DEF
   );
 }
 
-export function SlideUp({ children, className, delay = 0, duration = DURATION_DEFAULT, ...props }: MotionProps) {
+export function SlideUp({ children, className, delay = 0, duration = DURATION_DEFAULT, immediate, ...props }: MotionProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const variants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration, delay, ease: EASE_DEFAULT }
     }
@@ -63,11 +69,14 @@ export function SlideUp({ children, className, delay = 0, duration = DURATION_DE
     return <div className={className}>{children}</div>;
   }
 
+  const animationProps = immediate
+    ? { animate: "visible" as const }
+    : { whileInView: "visible" as const, viewport: { once: true, amount: 0.1 } };
+
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      {...animationProps}
       variants={variants}
       className={className}
       {...props}
@@ -77,13 +86,13 @@ export function SlideUp({ children, className, delay = 0, duration = DURATION_DE
   );
 }
 
-export function ScaleIn({ children, className, delay = 0, duration = DURATION_IMAGE, ...props }: MotionProps) {
+export function ScaleIn({ children, className, delay = 0, duration = DURATION_IMAGE, immediate, ...props }: MotionProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const variants: Variants = {
     hidden: { opacity: 0, scale: 1.02 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       transition: { duration, delay, ease: EASE_OUT }
     }
@@ -93,11 +102,14 @@ export function ScaleIn({ children, className, delay = 0, duration = DURATION_IM
     return <div className={className}>{children}</div>;
   }
 
+  const animationProps = immediate
+    ? { animate: "visible" as const }
+    : { whileInView: "visible" as const, viewport: { once: true, amount: 0.1 } };
+
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      {...animationProps}
       variants={variants}
       className={className}
       {...props}
@@ -156,5 +168,37 @@ export function HoverScale({ children, className, scale = 1.03, duration = 0.3, 
     >
       {children}
     </motion.div>
+  );
+}
+
+// Scroll-linked zoom effect for parallax-style sections
+interface ScrollZoomProps {
+  children: React.ReactNode;
+  className?: string;
+  scale?: number;
+  offset?: ScrollOffset;
+}
+
+export function ScrollZoom({ children, className, scale = 1.1, offset = ["start end", "end start"] }: ScrollZoomProps) {
+  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset,
+  });
+
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, scale]);
+
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
+  return (
+    <div ref={ref} className={cn("overflow-hidden", className)}>
+      <motion.div className="h-full w-full" style={{ scale: imageScale }}>
+        {children}
+      </motion.div>
+    </div>
   );
 }
