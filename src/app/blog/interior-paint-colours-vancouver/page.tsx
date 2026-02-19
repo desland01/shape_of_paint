@@ -107,14 +107,19 @@ export default function InteriorPaintColoursPage() {
       <p>
         Large-format peel-and-stick swatches from Benjamin Moore and Sherwin-Williams cost $5
         to $8 each. That is a tiny investment compared to repainting a room because the colour
-        looked different at home than it did in the store.
+        looked different at home than it did in the store. At Shape of Paint, we bring fan
+        decks and large swatches to every colour consultation. We tape them to your walls,
+        check them in morning and afternoon light, and make sure you are 100% confident
+        before we open a single can.
       </p>
 
       <h2>Coordinating Trim, Walls, and Ceilings</h2>
 
       <p>
         A common mistake is choosing a wall colour and ignoring everything else. Your trim,
-        ceilings, and walls need to work as a system.
+        ceilings, and walls need to work together. We spec the exact sheen for each surface:
+        flat for ceilings, eggshell for walls, semi-gloss for trim and doors. That combination
+        gives you the right look and the right durability in every spot.
       </p>
 
       <ul>
@@ -167,7 +172,7 @@ export default function InteriorPaintColoursPage() {
         step two. If your walls have imperfections, read about{" "}
         <Link
           href="/blog/level-5-finish-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           why a level 5 drywall finish matters for Vancouver homes
         </Link>{" "}
@@ -177,16 +182,17 @@ export default function InteriorPaintColoursPage() {
       <h2>Get Expert Colour Advice</h2>
 
       <p>
-        Choosing colours does not have to be stressful. A professional painter has seen
-        thousands of rooms and knows what works in Vancouver light. Most offer a colour
-        consultation as part of the quoting process.
+        Choosing colours does not have to be stressful. We have painted over 400 rooms in
+        Vancouver and know what works in this light. Every project starts with a colour
+        consultation where we walk through your home, check the natural light in each room,
+        and recommend specific Benjamin Moore or Sherwin-Williams colours that suit your space.
       </p>
 
       <p>
         Ready to transform your space with the right colours and a flawless finish?{" "}
         <Link
           href="/services/interior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Explore our interior painting services in Vancouver
         </Link>{" "}

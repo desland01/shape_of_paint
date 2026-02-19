@@ -94,9 +94,10 @@ export default function LowVocPaintPage() {
 
       <p>
         Natura is Benjamin Moore's zero-VOC interior line. It has zero VOCs in every sheen
-        and every colour, even after tinting. Coverage is excellent. It goes on smooth, levels
-        well, and dries to a durable finish. Available in flat, eggshell, and semi-gloss.
-        A gallon costs $65 to $80.
+        and every colour, even after tinting. We have used Natura on nursery projects where
+        families needed zero chemical exposure. Coverage is excellent. It goes on smooth,
+        levels well, and dries to a durable finish. Available in flat, eggshell, and
+        semi-gloss. A gallon costs $65 to $80.
       </p>
 
       <p>
@@ -140,7 +141,7 @@ export default function LowVocPaintPage() {
       </p>
 
       <p>
-        Here is what you can expect from today's premium low-VOC paints:
+        Here is what you can expect from today's top-tier low-VOC paints:
       </p>
 
       <ul>
@@ -192,11 +193,18 @@ export default function LowVocPaintPage() {
       </ol>
 
       <p>
-        Curious about what your interior painting project will cost with premium low-VOC
+        At Shape of Paint, we set up cross-ventilation with box fans on every interior
+        project. We also run a HEPA air scrubber in the room being painted. It pulls dust
+        and any trace fumes out of the air while the crew works. Most families can sleep in
+        the home the same night we finish.
+      </p>
+
+      <p>
+        Curious about what your interior painting project will cost with top-tier low-VOC
         products? Check out our{" "}
         <Link
           href="/blog/interior-painting-cost-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           interior painting cost guide for Vancouver
         </Link>{" "}
@@ -207,15 +215,16 @@ export default function LowVocPaintPage() {
 
       <p>
         Low-VOC and zero-VOC paints give you the same beautiful finish without the chemical
-        exposure. The technology has caught up. There is no performance penalty. And your
-        family breathes cleaner air from the day the paint goes on.
+        exposure. We switched to low-VOC products on every project 5 years ago and never
+        looked back. There is no performance penalty. And your family breathes cleaner air
+        from the day the paint goes on.
       </p>
 
       <p>
         Want a healthier home with a flawless finish?{" "}
         <Link
           href="/services/interior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Learn about our interior painting in Vancouver
         </Link>{" "}

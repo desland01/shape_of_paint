@@ -24,13 +24,13 @@ export function ServicesGrid({ services }: ServicesGridProps) {
             <SlideUp key={service.title} delay={i * 0.15}>
               <div className="group flex flex-col md:block">
                 {/* Mobile: title + description first, then image */}
-                <h3 className="mb-3 text-2xl font-semibold md:hidden">
+                <h3 className="mb-3 text-2xl font-normal md:hidden">
                   {service.title}
                 </h3>
                 <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:hidden">
                   {service.description}
                 </p>
-                <Link href={service.href} className="relative mb-6 block aspect-[4/3] overflow-hidden">
+                <Link href={service.href} className="relative mb-6 block aspect-[4/3] overflow-hidden hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -40,7 +40,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                   />
                 </Link>
                 {/* Desktop: title + description + link below image */}
-                <h3 className="mb-3 hidden text-2xl font-semibold md:block">
+                <h3 className="mb-3 hidden text-2xl font-normal md:block">
                   {service.title}
                 </h3>
                 <p className="mb-4 hidden text-lg font-normal leading-relaxed text-text-secondary md:block">
@@ -48,7 +48,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 </p>
                 <Link
                   href={service.href}
-                  className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
+                  className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   {service.title}
                 </Link>

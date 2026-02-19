@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 import type { BlogPost } from "@/config/blog";
 import { formatBlogDate } from "@/config/blog";
 
@@ -20,7 +20,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post, index = 0 }: BlogCardProps) {
   return (
-    <AnimateOnScroll delay={Math.min(index * 0.05, 0.2)}>
+    <SlideUp delay={Math.min(index * 0.05, 0.2)}>
       <article className="group border-b border-border-subtle py-10 first:pt-0 last:border-b-0 md:py-12">
         <Link href={post.href} className="grid gap-6 md:grid-cols-[1fr_320px] md:gap-10 lg:gap-14">
           <div className="flex flex-col justify-center">
@@ -31,7 +31,7 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
               {formatBlogDate(post.date)}
             </time>
 
-            <h2 className="mb-3 text-2xl font-semibold leading-tight text-foreground transition-opacity group-hover:opacity-70 md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground group-hover:text-link-hover transition-colors duration-300 md:text-3xl">
               {post.title}
             </h2>
 
@@ -40,7 +40,7 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
             </p>
 
             <div className="flex items-center justify-between">
-              <span className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-opacity group-hover:opacity-70">
+              <span className="text-sm font-medium uppercase tracking-[0.15em] text-foreground group-hover:text-link-hover transition-colors duration-300">
                 Read more
               </span>
 
@@ -58,11 +58,11 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
               alt={post.imageAlt}
               fill
               sizes="(max-width: 768px) 100vw, 320px"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           </div>
         </Link>
       </article>
-    </AnimateOnScroll>
+    </SlideUp>
   );
 }

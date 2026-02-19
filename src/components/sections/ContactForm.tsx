@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
-import { Button } from "@/components/ui/button";
+import { SlideUp } from "@/components/ui/motion";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -52,7 +51,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center py-8">
-        <h3 className="mb-3 text-2xl font-semibold">Thank you!</h3>
+        <h3 className="mb-3 text-2xl font-normal">Thank you!</h3>
         <p className="text-base text-text-secondary mb-2">
           We&apos;ll call you within 2 hours during business hours.
         </p>
@@ -70,7 +69,7 @@ export function ContactForm() {
   }
 
   return (
-    <AnimateOnScroll>
+    <SlideUp>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
         {/* Name */}
         <div>
@@ -179,18 +178,18 @@ export function ContactForm() {
         </div>
 
         {/* Submit */}
-        <Button
+        <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] min-h-[48px]"
+          className="w-full min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] disabled:opacity-50 disabled:pointer-events-none"
         >
           {isSubmitting ? "Sending..." : "Get My Free Estimate \u2192"}
-        </Button>
+        </button>
 
         {submitError && (
           <p className="text-xs text-red-600 mt-1">{submitError}</p>
         )}
       </form>
-    </AnimateOnScroll>
+    </SlideUp>
   );
 }

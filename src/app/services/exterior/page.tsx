@@ -10,7 +10,7 @@ import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Exterior Painting Vancouver BC",
-  description: "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits & decks with premium products built for BC weather. Free estimate.",
+  description: "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits & decks with professional coatings built for BC weather. Free estimate.",
 };
 
 const instagramImages = [
@@ -27,7 +27,7 @@ export default function ExteriorPaintingPage() {
     generateServiceSchema({
       name: "Exterior Painting",
       description:
-        "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits and decks with premium products built for BC weather.",
+        "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits and decks with professional coatings built for BC weather.",
       url: `${siteConfig.url}/services/exterior`,
     })
   );
@@ -45,13 +45,15 @@ export default function ExteriorPaintingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="Exterior Painting in Vancouver"
-        description="Siding, stucco, trim, soffits, and decks — premium coatings built to withstand Vancouver rain, moisture, and UV exposure."
+        description="Siding, stucco, trim, soffits, and decks. Professional coatings built to handle Vancouver rain, moisture, and UV."
+        image="/images/exterior.webp"
+        imageAlt="Exterior house painting by Shape of Paint"
       />
 
       <FeatureSection
         eyebrow="Built for BC Weather"
-        heading="Exterior paint that actually lasts in Vancouver"
-        description="Vancouver's rain, moisture, and temperature swings destroy cheap paint jobs in 2–3 years. Our process starts with thorough surface prep — power washing, scraping, sanding, caulking, and priming every surface before a single coat goes on. We use premium exterior-grade coatings selected specifically for the West Coast climate. The result? A finish that protects your home and looks great 7–10 years from now."
+        heading="Exterior paint built to last in Vancouver"
+        description="Vancouver rain, moisture, and temperature swings destroy bad paint jobs fast. Our process starts with power washing, scraping, sanding, caulking, and priming every surface. Then we apply professional-grade coatings made for the West Coast climate. Your finish will look great 7-10 years from now."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/exterior.webp"
@@ -59,28 +61,28 @@ export default function ExteriorPaintingPage() {
       />
 
       <SectionWrapper variant="warm">
-        <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
           Exterior Painting Services We Offer
         </h2>
         <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-          <li>Siding — Wood, Hardie board, vinyl, and composite siding expertly finished for maximum curb appeal and weather protection.</li>
+          <li>Siding — Wood, Hardie board, vinyl, and composite siding coated for lasting curb appeal and weather protection.</li>
           <li>Stucco — Specialized elastomeric and acrylic coatings for stucco exteriors that flex with BC temperature changes.</li>
-          <li>Trim and fascia — Crisp, weather-resistant finishes on all exterior trim that keep moisture out and look sharp for years.</li>
-          <li>Soffits — Detailed work on overhead surfaces that most painters rush through. We don't.</li>
-          <li>Decks and porches — Staining and sealing that protects your wood from Vancouver rain and keeps it looking great through every season.</li>
-          <li>Front doors and garage doors — Bold, welcoming finishes that boost curb appeal the moment someone drives up.</li>
+          <li>Trim and fascia — Crisp, weather-resistant finishes on all exterior trim that keep moisture out and hold up season after season.</li>
+          <li>Soffits — Detailed work on overhead surfaces that many painters overlook. We treat them with the same care as every visible face of your home.</li>
+          <li>Decks and porches — Staining and sealing that protects your wood from Vancouver rain and holds through every season.</li>
+          <li>Front doors and garage doors — Colors and finishes that match your home and look great from the street.</li>
         </ul>
       </SectionWrapper>
 
       <SectionWrapper>
-        <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Explore Our Other Services</h2>
+        <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
         <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
           Need work inside your home too? Our{" "}
-          <Link href="/services/interior" className="font-semibold text-foreground transition-opacity hover:opacity-70">
+          <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
             interior painting in Vancouver
           </Link>{" "}
           covers walls, ceilings, trim, baseboards, and specialty finishes. We also offer{" "}
-          <Link href="/services/cabinets" className="font-semibold text-foreground transition-opacity hover:opacity-70">
+          <Link href="/services/cabinets" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
             spray-finished cabinet painting
           </Link>{" "}
           that delivers a designer-quality finish factory replacements cannot match.

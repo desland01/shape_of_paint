@@ -237,7 +237,7 @@ export default function ExteriorPaintFailureSignsPage() {
         difference — check our guide on the{" "}
         <Link
           href="/blog/best-time-exterior-painting-bc"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           best time to paint your house exterior in BC
         </Link>{" "}
@@ -282,7 +282,7 @@ export default function ExteriorPaintFailureSignsPage() {
         Seeing signs of paint failure on your home? Learn more about our{" "}
         <Link
           href="/services/exterior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver
         </Link>{" "}

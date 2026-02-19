@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -18,15 +17,17 @@ export default function NorthVancouverAreaPage() {
       <PageHero
         heading="House Painters in North Vancouver, BC"
         description="Expert interior and exterior painting for North Shore homes. Licensed, insured, and built for Vancouver's wet climate."
+        image="/images/exterior-portfolio-5.webp"
+        imageAlt="House painters in North Vancouver"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Interior & Exterior Painting Services in North Vancouver
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Coatings Built for North Shore Rain
           </h2>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            North Vancouver has some of the most beautiful homes in the Lower Mainland. Waterfront condos in Lower Lonsdale (LoLo). Mountain-view properties in Lynn Valley and Upper Lonsdale. Hidden gems tucked into Deep Cove and Edgemont. Every one of them faces the same challenge: rain.
+            As painters in North Vancouver, we work on some of the most beautiful homes in the Lower Mainland. Waterfront condos in Lower Lonsdale (LoLo). Mountain-view properties in Lynn Valley and Upper Lonsdale. Hidden gems tucked into Deep Cove and Edgemont. Every one of them faces the same challenge: rain.
           </p>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
             The North Shore gets more rainfall than most of Vancouver. That means moisture is always trying to find a way into your walls, trim, and siding. Your exterior paint isn't just about looks—it's your home's first line of defense against the elements.
@@ -43,7 +44,7 @@ export default function NorthVancouverAreaPage() {
       <FeatureSection
         eyebrow="North Vancouver Painters"
         heading="Built for North Shore Weather"
-        description="Your home sits in the shadow of Grouse Mountain. You get incredible views. You also get constant moisture, rain, and humidity that breaks down cheap paint systems. We use premium coatings rated for harsh coastal climates. We prep wood, stucco, and vinyl siding the right way. The result: paint that actually protects your investment and looks incredible for a decade or more. That's the North Vancouver difference."
+        description="Your home sits in the shadow of Grouse Mountain. You get incredible views. You also get constant moisture, rain, and humidity that breaks down cheap paint systems. We use professional-grade coatings rated for harsh coastal climates. We prep wood, stucco, and vinyl siding the right way. The result: paint that protects your investment and looks great for a decade or more. That's the North Vancouver difference."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/exterior.webp"
@@ -52,7 +53,7 @@ export default function NorthVancouverAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             North Vancouver Neighbourhoods We Serve
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary">
@@ -83,28 +84,28 @@ export default function NorthVancouverAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
             Every home is different. Some need fresh{" "}
             <Link
               href="/services/interior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               interior painting
             </Link>{" "}
             to transform living spaces. Others need durable{" "}
             <Link
               href="/services/exterior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               exterior painting
             </Link>{" "}
             to weather North Shore storms for years to come. If you're thinking about upgrading your kitchen or bathroom, our{" "}
             <Link
               href="/services/cabinets"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               cabinet painting
             </Link>{" "}
@@ -113,7 +114,7 @@ export default function NorthVancouverAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to transform your North Vancouver home?"
         description="Get a free estimate from licensed, insured painters who understand North Shore homes."
         ctaText="Get Your Free Estimate"

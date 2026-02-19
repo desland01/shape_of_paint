@@ -81,7 +81,7 @@ export default function CabinetPaintingVsReplacingPage() {
         size? Read our{" "}
         <Link
           href="/blog/kitchen-cabinet-painting-cost-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           kitchen cabinet painting cost guide
         </Link>
@@ -148,7 +148,7 @@ export default function CabinetPaintingVsReplacingPage() {
         <li>Hinges and drawer slides work properly</li>
         <li>You want a colour change or a fresh, modern look</li>
         <li>
-          You want a bespoke colour and sheen that factory options cannot match
+          You want an exact colour and sheen that factory options cannot match
         </li>
         <li>You need the project done in under a week</li>
         <li>You like your current kitchen layout</li>
@@ -212,11 +212,11 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <p>
-        Looking for an artisan spray finish that makes factory cabinets look
+        Want a spray finish that makes factory cabinets look
         ordinary? Learn more about our{" "}
         <Link
           href="/services/cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver
         </Link>{" "}

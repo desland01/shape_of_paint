@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { SlideUp } from "@/components/ui/motion";
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("");
@@ -16,22 +15,22 @@ export function NewsletterSignup() {
   };
 
   return (
-    <section className="bg-warm-light py-12 md:py-16">
-      <div className="mx-auto max-w-[500px] px-6 text-center md:px-8">
+    <section className="bg-background py-12 md:py-16">
+      <div className="mx-auto max-w-[420px] px-6 text-center md:px-8">
         {!submitted ? (
           <>
-            <AnimateOnScroll>
-              <h4 className="mb-3 text-xl font-semibold">Get painting tips and project ideas</h4>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.1}>
-              <p className="mb-6 text-base font-normal text-text-secondary">
+            <SlideUp>
+              <h4 className="mb-3 text-2xl font-normal italic">Newsletter Signup</h4>
+            </SlideUp>
+            <SlideUp delay={0.1}>
+              <p className="mb-6 text-sm font-normal leading-relaxed text-text-secondary">
                 Colour trends, prep advice, and before-and-after transformations — straight to your inbox. No spam. Unsubscribe anytime.
               </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.15}>
+            </SlideUp>
+            <SlideUp delay={0.15}>
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-3 sm:flex-row"
+                className="flex flex-col gap-3"
               >
                 <Input
                   type="email"
@@ -39,24 +38,24 @@ export function NewsletterSignup() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="rounded-none border-border-subtle bg-background text-base"
+                  className="rounded-none border-border-subtle bg-transparent text-base h-11"
                 />
-                <Button
+                <button
                   type="submit"
-                  className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-6 text-sm font-medium uppercase tracking-[0.15em] min-h-[48px]"
+                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-foreground transition-all duration-[400ms] rounded-[12px] text-sm px-4 py-3 font-normal tracking-wide min-h-[44px]"
                 >
                   Subscribe
-                </Button>
+                </button>
               </form>
-            </AnimateOnScroll>
+            </SlideUp>
           </>
         ) : (
-          <AnimateOnScroll>
-            <h4 className="mb-2 text-xl font-semibold">Thank you!</h4>
+          <SlideUp>
+            <h4 className="mb-2 text-2xl font-normal italic">Thank you!</h4>
             <p className="text-base font-normal text-text-secondary">
               You have successfully joined our subscriber list.
             </p>
-          </AnimateOnScroll>
+          </SlideUp>
         )}
       </div>
     </section>

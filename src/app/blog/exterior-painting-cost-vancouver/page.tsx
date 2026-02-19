@@ -89,7 +89,7 @@ export default function ExteriorPaintingCostPage() {
         more about how{" "}
         <Link
           href="/blog/best-exterior-paint-vancouver-weather"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Vancouver weather affects exterior paint choices
         </Link>{" "}
@@ -220,7 +220,7 @@ export default function ExteriorPaintingCostPage() {
         Ready for a detailed quote on your home? Learn more about our{" "}
         <Link
           href="/services/exterior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver
         </Link>{" "}

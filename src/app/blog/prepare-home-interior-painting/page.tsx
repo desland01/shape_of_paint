@@ -77,7 +77,7 @@ export default function PrepareHomeInteriorPaintingPage() {
         your painter may recommend a skim coat. Learn more about{" "}
         <Link
           href="/blog/level-5-finish-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           level 5 drywall finishes and why they matter
         </Link>{" "}
@@ -89,12 +89,12 @@ export default function PrepareHomeInteriorPaintingPage() {
       <h3>Your Painter Handles</h3>
 
       <ul>
-        <li>Filling nail holes, dents, and small cracks</li>
-        <li>Sanding patched areas smooth</li>
-        <li>Caulking gaps between trim and walls</li>
-        <li>Priming stains, repaired areas, and colour changes</li>
-        <li>Masking trim, fixtures, and edges with painter's tape</li>
-        <li>Laying drop cloths over floors and remaining furniture</li>
+        <li>Filling nail holes and dents with DAP DryDex spackle (it goes on pink and dries white so we never miss a spot)</li>
+        <li>Sanding patched areas to 150 grit until smooth to the touch</li>
+        <li>Caulking gaps between trim and walls with DAP Alex Flex</li>
+        <li>Priming stains with BIN shellac primer, priming repaired areas and colour changes with Zinsser 1-2-3</li>
+        <li>Masking trim, fixtures, and edges with FrogTape for clean, sharp lines</li>
+        <li>Laying canvas drop cloths over floors and plastic sheeting over remaining furniture</li>
         <li>Cleaning up all materials and debris when the job is done</li>
       </ul>
 
@@ -112,9 +112,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       <h2>Protecting Floors and Furniture</h2>
 
       <p>
-        Any professional crew brings their own drop cloths and plastic sheeting. Canvas drop
-        cloths go on the floor. Plastic covers large furniture pieces. Painter's tape protects
-        baseboards, light switches, and outlet covers.
+        Any professional crew brings their own drop cloths and plastic sheeting. We use
+        12-ounce canvas drop cloths on floors. They are heavier than the cheap ones, so they
+        stay in place and absorb drips instead of letting them pool. Plastic covers large
+        furniture pieces. FrogTape protects baseboards, light switches, and outlet covers.
       </p>
 
       <p>
@@ -166,8 +167,10 @@ export default function PrepareHomeInteriorPaintingPage() {
 
       <p>
         Add 1 to 2 days if the walls need significant repair, skim coating, or wallpaper
-        removal. Colour changes from dark to light also add time because they require extra
-        coats and dedicated primer.
+        removal. Colour changes from dark to light also add time because they require a coat
+        of tinted primer plus two topcoats. We use Sherwin-Williams PVA primer tinted to 50%
+        of the final colour. That cuts through even the darkest existing paint and gives the
+        topcoat a clean base to work with.
       </p>
 
       <h2>Questions to Ask Your Painter Before They Start</h2>
@@ -199,15 +202,16 @@ export default function PrepareHomeInteriorPaintingPage() {
 
       <p>
         Preparing your home for interior painting is straightforward. Clear the small stuff.
-        Know the condition of your walls. Plan for kids and pets. Ask good questions. Your
-        painter handles the rest.
+        Know the condition of your walls. Plan for kids and pets. Ask good questions. We take
+        on 4 to 5 interior projects per month, so when we show up, we are fully focused on
+        your home. Your painter handles the rest.
       </p>
 
       <p>
         Ready to book your project?{" "}
         <Link
           href="/services/interior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Learn about our interior painting in Vancouver
         </Link>{" "}

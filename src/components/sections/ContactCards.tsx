@@ -1,7 +1,7 @@
 "use client";
 
 import { MapPin, Mail, Phone } from "lucide-react";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
 
 export function ContactCards() {
@@ -33,19 +33,19 @@ export function ContactCards() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card, i) => (
-            <AnimateOnScroll key={card.title} delay={i * 0.1}>
+            <SlideUp key={card.title} delay={i * 0.1}>
               <div className="text-center">
                 <card.icon
                   className="mx-auto mb-4 h-8 w-8 text-accent-gold"
                   strokeWidth={1.5}
                 />
-                <h2 className="mb-2 text-xl font-semibold">{card.title}</h2>
+                <h2 className="mb-2 text-xl font-normal">{card.title}</h2>
                 {card.lines.map((line, j) =>
                   card.href ? (
                     <a
                       key={j}
                       href={card.href}
-                      className="block text-base font-normal text-text-secondary transition-opacity hover:opacity-60"
+                      className="block text-base font-normal text-text-secondary hover:text-link-hover transition-colors duration-300"
                     >
                       {line}
                     </a>
@@ -56,7 +56,7 @@ export function ContactCards() {
                   )
                 )}
               </div>
-            </AnimateOnScroll>
+            </SlideUp>
           ))}
         </div>
       </div>

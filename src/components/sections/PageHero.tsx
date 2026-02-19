@@ -1,45 +1,69 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+import { SlideUp } from "@/components/ui/motion";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 
 interface PageHeroProps {
   heading: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-export function PageHero({ heading, description }: PageHeroProps) {
-  const prefersReducedMotion = useReducedMotion();
+export function PageHero({
+  heading,
+  description,
+  image,
+  imageAlt = "",
+}: PageHeroProps) {
+  const hasImage = !!image;
 
   return (
-    <section className="bg-background py-16 text-center md:py-24">
-      <div className="mx-auto max-w-[700px] px-6 md:px-8">
-        <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <DecorativeIcon variant="leaf" className="mb-6" />
-        </motion.div>
-        <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-        >
-          <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+    <section
+      className={
+        hasImage
+          ? "relative flex min-h-[55vh] items-center justify-center text-center"
+          : "bg-background py-16 text-center md:py-24"
+      }
+    >
+      {hasImage && (
+        <>
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority
+            style={{ objectFit: "cover" }}
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </>
+      )}
+
+      <div
+        className={`mx-auto max-w-[700px] px-6 md:px-8${hasImage ? " relative z-10" : ""}`}
+      >
+        <SlideUp>
+          <DecorativeIcon
+            variant="leaf"
+            className={`mb-6${hasImage ? " brightness-0 invert" : ""}`}
+          />
+        </SlideUp>
+        <SlideUp delay={0.1}>
+          <h1
+            className={`mb-4 text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl${hasImage ? " text-white" : ""}`}
+          >
             {heading}
           </h1>
-        </motion.div>
+        </SlideUp>
         {description && (
-          <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          >
-            <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+          <SlideUp delay={0.2}>
+            <p
+              className={`text-lg md:text-xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
+            >
               {description}
             </p>
-          </motion.div>
+          </SlideUp>
         )}
       </div>
     </section>

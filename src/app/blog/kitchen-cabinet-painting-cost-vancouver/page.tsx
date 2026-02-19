@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Kitchen Cabinet Painting Cost in Vancouver (2026 Guide) | Shape of Paint",
+  title: "Cabinet Painting Cost Vancouver (2026) | Shape of Paint",
   description:
     "Kitchen cabinet painting in Vancouver costs $2,500-$9,000 in 2026. Get exact pricing by kitchen size, what affects your quote, and hidden costs to avoid.",
 };
@@ -19,8 +19,8 @@ export default function KitchenCabinetPaintingCostPage() {
         Kitchen cabinet painting in Vancouver costs between $2,500 and $9,000 in 2026.
         The exact investment depends on your kitchen size, the number of doors, the type of
         finish, and the condition of your existing cabinets. I put this guide together so
-        you know exactly what goes into a proper fine-finish cabinet transformation — and
-        why the craftsmanship behind it matters.
+        you know exactly what goes into a proper fine-finish cabinet job — and
+        why the process and materials matter.
       </p>
 
       <h2>Investment by Kitchen Size</h2>
@@ -84,7 +84,7 @@ export default function KitchenCabinetPaintingCostPage() {
         high-traffic kitchens. For help choosing the right product, check our guide on{" "}
         <Link
           href="/blog/spray-vs-brush-cabinet-painting"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           spray vs. brush cabinet painting
         </Link>
@@ -131,13 +131,13 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         Some painters skip the primer coat to cut corners. Without a proper bonding
         primer, the finish will chip within 6 to 12 months — and you end up paying
-        twice. This is what happens when you hire someone without the artisan skill or
+        twice. This is what happens when you hire someone without the spray skill or
         the right materials. Always ask specifically what primer they use. BIN
         shellac-based and Stix bonding primer are the industry standards that
         professionals rely on.
       </p>
 
-      <h2>Additional Details That Elevate the Result</h2>
+      <h2>Additional Details That Improve the Result</h2>
 
       <h3>Hardware Replacement</h3>
 
@@ -161,7 +161,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         Standard cabinet painting covers exterior surfaces only. If you want the inside
         of your cabinets painted, that adds $500 to $1,200 depending on size. Clients
-        with glass-front doors almost always include this for a polished, cohesive look.
+        with glass-front doors almost always include this for a clean, finished look.
       </p>
 
       <h3>Crown Moulding or Trim</h3>
@@ -179,7 +179,7 @@ export default function KitchenCabinetPaintingCostPage() {
         <li>Ask to see photos of completed kitchens, not mid-project shots</li>
         <li>Confirm the quote includes bonding primer, not just topcoat</li>
         <li>Choose your colour before the estimate so the painter can plan for primer needs</li>
-        <li>Bundle hardware replacement into your project for a cohesive transformation</li>
+        <li>Bundle hardware replacement into your project for a complete transformation</li>
       </ul>
 
       <h2>Why This Investment Delivers</h2>
@@ -194,16 +194,17 @@ export default function KitchenCabinetPaintingCostPage() {
       </p>
 
       <p>
-        Ready to see what a fine-finish transformation looks like for your kitchen? See
+        Ready to see what a professional spray finish looks like for your kitchen? See
         what is included in our{" "}
         <Link
           href="/services/cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver
         </Link>{" "}
         service and request your free estimate today.
       </p>
+
     </BlogPostLayout>
   );
 }

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+import { FeatureSection } from "@/components/sections/FeatureSection";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Painting Services Vancouver BC | Shape of Paint",
+  title: "Painting Services Vancouver | Shape of Paint",
   description:
     "Interior, exterior & cabinet painting in Vancouver. Licensed, insured house painters delivering flawless finishes across the Lower Mainland. Free estimates.",
 };
@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         heading="Painting Services in Vancouver"
-        description="Interior, exterior, and cabinet painting — every project finished with the care your home deserves."
+        description="Interior, exterior, and cabinet painting. Every job done right, on time, on budget."
       />
 
       <section className="bg-background py-16 md:py-24">
@@ -24,7 +24,7 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-3 md:gap-8">
             {siteConfig.services.map((service) => (
               <Link key={service.title} href={service.href} className="group">
-                <div className="relative mb-6 aspect-[4/3] overflow-hidden">
+                <div className="relative mb-6 aspect-[4/3] overflow-hidden hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -33,13 +33,13 @@ export default function ServicesPage() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h2 className="mb-3 text-2xl font-semibold md:text-3xl">
+                <h2 className="mb-3 text-2xl font-normal leading-[1.2] md:text-3xl">
                   {service.title}
                 </h2>
                 <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
                   {service.description}
                 </p>
-                <span className="text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity group-hover:opacity-60">
+                <span className="text-sm font-medium uppercase tracking-[0.15em] text-foreground group-hover:text-link-hover transition-colors duration-300">
                   Learn More
                 </span>
               </Link>
@@ -48,9 +48,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ContactCTA
-        heading="Not sure which service you need?"
-        description="Tell us about your project and we'll recommend the right approach — no pressure, no obligation. Most estimates take less than 24 hours."
+      <FeatureSection
+        heading="Not sure where to start?"
+        description="Share a few details about your home and we'll recommend the right approach. Most estimates are ready within 24 hours."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/about-team.webp"

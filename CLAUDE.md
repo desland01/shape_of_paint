@@ -14,53 +14,73 @@
 
 If in doubt, use `/orchestrator`. Err on the side of orchestration.
 
+## Core Principles
+
+**Engineering:** Don't guess when fixing issues. Find the official docs for the framework/library involved. Code from first principles — don't patch broken things, fix them correctly, even if that means starting from scratch.
+
+**Visual design:** Use images liberally. This is a visual site. Movement, images, and colors keep visitors engaged. When in doubt, add a photo. Every section should have something to look at.
+
+**Brand voice:** Artisan / premium positioning only. No budget language ("save thousands", "fraction of cost", "cheap", "affordable"). Frame cost as investment. See Copywriting Standards below.
+
 ## Project Map
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx                    # Root layout, Montserrat font, metadata defaults
+│   ├── layout.tsx                    # Root layout, self-hosted fonts (Eros + ProximaVara), metadata defaults
 │   ├── page.tsx                      # Homepage (14 sections)
 │   ├── globals.css                   # Design tokens (colors, typography, spacing)
 │   ├── about/page.tsx                # About / Our Story page
+│   ├── about/reviews/page.tsx        # Customer reviews page
 │   ├── services/
 │   │   ├── interior/page.tsx         # Interior painting service page
-│   │   └── exterior/page.tsx         # Exterior painting service page
+│   │   ├── exterior/page.tsx         # Exterior painting service page
+│   │   ├── cabinets/page.tsx         # Cabinet painting service page
+│   │   └── portfolio/page.tsx        # Full portfolio gallery page
+│   ├── areas/                        # 12 service area pages (Burnaby, Coquitlam, Delta, Langley, etc.)
+│   ├── blog/                         # 12 SEO blog posts (interior, exterior, cabinet silos)
 │   ├── contact/
 │   │   ├── page.tsx                  # Contact page with form
 │   │   ├── estimate/page.tsx         # Free estimate CTA page
 │   │   └── faq/page.tsx              # FAQ page with accordion
+│   ├── privacy/page.tsx              # Privacy policy
+│   ├── terms/page.tsx                # Terms of service
 │   ├── api/contact/route.ts          # Contact form endpoint (logs to console)
 │   ├── sitemap.ts                    # Auto-generated sitemap
 │   └── robots.ts                     # Robots.txt config
 ├── components/
 │   ├── ui/                           # shadcn/ui primitives (Button, Card, Input, etc.)
+│   │   └── motion.tsx                # Motion primitives: SlideUp, ScaleIn (Framer Motion wrappers)
 │   ├── layout/
-│   │   ├── Header.tsx                # Logo + nav + mobile hamburger menu
+│   │   ├── Header.tsx                # Sticky header, transparent-on-hero, scroll-aware, CTA + phone
 │   │   └── Footer.tsx                # Logo, phone, link columns, copyright
 │   ├── sections/
-│   │   ├── Hero.tsx                  # 3-col photo grid + overlay card
+│   │   ├── Hero.tsx                  # Full-bleed single image, gradient overlay, staggered animations
 │   │   ├── FounderQuote.tsx          # Large quote block with author
 │   │   ├── VideoTestimonial.tsx      # Eyebrow + heading + video embed
 │   │   ├── ServicesGrid.tsx          # 3-column service cards
-│   │   ├── CTABanner.tsx             # Full-width CTA with heading + button
+│   │   ├── CTABanner.tsx             # Split layout CTA with phone fallback
 │   │   ├── FeatureSection.tsx        # Split image + text (reversible)
 │   │   ├── PortfolioGallery.tsx      # Photo grid with lightbox
-│   │   ├── Testimonials.tsx          # Carousel with prev/next
+│   │   ├── Testimonials.tsx          # Carousel with star ratings + Google attribution
 │   │   ├── ContactCTA.tsx            # Split heading + image CTA
 │   │   ├── InstagramGrid.tsx         # 6-photo grid
 │   │   ├── NewsletterSignup.tsx      # Email capture form
-│   │   ├── ContactForm.tsx           # Full contact form (RHF + Zod)
+│   │   ├── ContactForm.tsx           # Floating-label form, phone-first, RHF + Zod
 │   │   ├── ContactCards.tsx          # Address, email, phone cards
 │   │   ├── PageHero.tsx              # Simple centered page header
+│   │   ├── BlogCard.tsx              # Blog post card with image + excerpt
+│   │   ├── BlogPostLayout.tsx        # Blog post page wrapper
 │   │   └── FAQ.tsx                   # Accordion FAQ section
 │   └── shared/
 │       ├── SectionWrapper.tsx        # Section container with bg variants
-│       ├── AnimateOnScroll.tsx        # Framer Motion scroll trigger
-│       ├── DecorativeIcon.tsx         # Leaf/feather decorative icon
-│       └── Eyebrow.tsx               # Uppercase label text
+│       ├── AnimateOnScroll.tsx       # Framer Motion scroll trigger
+│       ├── TrustBar.tsx              # Trust signals: review count, years in business, etc.
+│       ├── DecorativeIcon.tsx        # Leaf/feather decorative icon
+│       └── Eyebrow.tsx              # Uppercase label text
 ├── config/
-│   └── site.ts                       # ⭐ Single source for all business info
+│   ├── site.ts                       # ⭐ Single source for all business info
+│   └── blog.ts                       # Blog post metadata (titles, slugs, excerpts, images)
 ├── lib/
 │   ├── schema.ts                     # JSON-LD generators (LocalBusiness, Service, FAQ)
 │   └── utils.ts                      # cn() utility
@@ -74,7 +94,7 @@ src/
 | "I want to..." | Do this |
 |-----------------|---------|
 | Change brand colors | Edit CSS custom properties in `src/app/globals.css`. Reference colors from target site are in `_reference/design-system.md`. |
-| Change fonts | Update font import in `src/app/layout.tsx` and `--font-montserrat` variable in `src/app/globals.css`. Target used Montserrat (all weights). |
+| Change fonts | Fonts are self-hosted in `public/fonts/`. Edit `@font-face` + `@layer base` rules in `globals.css`. Heading = `Eros-Regular.woff2`, body = `ProximaVara-Roman.woff2`. Do NOT use Tailwind `font-[]` arbitrary syntax — breaks in v4. |
 | Adjust spacing | Edit section padding in `src/components/shared/SectionWrapper.tsx` (currently py-16 md:py-24 lg:py-32). |
 | Change border radius | Edit `--radius` in `src/app/globals.css` (currently 0.25rem for minimal rounding). |
 | Adjust decorative icons | Edit `src/components/shared/DecorativeIcon.tsx` — uses Lucide `Leaf` icon in gold/sage variants. |
@@ -154,27 +174,32 @@ src/
 
 | Component | Path | Key Props |
 |-----------|------|-----------|
-| Hero | sections/Hero.tsx | eyebrow, headline, ctaText, ctaHref, images |
+| Hero | sections/Hero.tsx | eyebrow, headline, ctaText, ctaHref, image (full-bleed, gradient overlay) |
 | FounderQuote | sections/FounderQuote.tsx | quote, author |
 | VideoTestimonial | sections/VideoTestimonial.tsx | eyebrow, heading, videoUrl? |
 | ServicesGrid | sections/ServicesGrid.tsx | services: { title, description, href, image }[] |
-| CTABanner | sections/CTABanner.tsx | headline, ctaText, ctaHref |
+| CTABanner | sections/CTABanner.tsx | headline, ctaText, ctaHref (split layout, phone fallback) |
 | FeatureSection | sections/FeatureSection.tsx | eyebrow, heading, description, ctaText, ctaHref, image, imageAlt, reversed?, variant? |
 | PortfolioGallery | sections/PortfolioGallery.tsx | eyebrow, heading, subtitle?, images: { src, alt }[] |
-| Testimonials | sections/Testimonials.tsx | eyebrow?, heading, testimonials: { quote, author }[] |
+| Testimonials | sections/Testimonials.tsx | eyebrow?, heading, testimonials: { quote, author, rating? }[] |
 | ContactCTA | sections/ContactCTA.tsx | heading, description, ctaText, ctaHref, image, imageAlt |
 | InstagramGrid | sections/InstagramGrid.tsx | instagramUrl, images: { src, alt }[] |
 | NewsletterSignup | sections/NewsletterSignup.tsx | (self-contained) |
-| ContactForm | sections/ContactForm.tsx | (self-contained with API route) |
+| ContactForm | sections/ContactForm.tsx | (floating labels, phone-first, RHF + Zod, API route) |
 | ContactCards | sections/ContactCards.tsx | (reads from site config) |
 | PageHero | sections/PageHero.tsx | heading, description? |
+| BlogCard | sections/BlogCard.tsx | title, excerpt, href, image, date |
+| BlogPostLayout | sections/BlogPostLayout.tsx | (blog post page wrapper) |
 | FAQ | sections/FAQ.tsx | eyebrow?, heading, items: { question, answer }[] |
-| Header | layout/Header.tsx | (reads from site config) |
+| TrustBar | shared/TrustBar.tsx | (trust signals: review count, years, etc.) |
+| Header | layout/Header.tsx | (sticky, transparent-on-hero, scroll-aware, reads site config) |
 | Footer | layout/Footer.tsx | (reads from site config) |
 
 ## Site Config
 
 `src/config/site.ts` — **edit this first.** It feeds metadata, schema, footer, nav, services, and testimonials.
+
+`src/config/blog.ts` — Blog post metadata (titles, slugs, dates, excerpts, images). Referenced by blog index and BlogCard components.
 
 ## SEO & Copywriting Standards
 
@@ -224,6 +249,8 @@ Per `.claude/commands/hormozi-sanchez-writer.md`:
 - "You" more than "we"
 - Short sentences
 - VALUE = (Dream Outcome × Likelihood) / (Time × Effort)
+
+**Premium brand — banned language:** "save thousands", "fraction of the cost", "cheap", "affordable", "budget". Frame cost as investment in quality. Artisan positioning only.
 
 ### Key Docs
 

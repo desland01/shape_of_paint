@@ -65,7 +65,7 @@ export default function SprayVsBrushCabinetPage() {
         product matters too — read our guide on the{" "}
         <Link
           href="/blog/best-paint-kitchen-cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           best paint for kitchen cabinets
         </Link>{" "}
@@ -176,7 +176,7 @@ export default function SprayVsBrushCabinetPage() {
         Want a factory-smooth finish on your kitchen cabinets? Learn more about our{" "}
         <Link
           href="/services/cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver
         </Link>{" "}

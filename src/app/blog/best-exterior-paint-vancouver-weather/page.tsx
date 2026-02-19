@@ -137,7 +137,7 @@ export default function BestExteriorPaintPage() {
         Every premium exterior paint contains mildewcide. But in Vancouver,
         standard mildewcide levels are often not enough. Look for paints
         explicitly marketed for high-humidity or coastal climates. Both Aura
-        Exterior and Duration contain elevated levels of mildewcide compared
+        Exterior and Duration contain higher levels of mildewcide compared
         to their interior counterparts.
       </p>
 
@@ -187,7 +187,7 @@ export default function BestExteriorPaintPage() {
         guide on the{" "}
         <Link
           href="/blog/best-time-exterior-painting-bc"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           best time to paint your house exterior in BC
         </Link>{" "}
@@ -241,7 +241,7 @@ export default function BestExteriorPaintPage() {
         our{" "}
         <Link
           href="/services/exterior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver
         </Link>{" "}

@@ -151,7 +151,7 @@ export default function StuccoVsSidingPage() {
         mildew. The cost question comes up for every surface — see our{" "}
         <Link
           href="/blog/exterior-painting-cost-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           full exterior painting cost guide for Vancouver
         </Link>{" "}
@@ -235,7 +235,7 @@ export default function StuccoVsSidingPage() {
         Not sure which approach your home needs? Learn more about our{" "}
         <Link
           href="/services/exterior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver
         </Link>{" "}

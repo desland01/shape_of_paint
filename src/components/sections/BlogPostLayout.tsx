@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 
 interface BlogPostLayoutProps {
   title: string;
@@ -71,9 +71,9 @@ export function BlogPostLayout({
           </ol>
         </nav>
 
-        <AnimateOnScroll>
+        <SlideUp>
           <header className="mb-12">
-            <h1 className="mb-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+            <h1 className="mb-4 text-3xl font-normal leading-[1.15] md:text-4xl lg:text-5xl">
               {title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-normal text-text-secondary">
@@ -88,24 +88,22 @@ export function BlogPostLayout({
               <span>{readingTime}</span>
             </div>
           </header>
-        </AnimateOnScroll>
+        </SlideUp>
 
-        <AnimateOnScroll delay={0.1}>
-          <div className="prose-custom space-y-6 text-lg font-normal leading-relaxed text-text-secondary md:text-xl [&_blockquote]:border-l-4 [&_blockquote]:border-foreground/20 [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-foreground md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
-            {children}
-          </div>
-        </AnimateOnScroll>
+        <div className="prose-custom space-y-6 text-lg font-normal leading-relaxed text-text-secondary md:text-xl [&_blockquote]:border-l-4 [&_blockquote]:border-foreground/20 [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:leading-[1.2] [&_h2]:text-foreground md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+          {children}
+        </div>
       </div>
 
       <div className="border-t border-border-subtle">
         <div className="mx-auto max-w-[780px] px-6 py-12 md:px-8 md:py-16">
-          <AnimateOnScroll>
+          <SlideUp>
             <div className="mb-12 text-base font-normal leading-relaxed text-text-secondary">
               <p>
                 I&apos;m {siteConfig.ownerName}, the founder of{" "}
                 <Link
                   href="/"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   {siteConfig.name}
                 </Link>
@@ -114,11 +112,11 @@ export function BlogPostLayout({
                 matters when it comes to painting your home.
               </p>
             </div>
-          </AnimateOnScroll>
+          </SlideUp>
 
-          <AnimateOnScroll delay={0.1}>
+          <SlideUp delay={0.1}>
             <div className="rounded-sm bg-warm px-8 py-10 text-center md:px-12 md:py-14">
-              <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+              <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
                 Request an estimate
               </h2>
               <p className="mx-auto mb-6 max-w-md text-base font-normal text-text-secondary">
@@ -127,19 +125,19 @@ export function BlogPostLayout({
               </p>
               <Link
                 href="/contact/estimate"
-                className="inline-block bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-colors hover:bg-cta-hover"
+                className="inline-block rounded-[9px] bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-colors hover:bg-cta-hover"
               >
                 Get Your Free Estimate
               </Link>
             </div>
-          </AnimateOnScroll>
+          </SlideUp>
 
           <div className="mt-12 text-center text-base font-normal text-text-secondary">
             <p>
               Questions? Call us at{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 {siteConfig.phone}
               </a>

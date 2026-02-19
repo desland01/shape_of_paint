@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { FounderQuote } from "@/components/sections/FounderQuote";
 import { VideoTestimonial } from "@/components/sections/VideoTestimonial";
@@ -6,10 +7,14 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { NewsletterSignup } from "@/components/sections/NewsletterSignup";
 import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "House Painters Vancouver BC | Shape of Paint",
+  description: "Professional house painters in Vancouver & the Lower Mainland. Interior, exterior & cabinet painting. Licensed, insured. Get your free estimate.",
+};
 
 const heroImages = [
   {
@@ -27,14 +32,14 @@ const heroImages = [
 ];
 
 const galleryImages = [
-  { src: "/images/portfolio-1.webp", alt: "Shape of Paint portfolio project 1" },
-  { src: "/images/portfolio-2.webp", alt: "Shape of Paint portfolio project 2" },
-  { src: "/images/portfolio-3.webp", alt: "Shape of Paint portfolio project 3" },
-  { src: "/images/portfolio-4.webp", alt: "Shape of Paint portfolio project 4" },
-  { src: "/images/portfolio-5.webp", alt: "Shape of Paint portfolio project 5" },
-  { src: "/images/portfolio-6.webp", alt: "Shape of Paint portfolio project 6" },
-  { src: "/images/portfolio-7.webp", alt: "Shape of Paint portfolio project 7" },
-  { src: "/images/portfolio-8.webp", alt: "Shape of Paint portfolio project 8" },
+  { src: "/images/interior-portfolio-1.webp", alt: "Bright living room with designer paint finish" },
+  { src: "/images/cabinet-portfolio-5.webp", alt: "Staircase railing with hand-stained dark handrail and crisp white spindles" },
+  { src: "/images/exterior-portfolio-1.webp", alt: "Exterior home painting — classic Vancouver craftsman" },
+  { src: "/images/interior-portfolio-3.webp", alt: "Elegant hallway with hand-finished walls" },
+  { src: "/images/exterior-portfolio-2.webp", alt: "Modern exterior with fresh trim paint" },
+  { src: "/images/interior-portfolio-2.webp", alt: "Modern bathroom with crisp white walls" },
+  { src: "/images/cabinet-portfolio-1.webp", alt: "Kitchen transformation — cabinet refinishing" },
+  { src: "/images/cabinet-portfolio-4.webp", alt: "Spray-finished kitchen cabinets in matte white" },
 ];
 
 const instagramImages = [
@@ -51,14 +56,14 @@ export default function HomePage() {
     <>
       <Hero
         eyebrow="Vancouver's Trusted House Painters"
-        headline="Your home deserves more than a coat of paint — it deserves master craftsmanship"
+        headline="Vancouver house painters who care about the finish as much as you do"
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         images={heroImages}
       />
 
       <FounderQuote
-        quote="Every homeowner deserves a painting team that shows up on time, respects your space, and delivers results you can see from the street. That's not a promise — it's how we've built our reputation with hundreds of Vancouver families."
+        quote="Every homeowner deserves painters who show up on time, protect your floors, and do work you're proud of. That's not a tagline. It's how we've built our name — one Vancouver home at a time."
         author="Gabe Penner, Founder"
       />
 
@@ -71,15 +76,15 @@ export default function HomePage() {
       <ServicesGrid services={[...siteConfig.services]} />
 
       <CTABanner
-        headline="Your free estimate is 2 minutes away"
+        headline="Every project begins with a conversation"
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
       />
 
       <FeatureSection
         eyebrow="Design Expertise"
-        heading="More than painters — we're finishing specialists"
-        description="Interior, exterior, cabinets, or custom finishes — our team brings years of hands-on experience to every project. We work alongside designers and specialty trades so you get expert advice, not guesswork. The result? A finish that looks better and lasts longer than you expected."
+        heading="More than painters — finishing specialists"
+        description="Interior, exterior, cabinets, or custom finishes — our team brings years of hands-on experience to every surface we touch. We work with designers and specialty trades so you get honest advice, not guesswork. Finishes that look better and last longer than you expected."
         ctaText="See Our Interior Work"
         ctaHref="/services/interior"
         image="/images/design-services.webp"
@@ -95,9 +100,9 @@ export default function HomePage() {
 
       <FeatureSection
         eyebrow="Cabinet Painting"
-        heading="New-looking cabinets without the $30,000 renovation"
-        description="Why rip out perfectly good cabinets? Our spray-finished cabinet painting gives your kitchen a factory-fresh look at a fraction of the replacement cost. Most projects are done in 5–7 days with minimal disruption to your daily life."
-        ctaText="See Cabinet Transformations"
+        heading="Your kitchen, reimagined — without a full renovation"
+        description="Spray-finished cabinet painting gives your kitchen a smooth, factory-quality feel at a fraction of the replacement cost. Most projects wrap in 5–7 days with minimal disruption to your daily routine."
+        ctaText="Explore Cabinet Refinishing"
         ctaHref="/contact/estimate"
         image="/images/cabinet-finish.webp"
         imageAlt="Cabinet spray finish by Shape of Paint"
@@ -105,13 +110,13 @@ export default function HomePage() {
       />
 
       <Testimonials
-        heading="Vancouver homeowners trust Shape of Paint"
+        heading="Heard from homeowners we've worked with"
         testimonials={[...siteConfig.testimonials]}
       />
 
-      <ContactCTA
-        heading="Ready to love your home again?"
-        description="Tell us about your project and we'll get back to you within 2 business days with a firm quote — no surprises, no hidden fees. The price we quote is the price you pay."
+      <FeatureSection
+        heading="Let's talk about what your home could feel like"
+        description="Reach out and we'll get back to you within 2 business days with a firm quote. No surprises, no hidden fees. The price we quote is the price you pay."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/about-team.webp"
@@ -119,7 +124,7 @@ export default function HomePage() {
       />
 
       <CTABanner
-        headline="Hundreds of Vancouver homes painted. Yours could be next."
+        headline="47 families on the North Shore trusted us with their homes last year. Yours could be next."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
       />

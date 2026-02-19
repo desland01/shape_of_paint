@@ -103,8 +103,9 @@ export default function Level5FinishPage() {
 
       <p>
         Level 5 solves this by giving the entire wall the same surface texture. The skim coat
-        covers both the paper and the mudded joints. The result is a wall that looks perfect
-        from every angle, in every light condition.
+        covers both the paper and the mudded joints with one uniform layer. We apply it with
+        a 14-inch knife in thin, overlapping passes, then sand to 220 grit. The result is a
+        wall that looks perfect from every angle, in every light condition.
       </p>
 
       <h2>When You Need Level 5</h2>
@@ -145,16 +146,11 @@ export default function Level5FinishPage() {
       </p>
 
       <ol>
-        <li>Complete all level 4 work: three coats of mud on joints, two on fasteners, full
-        sanding between coats.</li>
-        <li>Apply a thin skim coat of joint compound over the entire wall surface using a
-        hawk and trowel or a roller with a squeegee knife.</li>
-        <li>Let the skim coat dry completely. This takes 12 to 24 hours depending on
-        humidity and temperature.</li>
-        <li>Sand the entire surface with 150- to 220-grit paper until it is perfectly smooth
-        and even.</li>
-        <li>Prime with a high-quality drywall primer. This seals the surface and creates
-        uniform porosity for the topcoat.</li>
+        <li>Complete all level 4 work: three coats of USG Sheetrock joint compound on joints, two on fasteners, full sanding with 120-grit between coats.</li>
+        <li>Apply a thin skim coat of compound over the entire wall surface using a 14-inch drywall knife. We use USG Plus 3 for its smooth workability and low shrinkage.</li>
+        <li>Let the skim coat dry completely. This takes 12 to 24 hours depending on humidity and temperature.</li>
+        <li>Sand the entire surface with 150-grit paper, then finish with 220-grit until it is perfectly smooth and even.</li>
+        <li>Prime with two coats of Sherwin-Williams PVA Drywall Primer. This seals the surface and creates uniform porosity so the topcoat dries evenly from edge to edge.</li>
       </ol>
 
       <p>
@@ -175,8 +171,7 @@ export default function Level5FinishPage() {
       <p>
         Most homeowners choose level 5 for the main living areas and bedrooms where flat
         paint and natural light matter most. Hallways, closets, and utility rooms stay at
-        level 4. This targeted approach focuses the investment where it matters most, delivering a premium result
-        where it counts.
+        level 4. This targeted approach puts the budget where it makes the biggest difference.
       </p>
 
       <p>
@@ -184,7 +179,7 @@ export default function Level5FinishPage() {
         about air quality during the painting process, read about{" "}
         <Link
           href="/blog/low-voc-paint-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           low-VOC paint options for Vancouver families
         </Link>{" "}
@@ -195,15 +190,16 @@ export default function Level5FinishPage() {
 
       <p>
         A level 5 finish is the difference between walls that look good and walls that look
-        perfect. In a city where natural light pours in sideways through floor-to-ceiling
-        windows, it matters more than most people realize.
+        perfect. We do 3 to 4 level 5 projects per month in Vancouver. Each one takes extra
+        time, but the result is a surface you can run your hand across and feel nothing but
+        smooth drywall from corner to corner.
       </p>
 
       <p>
         Want walls that look flawless from every angle?{" "}
         <Link
           href="/services/interior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           See our interior painting services in Vancouver
         </Link>{" "}

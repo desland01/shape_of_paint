@@ -2,24 +2,53 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Self-hosted fonts — actual files from whiteoakpainting.com */
+/* License required for production use: Eros Regular + Proxima Vara */
+@font-face {
+  font-family: "Eros Regular";
+  src: url("/fonts/Eros-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proximavara Roman";
+  src: url("/fonts/ProximaVara-Roman.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
+  --font-sans: "Proximavara Roman", Arial, sans-serif;
+  --font-heading: "Eros Regular", "Trebuchet MS", serif;
+  --font-display: "Eros Regular", "Trebuchet MS", serif;
   --font-mono: var(--font-geist-mono);
 
   --color-warm: var(--warm);
   --color-warm-light: var(--warm-light);
   --color-accent-gold: var(--accent-gold);
   --color-accent-sage: var(--accent-sage);
+  --color-accent-hover: var(--accent-hover);
   --color-cta: var(--cta);
   --color-cta-hover: var(--cta-hover);
   --color-cta-foreground: var(--cta-foreground);
+  --color-cta-hover-foreground: var(--cta-hover-foreground);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-border-subtle: var(--border-subtle);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-clay: var(--brand-clay);
+  --color-image-placeholder: var(--image-placeholder);
+  --color-link-hover: var(--link-hover);
+  --color-text-dark: var(--text-dark);
+  --color-newsletter-btn: var(--newsletter-btn);
+  --color-newsletter-btn-text: var(--newsletter-btn-text);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -62,31 +91,52 @@
 :root {
   --radius: 0.25rem;
 
-  /* ref: #FFFFFF — main page background */
-  --background: oklch(1 0 0);
-  /* ref: #1A1A1A — near-black primary text */
-  --foreground: oklch(0.145 0 0);
+  /* ref: #FFFCF8 — warm off-white page background */
+  --background: #FFFCF8;
+  /* ref: #212121 — near-black primary text */
+  --foreground: #212121;
 
   /* ref: #F5F0EA — warm cream alternating sections */
   --warm: #F5F0EA;
   /* ref: #F8F6F3 — light warm off-white */
   --warm-light: #F8F6F3;
-  /* ref: #C8A96E — gold oak leaf accent */
-  --accent-gold: #C8A96E;
-  /* ref: #A8B09A — sage decorative accents */
-  --accent-sage: #A8B09A;
-  /* ref: #E8E4DE — CTA button background */
-  --cta: #E8E4DE;
-  /* ref: #D4CFC7 — CTA hover */
-  --cta-hover: #D4CFC7;
-  /* ref: #1A1A1A — CTA button text */
+  /* ref: #D2956F — copper/terracotta accent */
+  --accent-gold: #D2956F;
+  /* ref: #A0A48E — sage decorative accents */
+  --accent-sage: #A0A48E;
+  /* ref: #DE967D — salmon/peach hover accent */
+  --accent-hover: #DE967D;
+  /* ref: #DBE3E4 — cool blue-grey CTA button background */
+  --cta: #DBE3E4;
+  /* ref: #D2956F — copper terracotta hover (same as accent) */
+  --cta-hover: #D2956F;
+  /* ref: #1A1A1A — CTA button text (default state) */
   --cta-foreground: #1A1A1A;
-  /* ref: #6B6B6B — secondary text */
-  --text-secondary: #6B6B6B;
-  /* ref: #999999 — muted text */
-  --text-muted: #999999;
-  /* ref: #E5E2DD — subtle borders */
-  --border-subtle: #E5E2DD;
+  /* ref: #212121 — CTA button text on hover (dark text stays dark) */
+  --cta-hover-foreground: #212121;
+  /* ref: rgb(192,164,135) — warm tan glow for button hover shadow */
+  --shadow-button-glow: 192 164 135;
+  /* ref: #424242 — secondary text (gray-800) */
+  --text-secondary: #424242;
+  /* ref: #757575 — muted text (gray-600) */
+  --text-muted: #757575;
+  /* ref: #E0E0E0 — neutral gray subtle borders */
+  --border-subtle: #E0E0E0;
+  /* ref: #C0A487 — warm tan secondary brand color */
+  --brand-secondary: #C0A487;
+  /* ref: #B3751B — brown clay accent */
+  --brand-clay: #B3751B;
+  /* ref: #EDE9DB — image overflow container background */
+  --image-placeholder: #EDE9DB;
+  /* RGB triplet for salmon glow box-shadows */
+  --shadow-hover-glow: 222 150 125;
+  /* link hover salmon accent */
+  --link-hover: #DE967C;
+  /* eyebrow/heading dark text */
+  --text-dark: #111111;
+  /* newsletter dark button */
+  --newsletter-btn: #212121;
+  --newsletter-btn-text: #FAFAFA;
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -124,6 +174,14 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: "Proximavara Roman", Arial, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Eros Regular", "Trebuchet MS", serif;
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid var(--cta-hover);
+    outline-offset: 2px;
   }
 }

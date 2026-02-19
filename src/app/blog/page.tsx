@@ -51,7 +51,7 @@ export default function BlogPage() {
 
           <div className="mb-12 text-center md:mb-16">
             <DecorativeIcon variant="leaf" className="mb-6" />
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl">
               Painting tips &amp; expert guides
             </h1>
           </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -18,21 +18,23 @@ export default function RichmondAreaPage() {
       <PageHero
         heading="House Painters in Richmond, BC"
         description="Professional interior and exterior painting for Richmond homeowners. Licensed, insured, and trusted with the details that matter."
+        image="/images/hero-2.webp"
+        imageAlt="Professional painters in Richmond BC"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Trusted Painters for Richmond Homes
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Island Living, Enduring Finishes
           </h2>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            When you need painters in Richmond BC, you need professionals who understand your community. Richmond is a thriving island city with unique character — from the heritage charm of Steveston's fishing village to modern condos along the Canada Line. Your home deserves painters who respect that diversity and deliver the craftsmanship your neighbourhood expects.
+            When you need painters in Richmond BC, you want a team that knows your community. Richmond is a thriving island city — from the heritage charm of Steveston's fishing village to modern condos along the Canada Line. Your home deserves painters who respect that range and deliver the quality your neighbourhood expects.
           </p>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            We've painted hundreds of Richmond homes. We know the moisture challenges from sea-level proximity and the river delta. We understand that many Richmond residents live in strata complexes, townhomes, and contemporary condos that demand precision finishing. Whether you're refreshing a Brighouse family home, updating a Terra Nova townhouse, or maintaining a Steveston heritage property, we bring the same meticulous approach: transparent timelines, no surprises, and results you'll love.
+            We've painted hundreds of Richmond homes. We know the moisture problems from sea-level air and the river delta. Many Richmond homes are strata complexes, townhomes, and condos that need precision finishing. Whether you're refreshing a Brighouse family home, updating a Terra Nova townhouse, or keeping a Steveston heritage property sharp, we bring clear timelines, no surprises, and results you'll love.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Shape of Paint has become the go-to choice for Richmond painters because we listen first. You tell us your vision — interior refresh, exterior protection, cabinet transformation — and we execute with the attention to detail that separates good painters from great ones. No cookie-cutter quotes. No guessing about timelines. Just honest, expert craftsmanship.
+            Shape of Paint has become the go-to choice for Richmond painters because we listen first. You tell us your vision — interior refresh, exterior protection, cabinet transformation — and we deliver with the care that sets great painters apart. No cookie-cutter quotes. No guessing about timelines. Just honest, expert work.
           </p>
         </div>
       </SectionWrapper>
@@ -40,7 +42,7 @@ export default function RichmondAreaPage() {
       <FeatureSection
         eyebrow="Richmond Painters"
         heading="Interior & Exterior Painting for Your Richmond Home"
-        description="Your Richmond home faces specific challenges — moisture from proximity to water, diverse architectural styles, and the need for finishes that last. We handle interior walls, ceilings, trim, and baseboards with flawless precision. On the exterior, we use premium coatings engineered for BC's coastal climate, protecting your siding, stucco, and trim for years. From Steveston to Ironwood to Broadmoor, we're the Richmond painters homeowners and designers recommend."
+        description="Your Richmond home faces real challenges — moisture from nearby water, different building styles, and the need for finishes that last. We handle interior walls, ceilings, trim, and baseboards with care. On the exterior, we use professional-grade coatings built for BC's coastal climate. Your siding, stucco, and trim stay protected for years. From Steveston to Ironwood to Broadmoor, we're the Richmond painters homeowners recommend."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/exterior.webp"
@@ -49,7 +51,7 @@ export default function RichmondAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Richmond Neighbourhoods We Serve
           </h2>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
@@ -73,7 +75,7 @@ export default function RichmondAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary">
@@ -83,7 +85,7 @@ export default function RichmondAreaPage() {
             <div>
               <Link
                 href="/services/interior"
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Interior Painting
               </Link>
@@ -94,7 +96,7 @@ export default function RichmondAreaPage() {
             <div>
               <Link
                 href="/services/exterior"
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Exterior Painting
               </Link>
@@ -105,7 +107,7 @@ export default function RichmondAreaPage() {
             <div>
               <Link
                 href="/services/cabinets"
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Cabinet Painting & Refinishing
               </Link>
@@ -117,9 +119,9 @@ export default function RichmondAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to Transform Your Richmond Home?"
-        description="Schedule a no-obligation free estimate with Shape of Paint. We'll visit your home, discuss your vision, and provide a firm quote with no surprises. Join hundreds of Richmond homeowners and designers who've trusted us with their most important spaces."
+        description="Schedule a free estimate with Shape of Paint. We'll visit your home, talk about your project, and give you a firm quote with no surprises. Hundreds of Richmond homeowners already trust us with their homes."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/interior.webp"

@@ -3,7 +3,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { siteConfig } from "@/config/site";
 
@@ -32,7 +32,7 @@ export default function ReviewsPage() {
 
       <SectionWrapper>
         {siteConfig.testimonials.map((testimonial, index) => (
-          <AnimateOnScroll key={index} delay={index * 0.1}>
+          <SlideUp key={index} delay={index * 0.1}>
             <div className="mx-auto mb-16 max-w-[700px] text-center last:mb-0">
               <DecorativeIcon variant="leaf" className="mb-6" />
               <blockquote className="mb-4 text-xl font-normal leading-relaxed italic text-foreground md:text-2xl">
@@ -42,13 +42,13 @@ export default function ReviewsPage() {
                 — {testimonial.author}
               </p>
             </div>
-          </AnimateOnScroll>
+          </SlideUp>
         ))}
       </SectionWrapper>
 
       <SectionWrapper variant="warm">
         <div className="text-center">
-          <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">
             See Us on Google
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -60,7 +60,7 @@ export default function ReviewsPage() {
             href={siteConfig.socialLinks.google}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60"
+            className="text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300"
           >
             View on Google Maps →
           </a>

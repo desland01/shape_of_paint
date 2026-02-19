@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -17,19 +16,21 @@ export default function LangleyAreaPage() {
       <PageHero
         heading="House Painters in Langley, BC"
         description="Expert interior and exterior painting services for Langley homeowners. Licensed, insured, and committed to quality."
+        image="/images/exterior-portfolio-4.webp"
+        imageAlt="House painting in Langley"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Langley Interior & Exterior Painting Services
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            From Fort Langley Heritage to Willoughby New Builds
           </h2>
           <div className="space-y-6 text-lg font-normal leading-relaxed text-text-secondary">
             <p>
               Painters Langley BC: If you live in Langley, you know the challenge. Your home faces Vancouver's unpredictable weather. Rain, moisture, and temperature swings wear down exterior paint faster than most regions. That's where we come in. Shape of Paint brings professional, licensed house painting to every corner of Langley — from Walnut Grove's family neighbourhoods to the heritage charm of Fort Langley.
             </p>
             <p>
-              Whether you're painting a bedroom, refreshing your front exterior, or transforming kitchen cabinets, we handle it with meticulous prep and premium coatings. We listen to your vision, offer honest colour advice, and deliver results that match Langley's quality standards. No shortcuts. No surprises.
+              Whether you're painting a bedroom, refreshing your front exterior, or transforming kitchen cabinets, we handle it with thorough prep and professional-grade coatings. We listen to your vision, offer honest colour advice, and deliver results that match Langley's standards. Every step is done right. No surprises.
             </p>
             <p>
               Your home is your biggest investment. The paint job is the first thing people see. We make sure it makes the right impression — and lasts for years, not months. From Brookswood's horse country estates to Aldergrove's rural developments, Langley homeowners trust us to get it right.
@@ -50,7 +51,7 @@ export default function LangleyAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Langley Neighbourhoods We Serve
           </h2>
           <div className="space-y-4 text-lg font-normal text-text-secondary">
@@ -91,7 +92,7 @@ export default function LangleyAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <div className="space-y-4">
@@ -101,21 +102,21 @@ export default function LangleyAreaPage() {
             <div className="space-y-3 pt-2">
               <Link
                 href="/services/interior"
-                className="text-base font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-base font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Interior Painting
               </Link>
               <br />
               <Link
                 href="/services/exterior"
-                className="text-base font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-base font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Exterior Painting
               </Link>
               <br />
               <Link
                 href="/services/cabinets"
-                className="text-base font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-base font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Cabinet Painting
               </Link>
@@ -124,7 +125,7 @@ export default function LangleyAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to Transform Your Langley Home?"
         description="Get a free, no-obligation estimate for your painting project. We'll visit your home, assess your needs, and provide a firm quote with no hidden charges. From colour consultation to final walkthrough, we're here to make your vision real."
         ctaText="Get Your Free Estimate"

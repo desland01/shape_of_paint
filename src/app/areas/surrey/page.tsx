@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -18,12 +18,14 @@ export default function SurreyAreaPage() {
       <PageHero
         heading="House Painters in Surrey, BC"
         description="Professional interior and exterior painting services for Surrey's largest neighbourhoods. Licensed, insured, and built for BC weather."
+        image="/images/hero-3.webp"
+        imageAlt="House painting services in Surrey BC"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px] px-6 md:px-8">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Interior & Exterior Painting Services in Surrey
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Growing Families, Enduring Finishes
           </h2>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
             Surrey is the largest city in the Lower Mainland. Your home needs painters who understand exactly what that means. More humidity. More rain. Weather that changes fast. We're painters Surrey homeowners call when they want results that last.
@@ -49,7 +51,7 @@ export default function SurreyAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px] px-6 md:px-8">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Surrey Neighbourhoods We Serve
           </h2>
           <div className="space-y-6 text-lg font-normal leading-relaxed text-text-secondary">
@@ -74,7 +76,7 @@ export default function SurreyAreaPage() {
             <div>
               <p className="mb-2 font-semibold text-foreground">South Surrey & Guildford</p>
               <p>
-                These neighbourhoods host some of Surrey's most beautiful homes. We bring the same attention to detail that designers demand. Master finishes. Zero shortcuts.
+                These neighbourhoods host some of Surrey's most beautiful homes. We bring the same attention to detail on every project. Clean finishes. No shortcuts.
               </p>
             </div>
             <div>
@@ -89,37 +91,37 @@ export default function SurreyAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px] px-6 md:px-8">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
             Shape of Paint delivers three core services to Surrey homeowners. Our{" "}
             <Link
               href="/services/interior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               interior painting
             </Link>{" "}
             service covers walls, ceilings, trim, baseboards, and specialty finishes. If you're ready to transform your home's exterior, check out our{" "}
             <Link
               href="/services/exterior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               exterior painting in Vancouver
             </Link>{" "}
             service — the same expertise and techniques we bring to every Surrey project. And if your kitchen or bathroom cabinets need a refresh, our{" "}
             <Link
               href="/services/cabinets"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               cabinet painting services
             </Link>{" "}
-            can make them look brand new at a fraction of replacement cost. Every service includes a firm quote, daily updates, and a final walkthrough where we don't leave until you're happy.
+            can make them look brand new at a fraction of replacement cost. Every service includes a firm quote, daily updates, and a final walkthrough where we don't leave until every detail is right.
           </p>
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to transform your Surrey home?"
         description="Surrey homeowners deserve painters who understand their neighbourhoods. Get a free, no-pressure estimate for your interior, exterior, or cabinet project. We'll walk you through options, answer questions, and give you a firm price with no surprises."
         ctaText="Get Your Free Estimate"

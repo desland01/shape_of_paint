@@ -209,7 +209,7 @@ export default function BestTimeExteriorPaintingPage() {
         about the{" "}
         <Link
           href="/blog/stucco-vs-siding-painting-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           differences between painting stucco and siding in Vancouver
         </Link>
@@ -233,7 +233,7 @@ export default function BestTimeExteriorPaintingPage() {
         more about our{" "}
         <Link
           href="/services/exterior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver
         </Link>{" "}

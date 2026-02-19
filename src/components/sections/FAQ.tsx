@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { SlideUp } from "@/components/ui/motion";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 
@@ -30,18 +30,18 @@ export function FAQ({
     <section className="bg-background py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-[700px] px-6 md:px-8">
         <div className="mb-12 text-center">
-          <AnimateOnScroll>
+          <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.1}>
+          </SlideUp>
+          <SlideUp delay={0.1}>
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.15}>
-            <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">{heading}</h2>
-          </AnimateOnScroll>
+          </SlideUp>
+          <SlideUp delay={0.15}>
+            <h2 className="text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">{heading}</h2>
+          </SlideUp>
         </div>
 
-        <AnimateOnScroll delay={0.2}>
+        <SlideUp delay={0.2}>
           <Accordion type="single" collapsible>
             {items.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
@@ -54,7 +54,7 @@ export function FAQ({
               </AccordionItem>
             ))}
           </Accordion>
-        </AnimateOnScroll>
+        </SlideUp>
       </div>
     </section>
   );

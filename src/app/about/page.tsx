@@ -48,28 +48,30 @@ export default function AboutPage() {
     <>
       <PageHero
         heading="Our Story"
-        description="Licensed, insured, and obsessed with the details that most painters skip."
+        description="We show up on time. We protect your home. We do work you can see from across the room."
+        image="/images/about-team.webp"
+        imageAlt="The Shape of Paint team"
       />
 
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-[800px] px-6 md:px-8">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             You shouldn't have to babysit your painters
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Most homeowners don't hire a painter because they want a painter. They hire one because they want the result — without the headaches. That means no paint drips on your hardwood. No mysterious charges on the final bill. And no scrambling to figure out if someone is actually showing up tomorrow. Our team is built around one idea: you should enjoy the transformation without worrying about the process.
+            You don't want a painter. You want the result. Floors protected, not spattered. A final bill that matches the quote. A crew that shows up when they said they would. That's what we built this company around.
           </p>
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Your home. Your vision. Our expertise.
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            A finish you can feel, not just see
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Every wall, cabinet, and trim piece in your home tells a story about how you live. We don't push cookie-cutter solutions. We listen first, then offer expert colour advice and finishing options tailored to your style, your light, and your budget. The goal isn't just a fresh coat — it's a home that feels like yours.
+            Every wall, cabinet, and trim piece in your home says something. We don't do one-size-fits-all. We listen first. Then we pick colours and sheens that work with your light, your materials, and how you use each room. Matte walls, crisp satin trim — everything works together on purpose.
           </p>
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Schedules, updates, and zero surprises
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Clear pricing. No surprises.
           </h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Before we touch a brush, you'll know exactly when we start, how long it takes, and what it costs. Firm quotes — the price doesn't change. Daily updates so you're never guessing. And a final walkthrough where we don't leave until you're happy. That's how we've earned repeat clients and designer referrals across Vancouver.
+            Before we touch a brush, you'll know when we start, how long it takes, and what it costs. Firm quotes — the price doesn't change. Daily updates so you're never guessing. A final walkthrough where we check every edge and every detail together. That's how we've earned repeat clients across Vancouver.
           </p>
         </div>
       </section>
@@ -77,7 +79,7 @@ export default function AboutPage() {
       <FeatureSection
         eyebrow="Meet the Founder"
         heading="Gabe Penner — Master Painter & Finishing Specialist"
-        description="Gabe started Shape of Paint with a simple belief: homeowners deserve craftsmanship, not shortcuts. After years perfecting coatings, faux finishes, and spray application, he built a company around meticulous prep, transparent communication, and results that speak for themselves. Today, designers and homeowners across Vancouver trust Gabe and his crew with their most detailed projects."
+        description="Gabe started Shape of Paint with one belief: good painting starts long before the first coat. After years perfecting coatings, faux finishes, and spray work, he built a company around thorough prep, clear communication, and finishes that hold up to close inspection. Today, designers and homeowners across Vancouver trust Gabe and his crew with their most detailed projects."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/about-founder.webp"
@@ -86,8 +88,8 @@ export default function AboutPage() {
 
       <section className="bg-warm py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-6 text-center md:px-8">
-          <h2 className="mb-12 text-3xl font-semibold md:text-4xl lg:text-5xl">
-            See what we can do for your home
+          <h2 className="mb-12 text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">
+            Recent work across Vancouver
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {portfolioCategories.map((cat) => (

@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
+import { SlideUp, ScaleIn } from "@/components/ui/motion";
 
 declare global {
   interface Window {
@@ -100,16 +100,16 @@ export function VideoTestimonial({
   return (
     <section className="bg-warm py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-[1200px] px-6 text-center md:px-8">
-        <AnimateOnScroll>
+        <SlideUp>
           <DecorativeIcon variant="leaf" className="mb-6" />
-        </AnimateOnScroll>
-        <AnimateOnScroll delay={0.1}>
+        </SlideUp>
+        <SlideUp delay={0.1}>
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
-        </AnimateOnScroll>
-        <AnimateOnScroll delay={0.2}>
-          <h2 className="mb-12 text-3xl font-semibold md:text-4xl lg:text-5xl">{heading}</h2>
-        </AnimateOnScroll>
-        <AnimateOnScroll delay={0.3}>
+        </SlideUp>
+        <SlideUp delay={0.2}>
+          <h2 className="mb-12 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
+        </SlideUp>
+        <ScaleIn delay={0.3}>
           <div className="relative mx-auto aspect-video max-w-[800px] overflow-hidden rounded-lg bg-warm-light">
             {videoId ? (
               <>
@@ -122,7 +122,7 @@ export function VideoTestimonial({
                   <button
                     onClick={toggleMute}
                     aria-label={muted ? "Turn sound on" : "Turn sound off"}
-                    className="absolute bottom-4 right-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+                    className="absolute bottom-4 right-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-black/70"
                   >
                     {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
                   </button>
@@ -134,7 +134,7 @@ export function VideoTestimonial({
               </div>
             )}
           </div>
-        </AnimateOnScroll>
+        </ScaleIn>
       </div>
     </section>
   );

@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
-import { Button } from "@/components/ui/button";
+import { SlideUp } from "@/components/ui/motion";
 
 interface CTABannerProps {
   headline: string;
@@ -12,34 +11,23 @@ interface CTABannerProps {
 
 export function CTABanner({ headline, ctaText, ctaHref }: CTABannerProps) {
   return (
-    <section className="bg-warm py-16 md:py-20">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8 border-t border-border-subtle">
-        <AnimateOnScroll>
-          <div className="text-center md:text-left md:flex md:items-center md:justify-between pt-16 md:pt-20">
-            <div>
-              <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
-                {headline}
-              </h2>
-              <p className="text-base text-text-secondary mt-2">
-                Licensed, insured, and backed by 200+ five-star reviews.
-              </p>
-            </div>
-            <div className="mt-8 md:mt-0 md:ml-8 flex flex-col items-center md:items-end shrink-0">
-              <Button
-                asChild
-                className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] min-h-[48px]"
+    <section className="bg-background py-16 md:py-24 lg:py-32">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+        <SlideUp>
+          <div className="text-center">
+            <h2 className="text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">
+              {headline}
+            </h2>
+            <div className="mt-10">
+              <Link
+                href={ctaHref}
+                className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border-subtle bg-transparent px-10 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
               >
-                <Link href={ctaHref}>{ctaText}</Link>
-              </Button>
-              <a
-                href="tel:6043537378"
-                className="text-sm text-text-secondary hover:text-foreground transition-colors mt-2"
-              >
-                Or call 604-353-7378
-              </a>
+                {ctaText}
+              </Link>
             </div>
           </div>
-        </AnimateOnScroll>
+        </SlideUp>
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           <p>Last updated: February 2026</p>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               Information We Collect
             </h2>
             <p>
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               How We Use Your Information
             </h2>
             <p>
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               Cookies and Analytics
             </h2>
             <p>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               Data Security
             </h2>
             <p>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               Your Rights
             </h2>
             <p>
@@ -73,14 +73,14 @@ export default function PrivacyPage() {
               personal information at any time by contacting us at{" "}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 {siteConfig.email}
               </a>{" "}
               or calling{" "}
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 {siteConfig.phone}
               </a>
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-2xl font-semibold text-foreground md:text-3xl">
+            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
               Changes to This Policy
             </h2>
             <p>

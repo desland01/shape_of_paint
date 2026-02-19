@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -18,18 +17,20 @@ export default function PortCoquitlamAreaPage() {
       <PageHero
         heading="House Painters in Port Coquitlam, BC"
         description="Expert interior and exterior painting for Port Coquitlam homes. We understand your community and deliver craftsmanship that matches your pride in PoCo."
+        image="/images/exterior-portfolio-7.webp"
+        imageAlt="House painting in Port Coquitlam"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Professional Painting Services in Port Coquitlam
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Community Roots, Craftsmanship That Endures
           </h2>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            Port Coquitlam — or PoCo as locals call it — has a heart. It's family-oriented, community-minded, and full of homes with character. Your neighborhood has roots running deep. You've got houses from the 1970s and 80s sitting proudly next to newer developments. The Traboulay PoCo Trail brings people together. Families gather for the May Day Parade. The Coquitlam River runs through your backyard. The WCE station connects you to the region. And through it all, your homes need painters who get it — painters who understand how Vancouver's damp climate challenges siding, how older trim responds to prep and patience, and how new homes need precision finishing that inspires.
+            Port Coquitlam — or PoCo as locals call it — has heart. It's family-focused, community-minded, and full of homes with character. Houses from the 1970s and 80s sit next to newer builds. The Traboulay PoCo Trail brings people together. Families gather for the May Day Parade. The Coquitlam River runs through your backyard. Your homes need painters who get it — painters who know how Vancouver's damp climate wears on siding, how older trim needs patient prep, and how new homes need clean, precise finishes.
           </p>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            We're house painters in Port Coquitlam who actually know Port Coquitlam. We've painted living rooms in Citadel Heights, refreshed exteriors in Mary Hill, tackled kitchen cabinets in Birchland Manor, and understood the unique charm of Downtown PoCo. We show up when we say we will. We prep like it's our own home. We communicate every step. And we leave your space looking better than you imagined — on time and on budget.
+            We're house painters in Port Coquitlam who actually know PoCo. We've painted living rooms in Citadel Heights, refreshed exteriors in Mary Hill, and tackled kitchen cabinets in Birchland Manor. We show up when we say we will. We prep like it's our own home. We talk to you every step. And we leave your space looking better than you expected — on time and on budget.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
             Ready to give your PoCo home the attention it deserves? Call us for a free estimate. No hidden charges, no surprises — just honest painters who care about your neighborhood as much as you do.
@@ -40,7 +41,7 @@ export default function PortCoquitlamAreaPage() {
       <FeatureSection
         eyebrow="Port Coquitlam Painters"
         heading="Painting That Honors Your Home"
-        description="Whether your Port Coquitlam home was built in the 70s or last year, it deserves expert care. We handle interior walls, ceilings, and cabinets with flawless finishes that transform how you live. For exteriors, we use premium coatings that stand up to heavy rain, moisture, and harsh BC sun — protecting your investment for years. From Citadel Heights to Shaughnessy to Downtown PoCo, we bring craftsmanship to every neighborhood."
+        description="Whether your Port Coquitlam home was built in the 70s or last year, it deserves expert care. We handle interior walls, ceilings, and cabinets with smooth finishes that change how your home feels. For exteriors, we use professional-grade coatings that stand up to heavy rain and BC sun — protecting your home for years. From Citadel Heights to Shaughnessy to Downtown PoCo, we bring quality to every neighborhood."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/exterior.webp"
@@ -49,12 +50,12 @@ export default function PortCoquitlamAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Port Coquitlam Neighborhoods We Serve
           </h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary">
             <p>
-              <span className="font-medium text-foreground">Citadel Heights:</span> Elevated views and proud homes. We've completed interior and exterior projects here that earned homeowners genuine pride.
+              <span className="font-medium text-foreground">Citadel Heights:</span> Great views and proud homes. We've finished interior and exterior projects here that homeowners love.
             </p>
             <p>
               <span className="font-medium text-foreground">Oxford Heights:</span> Established, tree-lined, and stable. We understand how to prep and protect the character homes that make this neighborhood special.
@@ -77,7 +78,7 @@ export default function PortCoquitlamAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <div className="space-y-4">
@@ -88,7 +89,7 @@ export default function PortCoquitlamAreaPage() {
               <li>
                 <Link
                   href="/services/interior"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Interior Painting
                 </Link>
@@ -97,16 +98,16 @@ export default function PortCoquitlamAreaPage() {
               <li>
                 <Link
                   href="/services/exterior"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Exterior Painting
                 </Link>
-                — Siding, stucco, trim, soffits, and decks with premium coatings built for BC weather.
+                — Siding, stucco, trim, soffits, and decks with professional-grade coatings built for BC weather.
               </li>
               <li>
                 <Link
                   href="/services/cabinets"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Cabinet Painting
                 </Link>
@@ -117,7 +118,7 @@ export default function PortCoquitlamAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to Transform Your Port Coquitlam Home?"
         description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise to PoCo homeowners."
         ctaText="Get Your Free Estimate"

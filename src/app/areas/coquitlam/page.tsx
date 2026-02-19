@@ -2,19 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Painters Coquitlam BC | Interior & Exterior | Shape of Paint",
+  title: "Painters Coquitlam BC | Shape of Paint",
   description:
     "Professional painters in Coquitlam, BC. Interior & exterior painting for Burke Mountain, Westwood Plateau & Maillardville. Free estimate.",
   alternates: {
     canonical: `${siteConfig.url}/areas/coquitlam`,
   },
   openGraph: {
-    title: "Painters Coquitlam BC | Interior & Exterior | Shape of Paint",
+    title: "Painters Coquitlam BC | Shape of Paint",
     description:
       "Professional painters in Coquitlam, BC. Interior & exterior painting for Burke Mountain, Westwood Plateau & Maillardville. Free estimate.",
     url: `${siteConfig.url}/areas/coquitlam`,
@@ -28,19 +27,21 @@ export default function CoquitlamAreaPage() {
       <PageHero
         heading="House Painters in Coquitlam, BC"
         description="Trusted painters serving Burke Mountain, Westwood Plateau, Maillardville, and every neighbourhood in Coquitlam. Interior, exterior, and cabinet painting."
+        image="/images/exterior-portfolio-2.webp"
+        imageAlt="House painters in Coquitlam"
       />
 
       <SectionWrapper>
         <div className="max-w-3xl">
-          <h2 className="mb-6 text-3xl font-bold">
-            Interior & Exterior Painting Services in Coquitlam
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2]">
+            New Construction to Established Character Homes
           </h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             <p>
-              Coquitlam is one of the Lower Mainland's fastest-growing communities. Your home
-              deserves painters who understand the unique challenges of this diverse city. Whether
-              you live in a brand-new Burke Mountain build or an established home near Lafarge Lake,
-              our painters are ready to transform your space.
+              As painters in Coquitlam, we know this is one of the Lower Mainland's fastest-growing
+              communities. Your home deserves painters who understand the unique challenges of this
+              diverse city. Whether you live in a brand-new Burke Mountain build or an established
+              home near Lafarge Lake, our team is ready to transform your space.
             </p>
             <p>
               We handle interior painting that brings your vision to life. Think fresh walls, crisp
@@ -50,7 +51,7 @@ export default function CoquitlamAreaPage() {
             </p>
             <p>
               Our exterior painting protects your investment against Vancouver's rain and BC
-              weather. Siding, stucco, trim, soffits, decks — we use premium coatings that last
+              weather. Siding, stucco, trim, soffits, decks — we use professional-grade coatings that last
               for years. Your Coquitlam home stays beautiful and protected.
             </p>
             <p>
@@ -65,7 +66,7 @@ export default function CoquitlamAreaPage() {
       <FeatureSection
         eyebrow="Coquitlam Painters"
         heading="Local Expertise for Your Neighbourhood"
-        description="We know Coquitlam's unique mix of new builds and established homes. We handle everything from state-of-the-art finishes in Burke Mountain new construction to carefully restoring heritage details in Maillardville. Whether your home sits on a quiet street near Austin Heights or overlooks the Evergreen Extension SkyTrain corridor, we bring the same level of precision and care to every project. We understand what matters to Coquitlam homeowners: quality craftsmanship, reliable timelines, and painters you can trust in your home."
+        description="We know Coquitlam's mix of new builds and older homes. We handle fresh finishes in Burke Mountain new construction and careful restoration in Maillardville. Whether your home sits near Austin Heights or overlooks the Evergreen SkyTrain corridor, we bring the same care to every project. Quality work, reliable timelines, and painters you can trust in your home."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/interior.webp"
@@ -75,7 +76,7 @@ export default function CoquitlamAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="max-w-3xl">
-          <h2 className="mb-8 text-3xl font-bold">Coquitlam Neighbourhoods We Serve</h2>
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2]">Coquitlam Neighbourhoods We Serve</h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             <p className="mb-4">
               Shape of Paint serves all of Coquitlam. We've painted homes in every neighbourhood:
@@ -99,26 +100,26 @@ export default function CoquitlamAreaPage() {
 
       <SectionWrapper>
         <div className="max-w-3xl">
-          <h2 className="mb-6 text-3xl font-bold">Explore Our Painting Services</h2>
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2]">Explore Our Painting Services</h2>
           <p className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             Shape of Paint specializes in three core services for Coquitlam homes:{" "}
             <Link
               href="/services/interior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               interior painting
             </Link>
             {" that transforms every room,"}
             <Link
               href="/services/exterior"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               {" exterior painting"}
             </Link>
             {" that protects your investment, and"}
             <Link
               href="/services/cabinets"
-              className="font-semibold text-foreground transition-opacity hover:opacity-70"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
             >
               {" cabinet painting"}
             </Link>
@@ -128,7 +129,7 @@ export default function CoquitlamAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to transform your Coquitlam home?"
         description="Get a free, no-obligation estimate from Shape of Paint. We'll visit your home, listen to your vision, and show you exactly what's possible."
         ctaText="Get Your Free Estimate"

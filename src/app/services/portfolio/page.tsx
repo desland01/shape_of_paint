@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+import { FeatureSection } from "@/components/sections/FeatureSection";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { siteConfig } from "@/config/site";
 
@@ -82,7 +82,7 @@ export default function PortfolioPage() {
         images={cabinetImages}
       />
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to transform your space?"
         description="Whether it's a single room or a complete exterior, we'd love to show you what's possible. Get your free estimate and join the portfolio."
         ctaText="Get Your Free Estimate"

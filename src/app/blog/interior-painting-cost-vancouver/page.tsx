@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Interior Painting Cost in Vancouver (2026 Guide) | Shape of Paint",
+  title: "Interior Painting Cost Vancouver 2026 | Shape of Paint",
   description:
     "Interior painting cost per square foot in Vancouver ranges from $3-$6 for walls and $4-$8 with ceilings and trim. Get a full 2026 price breakdown for your home.",
 };
@@ -59,7 +59,7 @@ export default function InteriorPaintingCostPage() {
         A whole-home project is more efficient than a single room. The crew already has
         equipment set up, drop cloths down, and materials on-site. Adding a second bedroom to
         the scope costs less per room than painting it as a standalone project. Whole-home
-        projects also produce a more cohesive result because the same crew controls colour
+        projects also produce a more consistent result because the same crew controls colour
         transitions, sheen consistency, and finish quality from room to room.
       </p>
 
@@ -78,9 +78,10 @@ export default function InteriorPaintingCostPage() {
         This is where most surprises happen. Walls with nail pops, drywall patches, cracks,
         or peeling paint need repair before a single drop of colour goes on. Minor patching
         is usually included in a professional quote. But if your walls need skim coating or
-        extensive drywall repair, that adds $1 to $3 per square foot to the project. Proper
-        prep is non-negotiable if you want a finish that looks clean under natural light and
-        lasts a decade.
+        extensive drywall repair, that adds $1 to $3 per square foot to the project. At
+        Shape of Paint, we sand every surface to 150 grit, fill nail holes with lightweight
+        spackle, and prime with Zinsser 1-2-3 before any colour goes on. That prep work is
+        what separates a 3-year paint job from a 10-year one.
       </p>
 
       <h3>Paint Quality</h3>
@@ -94,10 +95,11 @@ export default function InteriorPaintingCostPage() {
       </p>
 
       <p>
-        For most homeowners investing in professional interior work, premium paint is the
-        logical choice. You are already paying for skilled labour and thorough prep. Putting a
-        top-tier product on the wall is the difference between a result that looks professional
-        and one that looks exceptional.
+        We use Benjamin Moore Regal Select on 90% of our interior projects. It self-levels
+        to a smooth finish, covers in two coats, and holds its colour for 8 to 12 years. You
+        are already paying for skilled labour and thorough prep. Putting a top-tier product
+        on the wall is the difference between a result that looks professional and one that
+        looks exceptional.
       </p>
 
       <h3>Trim, Doors, and Baseboards</h3>
@@ -138,8 +140,8 @@ export default function InteriorPaintingCostPage() {
       </p>
 
       <ul>
-        <li>Surface preparation: patching small holes, sanding, cleaning, taping</li>
-        <li>Primer where needed (new drywall, dark-to-light colour changes, stains)</li>
+        <li>Surface preparation: patching with DAP DryDex spackle, sanding to 150 grit, cleaning walls with TSP solution, masking edges with FrogTape</li>
+        <li>Primer where needed: Zinsser 1-2-3 for new drywall, BIN shellac primer for water stains, tinted primer for dark-to-light colour changes</li>
         <li>Two coats of paint on all specified surfaces</li>
         <li>Protection of floors, furniture, and fixtures with drop cloths</li>
         <li>Cleanup and removal of all materials when the job is done</li>
@@ -196,7 +198,7 @@ export default function InteriorPaintingCostPage() {
         are not sure where to start, read our guide on{" "}
         <Link
           href="/blog/interior-paint-colours-vancouver"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           how to choose interior paint colours for Vancouver homes
         </Link>
@@ -209,14 +211,15 @@ export default function InteriorPaintingCostPage() {
         Every home is different. Square footage gives you a starting point, but the real
         price depends on your specific walls, ceilings, and trim. The most reliable way to
         get an accurate number is to have a painter walk through your space and give you a
-        written estimate with materials and scope spelled out.
+        written estimate with materials and scope spelled out. We take on 4 to 5 interior
+        projects per month so we can give each home the time it deserves.
       </p>
 
       <p>
         Ready to see what quality interior work looks like for your home?{" "}
         <Link
           href="/services/interior"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Learn about our interior painting in Vancouver
         </Link>{" "}

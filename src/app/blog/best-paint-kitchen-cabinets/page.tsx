@@ -186,7 +186,7 @@ export default function BestPaintKitchenCabinetsPage() {
         If you are comparing the full cost of painting vs. full replacement, our{" "}
         <Link
           href="/blog/cabinet-painting-vs-replacing"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting vs. replacing guide
         </Link>{" "}
@@ -206,7 +206,7 @@ export default function BestPaintKitchenCabinetsPage() {
         Want to see these products in action on real Vancouver kitchens? Check out our{" "}
         <Link
           href="/services/cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver
         </Link>{" "}

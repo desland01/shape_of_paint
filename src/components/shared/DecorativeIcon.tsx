@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { PaintBucket } from "lucide-react";
 
 interface DecorativeIconProps {
   variant?: "leaf" | "feather";
@@ -10,17 +9,17 @@ interface DecorativeIconProps {
 export function DecorativeIcon({
   variant = "leaf",
   className,
-  size = 20,
+  size = 100,
 }: DecorativeIconProps) {
   return (
     <div className={cn("flex items-center justify-center", className)}>
-      <PaintBucket
-        size={size}
-        strokeWidth={1.5}
+      <img
+        src="/images/logo-icon.png"
+        width={size}
+        height={size}
+        alt=""
         aria-hidden="true"
-        className={cn(
-          variant === "leaf" ? "text-accent-gold" : "text-accent-sage"
-        )}
+        className={cn(variant === "feather" && "opacity-60")}
       />
     </div>
   );

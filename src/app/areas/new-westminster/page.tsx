@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -18,29 +17,31 @@ export default function NewWestminsterAreaPage() {
       <PageHero
         heading="House Painters in New Westminster, BC"
         description="Expert painters for heritage homes, modern condos, and everything in between across the Royal City"
+        image="/images/hero-1.webp"
+        imageAlt="Painting services in New Westminster"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Your New Westminster Home Deserves the Right Painters
           </h2>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            New Westminster is one of BC's most historic and vibrant communities. Your home — whether it's a Victorian heritage gem in Queens Park or a modern condo overlooking the Fraser River — deserves painters who understand the character of the Royal City and the specific challenges of our coastal climate. Moisture, temperature swings, and intense seasonal weather can damage paint fast. That's why painters in New Westminster need to know which coatings last, which prep work actually prevents peeling, and how to protect your investment year after year.
+            New Westminster is one of BC's most historic communities. Your home — whether it's a Victorian gem in Queens Park or a modern condo overlooking the Fraser River — deserves painters who know the Royal City. Moisture, temperature swings, and tough seasonal weather can damage paint fast. That's why painters in New Westminster need to know which coatings last, which prep stops peeling, and how to protect your home year after year.
           </p>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            Shape of Paint has been serving New Westminster families and homeowners with the same approach: listen first, prepare thoroughly, and finish with precision. We handle interior repaints for Uptown apartments, exterior coatings for waterfront properties in Queensborough, and cabinet refinishing for homes across Downtown and Sapperton. Every project gets our full attention — no shortcuts, no surprises, and a firm quote before we touch anything.
+            Shape of Paint serves New Westminster families with a simple approach: listen first, prep well, finish right. We handle interior repaints for Uptown apartments, exterior coatings for Queensborough waterfront properties, and cabinet refinishing across Downtown and Sapperton. Every project gets our full attention — no surprises and a firm quote before we start.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            When you hire Shape of Paint to paint your home in New Westminster, you get painters who show up on time, communicate daily, and leave your home looking better than you imagined. That's not a promise — it's how we've earned the trust of hundreds of homeowners across the Royal City and the Lower Mainland.
+            When you hire Shape of Paint in New Westminster, you get painters who show up on time and communicate daily. We leave your home looking better than you expected. That's how we've earned the trust of hundreds of homeowners across the Royal City.
           </p>
         </div>
       </SectionWrapper>
 
       <FeatureSection
         eyebrow="New Westminster Painters"
-        heading="Interior & Exterior Painting for Every Home Style"
-        description="Your New Westminster home has its own personality. Maybe it's a period character home with crown moulding and hardwood that needs careful, detailed work. Maybe it's a modern Queensborough condo with clean lines and bright spaces. Or maybe it's a Sapperton family home that needs a complete refresh. We adapt our technique to your space — meticulous prep, premium coatings, and finishes that last. From walls and ceilings to trim, baseboards, cabinets, and exterior siding, we handle every detail. You pick the colours. We handle the rest."
+        heading="Heritage Details, Modern Precision"
+        description="Your New Westminster home has its own personality. Maybe it's a character home with crown moulding that needs careful work. Maybe it's a modern Queensborough condo with clean lines. Or a Sapperton family home that needs a full refresh. We match our approach to your space — thorough prep, professional-grade coatings, and finishes that last. Walls, ceilings, trim, cabinets, exterior siding — we handle it all. You pick the colours. We handle the rest."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/interior.webp"
@@ -49,7 +50,7 @@ export default function NewWestminsterAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             New Westminster Neighbourhoods We Serve
           </h2>
           <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
@@ -86,7 +87,7 @@ export default function NewWestminsterAreaPage() {
             <li className="flex items-start">
               <span className="mr-3 text-gold">•</span>
               <span>
-                <strong>Brow of the Hill:</strong> Elevated homes with mature landscapes and established communities
+                <strong>Brow of the Hill:</strong> Hillside homes with mature landscapes and established communities
               </span>
             </li>
             <li className="flex items-start">
@@ -101,7 +102,7 @@ export default function NewWestminsterAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary">
@@ -112,7 +113,7 @@ export default function NewWestminsterAreaPage() {
               <li>
                 <Link
                   href="/services/interior"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Interior Painting
                 </Link>
@@ -121,7 +122,7 @@ export default function NewWestminsterAreaPage() {
               <li>
                 <Link
                   href="/services/exterior"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Exterior Painting
                 </Link>
@@ -130,7 +131,7 @@ export default function NewWestminsterAreaPage() {
               <li>
                 <Link
                   href="/services/cabinets"
-                  className="font-semibold text-foreground transition-opacity hover:opacity-70"
+                  className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   Cabinet Painting
                 </Link>
@@ -141,7 +142,7 @@ export default function NewWestminsterAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to Transform Your New Westminster Home?"
         description="From Queens Park heritage homes to Queensborough waterfront properties, we're ready to paint your home with the care and precision it deserves. Get your free estimate today — no pressure, no sales pitch, just honest advice and professional service."
         ctaText="Get Your Free Estimate"

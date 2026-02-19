@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -25,28 +24,30 @@ export default function EstimatePage() {
     <>
       <PageHero
         heading="Get Your Free Painting Estimate"
-        description="Firm quotes only — the price we give you is the price you pay. No hidden fees. No surprises."
+        description="We give firm quotes. The price we give is the price you pay. No surprises, no hidden fees."
+        image="/images/hero-1.webp"
+        imageAlt="Request a free painting estimate"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[500px] text-center">
           <p className="mb-8 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-            Whether your project is interior, exterior, cabinets, or custom — tell us about it and we'll get back to you within 2 business days. Most estimates are done in a single visit.
+            Interior, exterior, or cabinets — tell us about your project and we'll get back to you within 2 business days. Most estimates are done in one visit.
           </p>
           {/* <!-- BOOKING_EMBED --> */}
-          <Button
-            asChild
-            className="bg-cta text-cta-foreground hover:bg-cta-hover rounded-none px-8 py-3 text-xs font-medium uppercase tracking-[0.2em]"
+          <Link
+            href="/contact"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-xs font-medium uppercase tracking-[0.2em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
           >
-            <Link href="/contact">Request a Quote</Link>
-          </Button>
+            Get Your Free Estimate
+          </Link>
         </div>
       </SectionWrapper>
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[700px]">
           <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-            Shape of Paint is licensed and insured, proudly serving homeowners across Vancouver and the Lower Mainland. We specialize in interior painting, exterior painting, and spray-finished cabinet refinishing. 30% deposit when the quote is accepted. Balance due only when you're 100% happy. Cash, credit, or e-transfer.
+            Shape of Paint is licensed and insured, serving homeowners across Vancouver and the Lower Mainland. We specialize in interior painting, exterior painting, and spray-finished cabinet refinishing. A 30% deposit is collected when the quote is accepted, with the balance due upon final walkthrough. We accept cash, credit, or e-transfer.
           </p>
         </div>
       </SectionWrapper>

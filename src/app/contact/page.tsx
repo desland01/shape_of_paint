@@ -25,14 +25,16 @@ export default function ContactPage() {
     <>
       <PageHero
         heading="Get in Touch"
+        image="/images/contact-cta.webp"
+        imageAlt="Get in touch with Shape of Paint"
       />
 
       <ContactCards />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[600px]">
-          <h2 className="mb-8 text-center text-3xl font-semibold md:text-4xl">
-            Tell us about your project
+          <h2 className="mb-8 text-center text-3xl font-normal leading-[1.2] md:text-4xl">
+            Get Your Free Estimate
           </h2>
           <ContactForm />
         </div>

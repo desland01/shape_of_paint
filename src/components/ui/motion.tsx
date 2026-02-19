@@ -7,8 +7,9 @@ import React from "react";
 // Duration and easing constants from _reference/animations.md
 const DURATION_DEFAULT = 0.5; // 400-600ms
 const DURATION_IMAGE = 0.7; // 600-800ms
-const EASE_DEFAULT: [number, number, number, number] = [0.25, 0.1, 0.25, 1]; // "ease" equivalent
-const EASE_OUT: [number, number, number, number] = [0, 0, 0.2, 1]; // "ease-out" equivalent
+// cubic-bezier(0.25, 0.46, 0.45, 0.94) — matched from whiteoakpainting.com
+const EASE_DEFAULT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+const EASE_OUT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 interface MotionProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
@@ -36,7 +37,7 @@ export function FadeIn({ children, className, delay = 0, duration = DURATION_DEF
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       className={className}
       {...props}
@@ -66,7 +67,7 @@ export function SlideUp({ children, className, delay = 0, duration = DURATION_DE
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       className={className}
       {...props}
@@ -96,7 +97,7 @@ export function ScaleIn({ children, className, delay = 0, duration = DURATION_IM
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       className={className}
       {...props}
@@ -128,7 +129,7 @@ export function StaggerContainer({ children, className, delay = 0, staggerChildr
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       className={className}
       {...props}

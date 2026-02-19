@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 
@@ -17,22 +16,24 @@ export default function PortMoodyAreaPage() {
       <PageHero
         heading="House Painters in Port Moody, BC"
         description="Expert painting services for Port Moody homeowners. Professional, licensed, and ready to bring your vision to life."
+        image="/images/exterior-portfolio-8.webp"
+        imageAlt="Painting contractors in Port Moody"
       />
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
-            Port Moody Interior & Exterior Painting Services
+          <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
+            The City of the Arts Deserves Artisan Finishes
           </h2>
           <div className="space-y-6 text-lg font-normal leading-relaxed text-text-secondary">
             <p>
-              House painters Port Moody: Port Moody is known as the City of the Arts. Your home deserves craftsmanship that matches. Located between the Burrard Inlet and Coast Mountains, Port Moody homes face unique challenges — moisture from the inlet, temperature shifts, and the need for finishes that look polished while standing up to coastal weather. That's where we come in.
+              House painters Port Moody: Port Moody is known as the City of the Arts. Your home deserves quality work to match. Sitting between the Burrard Inlet and Coast Mountains, Port Moody homes face real challenges — moisture from the inlet, temperature shifts, and the need for finishes that look great and hold up to coastal weather. That's where we come in.
             </p>
             <p>
-              Shape of Paint brings professional painting expertise to every corner of Port Moody — from Heritage Mountain's view properties to the compact, vibrant Moody Centre neighbourhood. Whether you're painting a bedroom, refreshing your exterior before the season changes, or transforming cabinets, we handle it with precision and care. We listen to your goals, offer expert colour advice, and deliver results that enhance your home's character.
+              Shape of Paint brings professional painting to every corner of Port Moody — from Heritage Mountain's view properties to Moody Centre's walkable core. Painting a bedroom? Refreshing your exterior before the season changes? Transforming cabinets? We handle it with precision and care. We listen, offer colour advice, and deliver results that bring out your home's best.
             </p>
             <p>
-              Port Moody is a community that values quality and creativity. Your paint job should reflect that. From the arts community to families along Rocky Point Park, Port Moody homeowners trust us to get it right the first time. No shortcuts. Just beautiful, lasting results.
+              Port Moody is a community that values quality and creativity. Your paint job should reflect that. From the arts community to families along Rocky Point Park, Port Moody homeowners trust us to get it right the first time. Beautiful, lasting results.
             </p>
           </div>
         </div>
@@ -41,7 +42,7 @@ export default function PortMoodyAreaPage() {
       <FeatureSection
         eyebrow="Port Moody Painters"
         heading="Interior & Exterior Painting Built for Coastal Living"
-        description="We paint walls, ceilings, trim, siding, decks, and cabinets — using premium coatings formulated for BC's moisture and weather. From single-room refreshes to full-exterior renovations, our team brings attention to detail on every project. You choose the colours and style. We handle everything else — prep, application, cleanup, and your satisfaction."
+        description="We paint walls, ceilings, trim, siding, decks, and cabinets — using professional-grade coatings built for BC's moisture and weather. From a single room to a full exterior, our team brings care to every project. You choose the colours and style. We handle everything else — prep, painting, cleanup, and your satisfaction."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/interior.webp"
@@ -50,7 +51,7 @@ export default function PortMoodyAreaPage() {
 
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Port Moody Neighbourhoods We Serve
           </h2>
           <div className="space-y-4 text-lg font-normal text-text-secondary">
@@ -91,7 +92,7 @@ export default function PortMoodyAreaPage() {
 
       <SectionWrapper>
         <div className="mx-auto max-w-[800px]">
-          <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>
           <div className="space-y-4">
@@ -101,21 +102,21 @@ export default function PortMoodyAreaPage() {
             <div className="space-y-3 pt-2">
               <Link
                 href="/services/interior"
-                className="text-sm font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-sm font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Interior Painting
               </Link>
               <br />
               <Link
                 href="/services/exterior"
-                className="text-sm font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-sm font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Exterior Painting
               </Link>
               <br />
               <Link
                 href="/services/cabinets"
-                className="text-sm font-semibold text-foreground transition-opacity hover:opacity-70"
+                className="text-sm font-medium text-foreground hover:text-link-hover transition-colors duration-300"
               >
                 Cabinet Painting
               </Link>
@@ -124,9 +125,9 @@ export default function PortMoodyAreaPage() {
         </div>
       </SectionWrapper>
 
-      <ContactCTA
+      <FeatureSection
         heading="Ready to Paint Your Port Moody Home?"
-        description="Get a free, no-obligation estimate for your painting project. We'll visit your home, listen to your vision, offer expert colour advice, and provide a firm quote with no hidden fees. From consultation to final walkthrough, we're committed to your satisfaction."
+        description="Get a free estimate for your painting project. We'll visit your home, listen to your ideas, offer colour advice, and give you a firm quote with no hidden fees. From first call to final walkthrough, your satisfaction is our goal."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/exterior.webp"

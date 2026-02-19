@@ -105,11 +105,13 @@ export default function CabinetPaintingPage() {
 
       <PageHero
         heading="Cabinet Painting in Vancouver"
-        description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that deliver a smoother, more refined result than factory replacements."
+        description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that deliver a smoother, more durable result than factory replacements."
+        image="/images/cabinets.webp"
+        imageAlt="Custom cabinet painting and refinishing"
       />
 
       <SectionWrapper>
-        <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
           Cabinet Painting Services
         </h2>
 
@@ -123,7 +125,7 @@ export default function CabinetPaintingPage() {
           Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
           factory-quality coating in any colour you choose. Swap out your
           hardware while we&apos;re at it and your kitchen looks like a
-          $30,000 remodel — with a finish quality that often surpasses factory.
+          $30,000 remodel — at a fraction of the cost.
         </p>
 
         <h3 className="mb-3 mt-6 text-xl font-medium">
@@ -133,9 +135,9 @@ export default function CabinetPaintingPage() {
           Bathroom cabinets and vanities take a beating from humidity, moisture,
           and daily use. Our refinishing process starts with moisture-resistant
           primers specifically formulated for high-humidity environments. We
-          spray multiple coats of premium enamel that won&apos;t peel, bubble,
+          spray multiple coats of professional-grade enamel that won&apos;t peel, bubble,
           or yellow — even in Vancouver&apos;s dampest bathrooms. New colour,
-          same cabinets, completely different room.
+          same cabinets — and a room that feels entirely different.
         </p>
 
         <h3 className="mb-3 mt-6 text-xl font-medium">
@@ -152,7 +154,7 @@ export default function CabinetPaintingPage() {
       </SectionWrapper>
 
       <SectionWrapper variant="warm">
-        <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
           Our Spray Finish Process
         </h2>
         <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -170,7 +172,7 @@ export default function CabinetPaintingPage() {
             that chips in 6 months.
           </li>
           <li>
-            3. Spray Application & Reassembly — Multiple coats of premium hybrid
+            3. Spray Application & Reassembly — Multiple coats of professional-grade hybrid
             alkyd enamel applied with professional HVLP equipment. Each coat is
             sanded between applications for a glass-smooth factory finish. Once
             fully cured, we reinstall everything — doors, drawers, hardware —
@@ -182,7 +184,7 @@ export default function CabinetPaintingPage() {
       <FeatureSection
         eyebrow="Artisan Finish"
         heading="Cabinet Painting vs. Replacing — Why the Finish Matters More"
-        description="Your cabinets aren't old. They just look old. A full kitchen cabinet replacement runs $20,000–$35,000 in Vancouver and gives you mass-produced factory doors. Our HVLP spray finish delivers a smoother, more refined result for $4,500–$7,500 — with unlimited custom colours and a glass-smooth surface that factory simply cannot replicate. No demolition. No plumbing disconnections. No countertop removal. Just a master-quality finish that transforms your kitchen in 5–7 business days. Our spray finish is why designers spec us by name."
+        description="Your cabinets aren't old. They just look old. A full kitchen replacement runs $20,000-$35,000 in Vancouver. You get mass-produced factory doors. Our HVLP spray finish costs $4,500-$7,500 and looks smoother than factory. Any colour you want. Glass-smooth surface. No demolition. No plumbing work. No countertop removal. Your kitchen transforms in 5-7 business days. That's why designers spec us by name."
         ctaText="Get Your Free Estimate"
         ctaHref="/contact/estimate"
         image="/images/cabinets.webp"
@@ -190,7 +192,7 @@ export default function CabinetPaintingPage() {
       />
 
       <SectionWrapper>
-        <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
+        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
           Cabinet Painting Cost in Vancouver
         </h2>
         <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -204,9 +206,9 @@ export default function CabinetPaintingPage() {
           <li>Island add-on: $800–$1,500</li>
         </ul>
         <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          We&apos;re not the cheapest option. If price is your only factor,
-          we&apos;re probably not the right fit. But if you want a finish that
-          looks factory-sprayed and lasts a decade — that&apos;s what we do.
+          We&apos;re selective about the projects we take on. If the priority
+          is the lowest price, we may not be the right fit. But if you want a
+          finish that holds for a decade — that&apos;s what we do.
         </p>
       </SectionWrapper>
 
@@ -219,14 +221,14 @@ export default function CabinetPaintingPage() {
       <FAQ heading="Frequently Asked Questions" items={cabinetFaqItems} />
 
       <SectionWrapper>
-        <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Explore Our Other Services</h2>
+        <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
         <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
           While we&apos;re transforming your cabinets, consider refreshing the rest of your home. Our{" "}
-          <Link href="/services/interior" className="font-semibold text-foreground transition-opacity hover:opacity-70">
+          <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
             interior painting services
           </Link>{" "}
           cover walls, ceilings, trim, and specialty finishes with the same attention to detail. We also handle{" "}
-          <Link href="/services/exterior" className="font-semibold text-foreground transition-opacity hover:opacity-70">
+          <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
             exterior painting for Vancouver homes
           </Link>{" "}
           — siding, stucco, and decks protected against BC weather.

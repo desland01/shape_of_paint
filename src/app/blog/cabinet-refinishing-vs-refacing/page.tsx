@@ -48,7 +48,7 @@ export default function CabinetRefinishingVsRefacingPage() {
       <p>
         The entire process takes 3 to 5 days for an average-sized kitchen. You keep your
         existing layout. You keep your existing doors. And because every coat is applied by
-        a master sprayer — not a factory line — you get a smoother, more refined finish
+        a master sprayer — not a factory line — you get a smoother, more even finish
         with unlimited colour options.
       </p>
 
@@ -106,7 +106,7 @@ export default function CabinetRefinishingVsRefacingPage() {
       <ul>
         <li>Superior finish quality — a master sprayer produces a smoother, more even coat than factory-applied finishes</li>
         <li>Unlimited colour selection — any Benjamin Moore, Sherwin-Williams, or custom-matched colour, in any sheen</li>
-        <li>Artisan craftsmanship — each door is prepped, primed, and sprayed by hand for a bespoke result</li>
+        <li>Hand-sprayed finish — each door is prepped, primed, and sprayed individually for a custom result</li>
         <li>Fastest turnaround — 3 to 5 days, no lead time for ordering parts</li>
         <li>Zero waste — nothing goes to the landfill</li>
         <li>Keeps your existing door style and layout</li>
@@ -178,7 +178,7 @@ export default function CabinetRefinishingVsRefacingPage() {
         finishing outperforms other methods, read our{" "}
         <Link
           href="/blog/spray-vs-brush-cabinet-painting"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           spray vs. brush cabinet painting
         </Link>{" "}
@@ -198,7 +198,7 @@ export default function CabinetRefinishingVsRefacingPage() {
         Ready to see what refinishing can do for your kitchen? Explore our{" "}
         <Link
           href="/services/cabinets"
-          className="font-semibold text-foreground transition-opacity hover:opacity-70"
+          className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver
         </Link>{" "}

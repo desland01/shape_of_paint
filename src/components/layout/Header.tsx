@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, PaintBucket } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,6 +19,15 @@ export function Header() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
   const isTransparent = pathname === "/" && !scrolled;
 
   return (
@@ -30,7 +39,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <PaintBucket className="h-5 w-5 text-accent-gold" strokeWidth={1.5} />
+          <img src="/images/logo-icon.png" className="h-[50px] w-auto" alt="" aria-hidden="true" />
           <span
             className={cn(
               "text-sm font-medium uppercase tracking-[0.2em] transition-colors duration-300",
@@ -47,7 +56,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:opacity-60",
+                "text-sm font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:text-link-hover",
                 isTransparent ? "text-white/90" : "text-foreground"
               )}
             >
@@ -59,10 +68,10 @@ export function Header() {
         <Link
           href="/contact/estimate"
           className={cn(
-            "hidden md:inline-flex items-center px-5 py-2 text-xs font-medium uppercase tracking-widest min-h-[48px] transition-colors",
+            "hidden md:inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-widest min-h-[48px] transition-colors",
             isTransparent
-              ? "border border-white text-white hover:bg-white/10"
-              : "bg-foreground text-background hover:bg-foreground/90"
+              ? "rounded-[9px] border border-white text-white hover:bg-white/10"
+              : "rounded-[9px] border border-cta bg-cta text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
           )}
         >
           Free Estimate
@@ -116,7 +125,7 @@ export function Header() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "block py-3 text-sm font-medium uppercase tracking-[0.15em] text-foreground transition-opacity hover:opacity-60",
+                      "block py-3 text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300",
                       "children" in item && "font-semibold"
                     )}
                   >
@@ -127,7 +136,7 @@ export function Header() {
                       key={child.href}
                       href={child.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-3 pl-4 text-sm font-normal tracking-[0.1em] text-text-secondary transition-opacity hover:opacity-60"
+                      className="block py-3 pl-4 text-sm font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
                     >
                       {child.label}
                     </Link>
