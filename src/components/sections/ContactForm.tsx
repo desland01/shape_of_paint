@@ -34,7 +34,7 @@ const PROJECT_TYPES = [
   { value: "interior", label: "Interior Painting", image: "/images/interior.webp" },
   { value: "exterior", label: "Exterior Painting", image: "/images/exterior.webp" },
   { value: "cabinets", label: "Cabinet Painting", image: "/images/cabinets.webp" },
-  { value: "other", label: "Something Else", image: null },
+  { value: "other", label: "Something Else", image: "/images/portfolio-2.webp" },
 ] as const;
 
 /* -------------------------------------------------------------------------- */
