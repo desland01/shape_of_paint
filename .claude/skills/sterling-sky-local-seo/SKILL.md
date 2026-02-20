@@ -205,4 +205,5 @@ Different strategies for each:
 See `references/near-me-checklist.md` for the complete ranking factors checklist.
 See `references/gbp-audit-checklist.md` for GBP optimization audit.
 
-$ARGUMENTS
+## Specific Focus (if provided)
+Apply your local SEO analysis to this user-specified context, location, or business: $ARGUMENTS

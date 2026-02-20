@@ -240,4 +240,5 @@ Cabinet painting has the most stable demand year-round. Prioritize the cabinets 
 | [copywriting-reference.md](copywriting-reference.md) | Writing any headline, CTA, description, or body copy |
 | [docs/keyword-map.md](../../../docs/keyword-map.md) | Full keyword data, competitor analysis, implementation phases |
 
-$ARGUMENTS
+## Specific Focus (if provided)
+Apply your analysis to this user-specified context, URL, keyword, or page: $ARGUMENTS
