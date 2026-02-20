@@ -24,7 +24,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
             <SlideUp key={service.title} delay={i * 0.15}>
               <div className="group flex flex-col md:block">
                 {/* Mobile: title + description first, then image */}
-                <h3 className="mb-3 text-2xl font-normal md:hidden">
+                <h3 className="mb-3 text-3xl font-normal md:hidden">
                   {service.title}
                 </h3>
                 <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:hidden">
@@ -42,7 +42,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                   </Link>
                 </ScrollZoom>
                 {/* Desktop: title + description + link below image */}
-                <h3 className="mb-3 hidden text-2xl font-normal md:block">
+                <h3 className="mb-3 hidden text-3xl font-normal md:block">
                   {service.title}
                 </h3>
                 <p className="mb-4 hidden text-lg font-normal leading-relaxed text-text-secondary md:block">

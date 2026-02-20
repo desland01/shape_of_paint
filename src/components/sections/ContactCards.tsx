@@ -39,7 +39,7 @@ export function ContactCards() {
                   className="mx-auto mb-4 h-8 w-8 text-accent-gold"
                   strokeWidth={1.5}
                 />
-                <h2 className="mb-2 text-xl font-normal">{card.title}</h2>
+                <h2 className="mb-2 text-2xl font-normal">{card.title}</h2>
                 {card.lines.map((line, j) =>
                   card.href ? (
                     <a

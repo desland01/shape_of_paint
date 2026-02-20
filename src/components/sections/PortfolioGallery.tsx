@@ -78,7 +78,7 @@ export function PortfolioGallery({
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
           </SlideUp>
           <SlideUp delay={0.15}>
-            <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">
+            <h2 className="mb-4 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">
               {heading}
             </h2>
           </SlideUp>

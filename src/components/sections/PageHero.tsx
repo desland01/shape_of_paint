@@ -53,7 +53,7 @@ export function PageHero({
         </SlideUp>
         <SlideUp immediate delay={0.1}>
           <h1
-            className={`mb-4 text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl${hasImage ? " text-white" : ""}`}
+            className={`mb-4 text-5xl font-normal leading-[1.15] md:text-6xl lg:text-7xl${hasImage ? " text-white" : ""}`}
           >
             {heading}
           </h1>
@@ -61,7 +61,7 @@ export function PageHero({
         {description && (
           <SlideUp immediate delay={0.2}>
             <p
-              className={`text-lg md:text-xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
+              className={`text-xl md:text-2xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
             >
               {description}
             </p>

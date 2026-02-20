@@ -220,6 +220,17 @@ export function CostCalculatorApp() {
       <div className="relative mx-auto grid max-w-[1200px] gap-8 px-6 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
         {/* Sidebar — order-2 on mobile so form appears first */}
         <aside className="order-2 space-y-8 lg:order-1 lg:sticky lg:top-28 lg:self-start">
+          {/* Dynamic text content — desktop only */}
+          <div className="hidden space-y-4 lg:block">
+            <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
+            <h1 className="max-w-[18ch] text-4xl font-normal leading-[1.04] md:text-5xl">
+              {STEP_CONTEXT[step].heading}
+            </h1>
+            <p className="max-w-[52ch] text-lg leading-relaxed text-text-secondary">
+              {STEP_CONTEXT[step].description}
+            </p>
+          </div>
+
           {/* Step image — desktop only */}
           <div className="hidden overflow-hidden rounded-2xl lg:block">
             <AnimatePresence mode="wait">
@@ -239,17 +250,6 @@ export function CostCalculatorApp() {
                 />
               </motion.div>
             </AnimatePresence>
-          </div>
-
-          {/* Dynamic text content */}
-          <div className="space-y-4">
-            <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
-            <h1 className="max-w-[18ch] text-4xl font-normal leading-[1.04] md:text-5xl">
-              {STEP_CONTEXT[step].heading}
-            </h1>
-            <p className="hidden max-w-[52ch] text-lg leading-relaxed text-text-secondary lg:block">
-              {STEP_CONTEXT[step].description}
-            </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -346,13 +346,15 @@ export function CostCalculatorApp() {
             </div>
           </div>
 
-          <div className="px-6 py-6 md:px-8 md:py-8">
-            {error && (
-              <div className="mb-5 rounded-2xl border border-accent-hover/40 bg-accent-hover/10 px-4 py-3 text-base text-foreground">
-                {error}
-              </div>
-            )}
+          {/* Step heading — mobile only */}
+          <div className="space-y-2 px-6 pt-6 md:px-8 lg:hidden">
+            <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
+            <h1 className="max-w-[18ch] text-3xl font-normal leading-[1.08] md:text-4xl">
+              {STEP_CONTEXT[step].heading}
+            </h1>
+          </div>
 
+          <div className="px-6 py-6 md:px-8 md:py-8">
             <AnimatePresence initial={false} mode="wait" custom={direction}>
               {/* ── Step 1: Measure ── */}
               {step === 1 && (
@@ -422,8 +424,18 @@ export function CostCalculatorApp() {
                         updateCurrentRoom({ name: event.target.value })
                       }
                       placeholder="Living Room, Bedroom, Office..."
-                      className="mt-4 min-h-12 w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-accent-gold"
+                      className={cn("mt-4 min-h-12 w-full rounded-xl border bg-background px-4 py-3 text-base text-foreground outline-none transition-colors", error ? "border-red-500 focus:border-red-500" : "border-border-subtle focus:border-accent-gold")}
                     />
+                    {error && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-2 text-sm font-medium text-red-600"
+                        role="alert"
+                      >
+                        {error}
+                      </motion.p>
+                    )}
                   </div>
 
                   {/* Dimensions — wrapped in card */}

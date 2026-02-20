@@ -71,7 +71,7 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
         </SlideUp>
 
         <SlideUp immediate delay={1 * STAGGER_DELAY}>
-          <h1 className="mx-auto max-w-3xl text-4xl font-normal leading-[1.15] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-[80px]">
+          <h1 className="mx-auto max-w-3xl text-5xl font-normal leading-[1.15] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-[80px]">
             {headline}
           </h1>
         </SlideUp>

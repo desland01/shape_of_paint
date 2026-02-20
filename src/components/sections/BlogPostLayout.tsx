@@ -73,7 +73,7 @@ export function BlogPostLayout({
 
         <SlideUp>
           <header className="mb-12">
-            <h1 className="mb-4 text-3xl font-normal leading-[1.15] md:text-4xl lg:text-5xl">
+            <h1 className="mb-4 text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl">
               {title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-normal text-text-secondary">
@@ -116,10 +116,10 @@ export function BlogPostLayout({
 
           <SlideUp delay={0.1}>
             <div className="rounded-sm bg-warm px-8 py-10 text-center md:px-12 md:py-14">
-              <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground md:text-3xl">
+              <h2 className="mb-3 text-3xl font-normal leading-[1.2] text-foreground md:text-4xl">
                 Request an estimate
               </h2>
-              <p className="mx-auto mb-6 max-w-md text-base font-normal text-text-secondary">
+              <p className="mx-auto mb-6 max-w-md text-lg font-normal text-text-secondary">
                 Want a free estimate? Tell us about your project and
                 we&apos;ll get back to you within 2 business days.
               </p>

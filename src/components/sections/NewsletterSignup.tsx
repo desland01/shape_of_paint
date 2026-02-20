@@ -20,10 +20,10 @@ export function NewsletterSignup() {
         {!submitted ? (
           <>
             <SlideUp>
-              <h4 className="mb-3 text-2xl font-normal italic">Newsletter Signup</h4>
+              <h4 className="mb-3 text-3xl font-normal italic">Newsletter Signup</h4>
             </SlideUp>
             <SlideUp delay={0.1}>
-              <p className="mb-6 text-sm font-normal leading-relaxed text-text-secondary">
+              <p className="mb-6 text-base font-normal leading-relaxed text-text-secondary">
                 Colour trends, prep advice, and before-and-after transformations — straight to your inbox. No spam. Unsubscribe anytime.
               </p>
             </SlideUp>
@@ -58,8 +58,8 @@ export function NewsletterSignup() {
           </>
         ) : (
           <SlideUp>
-            <h4 className="mb-2 text-2xl font-normal italic">Thank you!</h4>
-            <p className="text-base font-normal text-text-secondary">
+            <h4 className="mb-2 text-3xl font-normal italic">Thank you!</h4>
+            <p className="text-lg font-normal text-text-secondary">
               You have successfully joined our subscriber list.
             </p>
           </SlideUp>

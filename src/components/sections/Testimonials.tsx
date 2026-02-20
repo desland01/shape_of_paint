@@ -102,7 +102,7 @@ export function Testimonials({
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
         <SlideUp delay={0.1}>
-          <h2 className="mb-12 text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">{heading}</h2>
+          <h2 className="mb-12 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
         </SlideUp>
 
         {/* Arrow + Card row */}
@@ -136,10 +136,10 @@ export function Testimonials({
                   <WatercolorPeony />
                 </div>
 
-                <blockquote className="mb-6 text-lg italic leading-relaxed text-foreground md:text-xl lg:text-[22px] lg:leading-relaxed">
+                <blockquote className="mb-6 text-xl italic leading-relaxed text-foreground md:text-2xl lg:text-[26px] lg:leading-relaxed">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </blockquote>
-                <p className="text-base font-medium text-text-secondary">
+                <p className="text-lg font-medium text-text-secondary">
                   &mdash; {testimonials[current].author}
                 </p>
               </motion.div>

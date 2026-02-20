@@ -37,7 +37,7 @@ export function FAQ({
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
           </SlideUp>
           <SlideUp delay={0.15}>
-            <h2 className="text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">{heading}</h2>
+            <h2 className="text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
           </SlideUp>
         </div>
 
@@ -45,7 +45,7 @@ export function FAQ({
           <Accordion type="single" collapsible>
             {items.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-base font-medium md:text-lg">
+                <AccordionTrigger className="text-left text-lg font-medium md:text-xl">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal leading-relaxed text-text-secondary">

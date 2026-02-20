@@ -31,11 +31,11 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
               {formatBlogDate(post.date)}
             </time>
 
-            <h2 className="mb-3 text-2xl font-normal leading-[1.2] text-foreground group-hover:text-link-hover transition-colors duration-300 md:text-3xl">
+            <h2 className="mb-3 text-3xl font-normal leading-[1.2] text-foreground group-hover:text-link-hover transition-colors duration-300 md:text-4xl">
               {post.title}
             </h2>
 
-            <p className="mb-5 line-clamp-3 text-base font-normal leading-relaxed text-text-secondary md:text-lg">
+            <p className="mb-5 line-clamp-3 text-lg font-normal leading-relaxed text-text-secondary">
               {post.excerpt}
             </p>
 

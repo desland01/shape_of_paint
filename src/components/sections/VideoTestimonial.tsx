@@ -107,7 +107,7 @@ export function VideoTestimonial({
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
         <SlideUp delay={0.2}>
-          <h2 className="mb-12 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
+          <h2 className="mb-12 text-5xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
         </SlideUp>
         <ScaleIn delay={0.3}>
           <div className="relative mx-auto aspect-video max-w-[800px] overflow-hidden rounded-lg bg-warm-light">

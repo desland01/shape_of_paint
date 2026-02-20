@@ -123,13 +123,13 @@ export default function HomePage() {
                 </SlideUp>
 
                 <SlideUp delay={0.05}>
-                  <h2 className="mt-5 max-w-[20ch] text-3xl font-normal leading-[1.12] md:text-4xl lg:text-[2.65rem]">
+                  <h2 className="mt-5 max-w-[20ch] text-4xl font-normal leading-[1.12] md:text-5xl lg:text-5xl">
                     Build a room-by-room painting investment in minutes
                   </h2>
                 </SlideUp>
 
                 <SlideUp delay={0.1}>
-                  <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-text-secondary md:text-lg">
+                  <p className="mt-4 max-w-[52ch] text-lg leading-relaxed text-text-secondary">
                     Start with dimensions and surfaces, choose your material tier, and
                     walk into your estimate call with a clear planning number.
                   </p>
@@ -147,7 +147,7 @@ export default function HomePage() {
                         <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-gold/12">
                           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-accent-gold" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                         </span>
-                        <p className="text-base leading-relaxed text-text-secondary">{text}</p>
+                        <p className="text-lg leading-relaxed text-text-secondary">{text}</p>
                       </div>
                     </SlideUp>
                   ))}

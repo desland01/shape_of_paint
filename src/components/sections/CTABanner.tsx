@@ -19,7 +19,7 @@ export function CTABanner({ headline, ctaText, ctaHref }: CTABannerProps) {
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="text-center">
           <SlideUp>
-            <h2 className="text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">
+            <h2 className="text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">
               {headline}
             </h2>
           </SlideUp>
@@ -31,7 +31,7 @@ export function CTABanner({ headline, ctaText, ctaHref }: CTABannerProps) {
               {ctaText}
             </Link>
           </div>
-          <p className="mt-4 text-sm text-text-secondary">
+          <p className="mt-4 text-base text-text-secondary">
             Or call us:{" "}
             <a
               href={`tel:+1${phoneDigits}`}
