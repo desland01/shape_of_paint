@@ -71,7 +71,7 @@ export function FeatureSection({
         variant === "warm" ? "bg-warm" : "bg-background"
       )}
     >
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         {/*
           CSS Grid overlap layout:
           - 12 columns on desktop
@@ -84,7 +84,7 @@ export function FeatureSection({
           <motion.div
             style={{ y: imageY }}
             className={cn(
-              "relative md:row-start-1 overflow-visible",
+              "relative md:row-start-1 overflow-visible -mx-4 md:mx-0",
               reversed
                 ? "md:col-start-1 md:col-end-9"
                 : "md:col-start-5 md:col-end-13"
@@ -153,7 +153,7 @@ export function FeatureSection({
               className={cn(
                 "bg-white rounded-2xl p-8 md:p-10 lg:p-12",
                 "shadow-[0_4px_40px_-8px_rgba(0,0,0,0.08)]",
-                "-mt-12 mx-4 md:mt-0 md:mx-0"
+                "-mt-12 mx-0 md:mt-0"
               )}
             >
               <SlideUp>
@@ -165,12 +165,12 @@ export function FeatureSection({
                 </SlideUp>
               )}
               <SlideUp delay={0.15}>
-                <h2 className="mb-4 text-4xl font-normal leading-[1.25] md:text-5xl">
+                <h2 className="mb-4 text-5xl font-normal leading-[1.25] md:text-6xl">
                   {heading}
                 </h2>
               </SlideUp>
               <SlideUp delay={0.2}>
-                <p className="mb-6 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+                <p className="mb-6 text-xl md:text-2xl font-normal leading-relaxed text-text-secondary">
                   {description}
                 </p>
               </SlideUp>

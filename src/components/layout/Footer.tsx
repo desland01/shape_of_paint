@@ -6,7 +6,7 @@ import { SlideUp } from "@/components/ui/motion";
 export function Footer() {
   return (
     <footer className="bg-background">
-      <div className="mx-auto max-w-[1200px] px-6 pt-12 pb-24 md:px-8 md:py-16">
+      <div className="mx-auto max-w-[1200px] px-4 pt-12 pb-24 md:px-8 md:py-16">
         <div className="grid gap-12 md:grid-cols-5">
           <SlideUp>
             <div className="flex flex-col gap-4">
@@ -35,7 +35,7 @@ export function Footer() {
 
           <SlideUp delay={0.1}>
             <div>
-              <h5 className="mb-4 text-2xl md:text-3xl font-normal tracking-[1px]">
+              <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Company
               </h5>
               <ul className="flex flex-col gap-1">
@@ -55,7 +55,7 @@ export function Footer() {
 
           <SlideUp delay={0.1}>
             <div>
-              <h5 className="mb-4 text-2xl md:text-3xl font-normal tracking-[1px]">
+              <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Services
               </h5>
               <ul className="flex flex-col gap-1">
@@ -75,7 +75,7 @@ export function Footer() {
 
           <SlideUp delay={0.2}>
             <div>
-              <h5 className="mb-4 text-2xl md:text-3xl font-normal tracking-[1px]">
+              <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Service Areas
               </h5>
               <ul className="flex flex-col gap-1">
@@ -95,7 +95,7 @@ export function Footer() {
 
           <SlideUp delay={0.3}>
             <div>
-              <h5 className="mb-4 text-2xl md:text-3xl font-normal tracking-[1px]">
+              <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Legal
               </h5>
               <ul className="flex flex-col gap-1">

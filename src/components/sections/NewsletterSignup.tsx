@@ -16,11 +16,11 @@ export function NewsletterSignup() {
 
   return (
     <section className="bg-background py-12 md:py-16">
-      <div className="mx-auto max-w-[420px] px-6 text-center md:px-8">
+      <div className="mx-auto max-w-[420px] px-4 text-center md:px-8">
         {!submitted ? (
           <>
             <SlideUp>
-              <h4 className="mb-3 text-3xl font-normal italic">Newsletter Signup</h4>
+              <h4 className="mb-3 text-4xl font-normal italic">Newsletter Signup</h4>
             </SlideUp>
             <SlideUp delay={0.1}>
               <p className="mb-6 text-base font-normal leading-relaxed text-text-secondary">
@@ -58,7 +58,7 @@ export function NewsletterSignup() {
           </>
         ) : (
           <SlideUp>
-            <h4 className="mb-2 text-3xl font-normal italic">Thank you!</h4>
+            <h4 className="mb-2 text-4xl font-normal italic">Thank you!</h4>
             <p className="text-lg font-normal text-text-secondary">
               You have successfully joined our subscriber list.
             </p>

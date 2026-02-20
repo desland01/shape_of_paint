@@ -99,7 +99,7 @@ export function VideoTestimonial({
 
   return (
     <section className="bg-warm py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1200px] px-6 text-center md:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 text-center md:px-8">
         <SlideUp>
           <DecorativeIcon variant="leaf" className="mb-6" />
         </SlideUp>
@@ -107,10 +107,10 @@ export function VideoTestimonial({
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
         <SlideUp delay={0.2}>
-          <h2 className="mb-12 text-5xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
+          <h2 className="mb-12 text-5xl font-normal leading-[1.2] md:text-6xl lg:text-[72px]">{heading}</h2>
         </SlideUp>
         <ScaleIn delay={0.3}>
-          <div className="relative mx-auto aspect-video max-w-[800px] overflow-hidden rounded-lg bg-warm-light">
+          <div className="relative mx-auto aspect-video max-w-[800px] overflow-hidden rounded-none md:rounded-lg bg-warm-light -mx-4 md:mx-0">
             {videoId ? (
               <>
                 <div

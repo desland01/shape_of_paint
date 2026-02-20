@@ -38,7 +38,7 @@ export function Header() {
         isTransparent ? "bg-transparent" : "bg-background/95 backdrop-blur-sm"
       )}
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:py-6 md:px-8">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 md:py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/logo-icon.png"
@@ -115,7 +115,7 @@ export function Header() {
         </button>
       </div>
 
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         <div
           className={cn(
             "h-px bg-border-subtle transition-opacity duration-300",
@@ -133,7 +133,7 @@ export function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden md:hidden"
           >
-            <nav className="flex flex-col gap-1 px-6 py-6">
+            <nav className="flex flex-col gap-1 px-4 py-6">
               {siteConfig.nav.map((item) => (
                 <div key={item.href}>
                   <Link

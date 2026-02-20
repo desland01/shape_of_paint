@@ -225,13 +225,13 @@ export function CostCalculatorApp() {
         <div className="absolute bottom-4 right-20 h-44 w-44 rounded-full bg-accent-sage/20 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] gap-8 px-6 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
+      <div className="relative mx-auto grid max-w-[1200px] gap-8 px-4 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
         {/* Sidebar — order-2 on mobile so form appears first */}
         <aside className="order-2 space-y-8 lg:order-1 lg:sticky lg:top-28 lg:self-start">
           {/* Dynamic text content — desktop only */}
           <div className="hidden space-y-4 lg:block">
             <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
-            <h1 className="max-w-[18ch] text-4xl font-normal leading-[1.04] md:text-5xl">
+            <h1 className="max-w-[18ch] text-5xl font-normal leading-[1.04] md:text-6xl">
               {STEP_CONTEXT[step].heading}
             </h1>
             <p className="max-w-[52ch] text-lg leading-relaxed text-text-secondary">
@@ -317,7 +317,7 @@ export function CostCalculatorApp() {
           <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent-gold via-brand-secondary to-accent-sage" />
 
           {/* Circle step progress indicator */}
-          <div className="border-b border-border-subtle/80 bg-warm-light px-6 py-6 md:px-8">
+          <div className="border-b border-border-subtle/80 bg-warm-light px-4 py-6 md:px-8">
             <div className="flex items-center justify-between">
               {STEP_LABELS.map((entry, index) => {
                 const Icon = STEP_ICONS[entry.id];
@@ -355,14 +355,14 @@ export function CostCalculatorApp() {
           </div>
 
           {/* Step heading — mobile only */}
-          <div className="space-y-2 px-6 pt-6 md:px-8 lg:hidden">
+          <div className="space-y-2 px-4 pt-6 md:px-8 lg:hidden">
             <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
-            <h1 className="max-w-[18ch] text-3xl font-normal leading-[1.08] md:text-4xl">
+            <h1 className="max-w-[18ch] text-4xl font-normal leading-[1.08] md:text-5xl">
               {STEP_CONTEXT[step].heading}
             </h1>
           </div>
 
-          <div className="px-6 py-6 md:px-8 md:py-8">
+          <div className="px-4 py-6 md:px-8 md:py-8">
             <AnimatePresence initial={false} mode="wait" custom={direction}>
               {/* ── Step 1: Measure ── */}
               {step === 1 && (
@@ -415,7 +415,7 @@ export function CostCalculatorApp() {
 
                   {/* Room name */}
                   <div>
-                    <h2 className="text-2xl font-normal leading-tight text-foreground">
+                    <h2 className="text-3xl font-normal leading-tight text-foreground">
                       Name your room
                     </h2>
                     <p className="mt-1 text-base text-text-secondary">
@@ -632,7 +632,7 @@ export function CostCalculatorApp() {
                   className="space-y-5"
                 >
                   <div>
-                    <h2 className="text-2xl font-normal leading-tight text-foreground">
+                    <h2 className="text-3xl font-normal leading-tight text-foreground">
                       Select your paint tier
                     </h2>
                     <p className="mt-1 text-base text-text-secondary">
@@ -749,7 +749,7 @@ export function CostCalculatorApp() {
                     >
                       <Check className="h-7 w-7" />
                     </motion.div>
-                    <h2 className="mt-3 text-2xl font-normal text-foreground">
+                    <h2 className="mt-3 text-3xl font-normal text-foreground">
                       Your estimated project cost
                     </h2>
                     <p className="mt-1 text-base text-text-secondary">

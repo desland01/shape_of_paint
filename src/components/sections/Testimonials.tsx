@@ -97,12 +97,12 @@ export function Testimonials({
 
   return (
     <section className="bg-white py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[900px] px-6 text-center md:px-8">
+      <div className="mx-auto max-w-[900px] px-4 text-center md:px-8">
         <SlideUp>
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
         <SlideUp delay={0.1}>
-          <h2 className="mb-12 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
+          <h2 className="mb-12 text-5xl font-normal leading-[1.2] md:text-6xl lg:text-[72px]">{heading}</h2>
         </SlideUp>
 
         {/* Arrow + Card row */}
@@ -136,7 +136,7 @@ export function Testimonials({
                   <WatercolorPeony />
                 </div>
 
-                <blockquote className="mb-6 text-xl italic leading-relaxed text-foreground md:text-2xl lg:text-[26px] lg:leading-relaxed">
+                <blockquote className="mb-6 text-2xl italic leading-relaxed text-foreground md:text-3xl lg:text-[30px] lg:leading-relaxed">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </blockquote>
                 <p className="text-lg font-medium text-text-secondary">

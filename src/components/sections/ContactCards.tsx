@@ -30,7 +30,7 @@ export function ContactCards() {
 
   return (
     <section className="bg-background py-12">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card, i) => (
             <SlideUp key={card.title} delay={i * 0.1}>
@@ -39,18 +39,18 @@ export function ContactCards() {
                   className="mx-auto mb-4 h-8 w-8 text-accent-gold"
                   strokeWidth={1.5}
                 />
-                <h2 className="mb-2 text-2xl font-normal">{card.title}</h2>
+                <h2 className="mb-2 text-3xl font-normal">{card.title}</h2>
                 {card.lines.map((line, j) =>
                   card.href ? (
                     <a
                       key={j}
                       href={card.href}
-                      className="block text-base font-normal text-text-secondary hover:text-link-hover transition-colors duration-300"
+                      className="block text-lg font-normal text-text-secondary hover:text-link-hover transition-colors duration-300"
                     >
                       {line}
                     </a>
                   ) : (
-                    <p key={j} className="text-base font-normal text-text-secondary">
+                    <p key={j} className="text-lg font-normal text-text-secondary">
                       {line}
                     </p>
                   )

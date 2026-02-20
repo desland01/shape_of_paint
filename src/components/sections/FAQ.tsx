@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -26,9 +27,12 @@ export function FAQ({
   heading,
   items,
 }: FAQProps) {
+  const [showAll, setShowAll] = useState(false);
+  const visibleItems = items.length > 4 && !showAll ? items.slice(0, 3) : items;
+
   return (
     <section className="bg-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[700px] px-6 md:px-8">
+      <div className="mx-auto max-w-[700px] px-4 md:px-8">
         <div className="mb-12 text-center">
           <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />
@@ -37,23 +41,31 @@ export function FAQ({
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
           </SlideUp>
           <SlideUp delay={0.15}>
-            <h2 className="text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">{heading}</h2>
+            <h2 className="text-5xl font-normal leading-[1.2] md:text-6xl lg:text-[72px]">{heading}</h2>
           </SlideUp>
         </div>
 
         <SlideUp delay={0.2}>
           <Accordion type="single" collapsible>
-            {items.map((item, i) => (
+            {visibleItems.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-lg font-medium md:text-xl">
+                <AccordionTrigger className="text-left text-xl font-medium md:text-2xl">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-lg font-normal leading-relaxed text-text-secondary">
+                <AccordionContent className="text-xl font-normal leading-relaxed text-text-secondary md:text-2xl">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+          {items.length > 4 && !showAll && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="mt-6 mx-auto flex items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              Show All {items.length} Questions
+            </button>
+          )}
         </SlideUp>
       </div>
     </section>

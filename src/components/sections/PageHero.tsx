@@ -43,7 +43,7 @@ export function PageHero({
       )}
 
       <div
-        className={`mx-auto max-w-[700px] px-6 md:px-8${hasImage ? " relative z-10" : ""}`}
+        className={`mx-auto max-w-[700px] px-4 md:px-8${hasImage ? " relative z-10" : ""}`}
       >
         <SlideUp immediate>
           <DecorativeIcon
@@ -53,7 +53,7 @@ export function PageHero({
         </SlideUp>
         <SlideUp immediate delay={0.1}>
           <h1
-            className={`mb-4 text-5xl font-normal leading-[1.15] md:text-6xl lg:text-7xl${hasImage ? " text-white" : ""}`}
+            className={`mb-4 text-6xl font-normal leading-[1.15] md:text-7xl lg:text-8xl${hasImage ? " text-white" : ""}`}
           >
             {heading}
           </h1>
@@ -61,7 +61,7 @@ export function PageHero({
         {description && (
           <SlideUp immediate delay={0.2}>
             <p
-              className={`text-xl md:text-2xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
+              className={`text-2xl md:text-3xl font-normal leading-relaxed${hasImage ? " text-white/90" : " text-text-secondary"}`}
             >
               {description}
             </p>

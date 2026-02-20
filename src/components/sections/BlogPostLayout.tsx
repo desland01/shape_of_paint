@@ -27,7 +27,7 @@ export function BlogPostLayout({
 
   return (
     <article className="bg-background">
-      <div className="mx-auto max-w-[780px] px-6 pb-8 pt-16 md:px-8 md:pt-24">
+      <div className="mx-auto max-w-[780px] px-4 pb-8 pt-16 md:px-8 md:pt-24">
         <nav
           aria-label="Breadcrumb"
           className="mb-10 text-sm font-normal text-text-secondary"
@@ -73,7 +73,7 @@ export function BlogPostLayout({
 
         <SlideUp>
           <header className="mb-12">
-            <h1 className="mb-4 text-4xl font-normal leading-[1.15] md:text-5xl lg:text-6xl">
+            <h1 className="mb-4 text-5xl font-normal leading-[1.15] md:text-6xl lg:text-7xl">
               {title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-normal text-text-secondary">
@@ -90,13 +90,13 @@ export function BlogPostLayout({
           </header>
         </SlideUp>
 
-        <div className="prose-custom space-y-6 text-lg font-normal leading-relaxed text-text-secondary md:text-xl [&_blockquote]:border-l-4 [&_blockquote]:border-foreground/20 [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:leading-[1.2] [&_h2]:text-foreground md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+        <div className="prose-custom space-y-6 text-xl font-normal leading-relaxed text-text-secondary md:text-2xl [&_blockquote]:border-l-4 [&_blockquote]:border-foreground/20 [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-3xl [&_h2]:font-normal [&_h2]:leading-[1.2] [&_h2]:text-foreground md:[&_h2]:text-4xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-2xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
           {children}
         </div>
       </div>
 
       <div className="border-t border-border-subtle">
-        <div className="mx-auto max-w-[780px] px-6 py-12 md:px-8 md:py-16">
+        <div className="mx-auto max-w-[780px] px-4 py-12 md:px-8 md:py-16">
           <SlideUp>
             <div className="mb-12 text-base font-normal leading-relaxed text-text-secondary">
               <p>

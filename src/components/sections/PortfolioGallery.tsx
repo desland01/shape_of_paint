@@ -70,7 +70,7 @@ export function PortfolioGallery({
   return (
     <>
       <section className="bg-background pt-16 md:pt-24 lg:pt-32">
-        <div className="mx-auto mb-12 max-w-[1200px] px-6 text-center md:px-8">
+        <div className="mx-auto mb-12 max-w-[1200px] px-4 text-center md:px-8">
           <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />
           </SlideUp>
@@ -78,13 +78,13 @@ export function PortfolioGallery({
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
           </SlideUp>
           <SlideUp delay={0.15}>
-            <h2 className="mb-4 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-[60px]">
+            <h2 className="mb-4 text-5xl font-normal leading-[1.2] md:text-6xl lg:text-[72px]">
               {heading}
             </h2>
           </SlideUp>
           {subtitle && (
             <SlideUp delay={0.2}>
-              <p className="mx-auto mb-0 max-w-[600px] text-lg font-normal leading-relaxed text-text-secondary">
+              <p className="mx-auto mb-0 max-w-[600px] text-xl md:text-2xl font-normal leading-relaxed text-text-secondary">
                 {subtitle}
               </p>
             </SlideUp>
@@ -92,7 +92,7 @@ export function PortfolioGallery({
         </div>
 
         {images.length <= 2 ? (
-          <div className="mx-auto grid max-w-[800px] grid-cols-2 gap-5 px-4 md:px-6">
+          <div className="mx-auto grid max-w-[800px] grid-cols-2 gap-5 px-0 md:px-6">
             {images.map((image, index) => (
               <ScrollZoom
                 key={`${image.src}-${index}`}
@@ -119,7 +119,7 @@ export function PortfolioGallery({
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-5 px-4 md:grid-cols-4 md:px-6">
+          <div className="grid grid-cols-2 gap-5 px-0 md:grid-cols-4 md:px-6">
             {galleryColumns.map((column, colIndex) => {
               const isOdd = colIndex % 2 === 1;
               const aspects = isOdd

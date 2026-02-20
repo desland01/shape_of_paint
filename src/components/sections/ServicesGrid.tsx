@@ -18,19 +18,19 @@ interface ServicesGridProps {
 export function ServicesGrid({ services }: ServicesGridProps) {
   return (
     <section className="bg-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {services.map((service, i) => (
             <SlideUp key={service.title} delay={i * 0.15}>
               <div className="group flex flex-col md:block">
                 {/* Mobile: title + description first, then image */}
-                <h3 className="mb-3 text-3xl font-normal md:hidden">
+                <h3 className="mb-3 text-4xl font-normal md:hidden">
                   {service.title}
                 </h3>
-                <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:hidden">
+                <p className="mb-4 text-xl font-normal leading-relaxed text-text-secondary md:hidden">
                   {service.description}
                 </p>
-                <ScrollZoom>
+                <ScrollZoom className="-mx-4 md:mx-0">
                   <Link href={service.href} className="relative mb-6 block aspect-[4/3] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
                     <Image
                       src={service.image}
@@ -42,10 +42,10 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                   </Link>
                 </ScrollZoom>
                 {/* Desktop: title + description + link below image */}
-                <h3 className="mb-3 hidden text-3xl font-normal md:block">
+                <h3 className="mb-3 hidden text-4xl font-normal md:block">
                   {service.title}
                 </h3>
-                <p className="mb-4 hidden text-lg font-normal leading-relaxed text-text-secondary md:block">
+                <p className="mb-4 hidden text-xl md:text-2xl font-normal leading-relaxed text-text-secondary md:block">
                   {service.description}
                 </p>
                 <Link

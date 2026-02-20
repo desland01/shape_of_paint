@@ -164,10 +164,10 @@ export function ContactForm() {
 
     return (
       <div className="text-center py-8">
-        <h3 className="mb-3 text-3xl font-normal">
+        <h3 className="mb-3 text-4xl font-normal">
           Thank you, {name}!
         </h3>
-        <p className="text-base text-text-secondary mb-4">
+        <p className="text-lg text-text-secondary mb-4">
           We&apos;ll {contactLabel} {contactMethod} within 2 hours during
           business hours.
         </p>
@@ -220,8 +220,8 @@ export function ContactForm() {
     <div>
       {/* Heading */}
       <div className="mb-6">
-        <h3 className="text-3xl font-normal mb-1">Tell Us About Your Project</h3>
-        <p className="text-base text-text-secondary">
+        <h3 className="text-4xl font-normal mb-1">Tell Us About Your Project</h3>
+        <p className="text-lg text-text-secondary">
           We respond within 2 hours during business hours
         </p>
       </div>
@@ -248,7 +248,7 @@ export function ContactForm() {
                   ease: EASING,
                 }}
               >
-                <p className="text-base font-medium text-text-secondary mb-4">
+                <p className="text-lg font-medium text-text-secondary mb-4">
                   What type of project do you have in mind?
                 </p>
 
@@ -275,7 +275,7 @@ export function ContactForm() {
                           unoptimized
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                        <p className="absolute bottom-0 left-0 right-0 px-3 py-3 text-base font-semibold text-white">
+                        <p className="absolute bottom-0 left-0 right-0 px-3 py-3 text-lg font-semibold text-white">
                           {type.label}
                         </p>
                       </div>

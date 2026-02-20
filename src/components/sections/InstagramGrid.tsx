@@ -22,7 +22,7 @@ export function InstagramGrid({ instagramUrl, images }: InstagramGridProps) {
   return (
     <section className="bg-background py-12 md:py-16">
       <SlideUp>
-        <div className="mx-auto max-w-[1200px] px-6 md:px-10">
+        <div className="mx-auto max-w-[1200px] px-0 md:px-10">
           <div className="grid grid-cols-3 md:grid-cols-6 items-center gap-2 md:gap-3">
             {images.slice(0, 6).map((img, i) => (
               <ScrollZoom key={i} className={`${aspectRatios[i] || "aspect-square"} transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}>
