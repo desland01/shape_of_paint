@@ -99,6 +99,16 @@ export default function InteriorPaintingPage() {
           </Link>{" "}
           deliver a designer-quality spray finish that outperforms factory replacements.
         </p>
+        <p className="mt-5 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+          If you want a quick ballpark before booking, try our{" "}
+          <Link
+            href="/tools/cost-calculator"
+            className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
+          >
+            interior painting cost calculator
+          </Link>
+          .
+        </p>
       </SectionWrapper>
 
       <Testimonials

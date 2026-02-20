@@ -21,15 +21,6 @@ export const siteConfig = {
     google: "https://www.google.com/maps/place/Shape+of+Paint",
   },
   nav: [
-    { label: "Home", href: "/" },
-    {
-      label: "About",
-      href: "/about",
-      children: [
-        { label: "Our Story", href: "/about" },
-        { label: "Testimonials", href: "/about/reviews" },
-      ],
-    },
     {
       label: "Services",
       href: "/services",
@@ -41,25 +32,13 @@ export const siteConfig = {
       ],
     },
     {
-      label: "Areas",
-      href: "/areas/surrey",
+      label: "About",
+      href: "/about",
       children: [
-        { label: "Surrey", href: "/areas/surrey" },
-        { label: "Burnaby", href: "/areas/burnaby" },
-        { label: "North Vancouver", href: "/areas/north-vancouver" },
-        { label: "Coquitlam", href: "/areas/coquitlam" },
-        { label: "Richmond", href: "/areas/richmond" },
-        { label: "West Vancouver", href: "/areas/west-vancouver" },
-        { label: "Langley", href: "/areas/langley" },
-        { label: "Delta", href: "/areas/delta" },
-        { label: "New Westminster", href: "/areas/new-westminster" },
-        { label: "Port Moody", href: "/areas/port-moody" },
-        { label: "Port Coquitlam", href: "/areas/port-coquitlam" },
-        { label: "Pitt Meadows", href: "/areas/pitt-meadows" },
+        { label: "Our Story", href: "/about" },
+        { label: "Testimonials", href: "/about/reviews" },
       ],
     },
-    { label: "Blog", href: "/blog" },
-    { label: "FAQ", href: "/contact/faq" },
     {
       label: "Contact",
       href: "/contact",
@@ -68,6 +47,7 @@ export const siteConfig = {
         { label: "Free Estimate", href: "/contact#contact-form" },
       ],
     },
+    { label: "Blog", href: "/blog" },
   ],
   services: [
     {
@@ -136,6 +116,7 @@ export const siteConfig = {
       { label: "Interior Painting", href: "/services/interior" },
       { label: "Exterior Painting", href: "/services/exterior" },
       { label: "Cabinets", href: "/services/cabinets" },
+      { label: "Cost Calculator", href: "/tools/cost-calculator" },
       { label: "Free Estimate", href: "/contact#contact-form" },
       { label: "FAQ", href: "/contact/faq" },
       { label: "Contact", href: "/contact" },

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -78,14 +78,16 @@ export function Header() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+            title={siteConfig.phone}
+            aria-label={`Call us at ${siteConfig.phone}`}
             className={cn(
-              "text-sm font-medium tracking-wide transition-colors duration-300",
+              "inline-flex items-center justify-center min-h-[48px] min-w-[48px] rounded-full transition-colors duration-300",
               isTransparent
-                ? "text-white/80 hover:text-white"
-                : "text-text-secondary hover:text-foreground"
+                ? "text-white/80 hover:text-white hover:bg-white/10"
+                : "text-text-secondary hover:text-foreground hover:bg-foreground/5"
             )}
           >
-            {siteConfig.phone}
+            <Phone className="h-[18px] w-[18px]" strokeWidth={1.5} />
           </a>
           <Link
             href="/contact#contact-form"

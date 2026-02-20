@@ -46,6 +46,16 @@ export function PortfolioLightbox({
         container: {
           backgroundColor: "rgba(0, 0, 0, 0.88)",
         },
+        button: {
+          minWidth: 48,
+          minHeight: 48,
+        },
+        navigationPrev: {
+          padding: 12,
+        },
+        navigationNext: {
+          padding: 12,
+        },
       }}
     />
   );

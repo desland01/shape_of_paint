@@ -21,36 +21,36 @@ const instagramImages = [
 ];
 
 const interiorImages = [
-  { src: "/images/interior-portfolio-1.webp", alt: "Living room interior painting in Vancouver" },
-  { src: "/images/interior-portfolio-2.webp", alt: "Bedroom accent wall painting" },
-  { src: "/images/interior-portfolio-3.webp", alt: "Kitchen walls and trim painting" },
-  { src: "/images/interior-portfolio-4.webp", alt: "Hallway and staircase painting project" },
-  { src: "/images/interior-portfolio-5.webp", alt: "Bathroom interior painting with moisture-resistant finish" },
-  { src: "/images/interior-portfolio-6.webp", alt: "Open concept living area repaint" },
-  { src: "/images/interior-portfolio-7.webp", alt: "Ceiling and crown moulding painting" },
-  { src: "/images/interior-portfolio-8.webp", alt: "Level 5 finish accent wall" },
+  { src: "/images/interior-portfolio-1.webp", alt: "Living room with white linen sofa, leather club chairs, and reclaimed timber door frame" },
+  { src: "/images/interior-portfolio-2.webp", alt: "Vaulted ceiling room with arched window and bubble glass chandelier" },
+  { src: "/images/interior-portfolio-3.webp", alt: "Bedroom with dark charcoal accent wall, black nightstand, and brass sconce" },
+  { src: "/images/interior-portfolio-4.webp", alt: "Fireplace with white board-and-batten paneling, reclaimed wood mantel, and concrete surround" },
+  { src: "/images/interior-portfolio-5.webp", alt: "Cascading glass globe pendant chandelier in double-height stairwell" },
+  { src: "/images/interior-portfolio-7.webp", alt: "Herringbone tile shower niche with built-in shelving" },
+  { src: "/images/interior-portfolio-8.webp", alt: "Rustic reclaimed wood sideboard with pampas grass and woven wall art" },
+  { src: "/images/interior.webp", alt: "Curved staircase with white painted spindles and barn doors to home office" },
+  { src: "/images/cabinet-portfolio-7.webp", alt: "White French doors with crystal doorknobs opening into dining room" },
+  { src: "/images/portfolio-2.webp", alt: "Dark painted vanity on ornate black-and-white patterned tile floor" },
+  { src: "/images/portfolio-5.webp", alt: "Reclaimed wood beam with matte black steel bracket detail" },
+  { src: "/images/cabinet-portfolio-5.webp", alt: "Staircase with dark stained handrail, white painted spindles and treads" },
 ];
 
 const exteriorImages = [
-  { src: "/images/exterior-portfolio-1.webp", alt: "Vancouver home exterior painting" },
-  { src: "/images/exterior-portfolio-2.webp", alt: "Stucco exterior repaint in Burnaby" },
-  { src: "/images/exterior-portfolio-3.webp", alt: "Cedar siding restoration and painting" },
-  { src: "/images/exterior-portfolio-4.webp", alt: "Front door and trim exterior painting" },
-  { src: "/images/exterior-portfolio-5.webp", alt: "Deck staining and sealing project" },
-  { src: "/images/exterior-portfolio-6.webp", alt: "Multi-colour exterior scheme" },
-  { src: "/images/exterior-portfolio-7.webp", alt: "Soffit and fascia painting" },
-  { src: "/images/exterior-portfolio-8.webp", alt: "Complete home exterior transformation" },
+  { src: "/images/exterior-portfolio-1.webp", alt: "Luxury home facade with dual black garage doors and stone-and-stucco finish" },
+  { src: "/images/exterior-portfolio-2.webp", alt: "Custom painted garage door with decorative interlocking circle pattern" },
 ];
 
 const cabinetImages = [
-  { src: "/images/cabinet-portfolio-1.webp", alt: "White kitchen cabinet spray finish" },
-  { src: "/images/cabinet-portfolio-2.webp", alt: "Before and after kitchen cabinet painting" },
-  { src: "/images/cabinet-portfolio-3.webp", alt: "Bathroom vanity cabinet refinishing" },
-  { src: "/images/cabinet-portfolio-4.webp", alt: "Grey kitchen cabinets with new hardware" },
-  { src: "/images/cabinet-portfolio-5.webp", alt: "Oak cabinet staining project" },
-  { src: "/images/cabinet-portfolio-6.webp", alt: "Island cabinet painting" },
-  { src: "/images/cabinet-portfolio-7.webp", alt: "Laundry room cabinet refinishing" },
-  { src: "/images/cabinet-portfolio-8.webp", alt: "Custom colour cabinet spray finish" },
+  { src: "/images/interior-portfolio-6.webp", alt: "Laundry room with white shaker cabinets, butcher block counter, and iron cage pendant" },
+  { src: "/images/cabinet-portfolio-8.webp", alt: "Home office with floor-to-ceiling white built-in cabinets and open shelving" },
+  { src: "/images/cabinet-1.webp", alt: "Knurled matte black cabinet knob detail on white shaker door" },
+  { src: "/images/cabinet-2.webp", alt: "Kitchen with grey painted island, white perimeter cabinets, and stainless steel appliances" },
+  { src: "/images/cabinet-3.webp", alt: "White kitchen island drawers pulled open showing dovetail construction" },
+  { src: "/images/cabinet-4.webp", alt: "Kitchen with dark glass-front island and white traditional perimeter cabinetry" },
+  { src: "/images/cabinet-5.webp", alt: "White glass-front upper cabinet with crown moulding and ceramic dishware" },
+  { src: "/images/cabinet-6.webp", alt: "White shaker island with matte black bar pulls and dome pendant lights" },
+  { src: "/images/cabinet-7.webp", alt: "White kitchen cabinets with oil-rubbed bronze hardware and arabesque tile backsplash" },
+  { src: "/images/portfolio-3.webp", alt: "White shaker kitchen with woven leather counter stools and rustic metal pendants" },
 ];
 
 export default function PortfolioPage() {
@@ -66,6 +66,7 @@ export default function PortfolioPage() {
         heading="Interior Painting"
         subtitle="Walls, ceilings, trim, and specialty finishes across Vancouver homes."
         images={interiorImages}
+        priorityCount={4}
       />
 
       <PortfolioGallery

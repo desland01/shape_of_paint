@@ -18,6 +18,8 @@ interface PortfolioGalleryProps {
   heading: string;
   subtitle?: string;
   images: GalleryImage[];
+  /** Number of leading images to mark as priority (LCP optimization). */
+  priorityCount?: number;
 }
 
 const PortfolioLightbox = dynamic(
@@ -33,6 +35,7 @@ export function PortfolioGallery({
   heading,
   subtitle,
   images,
+  priorityCount = 0,
 }: PortfolioGalleryProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,43 +91,75 @@ export function PortfolioGallery({
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-5 px-4 md:grid-cols-4 md:px-6">
-          {galleryColumns.map((column, colIndex) => {
-            const isOdd = colIndex % 2 === 1;
-            const aspects = isOdd
-              ? ["aspect-square", "aspect-[4/5]"]
-              : ["aspect-[4/5]", "aspect-square"];
-
-            return (
-              <div
-                key={`col-${colIndex}`}
-                className={`flex flex-col gap-5${isOdd ? " md:mt-[50px]" : ""}`}
+        {images.length <= 2 ? (
+          <div className="mx-auto grid max-w-[800px] grid-cols-2 gap-5 px-4 md:px-6">
+            {images.map((image, index) => (
+              <ScrollZoom
+                key={`${image.src}-${index}`}
+                className="aspect-[4/5] w-full transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]"
               >
-                {column.map(({ image, index }, itemIndex) => (
-                  <ScrollZoom
-                    key={`${image.src}-${index}`}
-                    className={`${aspects[itemIndex] ?? "aspect-square"} w-full transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => openLightboxAt(index)}
-                      className="group relative h-full w-full cursor-pointer"
-                      aria-label={`View ${image.alt}`}
+                <button
+                  type="button"
+                  onClick={() => openLightboxAt(index)}
+                  className="group relative h-full w-full cursor-pointer"
+                  aria-label={`View ${image.alt}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 50vw, 400px"
+                    {...(index < priorityCount
+                      ? { priority: true, fetchPriority: "high" as const }
+                      : {})}
+                  />
+                </button>
+              </ScrollZoom>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-5 px-4 md:grid-cols-4 md:px-6">
+            {galleryColumns.map((column, colIndex) => {
+              const isOdd = colIndex % 2 === 1;
+              const aspects = isOdd
+                ? ["aspect-square", "aspect-[4/5]"]
+                : ["aspect-[4/5]", "aspect-square"];
+
+              return (
+                <div
+                  key={`col-${colIndex}`}
+                  className={`flex flex-col gap-5${isOdd ? " md:mt-[50px]" : ""}`}
+                >
+                  {column.map(({ image, index }, itemIndex) => (
+                    <ScrollZoom
+                      key={`${image.src}-${index}`}
+                      className={`${aspects[itemIndex] ?? "aspect-square"} w-full transition-shadow duration-700 hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)]`}
                     >
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        sizes="(max-width: 768px) 50vw, 25vw"
-                      />
-                    </button>
-                  </ScrollZoom>
-                ))}
-              </div>
-            );
-          })}
-        </div>
+                      <button
+                        type="button"
+                        onClick={() => openLightboxAt(index)}
+                        className="group relative h-full w-full cursor-pointer"
+                        aria-label={`View ${image.alt}`}
+                      >
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          {...(index < priorityCount
+                            ? { priority: true, fetchPriority: "high" as const }
+                            : {})}
+                        />
+                      </button>
+                    </ScrollZoom>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       <PortfolioLightbox

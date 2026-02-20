@@ -10,7 +10,7 @@ export function MobileCTABar() {
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
   const handleScroll = useCallback(() => {
-    setIsVisible(window.scrollY > 400);
+    setIsVisible(window.scrollY > 200);
   }, []);
 
   useEffect(() => {

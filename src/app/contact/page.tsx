@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { ContactCards } from "@/components/sections/ContactCards";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -28,6 +29,27 @@ export default function ContactPage() {
         image="/images/contact-cta.webp"
         imageAlt="Get in touch with Shape of Paint"
       />
+
+      <SectionWrapper variant="warm-light" className="py-10 md:py-14 lg:py-16">
+        <div className="mx-auto max-w-[880px] rounded-[24px] border border-border-subtle bg-background p-6 md:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+            Planning First
+          </p>
+          <h2 className="mt-3 text-2xl font-normal leading-[1.2] md:text-3xl">
+            Want a room-by-room number before booking?
+          </h2>
+          <p className="mt-3 text-base leading-relaxed text-text-secondary md:text-lg">
+            Use our interior cost calculator to build a quick planning estimate, then
+            submit your project details here for a firm quote.
+          </p>
+          <Link
+            href="/tools/cost-calculator"
+            className="mt-5 inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-foreground bg-foreground px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+          >
+            Open Cost Calculator
+          </Link>
+        </div>
+      </SectionWrapper>
 
       <div id="contact-form">
         <SectionWrapper>
