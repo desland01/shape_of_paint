@@ -157,6 +157,14 @@ export function CostCalculatorApp() {
   };
 
   const addRoom = () => {
+    const trimmedName = currentRoom.name.trim();
+    const isDefaultName =
+      trimmedName.length === 0 || trimmedName === `Room ${currentRoom.id}`;
+    if (isDefaultName) {
+      setError("Please name your room before adding another.");
+      return;
+    }
+
     const nextRoomId = rooms.reduce((maxId, room) => Math.max(maxId, room.id), 0) + 1;
     const nextRooms = [...rooms, createEmptyRoom(nextRoomId)];
     setRooms(nextRooms);
@@ -426,16 +434,6 @@ export function CostCalculatorApp() {
                       placeholder="Living Room, Bedroom, Office..."
                       className={cn("mt-4 min-h-12 w-full rounded-xl border bg-background px-4 py-3 text-base text-foreground outline-none transition-colors", error ? "border-red-500 focus:border-red-500" : "border-border-subtle focus:border-accent-gold")}
                     />
-                    {error && (
-                      <motion.p
-                        initial={{ opacity: 0, y: -4 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mt-2 text-sm font-medium text-red-600"
-                        role="alert"
-                      >
-                        {error}
-                      </motion.p>
-                    )}
                   </div>
 
                   {/* Dimensions — wrapped in card */}
@@ -587,6 +585,18 @@ export function CostCalculatorApp() {
                       </p>
                     </div>
                   </div>
+
+                  {/* Inline error — above action buttons */}
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3"
+                      role="alert"
+                    >
+                      <p className="text-sm font-medium text-red-700">{error}</p>
+                    </motion.div>
+                  )}
 
                   {/* Bottom buttons */}
                   <div className="grid gap-3 sm:grid-cols-2">
