@@ -27,7 +27,7 @@ export function BlogPostLayout({
 
   return (
     <article className="bg-background">
-      <div className="mx-auto max-w-[780px] px-4 pb-8 pt-16 md:px-8 md:pt-24">
+      <div className="mx-auto max-w-content px-4 pb-8 pt-16 md:px-8 md:pt-24">
         <nav
           aria-label="Breadcrumb"
           className="mb-10 text-sm font-normal text-text-secondary"
@@ -96,7 +96,7 @@ export function BlogPostLayout({
       </div>
 
       <div className="border-t border-border-subtle">
-        <div className="mx-auto max-w-[780px] px-4 py-12 md:px-8 md:py-16">
+        <div className="mx-auto max-w-content px-4 py-12 md:px-8 md:py-16">
           <SlideUp>
             <div className="mb-12 text-base font-normal leading-relaxed text-text-secondary">
               <p>

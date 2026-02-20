@@ -70,7 +70,7 @@ export function PortfolioGallery({
   return (
     <>
       <section className="bg-background pt-16 md:pt-24 lg:pt-32">
-        <div className="mx-auto mb-12 max-w-[1200px] px-4 text-center md:px-8">
+        <div className="mx-auto mb-12 max-w-[1440px] px-4 text-center md:px-8">
           <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />
           </SlideUp>
@@ -92,7 +92,7 @@ export function PortfolioGallery({
         </div>
 
         {images.length <= 2 ? (
-          <div className="mx-auto grid max-w-[800px] grid-cols-2 gap-5 px-0 md:px-6">
+          <div className="mx-auto grid max-w-[1000px] grid-cols-2 gap-5 px-0 md:px-0">
             {images.map((image, index) => (
               <ScrollZoom
                 key={`${image.src}-${index}`}
@@ -119,7 +119,7 @@ export function PortfolioGallery({
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-5 px-0 md:grid-cols-4 md:px-6">
+          <div className="grid grid-cols-2 gap-5 px-0 md:grid-cols-4 md:px-0">
             {galleryColumns.map((column, colIndex) => {
               const isOdd = colIndex % 2 === 1;
               const aspects = isOdd

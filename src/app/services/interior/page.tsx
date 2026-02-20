@@ -51,14 +51,16 @@ export default function InteriorPaintingPage() {
       />
 
       <SectionWrapper>
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">How Your Interior Painting Project Works</h2>
-        <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary">
-          <li>1. Colour consultation — We visit your home, discuss your vision, and help you choose colours that work with your space and natural light.</li>
-          <li>2. Full surface protection — Your furniture, floors, and fixtures are covered and sealed before any prep work begins. Your home stays clean.</li>
-          <li>3. Thorough preparation — Every surface is cleaned, sanded, patched, caulked, and primed. This is where 90% of a great paint job happens.</li>
-          <li>4. Precision application — Brush, roller, or spray — our team applies professional-grade coatings with the right technique for each surface.</li>
-          <li>5. Walkthrough and cleanup — We review every detail together before we leave. Your home goes back to normal — with a finish that looks great.</li>
-        </ol>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">How Your Interior Painting Project Works</h2>
+          <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary">
+            <li>1. Colour consultation — We visit your home, discuss your vision, and help you choose colours that work with your space and natural light.</li>
+            <li>2. Full surface protection — Your furniture, floors, and fixtures are covered and sealed before any prep work begins. Your home stays clean.</li>
+            <li>3. Thorough preparation — Every surface is cleaned, sanded, patched, caulked, and primed. This is where 90% of a great paint job happens.</li>
+            <li>4. Precision application — Brush, roller, or spray — our team applies professional-grade coatings with the right technique for each surface.</li>
+            <li>5. Walkthrough and cleanup — We review every detail together before we leave. Your home goes back to normal — with a finish that looks great.</li>
+          </ol>
+        </div>
       </SectionWrapper>
 
       <FeatureSection
@@ -72,43 +74,47 @@ export default function InteriorPaintingPage() {
       />
 
       <SectionWrapper variant="warm">
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-          Interior Painting Services We Offer
-        </h2>
-        <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-          <li>Walls and ceilings — Smooth, uniform finishes in every room of your home. Eggshell, satin, matte — we help you pick the right sheen for each room.</li>
-          <li>Trim and baseboards — Crisp, clean lines that frame your spaces and make the whole room look finished.</li>
-          <li>Fireplaces — Transformative finishes that turn your fireplace into a focal point. Brick, stone, or mantel — we handle it.</li>
-          <li>Staircases and railings — Detailed work on spindles, risers, and handrails that many painters overlook.</li>
-          <li>Kitchens and bathrooms — Moisture-resistant finishes built to handle Vancouver humidity without peeling or bubbling.</li>
-          <li>Bedrooms and living areas — Colours and textures tailored to how you actually live in each room.</li>
-          <li>Accent walls and level 5 finishes — Bold statements with the smoothest finish available. No imperfections.</li>
-        </ul>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Interior Painting Services We Offer
+          </h2>
+          <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
+            <li>Walls and ceilings — Smooth, uniform finishes in every room of your home. Eggshell, satin, matte — we help you pick the right sheen for each room.</li>
+            <li>Trim and baseboards — Crisp, clean lines that frame your spaces and make the whole room look finished.</li>
+            <li>Fireplaces — Transformative finishes that turn your fireplace into a focal point. Brick, stone, or mantel — we handle it.</li>
+            <li>Staircases and railings — Detailed work on spindles, risers, and handrails that many painters overlook.</li>
+            <li>Kitchens and bathrooms — Moisture-resistant finishes built to handle Vancouver humidity without peeling or bubbling.</li>
+            <li>Bedrooms and living areas — Colours and textures tailored to how you actually live in each room.</li>
+            <li>Accent walls and level 5 finishes — Bold statements with the smoothest finish available. No imperfections.</li>
+          </ul>
+        </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
-        <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-          Looking for more than interior work? We also specialize in{" "}
-          <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            exterior painting in Vancouver
-          </Link>{" "}
-          — siding, stucco, trim, and decks built to withstand BC weather. Need a kitchen refresh? Our{" "}
-          <Link href="/services/cabinets" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            cabinet painting services
-          </Link>{" "}
-          deliver a designer-quality spray finish that outperforms factory replacements.
-        </p>
-        <p className="mt-5 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-          If you want a quick ballpark before booking, try our{" "}
-          <Link
-            href="/tools/cost-calculator"
-            className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
-          >
-            interior painting cost calculator
-          </Link>
-          .
-        </p>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
+          <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+            Looking for more than interior work? We also specialize in{" "}
+            <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              exterior painting in Vancouver
+            </Link>{" "}
+            — siding, stucco, trim, and decks built to withstand BC weather. Need a kitchen refresh? Our{" "}
+            <Link href="/services/cabinets" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              cabinet painting services
+            </Link>{" "}
+            deliver a designer-quality spray finish that outperforms factory replacements.
+          </p>
+          <p className="mt-5 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+            If you want a quick ballpark before booking, try our{" "}
+            <Link
+              href="/tools/cost-calculator"
+              className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
+            >
+              interior painting cost calculator
+            </Link>
+            .
+          </p>
+        </div>
       </SectionWrapper>
 
       <Testimonials

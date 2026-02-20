@@ -21,7 +21,7 @@ export default function ServicesPage() {
       />
 
       <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 md:px-8">
           <div className="grid gap-12 md:grid-cols-3 md:gap-8">
             {siteConfig.services.map((service) => (
               <Link key={service.title} href={service.href} className="group">

@@ -21,7 +21,7 @@ export default function NewWestminsterAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Your New Westminster Home Deserves the Right Painters
           </h2>
@@ -48,7 +48,7 @@ export default function NewWestminsterAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             New Westminster Neighbourhoods We Serve
           </h2>
@@ -100,7 +100,7 @@ export default function NewWestminsterAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

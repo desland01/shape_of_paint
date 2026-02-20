@@ -32,7 +32,7 @@ export function FAQ({
 
   return (
     <section className="bg-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[700px] px-4 md:px-8">
+      <div className="mx-auto max-w-content px-4 md:px-8">
         <div className="mb-12 text-center">
           <SlideUp>
             <DecorativeIcon variant="leaf" className="mb-6" />

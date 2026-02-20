@@ -6,7 +6,7 @@ import { SlideUp } from "@/components/ui/motion";
 export function Footer() {
   return (
     <footer className="bg-background">
-      <div className="mx-auto max-w-[1200px] px-4 pt-12 pb-24 md:px-8 md:py-16">
+      <div className="mx-auto max-w-[1440px] px-4 pt-12 pb-24 md:px-8 md:py-16">
         <div className="grid gap-12 md:grid-cols-5">
           <SlideUp>
             <div className="flex flex-col gap-4">

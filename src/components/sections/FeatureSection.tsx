@@ -71,7 +71,7 @@ export function FeatureSection({
         variant === "warm" ? "bg-warm" : "bg-background"
       )}
     >
-      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         {/*
           CSS Grid overlap layout:
           - 12 columns on desktop

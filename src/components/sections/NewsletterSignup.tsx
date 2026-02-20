@@ -16,7 +16,7 @@ export function NewsletterSignup() {
 
   return (
     <section className="bg-background py-12 md:py-16">
-      <div className="mx-auto max-w-[420px] px-4 text-center md:px-8">
+      <div className="mx-auto max-w-[800px] px-4 text-center md:px-8">
         {!submitted ? (
           <>
             <SlideUp>

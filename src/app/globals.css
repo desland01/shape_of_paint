@@ -29,6 +29,7 @@
   --font-heading: "Eros Regular", "Trebuchet MS", serif;
   --font-display: "Eros Regular", "Trebuchet MS", serif;
   --font-mono: var(--font-geist-mono);
+  --max-width-content: 960px;
 
   --color-warm: var(--warm);
   --color-warm-light: var(--warm-light);
@@ -90,6 +91,7 @@
 
 :root {
   --radius: 0.25rem;
+  --header-h: 72px;
 
   /* ref: #FFFCF8 — warm off-white page background */
   --background: #FFFCF8;

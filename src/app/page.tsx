@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="absolute -right-16 bottom-10 h-72 w-72 rounded-full bg-accent-sage/12 blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-[1200px] px-4 md:px-8">
+        <div className="relative mx-auto max-w-[1440px] px-4 md:px-8">
           {/* Main card */}
           <div className="relative overflow-hidden rounded-3xl border border-border-subtle bg-background shadow-[0_36px_100px_-54px_rgba(0,0,0,0.25)]">
             {/* Top accent gradient bar */}

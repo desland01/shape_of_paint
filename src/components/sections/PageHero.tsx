@@ -43,7 +43,7 @@ export function PageHero({
       )}
 
       <div
-        className={`mx-auto max-w-[700px] px-4 md:px-8${hasImage ? " relative z-10" : ""}`}
+        className={`mx-auto max-w-content px-4 md:px-8${hasImage ? " relative z-10" : ""}`}
       >
         <SlideUp immediate>
           <DecorativeIcon

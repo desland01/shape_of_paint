@@ -20,7 +20,7 @@ export default function LangleyAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             From Fort Langley Heritage to Willoughby New Builds
           </h2>
@@ -49,7 +49,7 @@ export default function LangleyAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Langley Neighbourhoods We Serve
           </h2>
@@ -90,7 +90,7 @@ export default function LangleyAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

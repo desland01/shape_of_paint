@@ -22,7 +22,7 @@ export default function RichmondAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Island Living, Enduring Finishes
           </h2>
@@ -49,7 +49,7 @@ export default function RichmondAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Richmond Neighbourhoods We Serve
           </h2>
@@ -73,7 +73,7 @@ export default function RichmondAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

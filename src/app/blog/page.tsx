@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <>
       <section className="bg-background pb-4 pt-16 md:pt-24">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 md:px-8">
           <nav
             aria-label="Breadcrumb"
             className="mb-10 text-sm font-normal text-text-secondary"
@@ -59,7 +59,7 @@ export default function BlogPage() {
       </section>
 
       <section className="bg-background pb-16 md:pb-24">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 md:px-8">
           <div className="divide-y divide-border-subtle">
             {blogPosts.map((post, i) => (
               <BlogCard key={post.href} post={post} index={i} />

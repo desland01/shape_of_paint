@@ -61,32 +61,36 @@ export default function ExteriorPaintingPage() {
       />
 
       <SectionWrapper variant="warm">
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-          Exterior Painting Services We Offer
-        </h2>
-        <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-          <li>Siding — Wood, Hardie board, vinyl, and composite siding coated for lasting curb appeal and weather protection.</li>
-          <li>Stucco — Specialized elastomeric and acrylic coatings for stucco exteriors that flex with BC temperature changes.</li>
-          <li>Trim and fascia — Crisp, weather-resistant finishes on all exterior trim that keep moisture out and hold up season after season.</li>
-          <li>Soffits — Detailed work on overhead surfaces that many painters overlook. We treat them with the same care as every visible face of your home.</li>
-          <li>Decks and porches — Staining and sealing that protects your wood from Vancouver rain and holds through every season.</li>
-          <li>Front doors and garage doors — Colors and finishes that match your home and look great from the street.</li>
-        </ul>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Exterior Painting Services We Offer
+          </h2>
+          <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
+            <li>Siding — Wood, Hardie board, vinyl, and composite siding coated for lasting curb appeal and weather protection.</li>
+            <li>Stucco — Specialized elastomeric and acrylic coatings for stucco exteriors that flex with BC temperature changes.</li>
+            <li>Trim and fascia — Crisp, weather-resistant finishes on all exterior trim that keep moisture out and hold up season after season.</li>
+            <li>Soffits — Detailed work on overhead surfaces that many painters overlook. We treat them with the same care as every visible face of your home.</li>
+            <li>Decks and porches — Staining and sealing that protects your wood from Vancouver rain and holds through every season.</li>
+            <li>Front doors and garage doors — Colors and finishes that match your home and look great from the street.</li>
+          </ul>
+        </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
-        <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-          Need work inside your home too? Our{" "}
-          <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            interior painting in Vancouver
-          </Link>{" "}
-          covers walls, ceilings, trim, baseboards, and specialty finishes. We also offer{" "}
-          <Link href="/services/cabinets" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            spray-finished cabinet painting
-          </Link>{" "}
-          that delivers a designer-quality finish factory replacements cannot match.
-        </p>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
+          <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+            Need work inside your home too? Our{" "}
+            <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              interior painting in Vancouver
+            </Link>{" "}
+            covers walls, ceilings, trim, baseboards, and specialty finishes. We also offer{" "}
+            <Link href="/services/cabinets" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              spray-finished cabinet painting
+            </Link>{" "}
+            that delivers a designer-quality finish factory replacements cannot match.
+          </p>
+        </div>
       </SectionWrapper>
 
       <Testimonials

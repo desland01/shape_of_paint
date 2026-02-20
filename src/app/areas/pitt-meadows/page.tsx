@@ -21,7 +21,7 @@ export default function PittMeadowsAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Small-Town Roots, Professional-Grade Results
           </h2>
@@ -48,7 +48,7 @@ export default function PittMeadowsAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Pitt Meadows Neighborhoods We Serve
           </h2>
@@ -73,7 +73,7 @@ export default function PittMeadowsAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

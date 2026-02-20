@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight, Check, Plus, X, Ruler, Paintbrush, FileText, Inf
 import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/shared/Eyebrow";
-import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import {
@@ -81,7 +80,7 @@ function SurfaceToggle({
       type="button"
       onClick={onClick}
       className={cn(
-        "group min-h-[56px] rounded-2xl border p-4 text-left transition-all duration-300 active:scale-[0.97]",
+        "group min-h-[48px] rounded-2xl border p-3 text-left transition-all duration-300 active:scale-[0.97]",
         active
           ? "border-accent-gold bg-accent-gold/10 shadow-[0_10px_30px_-18px_rgb(var(--shadow-button-glow))]"
           : "border-border-subtle bg-background hover:border-accent-gold/60 hover:bg-warm-light"
@@ -135,10 +134,22 @@ export function CostCalculatorApp() {
 
   const totalSqFt = estimate.totals.wallSqFt + estimate.totals.ceilingSqFt;
 
+  const springTransition = { type: "spring" as const, stiffness: 300, damping: 30, mass: 0.8 };
+
   const stepAnimation = {
-    initial: (dir: number) => ({ opacity: 0, x: prefersReducedMotion ? 0 : dir * 28, y: prefersReducedMotion ? 0 : 8 }),
-    animate: { opacity: 1, x: 0, y: 0 },
-    exit: (dir: number) => ({ opacity: 0, x: prefersReducedMotion ? 0 : dir * -28, y: prefersReducedMotion ? 0 : -4 }),
+    initial: (dir: number) => ({
+      opacity: 0,
+      x: prefersReducedMotion ? 0 : dir * 120,
+      scale: prefersReducedMotion ? 1 : 0.96,
+      rotateY: prefersReducedMotion ? 0 : dir * 3,
+    }),
+    animate: { opacity: 1, x: 0, scale: 1, rotateY: 0 },
+    exit: (dir: number) => ({
+      opacity: 0,
+      x: prefersReducedMotion ? 0 : dir * -120,
+      scale: prefersReducedMotion ? 1 : 0.96,
+      rotateY: prefersReducedMotion ? 0 : dir * -3,
+    }),
   };
 
   const goToStep = (nextStep: Step) => {
@@ -180,8 +191,8 @@ export function CostCalculatorApp() {
     setError(null);
   };
 
-  const handleRoomSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleRoomSubmit = (event?: FormEvent<HTMLFormElement>) => {
+    if (event) event.preventDefault();
 
     const trimmedName = currentRoom.name.trim();
     const isDefaultName =
@@ -218,16 +229,16 @@ export function CostCalculatorApp() {
   ].filter((entry) => entry.cost > 0);
 
   return (
-    <SectionWrapper className="relative overflow-hidden py-14 md:py-20 lg:py-24">
+    <div className="relative h-full flex flex-col overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-12 top-24 h-56 w-56 rounded-full bg-accent-gold/20 blur-3xl" />
         <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-brand-secondary/30 blur-3xl" />
         <div className="absolute bottom-4 right-20 h-44 w-44 rounded-full bg-accent-sage/20 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] gap-8 px-4 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
+      <div className="relative mx-auto grid h-full max-w-[1440px] gap-8 px-4 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
         {/* Sidebar — order-2 on mobile so form appears first */}
-        <aside className="order-2 space-y-8 lg:order-1 lg:sticky lg:top-28 lg:self-start">
+        <aside className="order-2 space-y-8 lg:order-1 lg:overflow-y-auto">
           {/* Dynamic text content — desktop only */}
           <div className="hidden space-y-4 lg:block">
             <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
@@ -313,11 +324,11 @@ export function CostCalculatorApp() {
         </aside>
 
         {/* Wizard card — order-1 on mobile so it appears first */}
-        <section className="relative order-1 overflow-hidden rounded-[2rem] border border-border-subtle bg-background/95 shadow-[0_30px_80px_-42px_rgba(0,0,0,0.45)] backdrop-blur-sm lg:order-2">
+        <section className="relative order-1 flex flex-col overflow-hidden rounded-[2rem] border border-border-subtle bg-background/95 shadow-[0_30px_80px_-42px_rgba(0,0,0,0.45)] backdrop-blur-sm lg:order-2">
           <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent-gold via-brand-secondary to-accent-sage" />
 
           {/* Circle step progress indicator */}
-          <div className="border-b border-border-subtle/80 bg-warm-light px-4 py-6 md:px-8">
+          <div className="flex-shrink-0 border-b border-border-subtle/80 bg-warm-light px-4 py-6 md:px-8">
             <div className="flex items-center justify-between">
               {STEP_LABELS.map((entry, index) => {
                 const Icon = STEP_ICONS[entry.id];
@@ -355,14 +366,15 @@ export function CostCalculatorApp() {
           </div>
 
           {/* Step heading — mobile only */}
-          <div className="space-y-2 px-4 pt-6 md:px-8 lg:hidden">
+          <div className="flex-shrink-0 space-y-2 px-4 pt-6 md:px-8 lg:hidden">
             <Eyebrow>{STEP_CONTEXT[step].eyebrow}</Eyebrow>
             <h1 className="max-w-[18ch] text-4xl font-normal leading-[1.08] md:text-5xl">
               {STEP_CONTEXT[step].heading}
             </h1>
           </div>
 
-          <div className="px-4 py-6 md:px-8 md:py-8">
+          {/* Scrollable step content */}
+          <div className="flex-1 min-h-0 overflow-y-auto px-4 py-6 md:px-8 md:py-8" style={{ perspective: "1200px" }}>
             <AnimatePresence initial={false} mode="wait" custom={direction}>
               {/* ── Step 1: Measure ── */}
               {step === 1 && (
@@ -373,7 +385,7 @@ export function CostCalculatorApp() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: prefersReducedMotion ? 0 : 0.3, ease: "easeOut" }}
+                  transition={springTransition}
                   className="space-y-6"
                   onSubmit={handleRoomSubmit}
                 >
@@ -441,7 +453,7 @@ export function CostCalculatorApp() {
                     <h3 className="text-base font-semibold uppercase tracking-[0.09em] text-foreground">
                       Dimensions
                     </h3>
-                    <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    <div className="mt-3 grid grid-cols-3 gap-3">
                       {[
                         {
                           key: "length",
@@ -500,7 +512,7 @@ export function CostCalculatorApp() {
                     <p className="mt-1 text-base text-text-secondary">
                       Walls are included. Add any additional surfaces below.
                     </p>
-                    <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <div className="mt-3 grid grid-cols-2 gap-3">
                       <SurfaceToggle
                         active={currentRoom.includeCeiling}
                         onClick={() =>
@@ -597,25 +609,6 @@ export function CostCalculatorApp() {
                       <p className="text-sm font-medium text-red-700">{error}</p>
                     </motion.div>
                   )}
-
-                  {/* Bottom buttons */}
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <button
-                      type="button"
-                      onClick={addRoom}
-                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-border-subtle bg-warm-light px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
-                    >
-                      <Plus className="h-4 w-4" />
-                      Add Room
-                    </button>
-                    <button
-                      type="submit"
-                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
-                    >
-                      Continue
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </div>
                 </motion.form>
               )}
 
@@ -628,7 +621,7 @@ export function CostCalculatorApp() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: prefersReducedMotion ? 0 : 0.3, ease: "easeOut" }}
+                  transition={springTransition}
                   className="space-y-5"
                 >
                   <div>
@@ -651,20 +644,39 @@ export function CostCalculatorApp() {
                             type="button"
                             onClick={() => setMaterialTier(tier)}
                             whileTap={{ scale: 0.98 }}
+                            layout
                             className={cn(
-                              "w-full rounded-2xl border border-l-4 p-4 text-left transition-all duration-300",
+                              "w-full rounded-2xl border border-l-4 text-left transition-all duration-300",
                               selected
-                                ? "border-accent-gold bg-accent-gold/10 ring-2 ring-accent-gold/50 shadow-lg shadow-[0_12px_34px_-24px_rgb(var(--shadow-button-glow))]"
-                                : "border-border-subtle bg-background hover:border-accent-gold/60 hover:bg-warm-light"
+                                ? "border-accent-gold bg-accent-gold/10 ring-2 ring-accent-gold/50 shadow-lg shadow-[0_12px_34px_-24px_rgb(var(--shadow-button-glow))] p-4"
+                                : "border-border-subtle bg-background hover:border-accent-gold/60 hover:bg-warm-light px-4 py-3"
                             )}
                             style={{ borderLeftColor: info.color }}
                           >
-                            <div className="flex items-start justify-between gap-3">
-                              <div className="flex-1">
-                                <p className="text-lg font-semibold text-foreground">
-                                  {info.name}
+                            <div className="flex items-center justify-between gap-3">
+                              <p className={cn("font-semibold text-foreground", selected ? "text-lg" : "text-base")}>
+                                {info.name}
+                              </p>
+                              <div className="flex items-center gap-2">
+                                <p className={cn(
+                                  "font-mono",
+                                  selected ? "text-3xl text-accent-gold" : "text-xl text-foreground"
+                                )}>
+                                  {formatCurrency(info.price)}
                                 </p>
-                                <p className="text-base text-text-secondary">
+                                {!selected && (
+                                  <span className="text-xs text-text-muted">/gal</span>
+                                )}
+                              </div>
+                            </div>
+                            {selected && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <p className="mt-1 text-xs text-text-muted">per gallon</p>
+                                <p className="mt-2 text-base text-text-secondary">
                                   {info.description}
                                 </p>
                                 <div className="mt-3 grid grid-cols-2 gap-1.5">
@@ -674,23 +686,12 @@ export function CostCalculatorApp() {
                                     </span>
                                   ))}
                                 </div>
-                              </div>
-                              <div className="text-right">
-                                <p className={cn(
-                                  "font-mono text-3xl",
-                                  selected ? "text-accent-gold" : "text-foreground"
-                                )}>
-                                  {formatCurrency(info.price)}
-                                </p>
-                                <p className="text-xs text-text-muted">per gallon</p>
-                                {selected && (
-                                  <span className="mt-2 inline-flex items-center gap-1 rounded-full border border-accent-gold bg-background px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-foreground">
-                                    <Check className="h-3 w-3" />
-                                    Selected
-                                  </span>
-                                )}
-                              </div>
-                            </div>
+                                <span className="mt-3 inline-flex items-center gap-1 rounded-full border border-accent-gold bg-background px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-foreground">
+                                  <Check className="h-3 w-3" />
+                                  Selected
+                                </span>
+                              </motion.div>
+                            )}
                           </motion.button>
                         );
                       }
@@ -705,25 +706,6 @@ export function CostCalculatorApp() {
                     </span>{" "}
                     at {formatCurrency(TRIM_MATERIAL.price)}/gal.
                   </div>
-
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <button
-                      type="button"
-                      onClick={() => goToStep(1)}
-                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-border-subtle bg-warm-light px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
-                    >
-                      <ArrowLeft className="h-4 w-4" />
-                      Back
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => goToStep(3)}
-                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
-                    >
-                      View Estimate
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </div>
                 </motion.div>
               )}
 
@@ -736,7 +718,7 @@ export function CostCalculatorApp() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: prefersReducedMotion ? 0 : 0.3, ease: "easeOut" }}
+                  transition={springTransition}
                   className="space-y-5"
                 >
                   {/* Checkmark celebration */}
@@ -866,31 +848,6 @@ export function CostCalculatorApp() {
                     pricing may vary after on-site review and prep assessment.
                   </p>
 
-                  {/* Conversion CTA card */}
-                  <div className="rounded-3xl border border-accent-gold/30 bg-gradient-to-br from-warm to-warm-light p-6 text-center space-y-4">
-                    <h3 className="text-xl font-normal text-foreground">
-                      Ready for a precise quote?
-                    </h3>
-                    <p className="mx-auto max-w-[42ch] text-base text-text-secondary">
-                      This estimate gives you a starting point. For exact pricing, our team will assess your space and finalize every detail.
-                    </p>
-                    <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-                      <Link
-                        href="/contact#contact-form"
-                        className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
-                      >
-                        Request Your Free Estimate
-                      </Link>
-                      <a
-                        href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`}
-                        className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-border-subtle bg-background px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
-                      >
-                        <Phone className="h-4 w-4" />
-                        {siteConfig.phone}
-                      </a>
-                    </div>
-                  </div>
-
                   {/* Bottom utility buttons */}
                   <div className="grid gap-3 sm:grid-cols-2">
                     <button
@@ -913,8 +870,69 @@ export function CostCalculatorApp() {
               )}
             </AnimatePresence>
           </div>
+
+          {/* Pinned action footer */}
+          <div className="flex-shrink-0 border-t border-border-subtle bg-background px-4 py-4 md:px-8">
+            {step === 1 && (
+              <div className="grid gap-3 sm:grid-cols-2">
+                <button
+                  type="button"
+                  onClick={addRoom}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-border-subtle bg-warm-light px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
+                >
+                  <Plus className="h-4 w-4" />
+                  Add Room
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleRoomSubmit()}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                >
+                  Continue
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            )}
+            {step === 2 && (
+              <div className="grid gap-3 sm:grid-cols-2">
+                <button
+                  type="button"
+                  onClick={() => goToStep(1)}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-border-subtle bg-warm-light px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goToStep(3)}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                >
+                  View Estimate
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            )}
+            {step === 3 && (
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  href="/contact#contact-form"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-cta bg-cta px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                >
+                  Request Your Free Estimate
+                </Link>
+                <a
+                  href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-border-subtle bg-background px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
+                >
+                  <Phone className="h-4 w-4" />
+                  {siteConfig.phone}
+                </a>
+              </div>
+            )}
+          </div>
         </section>
       </div>
-    </SectionWrapper>
+    </div>
   );
 }

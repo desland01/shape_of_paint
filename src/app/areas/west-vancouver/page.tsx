@@ -22,7 +22,7 @@ export default function WestVancouverAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Where the View Deserves the Interior
           </h2>
@@ -49,7 +49,7 @@ export default function WestVancouverAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             West Vancouver Neighbourhoods We Serve
           </h2>
@@ -107,7 +107,7 @@ export default function WestVancouverAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

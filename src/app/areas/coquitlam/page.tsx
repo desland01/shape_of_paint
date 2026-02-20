@@ -32,7 +32,7 @@ export default function CoquitlamAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="max-w-3xl">
+        <div className="max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2]">
             New Construction to Established Character Homes
           </h2>
@@ -75,7 +75,7 @@ export default function CoquitlamAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="max-w-3xl">
+        <div className="max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2]">Coquitlam Neighbourhoods We Serve</h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             <p className="mb-4">
@@ -99,7 +99,7 @@ export default function CoquitlamAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="max-w-3xl">
+        <div className="max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2]">Explore Our Painting Services</h2>
           <p className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             Shape of Paint specializes in three core services for Coquitlam homes:{" "}

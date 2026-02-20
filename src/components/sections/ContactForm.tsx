@@ -26,9 +26,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 /*  Constants                                                                  */
 /* -------------------------------------------------------------------------- */
 
-const EASING: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
-const STEP_DURATION = 0.3;
-const SLIDE_OFFSET = 60;
+const SLIDE_OFFSET = 120;
 
 const PROJECT_TYPES = [
   { value: "interior", label: "Interior Painting", image: "/images/interior.webp" },
@@ -132,24 +130,32 @@ export function ContactForm() {
 
   /* ------ Animation variants ------ */
 
+  const springTransition = { type: "spring" as const, stiffness: 300, damping: 30, mass: 0.8 };
+
   const variants = shouldReduceMotion
     ? {
-        enter: { opacity: 1, x: 0 },
-        center: { opacity: 1, x: 0 },
-        exit: { opacity: 1, x: 0 },
+        enter: { opacity: 1, x: 0, scale: 1, rotateY: 0 },
+        center: { opacity: 1, x: 0, scale: 1, rotateY: 0 },
+        exit: { opacity: 1, x: 0, scale: 1, rotateY: 0 },
       }
     : {
         enter: (d: number) => ({
           x: d * SLIDE_OFFSET,
           opacity: 0,
+          scale: 0.96,
+          rotateY: d * 3,
         }),
         center: {
           x: 0,
           opacity: 1,
+          scale: 1,
+          rotateY: 0,
         },
         exit: (d: number) => ({
           x: d * -SLIDE_OFFSET,
           opacity: 0,
+          scale: 0.96,
+          rotateY: d * -3,
         }),
       };
 
@@ -196,7 +202,7 @@ export function ContactForm() {
   /* ------ Progress bar ------ */
 
   const progressBar = (
-    <div className="mb-6">
+    <div className="mb-6 flex-shrink-0">
       <p className="text-xs font-medium uppercase tracking-[0.15em] text-text-secondary mb-2">
         Step {step} of 3
       </p>
@@ -207,7 +213,7 @@ export function ContactForm() {
           animate={{ width: `${(step / 3) * 100}%` }}
           transition={{
             duration: shouldReduceMotion ? 0 : 0.3,
-            ease: EASING,
+            ease: [0.25, 0.46, 0.45, 0.94],
           }}
         />
       </div>
@@ -217,9 +223,9 @@ export function ContactForm() {
   /* ------ Render ------ */
 
   return (
-    <div>
+    <div className="flex h-full flex-col">
       {/* Heading */}
-      <div className="mb-6">
+      <div className="mb-6 flex-shrink-0">
         <h3 className="text-4xl font-normal mb-1">Tell Us About Your Project</h3>
         <p className="text-lg text-text-secondary">
           We respond within 2 hours during business hours
@@ -228,11 +234,11 @@ export function ContactForm() {
 
       {progressBar}
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-1 flex-col min-h-0">
         {/* Hidden projectType for form submission */}
         <input type="hidden" {...register("projectType")} />
 
-        <div className="relative overflow-hidden">
+        <div className="relative flex-1 min-h-0 overflow-hidden" style={{ perspective: "1200px" }}>
           <AnimatePresence mode="wait" custom={direction}>
             {/* ---- STEP 1: Project Type ---- */}
             {step === 1 && (
@@ -243,10 +249,7 @@ export function ContactForm() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{
-                  duration: shouldReduceMotion ? 0 : STEP_DURATION,
-                  ease: EASING,
-                }}
+                transition={springTransition}
               >
                 <p className="text-lg font-medium text-text-secondary mb-4">
                   What type of project do you have in mind?
@@ -265,7 +268,7 @@ export function ContactForm() {
                           : "border-border-subtle hover:border-text-muted"
                       }`}
                     >
-                      <div className="relative aspect-square w-full overflow-hidden rounded-[9px]">
+                      <div className="relative aspect-[4/3] md:aspect-square w-full overflow-hidden rounded-[9px]">
                         <Image
                           src={type.image}
                           alt={type.label}
@@ -300,10 +303,7 @@ export function ContactForm() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{
-                  duration: shouldReduceMotion ? 0 : STEP_DURATION,
-                  ease: EASING,
-                }}
+                transition={springTransition}
                 className="space-y-5"
               >
                 {/* Name */}
@@ -410,10 +410,7 @@ export function ContactForm() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{
-                  duration: shouldReduceMotion ? 0 : STEP_DURATION,
-                  ease: EASING,
-                }}
+                transition={springTransition}
                 className="space-y-5"
               >
                 <div>
@@ -426,7 +423,7 @@ export function ContactForm() {
                     <textarea
                       id="message"
                       placeholder=" "
-                      rows={5}
+                      rows={3}
                       className={`${INPUT_CLASS} resize-y`}
                       {...register("message")}
                     />

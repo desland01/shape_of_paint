@@ -111,74 +111,78 @@ export default function CabinetPaintingPage() {
       />
 
       <SectionWrapper>
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-          Cabinet Painting Services
-        </h2>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Cabinet Painting Services
+          </h2>
 
-        <h3 className="mb-3 mt-6 text-xl font-medium">
-          Kitchen Cabinet Painting
-        </h3>
-        <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          Cabinet painting in Vancouver is the fastest way to transform your
-          kitchen without a full renovation. We remove every door, drawer front,
-          and hinge — then apply a professional HVLP spray finish using Benjamin
-          Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
-          factory-quality coating in any colour you choose. Swap out your
-          hardware while we&apos;re at it and your kitchen looks like a
-          $30,000 remodel — at a fraction of the cost.
-        </p>
+          <h3 className="mb-3 mt-6 text-xl font-medium">
+            Kitchen Cabinet Painting
+          </h3>
+          <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            Cabinet painting in Vancouver is the fastest way to transform your
+            kitchen without a full renovation. We remove every door, drawer front,
+            and hinge — then apply a professional HVLP spray finish using Benjamin
+            Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
+            factory-quality coating in any colour you choose. Swap out your
+            hardware while we&apos;re at it and your kitchen looks like a
+            $30,000 remodel — at a fraction of the cost.
+          </p>
 
-        <h3 className="mb-3 mt-6 text-xl font-medium">
-          Bathroom Vanity & Cabinet Painting
-        </h3>
-        <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          Bathroom cabinets and vanities take a beating from humidity, moisture,
-          and daily use. Our refinishing process starts with moisture-resistant
-          primers specifically formulated for high-humidity environments. We
-          spray multiple coats of professional-grade enamel that won&apos;t peel, bubble,
-          or yellow — even in Vancouver&apos;s dampest bathrooms. New colour,
-          same cabinets — and a room that feels entirely different.
-        </p>
+          <h3 className="mb-3 mt-6 text-xl font-medium">
+            Bathroom Vanity & Cabinet Painting
+          </h3>
+          <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            Bathroom cabinets and vanities take a beating from humidity, moisture,
+            and daily use. Our refinishing process starts with moisture-resistant
+            primers specifically formulated for high-humidity environments. We
+            spray multiple coats of professional-grade enamel that won&apos;t peel, bubble,
+            or yellow — even in Vancouver&apos;s dampest bathrooms. New colour,
+            same cabinets — and a room that feels entirely different.
+          </p>
 
-        <h3 className="mb-3 mt-6 text-xl font-medium">
-          Custom Finishes & Staining
-        </h3>
-        <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          Not every project calls for a solid colour. We offer custom staining,
-          glazing, and specialty finishes for homeowners and designers who want
-          something beyond standard white or grey. Bring us your designer specs,
-          a colour match from another product, or just an idea — we&apos;ll
-          create sample finishes on your actual cabinet material so you see
-          exactly what you&apos;re getting before we spray.
-        </p>
+          <h3 className="mb-3 mt-6 text-xl font-medium">
+            Custom Finishes & Staining
+          </h3>
+          <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            Not every project calls for a solid colour. We offer custom staining,
+            glazing, and specialty finishes for homeowners and designers who want
+            something beyond standard white or grey. Bring us your designer specs,
+            a colour match from another product, or just an idea — we&apos;ll
+            create sample finishes on your actual cabinet material so you see
+            exactly what you&apos;re getting before we spray.
+          </p>
+        </div>
       </SectionWrapper>
 
       <SectionWrapper variant="warm">
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-          Our Spray Finish Process
-        </h2>
-        <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          <li>
-            1. Cleaning & De-Glossing — Every cabinet surface is cleaned with
-            TSP, then sanded or chemically de-glossed to create the perfect
-            bonding profile. Hinges, handles, and hardware come off. Doors and
-            drawer fronts are labeled and transported to our spray area.
-          </li>
-          <li>
-            2. Priming & Bonding Coats — We apply adhesion-promoting primer
-            designed for your specific cabinet material — whether it&apos;s MDF,
-            solid wood, laminate, or thermofoil. This step is non-negotiable.
-            It&apos;s the difference between paint that lasts 10 years and paint
-            that chips in 6 months.
-          </li>
-          <li>
-            3. Spray Application & Reassembly — Multiple coats of professional-grade hybrid
-            alkyd enamel applied with professional HVLP equipment. Each coat is
-            sanded between applications for a glass-smooth factory finish. Once
-            fully cured, we reinstall everything — doors, drawers, hardware —
-            and align every hinge.
-          </li>
-        </ol>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Our Spray Finish Process
+          </h2>
+          <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            <li>
+              1. Cleaning & De-Glossing — Every cabinet surface is cleaned with
+              TSP, then sanded or chemically de-glossed to create the perfect
+              bonding profile. Hinges, handles, and hardware come off. Doors and
+              drawer fronts are labeled and transported to our spray area.
+            </li>
+            <li>
+              2. Priming & Bonding Coats — We apply adhesion-promoting primer
+              designed for your specific cabinet material — whether it&apos;s MDF,
+              solid wood, laminate, or thermofoil. This step is non-negotiable.
+              It&apos;s the difference between paint that lasts 10 years and paint
+              that chips in 6 months.
+            </li>
+            <li>
+              3. Spray Application & Reassembly — Multiple coats of professional-grade hybrid
+              alkyd enamel applied with professional HVLP equipment. Each coat is
+              sanded between applications for a glass-smooth factory finish. Once
+              fully cured, we reinstall everything — doors, drawers, hardware —
+              and align every hinge.
+            </li>
+          </ol>
+        </div>
       </SectionWrapper>
 
       <FeatureSection
@@ -192,24 +196,26 @@ export default function CabinetPaintingPage() {
       />
 
       <SectionWrapper>
-        <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-          Cabinet Painting Cost in Vancouver
-        </h2>
-        <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          Transparent pricing so you know what to expect. Every project is
-          quoted after an in-home assessment, but here are typical ranges for
-          Vancouver cabinet painting projects:
-        </p>
-        <ul className="mb-6 space-y-3 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          <li>Kitchen cabinets (standard 20-door kitchen): $4,500–$7,500</li>
-          <li>Bathroom vanity and cabinets: $1,200–$2,500</li>
-          <li>Island add-on: $800–$1,500</li>
-        </ul>
-        <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          We&apos;re selective about the projects we take on. If the priority
-          is the lowest price, we may not be the right fit. But if you want a
-          finish that holds for a decade — that&apos;s what we do.
-        </p>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Cabinet Painting Cost in Vancouver
+          </h2>
+          <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            Transparent pricing so you know what to expect. Every project is
+            quoted after an in-home assessment, but here are typical ranges for
+            Vancouver cabinet painting projects:
+          </p>
+          <ul className="mb-6 space-y-3 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            <li>Kitchen cabinets (standard 20-door kitchen): $4,500–$7,500</li>
+            <li>Bathroom vanity and cabinets: $1,200–$2,500</li>
+            <li>Island add-on: $800–$1,500</li>
+          </ul>
+          <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            We&apos;re selective about the projects we take on. If the priority
+            is the lowest price, we may not be the right fit. But if you want a
+            finish that holds for a decade — that&apos;s what we do.
+          </p>
+        </div>
       </SectionWrapper>
 
       <PortfolioGallery
@@ -221,18 +227,20 @@ export default function CabinetPaintingPage() {
       <FAQ heading="Frequently Asked Questions" items={cabinetFaqItems} />
 
       <SectionWrapper>
-        <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
-        <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-          While we&apos;re transforming your cabinets, consider refreshing the rest of your home. Our{" "}
-          <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            interior painting services
-          </Link>{" "}
-          cover walls, ceilings, trim, and specialty finishes with the same attention to detail. We also handle{" "}
-          <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
-            exterior painting for Vancouver homes
-          </Link>{" "}
-          — siding, stucco, and decks protected against BC weather.
-        </p>
+        <div className="md:max-w-[70%]">
+          <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
+          <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
+            While we&apos;re transforming your cabinets, consider refreshing the rest of your home. Our{" "}
+            <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              interior painting services
+            </Link>{" "}
+            cover walls, ceilings, trim, and specialty finishes with the same attention to detail. We also handle{" "}
+            <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+              exterior painting for Vancouver homes
+            </Link>{" "}
+            — siding, stucco, and decks protected against BC weather.
+          </p>
+        </div>
       </SectionWrapper>
 
       <Testimonials

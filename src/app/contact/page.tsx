@@ -5,6 +5,7 @@ import { ContactCards } from "@/components/sections/ContactCards";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { ViewportFitWrapper } from "@/components/shared/ViewportFitWrapper";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function ContactPage() {
       />
 
       <SectionWrapper variant="warm-light" className="py-10 md:py-14 lg:py-16">
-        <div className="mx-auto max-w-[880px] rounded-[24px] border border-border-subtle bg-background p-6 md:p-8">
+        <div className="mx-auto max-w-content rounded-[24px] border border-border-subtle bg-background p-6 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
             Planning First
           </p>
@@ -51,16 +52,14 @@ export default function ContactPage() {
         </div>
       </SectionWrapper>
 
-      <div id="contact-form">
-        <SectionWrapper>
-          <div className="mx-auto max-w-[600px]">
-            <ContactForm />
-          </div>
-        </SectionWrapper>
-      </div>
+      <ViewportFitWrapper id="contact-form" className="bg-background">
+        <div className="mx-auto h-full flex flex-col max-w-content px-4 md:px-8 py-8">
+          <ContactForm />
+        </div>
+      </ViewportFitWrapper>
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[700px]">
+        <div className="mx-auto max-w-content">
           <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
             Firm quotes — no surprises. The price we give is the price you pay. No hidden fees. Shape of Paint is licensed and insured, serving 400+ homes across Vancouver and the Lower Mainland. A 30% deposit is collected when the quote is accepted, with the balance due upon final walkthrough. We accept cash, credit, or e-transfer.
           </p>

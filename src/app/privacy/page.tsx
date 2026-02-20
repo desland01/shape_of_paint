@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       <PageHero heading="Privacy Policy" />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px] space-y-8 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
+        <div className="mx-auto max-w-content space-y-8 text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
           <p>Last updated: February 2026</p>
 
           <div>

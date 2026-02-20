@@ -55,7 +55,7 @@ export default function AboutPage() {
       />
 
       <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-[800px] px-6 md:px-8">
+        <div className="mx-auto max-w-content px-6 md:px-8">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             You shouldn't have to babysit your painters
           </h2>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       />
 
       <section className="bg-warm py-16 md:py-24">
-        <div className="mx-auto max-w-[1200px] px-6 text-center md:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 text-center md:px-8">
           <h2 className="mb-12 text-3xl font-normal leading-[1.2] md:text-4xl lg:text-[60px]">
             Recent work across Vancouver
           </h2>

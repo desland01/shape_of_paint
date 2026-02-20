@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CostCalculatorApp } from "@/components/tools/CostCalculatorApp";
+import { ViewportFitWrapper } from "@/components/shared/ViewportFitWrapper";
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost Calculator",
@@ -12,5 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default function CostCalculatorPage() {
-  return <CostCalculatorApp />;
+  return (
+    <ViewportFitWrapper>
+      <CostCalculatorApp />
+    </ViewportFitWrapper>
+  );
 }

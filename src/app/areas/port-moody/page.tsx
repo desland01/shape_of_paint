@@ -20,7 +20,7 @@ export default function PortMoodyAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             The City of the Arts Deserves Artisan Finishes
           </h2>
@@ -49,7 +49,7 @@ export default function PortMoodyAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Port Moody Neighbourhoods We Serve
           </h2>
@@ -90,7 +90,7 @@ export default function PortMoodyAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

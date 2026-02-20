@@ -22,7 +22,7 @@ export default function SurreyAreaPage() {
       />
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px] px-6 md:px-8">
+        <div className="mx-auto max-w-content px-6 md:px-8">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Growing Families, Enduring Finishes
           </h2>
@@ -49,7 +49,7 @@ export default function SurreyAreaPage() {
       />
 
       <SectionWrapper variant="warm">
-        <div className="mx-auto max-w-[800px] px-6 md:px-8">
+        <div className="mx-auto max-w-content px-6 md:px-8">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Surrey Neighbourhoods We Serve
           </h2>
@@ -89,7 +89,7 @@ export default function SurreyAreaPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[800px] px-6 md:px-8">
+        <div className="mx-auto max-w-content px-6 md:px-8">
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Explore Our Painting Services
           </h2>

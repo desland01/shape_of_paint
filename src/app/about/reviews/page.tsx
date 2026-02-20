@@ -33,7 +33,7 @@ export default function ReviewsPage() {
       <SectionWrapper>
         {siteConfig.testimonials.map((testimonial, index) => (
           <SlideUp key={index} delay={index * 0.1}>
-            <div className="mx-auto mb-16 max-w-[700px] text-center last:mb-0">
+            <div className="mx-auto mb-16 max-w-content text-center last:mb-0">
               <DecorativeIcon variant="leaf" className="mb-6" />
               <blockquote className="mb-4 text-xl font-normal leading-relaxed italic text-foreground md:text-2xl">
                 &ldquo;{testimonial.quote}&rdquo;
