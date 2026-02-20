@@ -10,9 +10,9 @@ interface FounderQuoteProps {
 export function FounderQuote({ quote, author }: FounderQuoteProps) {
   return (
     <section className="relative z-20 bg-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[800px] px-4 text-center md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 text-center md:px-8">
         <SlideUp delay={0.1}>
-          <h2 className="mb-4 text-4xl font-normal leading-[1.45] tracking-[1.5px] md:text-[46px]">
+          <h2 className="mx-auto mb-4 max-w-[38ch] text-4xl font-normal leading-[1.45] tracking-[1.5px] md:text-[46px]">
             &ldquo;{quote}&rdquo;
           </h2>
         </SlideUp>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SlideUp, ScrollZoom } from "@/components/ui/motion";
+import { ArrowRight } from "lucide-react";
 
 interface Service {
   title: string;
@@ -18,7 +19,7 @@ interface ServicesGridProps {
 export function ServicesGrid({ services }: ServicesGridProps) {
   return (
     <section className="bg-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {services.map((service, i) => (
             <SlideUp key={service.title} delay={i * 0.15}>
@@ -50,9 +51,10 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 </p>
                 <Link
                   href={service.href}
-                  className="inline-flex items-center py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300"
+                  className="inline-flex items-center gap-2 py-3 min-h-[48px] text-sm font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300"
                 >
                   {service.title}
+                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 </Link>
               </div>
             </SlideUp>

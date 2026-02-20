@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -13,11 +13,25 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => {
+      document.documentElement.style.setProperty(
+        "--header-h",
+        `${entry.contentRect.height}px`
+      );
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -33,12 +47,13 @@ export function Header() {
 
   return (
     <header
+      ref={headerRef}
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         isTransparent ? "bg-transparent" : "bg-background/95 backdrop-blur-sm"
       )}
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 md:py-6 md:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-4 md:py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/logo-icon.png"
@@ -104,7 +119,7 @@ export function Header() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-3 -mr-3 md:hidden"
+          className="min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? (
@@ -115,7 +130,7 @@ export function Header() {
         </button>
       </div>
 
-      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div
           className={cn(
             "h-px bg-border-subtle transition-opacity duration-300",

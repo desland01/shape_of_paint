@@ -97,7 +97,7 @@ export function Testimonials({
 
   return (
     <section className="bg-white py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[900px] px-4 text-center md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 text-center md:px-8">
         <SlideUp>
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
@@ -111,7 +111,7 @@ export function Testimonials({
           {testimonials.length > 1 && (
             <button
               onClick={prev}
-              className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-[#999] hover:text-foreground transition-colors duration-300"
+              className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-text-secondary hover:text-foreground transition-colors duration-300"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="h-5 w-5" strokeWidth={1} />
@@ -119,7 +119,7 @@ export function Testimonials({
           )}
 
           {/* White testimonial card */}
-          <div className="relative min-h-[200px] w-full max-w-[700px]">
+          <div className="relative min-h-[200px] w-full max-w-[900px]">
             <AnimatePresence custom={direction} mode="wait">
               <motion.div
                 key={current}
@@ -136,7 +136,7 @@ export function Testimonials({
                   <WatercolorPeony />
                 </div>
 
-                <blockquote className="mb-6 text-2xl italic leading-relaxed text-foreground md:text-3xl lg:text-[30px] lg:leading-relaxed">
+                <blockquote className="mb-6 text-left text-2xl italic leading-relaxed text-foreground md:text-center md:text-3xl lg:text-[30px] lg:leading-relaxed">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </blockquote>
                 <p className="text-lg font-medium text-text-secondary">
@@ -150,7 +150,7 @@ export function Testimonials({
           {testimonials.length > 1 && (
             <button
               onClick={next}
-              className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-[#999] hover:text-foreground transition-colors duration-300"
+              className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-text-secondary hover:text-foreground transition-colors duration-300"
               aria-label="Next testimonial"
             >
               <ArrowRight className="h-5 w-5" strokeWidth={1} />

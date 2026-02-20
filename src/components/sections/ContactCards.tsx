@@ -30,7 +30,7 @@ export function ContactCards() {
 
   return (
     <section className="bg-background py-12">
-      <div className="mx-auto max-w-[1200px] px-4 md:px-8">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card, i) => (
             <SlideUp key={card.title} delay={i * 0.1}>
@@ -45,7 +45,7 @@ export function ContactCards() {
                     <a
                       key={j}
                       href={card.href}
-                      className="block text-lg font-normal text-text-secondary hover:text-link-hover transition-colors duration-300"
+                      className="block text-lg font-normal text-text-secondary underline underline-offset-2 hover:text-link-hover transition-colors duration-300"
                     >
                       {line}
                     </a>

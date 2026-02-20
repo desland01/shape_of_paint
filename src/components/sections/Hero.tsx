@@ -65,19 +65,19 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
       />
 
       {/* Content block */}
-      <div className="relative z-10 w-full max-w-4xl px-4 pb-24 pt-28 text-center md:pb-0 md:pt-0">
+      <div className="relative z-10 w-full max-w-6xl px-4 pb-24 pt-28 text-center md:pb-0 md:pt-0">
         <SlideUp immediate delay={0 * STAGGER_DELAY}>
           <Eyebrow className="mb-4 text-white">{eyebrow}</Eyebrow>
         </SlideUp>
 
         <SlideUp immediate delay={1 * STAGGER_DELAY}>
-          <h1 className="mx-auto max-w-3xl text-6xl font-normal leading-[1.15] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-7xl lg:text-[96px]">
+          <h1 className="mx-auto text-6xl font-normal leading-[1.15] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6)] md:text-7xl lg:text-[96px]">
             {headline}
           </h1>
         </SlideUp>
 
         <SlideUp immediate delay={2 * STAGGER_DELAY}>
-          <p className="mx-auto mt-4 max-w-xl text-xl text-white/80 md:text-2xl">
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-white/80 md:text-2xl">
             Professional house painters serving Vancouver and the Lower Mainland
           </p>
         </SlideUp>
@@ -93,7 +93,7 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
 
           <a
             href="tel:6043537378"
-            className="inline-flex min-h-[48px] items-center text-sm font-medium text-white underline-offset-4 transition-colors hover:text-white/80 hover:underline"
+            className="inline-flex min-h-[48px] items-center text-sm font-medium text-white underline underline-offset-4 transition-colors hover:text-white/80"
           >
             604-353-7378
           </a>
