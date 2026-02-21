@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { MATERIALS, TRIM_MATERIAL } from "@/lib/cost-calculator/constants";
 import { calculateEstimate, calculateRoomMetrics, createEmptyRoom } from "@/lib/cost-calculator/interiorCalculator";
@@ -22,6 +22,7 @@ export function CostCalculatorApp() {
   const [rooms, setRooms] = useState<RoomData[]>([createEmptyRoom(1)]);
   const [currentRoomIndex, setCurrentRoomIndex] = useState(0);
   const [materialTier, setMaterialTier] = useState<MaterialTier>("better");
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   // Derived state
   const currentRoom = rooms[currentRoomIndex] ?? rooms[0];
@@ -42,6 +43,7 @@ export function CostCalculatorApp() {
     setDirection(nextStep > step ? 1 : -1);
     setStep(nextStep);
     setError(null);
+    scrollRef.current?.scrollTo(0, 0);
   };
 
   // Room mutations
@@ -91,6 +93,7 @@ export function CostCalculatorApp() {
     setCurrentRoomIndex(0);
     setMaterialTier("better");
     setError(null);
+    scrollRef.current?.scrollTo(0, 0);
   };
 
   // Animation system (matches ContactForm exactly)
@@ -131,7 +134,7 @@ export function CostCalculatorApp() {
       </div>
 
       {/* Step content with slide transitions */}
-      <div className="relative flex-1 min-h-0 overflow-y-auto" style={{ perspective: "1200px" }}>
+      <div ref={scrollRef} className="relative flex-1 min-h-0 overflow-y-auto" style={{ perspective: "1200px" }}>
         <AnimatePresence mode="wait" custom={direction}>
           {step === 1 && (
             <motion.div key="step-1" custom={direction} variants={variants} initial="enter" animate="center" exit="exit" transition={springTransition}>

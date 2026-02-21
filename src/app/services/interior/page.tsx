@@ -48,6 +48,8 @@ export default function InteriorPaintingPage() {
         description="Walls, ceilings, trim, baseboards, fireplaces, and staircases. Clean, smooth finishes that make every room in your Vancouver home look its best."
         image="/images/interior.webp"
         imageAlt="Professional interior painting in progress"
+        ctaText="Get Your Free Estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <SectionWrapper>

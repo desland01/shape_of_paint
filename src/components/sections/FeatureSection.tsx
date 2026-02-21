@@ -165,7 +165,7 @@ export function FeatureSection({
                 </SlideUp>
               )}
               <SlideUp delay={0.15}>
-                <h2 className="mb-4 text-5xl font-normal leading-[1.25] md:text-6xl">
+                <h2 className="mb-4 text-4xl font-normal leading-[1.25] md:text-6xl">
                   {heading}
                 </h2>
               </SlideUp>

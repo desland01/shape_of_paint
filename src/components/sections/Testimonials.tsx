@@ -102,7 +102,7 @@ export function Testimonials({
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
         <SlideUp delay={0.1}>
-          <h2 className="mb-12 text-5xl font-normal leading-[1.2] md:text-6xl lg:text-[72px]">{heading}</h2>
+          <h2 className="mb-12 text-4xl font-normal leading-[1.2] md:text-5xl lg:text-6xl xl:text-[72px]">{heading}</h2>
         </SlideUp>
 
         {/* Arrow + Card row */}
@@ -114,7 +114,7 @@ export function Testimonials({
               className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-text-secondary hover:text-foreground transition-colors duration-300"
               aria-label="Previous testimonial"
             >
-              <ArrowLeft className="h-5 w-5" strokeWidth={1} />
+              <ArrowLeft className="h-6 w-6" strokeWidth={1.5} />
             </button>
           )}
 
@@ -153,10 +153,33 @@ export function Testimonials({
               className="shrink-0 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-text-secondary hover:text-foreground transition-colors duration-300"
               aria-label="Next testimonial"
             >
-              <ArrowRight className="h-5 w-5" strokeWidth={1} />
+              <ArrowRight className="h-6 w-6" strokeWidth={1.5} />
             </button>
           )}
         </div>
+
+        {/* Indicator dots */}
+        {testimonials.length > 1 && (
+          <div className="mt-8 flex items-center justify-center gap-2" role="tablist" aria-label="Testimonial navigation">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setDirection(index > current ? 1 : -1);
+                  setCurrent(index);
+                }}
+                className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                  index === current
+                    ? "bg-text-secondary scale-125"
+                    : "bg-text-secondary/30 hover:bg-text-secondary/50"
+                }`}
+                role="tab"
+                aria-selected={index === current}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -22,9 +22,9 @@ export default function ServicesPage() {
 
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-[1440px] px-6 md:px-8">
-          <div className="grid gap-12 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-8 md:grid-cols-3 md:gap-8">
             {siteConfig.services.map((service) => (
-              <Link key={service.title} href={service.href} className="group">
+              <Link key={service.title} href={service.href} className="group rounded-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cta-hover">
                 <ScrollZoom>
                   <div className="relative mb-6 aspect-[4/3] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
                     <Image
@@ -42,8 +42,9 @@ export default function ServicesPage() {
                 <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
                   {service.description}
                 </p>
-                <span className="text-sm font-medium uppercase tracking-[0.15em] text-foreground group-hover:text-link-hover transition-colors duration-300">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.15em] text-foreground group-hover:text-link-hover group-hover:underline underline-offset-4 transition-colors duration-300" aria-hidden="true">
                   Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </span>
               </Link>
             ))}

@@ -108,6 +108,8 @@ export default function CabinetPaintingPage() {
         description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that deliver a smoother, more durable result than factory replacements."
         image="/images/cabinets.webp"
         imageAlt="Custom cabinet painting and refinishing"
+        ctaText="Get Your Free Estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <SectionWrapper>
@@ -116,7 +118,7 @@ export default function CabinetPaintingPage() {
             Cabinet Painting Services
           </h2>
 
-          <h3 className="mb-3 mt-6 text-xl font-medium">
+          <h3 className="mb-3 mt-6 text-xl font-bold">
             Kitchen Cabinet Painting
           </h3>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -126,10 +128,10 @@ export default function CabinetPaintingPage() {
             Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
             factory-quality coating in any colour you choose. Swap out your
             hardware while we&apos;re at it and your kitchen looks like a
-            $30,000 remodel — at a fraction of the cost.
+            $30,000 remodel.
           </p>
 
-          <h3 className="mb-3 mt-6 text-xl font-medium">
+          <h3 className="mb-3 mt-6 text-xl font-bold">
             Bathroom Vanity & Cabinet Painting
           </h3>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -141,7 +143,7 @@ export default function CabinetPaintingPage() {
             same cabinets — and a room that feels entirely different.
           </p>
 
-          <h3 className="mb-3 mt-6 text-xl font-medium">
+          <h3 className="mb-3 mt-6 text-xl font-bold">
             Custom Finishes & Staining
           </h3>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
@@ -215,6 +217,14 @@ export default function CabinetPaintingPage() {
             is the lowest price, we may not be the right fit. But if you want a
             finish that holds for a decade — that&apos;s what we do.
           </p>
+          <p className="mt-8">
+            <Link
+              href="/contact#contact-form"
+              className="inline-flex min-h-[48px] items-center rounded-[9px] border border-cta bg-cta px-6 py-3 text-base font-medium text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+            >
+              Get Your Free Estimate
+            </Link>
+          </p>
         </div>
       </SectionWrapper>
 
@@ -231,11 +241,11 @@ export default function CabinetPaintingPage() {
           <h2 className="mb-4 text-3xl font-normal leading-[1.2] md:text-4xl">Explore Our Other Services</h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
             While we&apos;re transforming your cabinets, consider refreshing the rest of your home. Our{" "}
-            <Link href="/services/interior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+            <Link href="/services/interior" className="font-medium text-foreground underline decoration-foreground/30 underline-offset-2 hover:text-link-hover hover:decoration-link-hover transition-colors duration-300">
               interior painting services
             </Link>{" "}
             cover walls, ceilings, trim, and specialty finishes with the same attention to detail. We also handle{" "}
-            <Link href="/services/exterior" className="font-medium text-foreground hover:text-link-hover transition-colors duration-300">
+            <Link href="/services/exterior" className="font-medium text-foreground underline decoration-foreground/30 underline-offset-2 hover:text-link-hover hover:decoration-link-hover transition-colors duration-300">
               exterior painting for Vancouver homes
             </Link>{" "}
             — siding, stucco, and decks protected against BC weather.

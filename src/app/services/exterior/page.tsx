@@ -48,6 +48,8 @@ export default function ExteriorPaintingPage() {
         description="Siding, stucco, trim, soffits, and decks. Professional coatings built to handle Vancouver rain, moisture, and UV."
         image="/images/exterior.webp"
         imageAlt="Exterior house painting by Shape of Paint"
+        ctaText="Get Your Free Estimate"
+        ctaHref="/contact#contact-form"
       />
 
       <FeatureSection
