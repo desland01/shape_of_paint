@@ -54,6 +54,12 @@ export function Header() {
     };
   }, [isOpen]);
 
+  const handleNavClick = () => {
+    document.body.style.overflow = '';
+    window.scrollTo(0, 0);
+    setIsOpen(false);
+  };
+
   const isTransparent = pathname === "/" && !scrolled;
 
   return (
@@ -175,7 +181,7 @@ export function Header() {
                 <div key={item.href}>
                   <Link
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleNavClick}
                     className={cn(
                       "block min-h-[48px] py-3.5 text-base font-medium uppercase tracking-[0.15em] text-foreground hover:text-link-hover transition-colors duration-300",
                       "children" in item && "font-semibold"
@@ -187,7 +193,7 @@ export function Header() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleNavClick}
                       className="block min-h-[48px] py-3.5 pl-4 text-base font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
                     >
                       {child.label}
@@ -197,7 +203,7 @@ export function Header() {
               ))}
               <Link
                 href="/contact#contact-form"
-                onClick={() => setIsOpen(false)}
+                onClick={handleNavClick}
                 className="mt-4 flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
               >
                 Get a Quote
