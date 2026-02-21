@@ -15,7 +15,9 @@ export const metadata: Metadata = {
 export default function CostCalculatorPage() {
   return (
     <ViewportFitWrapper>
-      <CostCalculatorApp />
+      <div className="mx-auto h-full flex flex-col max-w-content px-4 md:px-8 py-8">
+        <CostCalculatorApp />
+      </div>
     </ViewportFitWrapper>
   );
 }
