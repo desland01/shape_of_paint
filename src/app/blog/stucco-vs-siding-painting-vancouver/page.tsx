@@ -14,6 +14,11 @@ export default function StuccoVsSidingPage() {
       title="Stucco vs. Siding: Exterior Painting Differences in Vancouver"
       date="2026-02-18"
       readingTime="7 min read"
+      slug="stucco-vs-siding-painting-vancouver"
+      description="40% of Vancouver homes have stucco. 35% have wood siding. Each fails differently when painted wrong. The prep and product guide for your surface."
+      image="/images/portfolio-6.webp"
+      dateModified="2026-02-21"
+      category="Exterior Painting"
     >
       <p>
         Stucco painting in Vancouver is a completely different job than
@@ -31,6 +36,14 @@ export default function StuccoVsSidingPage() {
       </p>
 
       <h2>Painting Stucco in Vancouver</h2>
+
+      <p>
+        Painting stucco in Vancouver requires crack repair, low-pressure
+        washing, a masonry-specific or elastomeric primer, and either an
+        elastomeric coating or premium 100% acrylic latex topcoat. Shape
+        of Paint uses this exact sequence on every stucco home across the
+        Lower Mainland.
+      </p>
 
       <h3>Prep: Crack Repair Comes First</h3>
 
@@ -91,28 +104,43 @@ export default function StuccoVsSidingPage() {
 
       <h3>Vancouver-Specific Stucco Problems</h3>
 
-      <ul>
-        <li>
-          <strong>Rain-freeze cracking:</strong> Water enters hairline cracks
-          in fall, freezes in winter, and expands the crack. By spring, what
-          was a hairline crack is now 2 mm wide. Elastomeric coatings prevent
-          this cycle.
-        </li>
-        <li>
-          <strong>Efflorescence:</strong> White salt deposits leach through
-          stucco when moisture moves through the wall. You must remove
-          efflorescence with a mild acid wash and let the wall dry before
-          painting. Painting over it traps the salts and the paint peels.
-        </li>
-        <li>
-          <strong>Mildew on north walls:</strong> Stucco&apos;s rough
-          texture holds moisture and mildew spores. North-facing stucco
-          walls need extra mildewcide in the paint and thorough cleaning
-          before prep.
-        </li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Problem</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">What Happens</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Solution</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Rain-freeze cracking</td>
+              <td className="py-3 pr-6">Water enters hairline cracks in fall, freezes in winter, widens to 2 mm by spring</td>
+              <td className="py-3 pr-6">Elastomeric coatings prevent the cycle</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Efflorescence</td>
+              <td className="py-3 pr-6">White salt deposits leach through stucco; painting over them causes peeling</td>
+              <td className="py-3 pr-6">Mild acid wash, full drying before painting</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Mildew on north walls</td>
+              <td className="py-3 pr-6">Rough stucco texture holds moisture and mildew spores</td>
+              <td className="py-3 pr-6">Extra mildewcide in paint, thorough cleaning before prep</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Painting Wood Siding in Vancouver</h2>
+
+      <p>
+        Painting wood siding in Vancouver starts with a thorough rot
+        inspection, followed by scraping, sanding, caulking, and
+        tannin-blocking primer on all bare wood. Two coats of premium
+        acrylic latex in satin or semi-gloss finish complete the system.
+      </p>
 
       <h3>Prep: Scrape, Sand, and Check for Rot</h3>
 
@@ -161,6 +189,13 @@ export default function StuccoVsSidingPage() {
       <h2>Painting Hardie Board (Fibre Cement)</h2>
 
       <p>
+        Hardie board (fibre cement) is the easiest exterior surface to
+        paint in Vancouver. It does not rot or bleed tannins, requires
+        minimal prep, and holds premium acrylic latex coatings for 12 to
+        15 years with proper caulk maintenance at all board joints.
+      </p>
+
+      <p>
         Hardie board is one of the easiest surfaces to paint. It does not
         rot, does not bleed tannins, and holds paint extremely well. Prep is
         straightforward: clean, spot-prime any bare areas where factory
@@ -177,6 +212,14 @@ export default function StuccoVsSidingPage() {
       <h2>Painting Vinyl Siding</h2>
 
       <p>
+        Vinyl siding can be painted, but only with vinyl-safe formulations
+        like Sherwin-Williams VinylSafe colours. The key rule is never
+        going darker than the original colour, since darker shades absorb
+        more heat and can warp the panels on Vancouver&apos;s sun-exposed
+        walls.
+      </p>
+
+      <p>
         Yes, you can paint vinyl siding. No, you cannot use just any paint.
         Vinyl expands and contracts significantly with temperature changes. A
         standard exterior paint on vinyl will crack and peel.
@@ -185,12 +228,23 @@ export default function StuccoVsSidingPage() {
       <p>
         Use a paint specifically formulated for vinyl siding (like
         Sherwin-Williams VinylSafe or Benjamin Moore&apos;s vinyl-safe
-        colours). These paints flex with the siding. Important rule: never
+        colours). According to Sherwin-Williams, their VinylSafe colour
+        palette is engineered to reflect enough heat to prevent warping
+        on vinyl substrates, even in direct sun exposure. These paints
+        flex with the siding. Important rule: never
         paint vinyl a colour darker than the original. Darker colours absorb
         more heat, which can warp the panels.
       </p>
 
       <h2>Common Mistakes That Cause Failure</h2>
+
+      <p>
+        The five most common exterior paint failures in Vancouver are
+        wrong primer selection, skipping stucco crack repairs, painting
+        over rot, pressure washing stucco at full blast, and painting wet
+        surfaces. Each one leads to premature coating failure within 1 to
+        3 years.
+      </p>
 
       <ol>
         <li>
@@ -221,6 +275,14 @@ export default function StuccoVsSidingPage() {
       </ol>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        Stucco and wood siding require completely different prep, primers,
+        and topcoats. According to the National Research Council Canada,
+        matching coating systems to substrate type is critical for
+        long-term building envelope performance in high-moisture climates
+        like coastal BC.
+      </p>
 
       <p>
         Stucco and siding are different materials that need different

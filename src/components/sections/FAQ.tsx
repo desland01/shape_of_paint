@@ -67,6 +67,16 @@ export function FAQ({
             </button>
           )}
         </SlideUp>
+
+        {/* SSR-rendered plain HTML for AI crawlers that cannot expand accordions */}
+        <div className="sr-only">
+          {items.map((item, i) => (
+            <div key={i}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

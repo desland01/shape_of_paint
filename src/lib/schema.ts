@@ -113,7 +113,14 @@ export function generateServiceSchema(service: {
   name: string;
   description: string;
   url: string;
+  areaServed?: string | string[];
 }) {
+  const areaServed = service.areaServed
+    ? Array.isArray(service.areaServed)
+      ? service.areaServed.map((city) => ({ "@type": "City" as const, name: city }))
+      : { "@type": "City" as const, name: service.areaServed }
+    : { "@type": "City" as const, name: siteConfig.serviceArea };
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -125,10 +132,7 @@ export function generateServiceSchema(service: {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    areaServed: {
-      "@type": "City",
-      name: siteConfig.serviceArea,
-    },
+    areaServed,
   };
 }
 
@@ -189,5 +193,26 @@ export function generateBreadcrumbSchema(
       name: item.name,
       item: item.url,
     })),
+  };
+}
+
+export function generateHowToSchema(howTo: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string; image?: string }[];
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howTo.name,
+    description: howTo.description,
+    step: howTo.steps.map((step) => ({
+      "@type": "HowToStep",
+      name: step.name,
+      text: step.text,
+      ...(step.image && { image: step.image }),
+    })),
+    url: howTo.url,
   };
 }

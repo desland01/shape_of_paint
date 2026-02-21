@@ -14,6 +14,11 @@ export default function Level5FinishPage() {
       title="Level 5 Drywall Finish: Why It Matters for Your Vancouver Home"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="level-5-finish-vancouver"
+      description="Raking light from large windows reveals every drywall seam as shadowy lines called photographing. A level 5 skim coat eliminates it. Do your walls need it?"
+      image="/images/interior-work.webp"
+      dateModified="2026-02-21"
+      category="Interior Painting"
     >
       <p>
         A level 5 finish painting treatment is the highest grade of drywall preparation you
@@ -29,6 +34,10 @@ export default function Level5FinishPage() {
       </p>
 
       <h2>Drywall Finish Levels Explained</h2>
+
+      <p>
+        The Gypsum Association defines six drywall finish levels numbered 0 through 5, each building on the one below it. Level 0 is bare drywall with no treatment, while level 5 adds a full skim coat over the entire surface for a perfectly uniform texture that eliminates photographing under raking light.
+      </p>
 
       <p>
         The Gypsum Association defines six levels of drywall finishing, numbered 0 through 5.
@@ -88,6 +97,10 @@ export default function Level5FinishPage() {
       <h2>Why Level 5 Matters in Vancouver Homes</h2>
 
       <p>
+        Vancouver homes with large west-facing windows, floor-to-ceiling glass, and open floor plans are especially prone to drywall photographing because low-angle natural light rakes across wall surfaces and reveals every seam. A level 5 skim coat gives the entire wall a uniform texture that eliminates these visible imperfections under any lighting condition.
+      </p>
+
+      <p>
         Vancouver homes have a particular problem: low-angle natural light. Large west-facing
         windows, floor-to-ceiling glass, and open floor plans create raking light that travels
         across your walls at a sharp angle. That raking light reveals every imperfection in
@@ -111,25 +124,55 @@ export default function Level5FinishPage() {
       <h2>When You Need Level 5</h2>
 
       <p>
+        A level 5 drywall finish is necessary in Vancouver homes with flat or matte paint, large windows, dark accent colours, or long unbroken walls in open-concept spaces. Shape of Paint recommends level 5 for any room where natural raking light and a smooth paint sheen would reveal standard level 4 imperfections.
+      </p>
+
+      <p>
         Not every wall needs this treatment. Here is when it matters:
       </p>
 
-      <ul>
-        <li>Flat or matte paint finishes. These sheens hide nothing. Every bump and joint
-        shows through.</li>
-        <li>Rooms with large windows or abundant natural light. The more light, the more
-        imperfections you see.</li>
-        <li>Accent walls that draw the eye. A single feature wall in a contrasting colour
-        gets scrutinized.</li>
-        <li>Dark paint colours. Dark shades amplify surface irregularities because they
-        absorb more light and create sharper shadows.</li>
-        <li>Open-concept spaces with long, unbroken walls. The longer the wall, the more
-        obvious the joints become.</li>
-        <li>High-end renovations where finish quality matters. If you are spending $50,000
-        on a kitchen, the walls should match that standard.</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Scenario</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Why Level 5 Matters</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Flat or matte paint finishes</td>
+              <td className="py-3 pr-6">These sheens hide nothing — every bump and joint shows through</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Rooms with large windows</td>
+              <td className="py-3 pr-6">More natural light reveals more surface imperfections</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Accent walls in contrasting colour</td>
+              <td className="py-3 pr-6">A feature wall draws the eye and gets scrutinized</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Dark paint colours</td>
+              <td className="py-3 pr-6">Dark shades absorb light and create sharper shadows on imperfections</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Long unbroken walls in open-concept spaces</td>
+              <td className="py-3 pr-6">The longer the wall, the more obvious the joints become</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">High-end renovations</td>
+              <td className="py-3 pr-6">Walls should match the quality standard of a $50,000+ kitchen</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>When You Can Skip It</h2>
+
+      <p>
+        Level 5 is not required for every wall in your home. Walls receiving eggshell or satin paint in rooms with average light, textured surfaces, or spaces covered by wallpaper, tile, or wainscoting perform well at level 4. Closets, laundry rooms, and utility spaces rarely justify the added investment.
+      </p>
 
       <ul>
         <li>Walls getting eggshell or satin paint in rooms with average light</li>
@@ -140,6 +183,10 @@ export default function Level5FinishPage() {
       </ul>
 
       <h2>The Skim Coat Process</h2>
+
+      <p>
+        Achieving a level 5 finish adds two to three steps beyond standard level 4 drywall work. The process involves completing all level 4 preparation, applying a thin skim coat of joint compound over the entire wall, drying for 12 to 24 hours, and sanding to 220 grit for a perfectly smooth, uniform surface.
+      </p>
 
       <p>
         Achieving a level 5 finish adds two to three steps to the standard drywall process.
@@ -160,6 +207,10 @@ export default function Level5FinishPage() {
       </p>
 
       <h2>Cost Premium</h2>
+
+      <p>
+        A level 5 drywall finish in Vancouver adds $1.50 to $3.00 per square foot of wall surface compared to standard level 4 preparation. For a typical bedroom, that means an additional $400 to $800, while a full home runs $2,000 to $5,000 depending on how many rooms receive the treatment. According to the Canada Mortgage and Housing Corporation (CMHC), drywall finishing quality is one of the top factors affecting long-term paint performance in Canadian homes.
+      </p>
 
       <p>
         A level 5 finish adds $1.50 to $3.00 per square foot of wall surface compared to a
@@ -187,6 +238,10 @@ export default function Level5FinishPage() {
       </p>
 
       <h2>Get a Flawless Finish for Your Home</h2>
+
+      <p>
+        Shape of Paint completes 3 to 4 level 5 drywall projects per month in Vancouver. Each project takes extra time, but the result is a surface you can run your hand across and feel nothing but smooth drywall from corner to corner — the foundation for a paint finish that looks flawless under any lighting condition.
+      </p>
 
       <p>
         A level 5 finish is the difference between walls that look good and walls that look

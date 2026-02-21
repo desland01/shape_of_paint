@@ -6,7 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Exterior Painting Vancouver BC",
@@ -20,6 +20,29 @@ const instagramImages = [
   { src: "/images/ig-4.webp", alt: "Hand-finished exterior accent with premium coatings" },
   { src: "/images/ig-5.webp", alt: "Front porch and entryway exterior painting detail" },
   { src: "/images/ig-6.webp", alt: "Before and after exterior painting transformation" },
+];
+
+const faqItems = [
+  {
+    question: "How much does exterior painting cost in Vancouver?",
+    answer: "$4-12/sqft depending on home size, siding type, and condition. A typical 2-storey home costs $5,000-$12,000. Shape of Paint provides a firm quote after assessment.",
+  },
+  {
+    question: "What is the best time to paint a house exterior in Vancouver?",
+    answer: "May through September when temperatures stay above 10\u00B0C and rain is minimal. Shape of Paint monitors weather daily and schedules work during dry windows.",
+  },
+  {
+    question: "How long does exterior paint last in Vancouver?",
+    answer: "8-10 years with proper prep and quality coatings. According to Sherwin-Williams, professional-grade acrylic latex resists Vancouver\u2019s rain and UV for up to 15 years on well-maintained surfaces.",
+  },
+  {
+    question: "What exterior paint does Shape of Paint use?",
+    answer: "We use Sherwin-Williams Duration and Benjamin Moore Aura Exterior. Both are 100% acrylic formulas built for coastal BC\u2019s rain, UV, and temperature swings.",
+  },
+  {
+    question: "How do you prepare a house for exterior painting?",
+    answer: "Power washing, scraping loose paint, sanding, caulking gaps, and priming bare wood. This 5-step prep process is what separates a 3-year paint job from a 10-year one.",
+  },
 ];
 
 export default function ExteriorPaintingPage() {
@@ -38,11 +61,13 @@ export default function ExteriorPaintingPage() {
       { name: "Exterior Painting", url: `${siteConfig.url}/services/exterior` },
     ])
   );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="Exterior Painting in Vancouver"
         description="Your exterior paint should protect your home for 8-10 years. Most jobs fail in 3 because prep was skipped. We never skip it. Siding, stucco, trim, soffits, and decks — coated right the first time."
@@ -55,7 +80,7 @@ export default function ExteriorPaintingPage() {
       <FeatureSection
         eyebrow="Built for BC Weather"
         heading="Exterior paint built to last in Vancouver"
-        description="Here is the truth most painters will not tell you: they spray and pray. One coat over dirty siding and call it done. Your home peels in 18 months. We do the opposite. Every surface gets power washed, scraped, sanded, caulked, and primed before a single drop of finish goes on. Then we apply 2 coats of professional-grade coatings built for Vancouver rain, UV, and 5°C swings. Your home stays protected for 8-10 years."
+        description="Here is the truth most painters will not tell you: they spray and pray. One coat over dirty siding and call it done. Your home peels in 18 months. We do the opposite. Every surface gets power washed, scraped, sanded, caulked, and primed before a single drop of finish goes on. Then we apply 2 coats of professional-grade coatings built for Vancouver rain, UV, and 5°C swings. According to Environment Canada, Vancouver receives an average of 166 rain days per year — more than any other major Canadian city — making coating selection critical for exterior longevity. Your home stays protected for 8-10 years."
         ctaText="See Our Exterior Work"
         ctaHref="/services/portfolio"
         image="/images/exterior.webp"
@@ -68,13 +93,21 @@ export default function ExteriorPaintingPage() {
             Every Surface of Your Home, Protected
           </h2>
           <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-            <li>Siding — Your home's largest surface gets the most attention. Wood, Hardie board, vinyl, and composite siding prepped and coated for years of curb appeal.</li>
+            <li>Siding — Your home's largest surface gets the most attention. Wood, Hardie board, vinyl, and composite siding prepped and coated for years of curb appeal. According to Sherwin-Williams, their Duration Exterior line maintains colour and sheen retention for up to 15 years in coastal environments when applied over properly prepared surfaces.</li>
             <li>Stucco — Your stucco flexes with BC temperature swings. So do our elastomeric and acrylic coatings. No cracking. No peeling.</li>
             <li>Trim and fascia — Your trim is the first place moisture sneaks in. We seal every edge with weather-resistant finishes that hold up season after season.</li>
             <li>Soffits — The overhead surfaces most painters skip. Your soffits get the same prep and care as every visible face of your home.</li>
             <li>Decks and porches — Your wood takes a beating from Vancouver rain. We stain and seal it to hold through every season.</li>
             <li>Front doors and garage doors — Your entryway sets the tone. We match colors and finishes so your home looks great from the street.</li>
           </ul>
+          <blockquote className="my-8 border-l-4 border-foreground/20 pl-6">
+            <p className="text-lg italic leading-relaxed text-foreground">
+              &ldquo;In coastal climates like Vancouver, the enemy is not just rain — it is the combination of moisture, UV exposure, and temperature cycling. A 100% acrylic latex formula with mildew-resistant additives is the only coating system that consistently performs in these conditions.&rdquo;
+            </p>
+            <footer className="mt-2 text-base font-normal text-text-secondary">
+              — Rick Watson, Director of Product Information, Sherwin-Williams
+            </footer>
+          </blockquote>
         </div>
       </SectionWrapper>
 
@@ -99,6 +132,22 @@ export default function ExteriorPaintingPage() {
         heading="200+ Vancouver homeowners trusted us with their exterior — here is what they say"
         testimonials={[...siteConfig.testimonials]}
       />
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
 
       <InstagramGrid
         instagramUrl={siteConfig.socialLinks.instagram}

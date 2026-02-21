@@ -3,6 +3,8 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters Delta BC | Shape of Paint",
@@ -11,8 +13,42 @@ export const metadata: Metadata = {
 };
 
 export default function DeltaAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Areas", url: `${siteConfig.url}/areas` },
+    { name: "Delta", url: `${siteConfig.url}/areas/delta` },
+  ]));
+  const serviceJsonLd = JSON.stringify(generateServiceSchema({
+    name: "House Painting in Delta",
+    description: "Professional interior, exterior, and cabinet painting services in Delta, BC by Shape of Paint.",
+    url: `${siteConfig.url}/areas/delta`,
+    areaServed: "Delta",
+  }));
+  const faqItems = [
+    {
+      question: "How much does it cost to paint a house in Delta?",
+      answer: "Interior painting in Delta ranges from $3-8 per square foot, and exterior work runs $4-12 per square foot. Costs vary between Tsawwassen oceanfront properties, Ladner heritage homes, and newer North Delta builds due to different prep needs. Shape of Paint provides a firm quote after a free in-home visit.",
+    },
+    {
+      question: "What exterior paint handles Delta's coastal weather?",
+      answer: "Tsawwassen homes near the ocean benefit from marine-grade coatings that resist salt air corrosion. Ladner and North Delta properties do well with premium acrylic latex exteriors. Shape of Paint selects the right product for your specific location and exposure to ensure maximum protection.",
+    },
+    {
+      question: "How long does interior paint last in Delta homes?",
+      answer: "Quality interior paint lasts 8-12 years in Delta homes with normal wear. Newer builds in North Delta often have smoother drywall that holds paint longer, while older Ladner properties may need more thorough prep. Shape of Paint uses premium products that maintain their finish for years.",
+    },
+    {
+      question: "When is the best time to paint a house in Delta?",
+      answer: "May through September is the ideal exterior painting season in Delta. Tsawwassen enjoys more sunshine than most of the Lower Mainland, which can extend the painting window. Shape of Paint schedules your project during the best weather conditions for lasting results.",
+    },
+  ];
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Delta, BC"
         description="Your Ladner, Tsawwassen, or North Delta home deserves painters who know your community. Licensed, insured, and detail-obsessed."
@@ -111,6 +147,22 @@ export default function DeltaAreaPage() {
                 Spray-finished kitchen and bathroom cabinets with an artisan finish that rivals custom cabinetry.
               </p>
             </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Delta
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

@@ -14,6 +14,11 @@ export default function PrepareHomeInteriorPaintingPage() {
       title="How to Prepare Your Home for Interior Painting"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="prepare-home-interior-painting"
+      description="Projects run 20-30% faster when homeowners prep correctly. Covers what to move, wall checks, pet planning, and 10 questions to ask your painter."
+      image="/images/portfolio-5.webp"
+      dateModified="2026-02-21"
+      category="Interior Painting"
     >
       <p>
         Knowing how to prepare for interior painting ensures a smoother project and a better result. A
@@ -28,6 +33,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       </p>
 
       <h2>What to Move Out of the Rooms</h2>
+
+      <p>
+        Clear small furniture, wall decor, electronics, fragile items, curtains, and bedding from rooms being painted before the crew arrives. The more you remove, the faster and cleaner the paint job goes — most Vancouver homeowners can clear a room in under 30 minutes by working through this checklist.
+      </p>
 
       <p>
         Start by clearing as much as possible from the rooms being painted. The more you
@@ -51,6 +60,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       </p>
 
       <h2>Wall Prep: What to Check Before the Crew Arrives</h2>
+
+      <p>
+        Walk through every room before your painting crew arrives and note nail holes, dents, cracks, nail pops, peeling paint, and water stains. You do not need to fix these yourself — a professional painter handles all repairs during the prep phase — but identifying them early helps you discuss the scope and avoid surprises on the quote.
+      </p>
 
       <p>
         Walk through every room and look at the walls closely. Note anything that needs
@@ -86,6 +99,10 @@ export default function PrepareHomeInteriorPaintingPage() {
 
       <h2>What Professional Painters Handle vs. What You Should Do</h2>
 
+      <p>
+        Professional painters handle all surface preparation, priming, masking, floor protection, and cleanup. You should handle clearing personal items, removing wall decor, taking down curtains, ensuring access, finalizing colours, and notifying neighbours. This division of labour is how Shape of Paint keeps Vancouver projects running on schedule.
+      </p>
+
       <h3>Your Painter Handles</h3>
 
       <ul>
@@ -112,6 +129,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       <h2>Protecting Floors and Furniture</h2>
 
       <p>
+        Professional painters protect your floors with 12-ounce canvas drop cloths and cover furniture with plastic sheeting. Canvas drops are heavier than cheap alternatives, so they stay in place and absorb drips instead of letting paint pool on your hardwood or carpet. Shape of Paint uses FrogTape on all baseboards, switches, and outlet covers for clean edge protection.
+      </p>
+
+      <p>
         Any professional crew brings their own drop cloths and plastic sheeting. We use
         12-ounce canvas drop cloths on floors. They are heavier than the cheap ones, so they
         stay in place and absorb drips instead of letting them pool. Plastic covers large
@@ -131,6 +152,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       </p>
 
       <h2>Planning Around Kids and Pets</h2>
+
+      <p>
+        Keep children out of rooms being painted, set up a safe zone in an unpainted room, board pets or confine them to a separate area, move bird cages far from the painting area, and plan meals in advance if the kitchen is on the schedule. According to the Canada Mortgage and Housing Corporation (CMHC), proper ventilation and room isolation during interior painting are especially important in homes with young children and pets.
+      </p>
 
       <p>
         Painting day is not the best day for curious toddlers and excited dogs. Here is how
@@ -153,27 +178,60 @@ export default function PrepareHomeInteriorPaintingPage() {
       <h2>Timeline Expectations</h2>
 
       <p>
+        A professional crew of 2 to 3 painters completes a single room in 1 day, a full condo in 2 to 3 days, and a full house interior in 3 to 5 days. Add 1 to 2 days for significant wall repair, skim coating, wallpaper removal, or dark-to-light colour changes that require tinted primer plus two topcoats.
+      </p>
+
+      <p>
         Here is how long different interior painting projects typically take with a
         professional crew of 2 to 3 painters:
       </p>
 
-      <ul>
-        <li>Single room (bedroom or office): 1 day</li>
-        <li>Two to three rooms: 1 to 2 days</li>
-        <li>Full condo or apartment (700-1,000 sq ft): 2 to 3 days</li>
-        <li>Full house interior (1,500-2,500 sq ft): 3 to 5 days</li>
-        <li>Large home with detailed trim (3,000+ sq ft): 5 to 8 days</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Project Size</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Timeline</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Single room (bedroom or office)</td>
+              <td className="py-3 pr-6">1 day</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Two to three rooms</td>
+              <td className="py-3 pr-6">1 to 2 days</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Full condo or apartment (700-1,000 sq ft)</td>
+              <td className="py-3 pr-6">2 to 3 days</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Full house interior (1,500-2,500 sq ft)</td>
+              <td className="py-3 pr-6">3 to 5 days</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Large home with detailed trim (3,000+ sq ft)</td>
+              <td className="py-3 pr-6">5 to 8 days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>
         Add 1 to 2 days if the walls need significant repair, skim coating, or wallpaper
         removal. Colour changes from dark to light also add time because they require a coat
         of tinted primer plus two topcoats. We use Sherwin-Williams PVA primer tinted to 50%
         of the final colour. That cuts through even the darkest existing paint and gives the
-        topcoat a clean base to work with.
+        topcoat a clean base to work with. According to Sherwin-Williams, tinting primer to approximately 50% of the finish colour reduces the number of topcoats needed from three to two on most dark-to-light transitions.
       </p>
 
       <h2>Questions to Ask Your Painter Before They Start</h2>
+
+      <p>
+        A 10-minute conversation before the job starts prevents misunderstandings about coats, materials, prep, timeline, and warranty. Shape of Paint answers all 10 of these questions in writing as part of every project estimate for Vancouver homeowners.
+      </p>
 
       <p>
         A 10-minute conversation before the job starts prevents misunderstandings later. Here
@@ -199,6 +257,10 @@ export default function PrepareHomeInteriorPaintingPage() {
       </p>
 
       <h2>You Are Ready</h2>
+
+      <p>
+        Preparing your home for interior painting takes less than an hour per room and makes the entire project run 20% to 30% faster. Clear small items, know the condition of your walls, plan for kids and pets, and ask the right questions. Shape of Paint takes on 4 to 5 interior projects per month in Vancouver, and well-prepared homes consistently produce the cleanest results.
+      </p>
 
       <p>
         Preparing your home for interior painting is straightforward. Clear the small stuff.

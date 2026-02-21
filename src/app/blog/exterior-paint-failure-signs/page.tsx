@@ -14,6 +14,11 @@ export default function ExteriorPaintFailureSignsPage() {
       title="How to Spot Exterior Paint Failure Before It's Too Late"
       date="2026-02-18"
       readingTime="7 min read"
+      slug="exterior-paint-failure-signs"
+      description="Catch peeling early: $1,500 spot repair. Miss it: $15,000 full repaint. 6 warning signs every Vancouver homeowner should check each spring."
+      image="/images/portfolio-7.webp"
+      dateModified="2026-02-21"
+      category="Exterior Painting"
     >
       <p>
         Peeling paint on your exterior is more than ugly — it is your home
@@ -29,6 +34,14 @@ export default function ExteriorPaintFailureSignsPage() {
       </p>
 
       <h2>1. Peeling and Flaking</h2>
+
+      <p>
+        Peeling and flaking is the most common exterior paint failure in
+        Vancouver. It is caused by moisture behind the paint film, poor
+        surface preparation, or incompatible paint layers. Small peeling
+        spots under 2 square feet can be spot-repaired, but widespread
+        peeling requires a full wall repaint.
+      </p>
 
       <h3>What It Looks Like</h3>
 
@@ -71,6 +84,14 @@ export default function ExteriorPaintFailureSignsPage() {
       </p>
 
       <h2>2. Bubbling and Blistering</h2>
+
+      <p>
+        Bubbling and blistering in exterior paint appears as raised bumps
+        on the surface, most commonly on south-facing and west-facing
+        walls. The three main causes in Vancouver are heat blistering from
+        direct sun, moisture vapor moving through the wall, and paint
+        applied on hot surfaces.
+      </p>
 
       <h3>What It Looks Like</h3>
 
@@ -116,6 +137,14 @@ export default function ExteriorPaintFailureSignsPage() {
 
       <h2>3. Chalking</h2>
 
+      <p>
+        Chalking is a powdery residue that comes off on your hand when you
+        rub the painted surface. Some chalking after 8 to 10 years is
+        normal and even designed into certain exterior paints. Heavy
+        chalking within 3 to 5 years signals low-quality paint that was
+        not rated for Vancouver&apos;s UV exposure.
+      </p>
+
       <h3>What It Looks Like</h3>
 
       <p>
@@ -145,6 +174,14 @@ export default function ExteriorPaintFailureSignsPage() {
       </p>
 
       <h2>4. Fading</h2>
+
+      <p>
+        Fading occurs when UV radiation breaks down paint pigments, making
+        colours appear washed out. Reds, blues, and dark greens fade
+        fastest. According to Sherwin-Williams, premium exterior coatings
+        with advanced UV-blocking resins retain their colour up to 3 times
+        longer than standard formulations in direct sun exposure.
+      </p>
 
       <h3>What It Looks Like</h3>
 
@@ -176,6 +213,14 @@ export default function ExteriorPaintFailureSignsPage() {
 
       <h2>5. Mildew and Algae Growth</h2>
 
+      <p>
+        Mildew and algae growth is the most common exterior paint problem
+        in Vancouver due to persistent moisture and mild winters that
+        never fully kill mildew spores. Black, green, or grey splotches
+        concentrate on north-facing walls, under eaves, and in any area
+        that stays shaded and damp.
+      </p>
+
       <h3>What It Looks Like</h3>
 
       <p>
@@ -187,13 +232,38 @@ export default function ExteriorPaintFailureSignsPage() {
 
       <h3>What Causes It</h3>
 
-      <ul>
-        <li>Persistent moisture and shade</li>
-        <li>Paint without adequate mildewcide</li>
-        <li>Poor airflow around the affected area</li>
-        <li>Overhanging trees that keep surfaces damp</li>
-        <li>Flat sheen paint, which holds moisture longer than satin or semi-gloss</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Cause</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Prevention</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Persistent moisture and shade</td>
+              <td className="py-3 pr-6">Improve drainage and trim vegetation near walls</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Paint without adequate mildewcide</td>
+              <td className="py-3 pr-6">Use premium paint with high-level mildewcide or add supplemental</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Poor airflow around the area</td>
+              <td className="py-3 pr-6">Clear obstructions, improve ventilation near walls</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Overhanging trees keeping surfaces damp</td>
+              <td className="py-3 pr-6">Trim branches to at least 3 feet from the house</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Flat sheen paint holding moisture</td>
+              <td className="py-3 pr-6">Switch to satin or semi-gloss on problem walls</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h3>What to Do</h3>
 
@@ -208,6 +278,14 @@ export default function ExteriorPaintFailureSignsPage() {
       </p>
 
       <h2>6. Cracking (Alligator Skin)</h2>
+
+      <p>
+        Alligator cracking is a pattern of deep, interconnected cracks
+        caused by too many rigid paint layers that can no longer flex with
+        the building. Unlike peeling, alligator cracking cannot be
+        spot-repaired — all cracked paint must be scraped or chemically
+        stripped back to a sound surface.
+      </p>
 
       <h3>What It Looks Like</h3>
 
@@ -247,6 +325,14 @@ export default function ExteriorPaintFailureSignsPage() {
       <h2>The Homeowner Inspection Checklist</h2>
 
       <p>
+        Vancouver homeowners should walk the perimeter of their home once
+        a year — ideally in spring after the wet season — and check every
+        wall for 8 specific warning signs. According to CMHC, annual
+        exterior inspections catch small problems before they become
+        major repairs, reducing long-term maintenance costs by up to 50%.
+      </p>
+
+      <p>
         Walk around your home once a year — ideally in spring after the wet
         season — and check each wall for:
       </p>
@@ -269,6 +355,14 @@ export default function ExteriorPaintFailureSignsPage() {
       </p>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        Exterior paint failure gives you warning signs months or years
+        before it becomes a serious problem. The six signs to watch are
+        peeling, bubbling, chalking, fading, mildew, and cracking. Shape
+        of Paint offers free exterior inspections for Vancouver homeowners
+        who want an honest assessment of their home&apos;s condition.
+      </p>
 
       <p>
         Paint failure does not happen overnight. It gives you warning signs

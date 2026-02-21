@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters Coquitlam BC | Shape of Paint",
@@ -22,8 +23,42 @@ export const metadata: Metadata = {
 };
 
 export default function CoquitlamAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Areas", url: `${siteConfig.url}/areas` },
+    { name: "Coquitlam", url: `${siteConfig.url}/areas/coquitlam` },
+  ]));
+  const serviceJsonLd = JSON.stringify(generateServiceSchema({
+    name: "House Painting in Coquitlam",
+    description: "Professional interior, exterior, and cabinet painting services in Coquitlam, BC by Shape of Paint.",
+    url: `${siteConfig.url}/areas/coquitlam`,
+    areaServed: "Coquitlam",
+  }));
+  const faqItems = [
+    {
+      question: "How much does house painting cost in Coquitlam?",
+      answer: "Interior painting in Coquitlam ranges from $3-8 per square foot, and exterior work runs $4-12 per square foot. Coquitlam's mix of newer Burke Mountain builds and established homes in Maillardville means prep requirements vary. Shape of Paint gives you a firm quote after a free in-home visit.",
+    },
+    {
+      question: "What type of paint works best for Coquitlam's climate?",
+      answer: "Acrylic latex exterior paints perform best in Coquitlam because they handle the heavy rainfall that rolls off Burke Mountain. Shape of Paint uses professional-grade coatings with built-in mildew resistance, which is critical for homes on north-facing slopes and shaded lots throughout the Tri-Cities.",
+    },
+    {
+      question: "Do Coquitlam painters need to be licensed?",
+      answer: "Yes. BC requires painting contractors to hold a valid business licence. Shape of Paint is fully licensed, insured, and WorkSafeBC compliant. You can verify our credentials before we start. Every project comes with liability coverage and a written satisfaction guarantee.",
+    },
+    {
+      question: "How often should I repaint my Coquitlam home exterior?",
+      answer: "Most Coquitlam exteriors need repainting every 8-10 years with quality coatings. North-facing walls and areas shaded by trees may need attention sooner due to moisture buildup. Shape of Paint uses thorough prep and premium products so your finish lasts the full lifespan.",
+    },
+  ];
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Coquitlam, BC"
         description="Your Coquitlam home deserves painters who know Burke Mountain new builds and Maillardville heritage equally well. Interior, exterior, and cabinet painting with guaranteed results."
@@ -125,6 +160,22 @@ export default function CoquitlamAreaPage() {
             {" that gives kitchens and bathrooms a brand-new look without a full renovation."}
             {" Each service reflects our commitment to quality finishes and reliable craftsmanship."}
           </p>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Coquitlam
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-muted-foreground">{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 

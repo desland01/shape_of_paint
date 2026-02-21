@@ -14,6 +14,11 @@ export default function BestTimeExteriorPaintingPage() {
       title="When Is the Best Time to Paint Your House Exterior in BC?"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="best-time-exterior-painting-bc"
+      description="Paint in the wrong month and your $10,000 project fails within a year. This month-by-month guide shows the exact window for BC exteriors."
+      image="/images/hero-3.webp"
+      dateModified="2026-02-21"
+      category="Exterior Painting"
     >
       <p>
         The best time to paint exterior surfaces in BC is during the dry
@@ -30,6 +35,14 @@ export default function BestTimeExteriorPaintingPage() {
       </p>
 
       <h2>The Ideal Conditions for Exterior Paint</h2>
+
+      <p>
+        The ideal conditions for exterior painting in BC are temperatures
+        between 10°C and 30°C, relative humidity below 85%, dry surfaces,
+        and no rain for at least 4 hours after application. These five
+        conditions must all be met for proper film formation and long-term
+        adhesion.
+      </p>
 
       <p>
         Every premium exterior paint has a set of application requirements
@@ -66,7 +79,15 @@ export default function BestTimeExteriorPaintingPage() {
         </li>
       </ul>
 
-      <h2>Vancouver's Painting Season: Month by Month</h2>
+      <h2>Vancouver&apos;s Painting Season: Month by Month</h2>
+
+      <p>
+        Vancouver&apos;s exterior painting season runs from May through
+        September, with July and August offering the most reliable weather.
+        April and October are possible with caution and specialized
+        products. Shape of Paint schedules all exterior projects within
+        this window to ensure proper curing conditions.
+      </p>
 
       <h3>January to March: Not Recommended</h3>
 
@@ -136,6 +157,14 @@ export default function BestTimeExteriorPaintingPage() {
       <h2>Morning Dew Is a Hidden Problem</h2>
 
       <p>
+        Morning dew on Vancouver home exteriors can trap moisture under
+        fresh paint and cause peeling within months. Professional crews
+        wait until surfaces warm and dry — typically 9 to 10 AM in summer
+        — and stop painting by 5 to 6 PM so the last coat cures before
+        evening moisture settles.
+      </p>
+
+      <p>
         Even in July, Vancouver surfaces collect dew overnight. If you touch
         your siding at 7 AM and it feels cool and slightly damp, it has dew
         on it. Painting over dew traps moisture under the film and leads to
@@ -146,40 +175,67 @@ export default function BestTimeExteriorPaintingPage() {
         A professional crew knows to wait until surfaces warm up and dry —
         usually 9 to 10 AM on most summer days. They also stop painting by 5
         to 6 PM so the last coat has time to cure before evening moisture
-        settles.
+        settles. According to the National Research Council Canada, moisture
+        trapped within the building envelope is one of the leading causes
+        of premature coating failure on residential exteriors in coastal BC.
       </p>
 
       <h2>What Happens When You Paint in Bad Conditions</h2>
 
       <p>
+        Painting in bad conditions causes four common failures: soft films
+        from cold application, blistering from trapped moisture, pigment
+        washout from rain, and wrinkling from extreme heat. Each one
+        requires scraping and repainting the affected area — turning a
+        single project into two.
+      </p>
+
+      <p>
         Here is what goes wrong when someone ignores the weather window:
       </p>
 
-      <ul>
-        <li>
-          <strong>Painted too cold:</strong> Paint film never fully hardens.
-          It stays soft, picks up dirt, and peels off in sheets within 1 to 2
-          years.
-        </li>
-        <li>
-          <strong>Painted on wet surfaces:</strong> Moisture gets trapped
-          under the film. Bubbles and blisters appear within weeks. The only
-          fix is scraping and repainting.
-        </li>
-        <li>
-          <strong>Rain hit the fresh paint:</strong> Water streaks wash out
-          pigment, leaving runs and discoloured patches. The affected sections
-          need to be sanded and recoated.
-        </li>
-        <li>
-          <strong>Painted in extreme heat:</strong> The surface dries before
-          the paint underneath. This creates a skin that wrinkles and
-          eventually cracks. South-facing stucco walls in August are the most
-          common victim.
-        </li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Condition</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">What Goes Wrong</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Timeline</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Painted too cold</td>
+              <td className="py-3 pr-6">Film never fully hardens, picks up dirt, peels in sheets</td>
+              <td className="py-3 pr-6">1 to 2 years</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Painted on wet surfaces</td>
+              <td className="py-3 pr-6">Moisture trapped under film causes bubbles and blisters</td>
+              <td className="py-3 pr-6">Weeks</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Rain hit fresh paint</td>
+              <td className="py-3 pr-6">Pigment washes out, leaving runs and discoloured patches</td>
+              <td className="py-3 pr-6">Immediate</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Painted in extreme heat</td>
+              <td className="py-3 pr-6">Surface skins over while wet underneath, wrinkles and cracks</td>
+              <td className="py-3 pr-6">Weeks to months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Scheduling Tips</h2>
+
+      <p>
+        Book your Vancouver exterior painting project in February or March
+        for a May to September start date. Good painting crews fill their
+        summer calendars early, and flexible scheduling around rain days
+        produces a better result than rushing into bad weather.
+      </p>
 
       <ol>
         <li>
@@ -217,6 +273,15 @@ export default function BestTimeExteriorPaintingPage() {
       </p>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        The best time to paint a house exterior in BC is May through
+        September, with July and August as the safest months. According
+        to Environment Canada, Vancouver averages only 4 to 6 rain days
+        per month in July and August compared to 15 to 20 days per month
+        in winter — making summer the only reliable window for exterior
+        coatings.
+      </p>
 
       <p>
         May through September is the safe window for exterior painting in BC.

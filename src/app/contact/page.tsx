@@ -8,6 +8,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { ViewportFitWrapper } from "@/components/shared/ViewportFitWrapper";
 import { ScrollToHash } from "@/components/shared/ScrollToHash";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Vancouver Painting Estimate | Shape of Paint",
@@ -24,8 +25,14 @@ const instagramImages = [
 ];
 
 export default function ContactPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Contact", url: `${siteConfig.url}/contact` },
+  ]));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <ScrollToHash />
       <PageHero
         heading="Get Your Vancouver Painting Estimate"

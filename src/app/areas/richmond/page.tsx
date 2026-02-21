@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters Richmond BC | Shape of Paint",
@@ -12,8 +13,42 @@ export const metadata: Metadata = {
 };
 
 export default function RichmondAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Areas", url: `${siteConfig.url}/areas` },
+    { name: "Richmond", url: `${siteConfig.url}/areas/richmond` },
+  ]));
+  const serviceJsonLd = JSON.stringify(generateServiceSchema({
+    name: "House Painting in Richmond",
+    description: "Professional interior, exterior, and cabinet painting services in Richmond, BC by Shape of Paint.",
+    url: `${siteConfig.url}/areas/richmond`,
+    areaServed: "Richmond",
+  }));
+  const faqItems = [
+    {
+      question: "How much does house painting cost in Richmond?",
+      answer: "Interior painting in Richmond typically costs $3-8 per square foot, and exterior runs $4-12 per square foot. Newer builds in West Cambie need different prep than established Steveston homes, so pricing varies. Shape of Paint provides a firm quote after visiting your home.",
+    },
+    {
+      question: "What exterior paint handles Richmond's moisture?",
+      answer: "Premium acrylic latex with a moisture barrier works best. Richmond sits at sea level and gets persistent fog from the Fraser River, so coatings need to resist constant dampness. Shape of Paint selects professional-grade products rated for Richmond's unique delta climate.",
+    },
+    {
+      question: "How long does a paint job last in Richmond?",
+      answer: "Interior finishes last 8-12 years, and quality exterior paint lasts 8-10 years in Richmond. Constant humidity is the main challenge here. Shape of Paint uses thorough surface prep and premium coatings to maximize lifespan on every Richmond project.",
+    },
+    {
+      question: "Does Shape of Paint serve all Richmond neighbourhoods?",
+      answer: "Yes. Shape of Paint serves every Richmond neighbourhood, from Steveston and Ironwood to Brighouse, West Cambie, and Garden City. We know each area's housing styles and have completed hundreds of projects across the entire city.",
+    },
+  ];
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Richmond, BC"
         description="Your Richmond home deserves painters trusted with the details that matter. Licensed, insured, and committed to your vision."
@@ -114,6 +149,22 @@ export default function RichmondAreaPage() {
                 Spray-finished kitchen and bathroom cabinets with an artisan finish that rivals custom cabinetry.
               </p>
             </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Richmond
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

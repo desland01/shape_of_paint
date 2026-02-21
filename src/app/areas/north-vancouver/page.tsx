@@ -3,6 +3,12 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters North Vancouver BC | Shape of Paint",
@@ -10,9 +16,53 @@ export const metadata: Metadata = {
     "North Shore homes need coatings built for rain. 200+ homes painted in Lower Lonsdale, Lynn Valley, and Deep Cove. Licensed, insured. Free consultation.",
 };
 
+const faqItems = [
+  {
+    question: "How much does it cost to paint a house in North Vancouver?",
+    answer:
+      "Interior painting in North Vancouver typically costs $3-8 per square foot, and exterior ranges $4-12 per square foot. North Van's steep lots and tall homes can add 15-25% for scaffolding and access equipment. Shape of Paint provides a firm quote after visiting your home so you know the exact investment upfront.",
+  },
+  {
+    question: "What paint handles North Vancouver's rain?",
+    answer:
+      "Premium acrylic latex with built-in mildew resistance is essential for North Shore homes. The North Shore gets significantly more rain than Vancouver proper, so Shape of Paint uses professional-grade coatings with superior adhesion and moisture barriers. Every exterior surface gets primers and topcoats rated for harsh coastal climates.",
+  },
+  {
+    question: "How often should I repaint my North Vancouver home?",
+    answer:
+      "Exterior surfaces typically need repainting every 7-10 years with quality materials. North-facing walls may need attention every 5-7 years due to reduced sun exposure and persistent moisture. Shape of Paint uses thorough prep and professional-grade coatings to maximize the lifespan of every finish.",
+  },
+  {
+    question: "Do North Vancouver painters need special equipment?",
+    answer:
+      "Many North Vancouver homes require scaffolding due to steep terrain, split-level construction, and elevated foundations. Shape of Paint is fully equipped for challenging access situations across the North Shore. Our team arrives with the right equipment for your property — no delays or surprise add-on charges.",
+  },
+];
+
 export default function NorthVancouverAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "North Vancouver", url: `${siteConfig.url}/areas/north-vancouver` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting in North Vancouver",
+      description:
+        "Professional interior, exterior, and cabinet painting for North Vancouver homes. Coatings built for North Shore rain. Licensed and insured.",
+      url: `${siteConfig.url}/areas/north-vancouver`,
+      areaServed: "North Vancouver",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in North Vancouver, BC"
         description="Your North Shore home faces more rain than anywhere else in Metro Vancouver. You need painters who build every finish to withstand it. Licensed, insured, and proven on 200+ homes."
@@ -110,6 +160,24 @@ export default function NorthVancouverAreaPage() {
             </Link>{" "}
             service gives you a brand-new look without the renovation price tag. Whatever your North Vancouver home needs, we've got the expertise and the finish quality to make it happen.
           </p>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in North Vancouver
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item) => (
+              <div key={item.question}>
+                <h3 className="text-xl font-medium">{item.question}</h3>
+                <p className="mt-3 text-lg font-normal leading-relaxed text-text-secondary">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 

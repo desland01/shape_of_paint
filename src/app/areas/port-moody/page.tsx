@@ -4,14 +4,57 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
+
 export const metadata: Metadata = {
   title: "House Painters Port Moody BC | Shape of Paint",
   description: "Port Moody's trusted house painters. Coastal-grade finishes for Heritage Mountain, Glenayre, and Inlet Centre. Licensed, insured. Book your free consultation.",
 };
 
+const faqItems = [
+  {
+    question: "How much does house painting cost in Port Moody?",
+    answer: "Interior painting in Port Moody typically costs $3-8 per square foot, with exterior projects ranging $4-12 per square foot. Port Moody's heritage homes in the old town area may need extra preparation work, which can affect pricing. Shape of Paint provides free on-site estimates with firm, transparent quotes.",
+  },
+  {
+    question: "What paint is best for Port Moody's wet climate?",
+    answer: "Mildew-resistant acrylic latex is the top choice for Port Moody exteriors. Port Moody receives significant rainfall from inlet moisture, so Shape of Paint selects coatings with advanced moisture barriers. For interiors, we use low-VOC acrylic formulas that resist humidity and maintain a clean finish year-round.",
+  },
+  {
+    question: "Can you paint in Port Moody during the rainy season?",
+    answer: "Interior painting happens year-round regardless of weather. Exterior painting in Port Moody is best scheduled May through September when conditions are dry and temperatures are warm. Shape of Paint monitors weather daily and adjusts scheduling to protect the quality of every exterior project.",
+  },
+  {
+    question: "How often should Port Moody homes be repainted?",
+    answer: "Exterior paint on most Port Moody homes lasts 7-10 years with professional application and prep. Waterfront and inlet-adjacent homes may need more frequent maintenance due to salt air and moisture exposure. Shape of Paint uses premium coatings designed to extend time between repaints.",
+  },
+];
+
 export default function PortMoodyAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "Port Moody", url: `${siteConfig.url}/areas/port-moody` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting Port Moody",
+      description: "Port Moody's trusted house painters. Coastal-grade finishes for Heritage Mountain, Glenayre, and Inlet Centre. Licensed, insured. Free consultation.",
+      url: `${siteConfig.url}/areas/port-moody`,
+      areaServed: "Port Moody",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      {/* Schema markup - generated from static site config, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Port Moody, BC"
         description="Your Port Moody home sits between inlet and mountains. You need painters who build every finish for coastal moisture. Licensed, insured, and trusted across Heritage Mountain, Glenayre, and Moody Centre."
@@ -120,6 +163,22 @@ export default function PortMoodyAreaPage() {
                 Cabinet Painting
               </Link>
             </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Port Moody
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

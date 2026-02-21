@@ -6,6 +6,7 @@ import { FeatureSection } from "@/components/sections/FeatureSection";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { ScrollZoom } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Vancouver's Master Painters | About Shape of Paint",
@@ -45,8 +46,14 @@ const portfolioCategories = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "About", url: `${siteConfig.url}/about` },
+  ]));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="Vancouver Painters Who Do It Right"
         description="400+ projects. On time. On quote. A finish you can see from across the room."

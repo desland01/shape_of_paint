@@ -4,15 +4,58 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
+
 export const metadata: Metadata = {
   title: "House Painters Pitt Meadows BC | Shape of Paint",
   description:
     "Trusted house painters in Pitt Meadows, BC. 200+ homes painted with precision. Interior, exterior, and cabinet finishes built for your climate. Free estimates.",
 };
 
+const faqItems = [
+  {
+    question: "How much does house painting cost in Pitt Meadows?",
+    answer: "Interior painting in Pitt Meadows typically runs $3-8 per square foot, while exterior projects range $4-12 per square foot. Pitt Meadows' newer suburban homes tend toward the lower end of these ranges. Shape of Paint provides free on-site estimates with firm pricing — no hidden fees.",
+  },
+  {
+    question: "What paint works best for Pitt Meadows homes?",
+    answer: "Premium acrylic latex performs best on Pitt Meadows exteriors. The agricultural setting means more dust and pollen settle on surfaces, so Shape of Paint uses self-priming formulas with excellent adhesion. For interiors, we recommend low-VOC acrylic with washable finishes for lasting results.",
+  },
+  {
+    question: "How long does exterior paint last in Pitt Meadows?",
+    answer: "With proper surface preparation, exterior paint on Pitt Meadows homes lasts 8-10 years. The flat terrain means less wind damage compared to hillside areas, which helps longevity. Shape of Paint uses professional-grade coatings and thorough prep to maximize the lifespan of every project.",
+  },
+  {
+    question: "Does Shape of Paint serve Pitt Meadows?",
+    answer: "Yes, Shape of Paint serves all of Pitt Meadows including the dyke-side neighbourhoods, meadowlands area, Central Pitt Meadows, South Bonson, and Osprey Village. We handle interior, exterior, and cabinet painting for residential homes throughout the community.",
+  },
+];
+
 export default function PittMeadowsAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "Pitt Meadows", url: `${siteConfig.url}/areas/pitt-meadows` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting Pitt Meadows",
+      description: "Trusted house painters in Pitt Meadows, BC. Interior, exterior, and cabinet painting with precision craftsmanship. Free estimates.",
+      url: `${siteConfig.url}/areas/pitt-meadows`,
+      areaServed: "Pitt Meadows",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      {/* Schema markup for search engines - content is generated from static config, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Pitt Meadows, BC"
         description="Your Pitt Meadows home faces unique weather challenges. You deserve painters who understand your neighbourhood and deliver finishes that last."
@@ -110,6 +153,22 @@ export default function PittMeadowsAreaPage() {
                 — Kitchen and bathroom cabinets sprayed to a showroom finish. Designer-quality results without the renovation.
               </li>
             </ul>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Pitt Meadows
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

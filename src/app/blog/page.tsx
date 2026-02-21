@@ -4,6 +4,8 @@ import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { BlogCard } from "@/components/sections/BlogCard";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { blogPosts } from "@/config/blog";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painting Tips & Guides | Shape of Paint Blog",
@@ -12,8 +14,14 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+  ]));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <section className="bg-background pb-4 pt-16 md:pt-24">
         <div className="mx-auto max-w-[1440px] px-6 md:px-8">
           <nav

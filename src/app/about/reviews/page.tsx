@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { SlideUp } from "@/components/ui/motion";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "200+ Reviews | Vancouver Painters | Shape of Paint",
@@ -23,8 +24,15 @@ const instagramImages = [
 ];
 
 export default function ReviewsPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "About", url: `${siteConfig.url}/about` },
+    { name: "Reviews", url: `${siteConfig.url}/about/reviews` },
+  ]));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="200+ Five-Star Reviews from Vancouver Homeowners"
         description="4.9-star average. Zero shortcuts. Every review below is from a real Vancouver family who trusted us with their home. Read what they said — then decide for yourself."

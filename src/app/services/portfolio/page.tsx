@@ -4,6 +4,7 @@ import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Our Work",
@@ -54,8 +55,15 @@ const cabinetImages = [
 ];
 
 export default function PortfolioPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Services", url: `${siteConfig.url}/services` },
+    { name: "Portfolio", url: `${siteConfig.url}/services/portfolio` },
+  ]));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="Our Work"
         description="Every project tells a story. Browse interior, exterior, and cabinet painting transformations across Vancouver and the Lower Mainland."

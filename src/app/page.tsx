@@ -13,6 +13,7 @@ import { NewsletterSignup } from "@/components/sections/NewsletterSignup";
 import Image from "next/image";
 import { SlideUp, StaggerContainer } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "House Painters Vancouver BC | Shape of Paint",
@@ -55,8 +56,20 @@ const instagramImages = [
 ];
 
 export default function HomePage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+  ]));
+  const websiteJsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.url,
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: websiteJsonLd }} />
       <Hero
         eyebrow="Vancouver's Trusted House Painters"
         headline="Vancouver house painters who care about the finish as much as you do"

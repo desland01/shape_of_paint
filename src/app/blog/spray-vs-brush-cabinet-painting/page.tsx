@@ -14,6 +14,11 @@ export default function SprayVsBrushCabinetPage() {
       title="Spray vs. Brush: Why Spray-Finished Cabinets Look Better"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="spray-vs-brush-cabinet-painting"
+      description="Most painters don't own spray equipment -- so they brush cabinets instead. Here's what HVLP spray finishing delivers that rollers never will."
+      image="/images/portfolio-1.webp"
+      dateModified="2026-02-21"
+      category="Cabinet Painting"
     >
       <p>
         Spray painting cabinets produces a smoother, harder, more factory-like finish
@@ -23,6 +28,12 @@ export default function SprayVsBrushCabinetPage() {
       </p>
 
       <h2>Why Brush Marks Show on Cabinets</h2>
+
+      <p>
+        Brush and roller marks are visible on cabinet doors because you view them at
+        eye level from 2 feet away every day. Any texture — strokes, stipple, drips —
+        is immediately obvious on flat cabinet surfaces in a way it never is on walls.
+      </p>
 
       <p>
         Cabinet doors sit at eye level. You see them up close every single day. Any
@@ -44,6 +55,13 @@ export default function SprayVsBrushCabinetPage() {
       </p>
 
       <h2>How HVLP Spray Finishing Works</h2>
+
+      <p>
+        HVLP (High Volume, Low Pressure) spray finishing atomizes paint into a fine mist
+        that deposits thin, uniform coats on cabinet surfaces. Shape of Paint uses the
+        same controlled spray technology found in furniture factories and automotive shops
+        to deliver a glass-smooth result on Vancouver kitchen cabinets.
+      </p>
 
       <p>
         HVLP stands for High Volume, Low Pressure. It is the same technology that
@@ -74,27 +92,52 @@ export default function SprayVsBrushCabinetPage() {
 
       <h2>Finish Quality Comparison</h2>
 
-      <h3>Spray Finish</h3>
+      <p>
+        Spray-applied cabinet finishes deliver zero texture, even sheen, and thinner coats
+        that cure harder than brushed applications. The difference between spray and brush
+        is visible from across any Vancouver kitchen.
+      </p>
 
-      <ul>
-        <li>Glass-smooth surface with zero texture</li>
-        <li>Even sheen across flat panels, edges, and profiles</li>
-        <li>No brush marks, drips, or roller stipple</li>
-        <li>Thinner, more even coats that cure harder</li>
-        <li>Looks identical to a factory finish</li>
-      </ul>
-
-      <h3>Brush and Roller Finish</h3>
-
-      <ul>
-        <li>Visible texture under direct light</li>
-        <li>Uneven thickness at edges and profiles</li>
-        <li>Higher chance of drips on vertical surfaces</li>
-        <li>Thicker coats that take longer to cure</li>
-        <li>Looks hand-painted (and not in a good way on cabinets)</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Spray Finish</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Brush and Roller Finish</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Glass-smooth surface with zero texture</td>
+              <td className="py-3 pr-6">Visible texture under direct light</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Even sheen across flat panels, edges, and profiles</td>
+              <td className="py-3 pr-6">Uneven thickness at edges and profiles</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">No brush marks, drips, or roller stipple</td>
+              <td className="py-3 pr-6">Higher chance of drips on vertical surfaces</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Thinner, more even coats that cure harder</td>
+              <td className="py-3 pr-6">Thicker coats that take longer to cure</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Looks identical to a factory finish</td>
+              <td className="py-3 pr-6">Looks hand-painted (not ideal for cabinets)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Durability Differences</h2>
+
+      <p>
+        Sprayed cabinet coats cure faster and harder than brushed coats because they are
+        thinner and more uniform. A sprayed coat of Benjamin Moore Advance reaches full
+        hardness in about 14 days, while a heavy brushed coat can take 21 to 30 days.
+      </p>
 
       <p>
         Sprayed coats are thinner and more uniform than brushed coats. That means they
@@ -110,12 +153,24 @@ export default function SprayVsBrushCabinetPage() {
       </p>
 
       <p>
+        According to Benjamin Moore, their Advance waterborne alkyd formula achieves
+        optimal film hardness when applied at 2 to 3 mils per coat — a thickness that
+        HVLP spray equipment delivers consistently but brushes and rollers cannot match.
+      </p>
+
+      <p>
         Spray-applied finishes also adhere more evenly. When paint is brushed on too
         thick, the outer layer skins over while the interior stays soft. That creates
         weak spots where the finish can peel later.
       </p>
 
       <h2>Drying Time Differences</h2>
+
+      <p>
+        Sprayed cabinet coats dry to touch in 30 to 60 minutes and can be recoated in
+        4 to 6 hours. Brushed coats need 6 to 8 hours between coats and 24 hours before
+        handling — adding 2 to 4 extra days to a Vancouver cabinet project.
+      </p>
 
       <p>
         Sprayed coats are thin — typically 2 to 3 mils per coat. They dry to touch in
@@ -133,7 +188,9 @@ export default function SprayVsBrushCabinetPage() {
       <h2>When Brush and Roller Makes Sense</h2>
 
       <p>
-        There are a few situations where a brush is the right tool:
+        Brush and roller application is appropriate for small touch-ups, tight interior
+        corners, and single-door repairs — situations where setting up spray equipment
+        is not practical. For all visible cabinet surfaces, spray is the better choice.
       </p>
 
       <ul>
@@ -151,10 +208,23 @@ export default function SprayVsBrushCabinetPage() {
       <h2>Why Not All Painters Spray</h2>
 
       <p>
+        Professional HVLP spray equipment costs $2,000 to $5,000 and requires a
+        controlled, dust-free environment plus training in consistent film application.
+        Many general painters in Vancouver do not have this setup, which is why they
+        default to brush-and-roller on cabinets.
+      </p>
+
+      <p>
         Spray equipment costs $2,000 to $5,000. It requires a controlled environment
         free of dust and debris. The painter needs training to achieve consistent film
         thickness without runs or sags. And overspray means every nearby surface must be
         carefully masked.
+      </p>
+
+      <p>
+        According to Sherwin-Williams, their ProClassic and Emerald Urethane lines are
+        specifically formulated for spray application on cabinetry — achieving optimal
+        levelling and film hardness only when atomized through professional spray equipment.
       </p>
 
       <p>
@@ -165,6 +235,12 @@ export default function SprayVsBrushCabinetPage() {
       </p>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        Spray finishing is the only application method that delivers a factory-smooth,
+        durable result on kitchen cabinets. Shape of Paint uses HVLP equipment on every
+        Vancouver cabinet project because the difference is visible from across the room.
+      </p>
 
       <p>
         Your cabinets are the most visible surface in your kitchen. A spray finish makes

@@ -14,6 +14,11 @@ export default function ExteriorPaintingCostPage() {
       title="How Much Does It Cost to Paint a House Exterior in Vancouver?"
       date="2026-02-18"
       readingTime="7 min read"
+      slug="exterior-painting-cost-vancouver"
+      description="Vancouver homes cost $5,000 to $20,000 to paint. 6 factors determine where yours falls. Here is how to read a quote like a pro."
+      image="/images/exterior.webp"
+      dateModified="2026-02-21"
+      category="Exterior Painting"
     >
       <p>
         If you are wondering how much to paint a house in Vancouver, you are
@@ -35,28 +40,47 @@ export default function ExteriorPaintingCostPage() {
       <h2>What a Professional Exterior Transformation Costs by House Size</h2>
 
       <p>
+        Exterior painting costs in Vancouver range from $5,000 for a small
+        bungalow to $20,000 for a large multi-storey home. Shape of Paint
+        prices every project based on square footage, siding type, and
+        preparation scope — so your quote reflects your home, not a generic
+        estimate.
+      </p>
+
+      <p>
         These ranges reflect what Vancouver homeowners invest in 2026 for a
         professional crew using premium coatings, thorough surface preparation,
         and a full 2-coat system.
       </p>
 
-      <ul>
-        <li>
-          <strong>1,500 sq ft home (small bungalow or rancher):</strong> $5,000
-          to $8,000. Usually single-storey with straightforward access. A crew
-          of 3 can complete the project in 3 to 5 days.
-        </li>
-        <li>
-          <strong>2,500 sq ft home (average two-storey):</strong> $8,000 to
-          $14,000. Expect scaffolding or extension ladder work for the second
-          floor. Add $500 to $1,500 for additional height access.
-        </li>
-        <li>
-          <strong>3,000+ sq ft home (large or multi-storey):</strong> $12,000
-          to $20,000. Three-storey homes or complex rooflines require full
-          scaffolding setups. Expect 7 to 12 days on site for a thorough job.
-        </li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Home Size</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Cost Range</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Timeline</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">1,500 sq ft (small bungalow or rancher)</td>
+              <td className="py-3 pr-6">$5,000 to $8,000</td>
+              <td className="py-3 pr-6">3 to 5 days</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">2,500 sq ft (average two-storey)</td>
+              <td className="py-3 pr-6">$8,000 to $14,000</td>
+              <td className="py-3 pr-6">5 to 8 days</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">3,000+ sq ft (large or multi-storey)</td>
+              <td className="py-3 pr-6">$12,000 to $20,000</td>
+              <td className="py-3 pr-6">7 to 12 days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>
         These numbers include labour, premium paint, primer, complete surface
@@ -66,6 +90,13 @@ export default function ExteriorPaintingCostPage() {
       </p>
 
       <h2>The 6 Factors That Define Your Project Scope</h2>
+
+      <p>
+        The six factors that most affect your Vancouver exterior painting
+        cost are number of storeys, siding type, surface preparation needs,
+        paint quality, trim complexity, and repairs required. Each one
+        shifts your quote by hundreds or thousands of dollars.
+      </p>
 
       <h3>1. Number of Storeys</h3>
 
@@ -119,7 +150,10 @@ export default function ExteriorPaintingCostPage() {
         Sherwin-Williams Duration runs $75 to $95. Lower-grade coatings cost
         $35 to $45. The difference is not just price per gallon — premium
         formulations resist fading, chalking, and moisture penetration for 10
-        to 15 years in Vancouver weather. Inferior products begin breaking down
+        to 15 years in Vancouver weather. According to Sherwin-Williams,
+        their Duration Exterior line maintains colour and sheen retention
+        for up to 15 years in coastal climates when applied with proper
+        surface preparation. Inferior products begin breaking down
         in 3 to 5 years, which means a second full project far sooner than
         necessary.
       </p>
@@ -147,6 +181,13 @@ export default function ExteriorPaintingCostPage() {
       <h2>What a Complete Professional Quote Includes</h2>
 
       <p>
+        A professional exterior painting quote in Vancouver should itemize
+        surface prep, primer, two coats of premium paint, trim work,
+        protection of landscaping, full cleanup, and a written warranty.
+        Shape of Paint includes all nine steps in every estimate.
+      </p>
+
+      <p>
         A thorough exterior painting quote in Vancouver should cover all of the
         following. If any item is missing, it is worth asking why.
       </p>
@@ -164,6 +205,14 @@ export default function ExteriorPaintingCostPage() {
       </ol>
 
       <h2>What Separates a Quality Quote from an Incomplete One</h2>
+
+      <p>
+        A quality exterior painting quote details the exact products, number
+        of coats, prep steps, and warranty terms. An incomplete quote leaves
+        out scope items, which leads to surprise charges or premature failure.
+        Vancouver homeowners should compare line items, not just bottom-line
+        prices.
+      </p>
 
       <p>
         Last summer we quoted two identical townhouses on the same street in
@@ -191,6 +240,13 @@ export default function ExteriorPaintingCostPage() {
       <h2>How to Get an Accurate Quote</h2>
 
       <p>
+        The most accurate way to get an exterior painting quote in Vancouver
+        is through an in-person visit where an estimator inspects every wall,
+        measures surface area, and identifies repairs. Shape of Paint provides
+        detailed on-site estimates at no charge.
+      </p>
+
+      <p>
         The most accurate exterior painting quotes come from an in-person
         visit. A skilled estimator will walk your entire home, assess every
         wall, note the siding type and condition, identify needed repairs,
@@ -205,6 +261,14 @@ export default function ExteriorPaintingCostPage() {
       </p>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        Most Vancouver exterior painting projects cost between $5,000 and
+        $14,000 for average-sized homes, with larger properties reaching
+        $20,000. According to CMHC, exterior maintenance including painting
+        should be budgeted at 1% to 2% of a home&apos;s value annually to
+        preserve long-term resale value.
+      </p>
 
       <p>
         Most Vancouver homeowners invest $5,000 to $14,000 in a quality

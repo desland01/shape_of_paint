@@ -14,6 +14,11 @@ export default function KitchenCabinetPaintingCostPage() {
       title="Kitchen Cabinet Painting Cost in Vancouver (2026 Guide)"
       date="2026-02-18"
       readingTime="7 min read"
+      slug="kitchen-cabinet-painting-cost-vancouver"
+      description="Cabinet painting in Vancouver costs $2,500-$9,000 in 2026. What drives your quote, what a proper estimate includes, and the primer step most painters skip."
+      image="/images/cabinet-finish.webp"
+      dateModified="2026-02-21"
+      category="Cabinet Painting"
     >
       <p>
         Kitchen cabinet painting in Vancouver costs between $2,500 and $9,000 in 2026.
@@ -24,6 +29,13 @@ export default function KitchenCabinetPaintingCostPage() {
       </p>
 
       <h2>Investment by Kitchen Size</h2>
+
+      <p>
+        Cabinet painting costs in Vancouver range from $2,500 for a small condo kitchen
+        to $9,000 or more for a large custom home. Shape of Paint bases every quote on
+        door count, finish type, and cabinet condition — the three factors that drive
+        the real investment.
+      </p>
 
       <h3>Small Kitchen (15 to 25 Doors)</h3>
 
@@ -53,6 +65,12 @@ export default function KitchenCabinetPaintingCostPage() {
       </p>
 
       <h2>What Drives the Investment</h2>
+
+      <p>
+        Five main factors determine your Vancouver cabinet painting quote: door count,
+        colour change complexity, finish type, cabinet condition, and whether your kitchen
+        includes an island. Shape of Paint evaluates all five during every in-home estimate.
+      </p>
 
       <h3>Number of Doors and Drawer Fronts</h3>
 
@@ -111,9 +129,10 @@ export default function KitchenCabinetPaintingCostPage() {
       <h2>What a Proper Quote Includes</h2>
 
       <p>
-        A complete fine-finish cabinet painting quote in Vancouver should include all of
-        the following. If any of these are missing, it is a sign the painter may not have
-        the process or equipment to deliver a lasting result.
+        A complete cabinet painting quote in Vancouver should cover every step from
+        door removal to final touch-ups. Shape of Paint includes all 9 steps below
+        in every estimate — if any are missing from another quote, the painter may lack
+        the process or equipment for a lasting result.
       </p>
 
       <ol>
@@ -138,6 +157,12 @@ export default function KitchenCabinetPaintingCostPage() {
       </p>
 
       <h2>Additional Details That Improve the Result</h2>
+
+      <p>
+        Beyond the core spray finish, several add-ons can elevate the final result of
+        your Vancouver cabinet project. Hardware, hinges, interior shelving, and trim
+        work are the most common upgrades Shape of Paint clients choose.
+      </p>
 
       <h3>Hardware Replacement</h3>
 
@@ -174,23 +199,69 @@ export default function KitchenCabinetPaintingCostPage() {
 
       <h2>How to Ensure a Superior Result</h2>
 
-      <ul>
-        <li>Get 3 quotes from spray-only painters — anyone offering brush-and-roller on cabinets lacks the equipment for a fine finish</li>
-        <li>Ask to see photos of completed kitchens, not mid-project shots</li>
-        <li>Confirm the quote includes bonding primer, not just topcoat</li>
-        <li>Choose your colour before the estimate so the painter can plan for primer needs</li>
-        <li>Bundle hardware replacement into your project for a complete transformation</li>
-      </ul>
+      <p>
+        Choosing the right cabinet painter in Vancouver comes down to equipment,
+        process, and transparency. Shape of Paint recommends getting 3 spray-only quotes
+        and verifying that bonding primer is included — not just topcoat.
+      </p>
+
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Step</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Why It Matters</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Get 3 quotes from spray-only painters</td>
+              <td className="py-3 pr-6">Brush-and-roller on cabinets signals a lack of proper equipment</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Ask to see completed kitchen photos</td>
+              <td className="py-3 pr-6">Mid-project shots hide final quality issues</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Confirm bonding primer is included</td>
+              <td className="py-3 pr-6">Without primer, the finish chips within 6-12 months</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Choose your colour before the estimate</td>
+              <td className="py-3 pr-6">Lets the painter plan for primer and coat requirements</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Bundle hardware replacement</td>
+              <td className="py-3 pr-6">New pulls and knobs complete the visual transformation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Why This Investment Delivers</h2>
 
       <p>
-        At $4,000 to $6,000 for an average kitchen, a professional cabinet transformation
-        is one of the highest-ROI home improvements you can make. Real estate data shows
-        kitchen updates recoup 75% to 100% of their cost at resale. The investment is
+        At $4,000 to $6,000, professional cabinet painting is one of the highest-ROI
+        home improvements available to Vancouver homeowners. The finish quality from a
+        master HVLP sprayer often surpasses factory coatings at a fraction of the
+        replacement cost.
+      </p>
+
+      <p>
+        According to CMHC (Canada Mortgage and Housing Corporation), minor kitchen
+        updates recoup 75% to 100% of their cost at resale in the Canadian housing
+        market. At $4,000 to $6,000 for an average kitchen, a professional cabinet transformation
+        is one of the highest-ROI home improvements you can make. The investment is
         less than full cabinet replacement — and the finish quality from a master sprayer
         with HVLP equipment, bonding primers, and multiple precision coats is often
         superior to factory.
+      </p>
+
+      <p>
+        According to Benjamin Moore, their Advance waterborne alkyd formula reaches full
+        hardness in 14 to 21 days when spray-applied at the recommended 2-to-3-mil film
+        thickness — delivering a furniture-grade surface that resists chipping and
+        yellowing for years.
       </p>
 
       <p>

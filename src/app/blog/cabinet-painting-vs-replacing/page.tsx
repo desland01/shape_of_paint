@@ -14,6 +14,11 @@ export default function CabinetPaintingVsReplacingPage() {
       title="Cabinet Painting vs. Replacing: Why a Master Spray Finish Beats Factory Every Time"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="cabinet-painting-vs-replacing"
+      description="$40,000 custom cabinets that don't look as good as a 5-day spray finish. Here's why factory coatings can't match a hand-sprayed HVLP result."
+      image="/images/cabinets.webp"
+      dateModified="2026-02-21"
+      category="Cabinet Painting"
     >
       <p>
         Cabinet painting vs replacing is the first question every Vancouver
@@ -31,6 +36,13 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <h2>The Finish Quality Nobody Talks About</h2>
+
+      <p>
+        Professional cabinet painting in Vancouver delivers a hand-sprayed HVLP finish
+        that outperforms factory coatings on smoothness, sheen consistency, and colour
+        accuracy. Shape of Paint uses controlled spray setups to build thin, even coats
+        that cure to a glass-smooth surface with zero orange peel texture.
+      </p>
 
       <p>
         When you buy replacement cabinets — even expensive ones — you get a
@@ -58,6 +70,13 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>What the Numbers Look Like</h2>
 
       <p>
+        Cabinet painting in Vancouver typically costs $3,000 to $6,000 for a standard
+        kitchen, while full cabinet replacement runs $15,000 to $40,000. Shape of Paint
+        projects include cleaning, sanding, bonding primer, and 2 coats of HVLP
+        spray-applied finish on all doors, drawer fronts, and frames.
+      </p>
+
+      <p>
         Professional cabinet painting in Vancouver typically costs between
         $3,000 and $6,000 for an average-sized kitchen. That includes cleaning,
         sanding, priming, and 2 coats of spray-applied finish on all doors,
@@ -69,6 +88,13 @@ export default function CabinetPaintingVsReplacingPage() {
         demolition, new boxes, new doors, hardware, countertop adjustments,
         plumbing reconnection, and installation labour. Some custom kitchens in
         Vancouver exceed $40,000.
+      </p>
+
+      <p>
+        According to CMHC (Canada Mortgage and Housing Corporation), minor kitchen
+        renovations like cabinet refinishing recoup 75% to 100% of the investment at
+        resale — making it one of the highest-ROI home improvements in the Canadian
+        housing market.
       </p>
 
       <p>
@@ -88,6 +114,12 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <h2>Timeline: 3 to 5 Days vs. 4 to 8 Weeks</h2>
+
+      <p>
+        Professional cabinet painting takes 3 to 5 working days for an average Vancouver
+        kitchen. Full cabinet replacement requires 4 to 8 weeks from order to completion,
+        with custom cabinets adding 10 to 14 weeks for fabrication alone.
+      </p>
 
       <p>
         A professional cabinet painting crew finishes most Vancouver kitchens
@@ -112,6 +144,12 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>Disruption Level</h2>
 
       <p>
+        Cabinet painting causes minimal disruption to your Vancouver home — you keep
+        access to your sink, stove, and fridge throughout the 3-to-5-day process. Full
+        replacement turns your kitchen into a construction zone for weeks.
+      </p>
+
+      <p>
         With painting, you lose access to your cabinets for 3 to 5 days. You
         can still use your sink, stove, and fridge. Most families set up a
         temporary station on the dining table and barely notice.
@@ -125,6 +163,13 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <h2>The Environmental Angle</h2>
+
+      <p>
+        Refinishing cabinets in Vancouver generates near-zero waste compared to
+        replacement, which sends hundreds of pounds of wood, MDF, and laminate to the
+        landfill. Construction and demolition waste accounts for roughly 30% of Metro
+        Vancouver landfill volume each year.
+      </p>
 
       <p>
         Replacing cabinets sends hundreds of pounds of wood, MDF, and laminate
@@ -142,16 +187,48 @@ export default function CabinetPaintingVsReplacingPage() {
 
       <h2>When Refinishing Is the Right Choice</h2>
 
-      <ul>
-        <li>Your cabinet boxes are solid and square</li>
-        <li>Hinges and drawer slides work properly</li>
-        <li>You want a colour change or a fresh, modern look</li>
-        <li>
-          You want an exact colour and sheen that factory options cannot match
-        </li>
-        <li>You need the project done in under a week</li>
-        <li>You like your current kitchen layout</li>
-      </ul>
+      <p>
+        Refinishing is the right choice for about 85% of Vancouver kitchens — any home
+        where the cabinet boxes are structurally solid and the layout works. Shape of
+        Paint sees this in most kitchens built in the last 30 years.
+      </p>
+
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Condition</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Refinishing Suitable?</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Cabinet boxes are solid and square</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Hinges and drawer slides work properly</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">You want a colour change or fresh look</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">You want exact colour and sheen control</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">You need the project done in under a week</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">You like your current kitchen layout</td>
+              <td className="py-3 pr-6">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>
         That describes about 85% of the kitchens we see in Vancouver. Most
@@ -161,6 +238,12 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <h2>When Replacing Makes More Sense</h2>
+
+      <p>
+        Full cabinet replacement is the right call when boxes are structurally
+        compromised — warped, water-damaged, or delaminating — or when you need a
+        completely new kitchen layout with different plumbing and electrical.
+      </p>
 
       <ul>
         <li>
@@ -186,6 +269,13 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>What About Refacing?</h2>
 
       <p>
+        Refacing is a middle option between painting and replacing — you keep
+        the boxes but get new doors, typically costing $8,000 to $15,000 in
+        Vancouver. For most homeowners, a spray refinish still delivers a
+        smoother, more customizable result.
+      </p>
+
+      <p>
         Refacing sits between painting and replacing. You keep the boxes but
         replace the doors and drawer fronts with new ones. Cost runs $8,000 to
         $15,000 in Vancouver. It makes sense if your doors are physically
@@ -202,12 +292,24 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>The Bottom Line</h2>
 
       <p>
+        For Vancouver homeowners with structurally sound cabinets, a master HVLP spray
+        refinish delivers the highest-quality kitchen finish available — better than
+        factory, faster than replacement, and with zero waste sent to the landfill.
+      </p>
+
+      <p>
         If your cabinet boxes are in good shape, a master spray refinish is the
         highest-quality finish you can put on your kitchen. You get a
         hand-applied surface that outperforms factory coatings. You get your
         kitchen back in less than a week. You keep perfectly good materials out
         of the landfill. And the investment runs well below what replacement
         costs.
+      </p>
+
+      <p>
+        According to Benjamin Moore, their Advance alkyd-modified formula delivers a
+        furniture-grade finish that resists chipping and yellowing for 8 to 12 years
+        when properly applied with HVLP spray equipment over a bonding primer.
       </p>
 
       <p>

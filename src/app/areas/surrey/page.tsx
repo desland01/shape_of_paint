@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters Surrey BC | Shape of Paint",
@@ -12,8 +13,42 @@ export const metadata: Metadata = {
 };
 
 export default function SurreyAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Areas", url: `${siteConfig.url}/areas` },
+    { name: "Surrey", url: `${siteConfig.url}/areas/surrey` },
+  ]));
+  const serviceJsonLd = JSON.stringify(generateServiceSchema({
+    name: "House Painting in Surrey",
+    description: "Professional interior, exterior, and cabinet painting services in Surrey, BC by Shape of Paint.",
+    url: `${siteConfig.url}/areas/surrey`,
+    areaServed: "Surrey",
+  }));
+  const faqItems = [
+    {
+      question: "How much does it cost to paint a house in Surrey?",
+      answer: "Pricing varies across Surrey's diverse neighbourhoods. Interior painting runs $3-8 per square foot, and exterior ranges from $4-12 per square foot. South Surrey waterfront homes require different prep than Fleetwood family homes. Shape of Paint provides firm quotes after an in-home assessment.",
+    },
+    {
+      question: "What is the best paint for Surrey homes?",
+      answer: "Acrylic latex exterior coatings perform best in Surrey. Surrey gets slightly less rain than the North Shore but more sun exposure, so UV-resistant formulations are essential. Shape of Paint selects professional-grade products matched to your home's specific exposure and surface type.",
+    },
+    {
+      question: "How do I choose a reliable painter in Surrey?",
+      answer: "Look for licensed and insured painters with strong local reviews. Shape of Paint has 200+ five-star reviews, serves every Surrey neighbourhood, and provides references from homeowners in your area. Ask for a firm written quote and clear timeline before committing.",
+    },
+    {
+      question: "When is the best time to paint a house in Surrey?",
+      answer: "May through September is the ideal window. Surrey's drier climate compared to North Vancouver gives you a slightly longer painting season. Shape of Paint monitors weather closely and schedules your exterior work during the best conditions for lasting results.",
+    },
+  ];
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Surrey, BC"
         description="Your Surrey home faces tough weather across every season. You need painters who know Fleetwood, Newton, and Cloverdale inside out. Licensed, insured, and trusted by hundreds of homeowners."
@@ -117,6 +152,22 @@ export default function SurreyAreaPage() {
             </Link>{" "}
             can give your cabinets an artisan finish rivaling factory new. Every service includes a firm quote, daily updates, and a final walkthrough where we don't leave until every detail is right.
           </p>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content px-6 md:px-8">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Surrey
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 

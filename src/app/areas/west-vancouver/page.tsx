@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
-
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters West Vancouver BC | Shape of Paint",
@@ -12,8 +13,42 @@ export const metadata: Metadata = {
 };
 
 export default function WestVancouverAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Areas", url: `${siteConfig.url}/areas` },
+    { name: "West Vancouver", url: `${siteConfig.url}/areas/west-vancouver` },
+  ]));
+  const serviceJsonLd = JSON.stringify(generateServiceSchema({
+    name: "House Painting in West Vancouver",
+    description: "Designer-grade interior, exterior, and cabinet painting services in West Vancouver, BC by Shape of Paint.",
+    url: `${siteConfig.url}/areas/west-vancouver`,
+    areaServed: "West Vancouver",
+  }));
+  const faqItems = [
+    {
+      question: "How much does house painting cost in West Vancouver?",
+      answer: "West Vancouver's luxury homes, steep lots, and ocean-facing exposures require specialized access equipment and premium coatings, so costs run higher than the regional average. Shape of Paint provides detailed quotes after an on-site assessment of your specific property and conditions.",
+    },
+    {
+      question: "What paint handles West Vancouver's coastal conditions?",
+      answer: "Marine-grade acrylic with UV and salt-air resistance is essential. Oceanfront homes in West Vancouver face relentless salt spray and intense sun exposure that break down standard coatings fast. Shape of Paint selects professional-grade products engineered for coastal durability.",
+    },
+    {
+      question: "How often should West Vancouver homes be repainted?",
+      answer: "Ocean-facing exteriors need repainting every 6-8 years, while sheltered sides last 8-10 years. Salt spray accelerates paint breakdown significantly on West Vancouver waterfront properties. Shape of Paint uses thorough prep and premium coatings to extend the life of every finish.",
+    },
+    {
+      question: "Does Shape of Paint work on West Vancouver's steep-lot homes?",
+      answer: "Yes. Shape of Paint is fully equipped with professional scaffolding and access systems for West Vancouver's hillside properties. From Ambleside waterfront to British Properties estates, we handle steep grades, multi-level exteriors, and challenging access with safe, expert execution.",
+    },
+  ];
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in West Vancouver, BC"
         description="Designer-grade finishes for waterfront estates and architectural homes across West Vancouver"
@@ -144,6 +179,22 @@ export default function WestVancouverAreaPage() {
                 {" — Professional spray finishes for kitchens and bathrooms"}
               </li>
             </ul>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in West Vancouver
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

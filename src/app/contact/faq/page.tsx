@@ -3,7 +3,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FAQ } from "@/components/sections/FAQ";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { siteConfig } from "@/config/site";
-import { generateFAQSchema } from "@/lib/schema";
+import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painting FAQ Vancouver | Shape of Paint",
@@ -54,10 +54,16 @@ const faqItems = [
 
 export default function FAQPage() {
   const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Contact", url: `${siteConfig.url}/contact` },
+    { name: "FAQ", url: `${siteConfig.url}/contact/faq` },
+  ]));
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: faqJsonLd}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: breadcrumbJsonLd}} />
       <PageHero heading="Vancouver Painting Questions, Answered" />
 
       <FAQ

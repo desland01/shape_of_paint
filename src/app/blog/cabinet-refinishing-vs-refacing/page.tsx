@@ -14,6 +14,11 @@ export default function CabinetRefinishingVsRefacingPage() {
       title="Cabinet Refinishing vs. Refacing: What's the Difference?"
       date="2026-02-18"
       readingTime="6 min read"
+      slug="cabinet-refinishing-vs-refacing"
+      description="8 out of 10 Vancouver homeowners choose refinishing over refacing. A master spray finish outperforms factory doors in 3-5 days with unlimited colour options."
+      image="/images/portfolio-3.webp"
+      dateModified="2026-02-21"
+      category="Cabinet Painting"
     >
       <p>
         Cabinet refinishing in Vancouver gives you something factory refacing
@@ -25,6 +30,13 @@ export default function CabinetRefinishingVsRefacingPage() {
       </p>
 
       <h2>What Is Cabinet Refinishing?</h2>
+
+      <p>
+        Cabinet refinishing means painting or staining your existing doors, drawer
+        fronts, and frames without replacing anything. Shape of Paint completes most
+        Vancouver kitchen refinishing projects in 3 to 5 days using HVLP spray
+        equipment, bonding primer, and acrylic alkyd finish coats.
+      </p>
 
       <p>
         Refinishing means painting or staining your existing cabinet doors, drawer fronts,
@@ -55,6 +67,13 @@ export default function CabinetRefinishingVsRefacingPage() {
       <h2>What Is Cabinet Refacing?</h2>
 
       <p>
+        Cabinet refacing replaces your doors and drawer fronts with brand-new
+        factory-made pieces while keeping the existing boxes, which get covered with
+        matching veneer or laminate. The process takes 3 to 5 days for installation but
+        requires 3 to 6 weeks of lead time for custom door orders.
+      </p>
+
+      <p>
         Refacing means replacing your cabinet doors and drawer fronts with brand-new ones
         while keeping the existing boxes. The boxes get covered with a matching veneer or
         laminate to create a uniform look.
@@ -79,21 +98,41 @@ export default function CabinetRefinishingVsRefacingPage() {
 
       <h2>Cost Comparison</h2>
 
-      <h3>Refinishing (Painting)</h3>
+      <p>
+        Refinishing costs 60% to 70% less than refacing for the same Vancouver kitchen.
+        A medium kitchen runs $4,000 to $6,000 for refinishing versus $8,000 to $15,000
+        for refacing — and the hand-sprayed finish from Shape of Paint is smoother than
+        factory-applied coatings on new doors.
+      </p>
 
-      <ul>
-        <li>Small kitchen (15-25 doors): $2,500 to $4,000</li>
-        <li>Medium kitchen (25-40 doors): $4,000 to $6,000</li>
-        <li>Large kitchen (40-60+ doors): $6,000 to $9,000</li>
-      </ul>
-
-      <h3>Refacing</h3>
-
-      <ul>
-        <li>Small kitchen: $5,000 to $8,000</li>
-        <li>Medium kitchen: $8,000 to $15,000</li>
-        <li>Large kitchen: $15,000 to $22,000</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Kitchen Size</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Refinishing Cost</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Refacing Cost</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Small (15-25 doors)</td>
+              <td className="py-3 pr-6">$2,500 to $4,000</td>
+              <td className="py-3 pr-6">$5,000 to $8,000</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Medium (25-40 doors)</td>
+              <td className="py-3 pr-6">$4,000 to $6,000</td>
+              <td className="py-3 pr-6">$8,000 to $15,000</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Large (40-60+ doors)</td>
+              <td className="py-3 pr-6">$6,000 to $9,000</td>
+              <td className="py-3 pr-6">$15,000 to $22,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>
         Refacing costs 2 to 3 times more than refinishing for the same kitchen. The price
@@ -102,6 +141,13 @@ export default function CabinetRefinishingVsRefacingPage() {
       </p>
 
       <h2>Pros of Refinishing</h2>
+
+      <p>
+        Refinishing offers 8 distinct advantages over refacing for Vancouver homeowners:
+        superior hand-sprayed finish quality, unlimited colour selection, faster
+        turnaround, zero waste, and an investment that runs 60% to 70% less than refacing
+        for a finer result.
+      </p>
 
       <ul>
         <li>Superior finish quality — a master sprayer produces a smoother, more even coat than factory-applied finishes</li>
@@ -116,6 +162,12 @@ export default function CabinetRefinishingVsRefacingPage() {
 
       <h2>Cons of Refinishing</h2>
 
+      <p>
+        Refinishing is not suitable when doors are severely damaged, warped, or made of
+        thermofoil or vinyl-wrap materials. It also cannot change the door profile style —
+        a raised panel stays a raised panel after painting.
+      </p>
+
       <ul>
         <li>Does not change the door profile or style (raised panel stays raised panel)</li>
         <li>Doors with severe physical damage cannot be painted over</li>
@@ -125,6 +177,12 @@ export default function CabinetRefinishingVsRefacingPage() {
 
       <h2>Pros of Refacing</h2>
 
+      <p>
+        Refacing makes sense when you want a completely different door style or when
+        existing doors are physically damaged beyond what paint can repair. You get
+        brand-new doors and hardware while keeping the existing cabinet boxes.
+      </p>
+
       <ul>
         <li>You get brand-new doors and drawer fronts</li>
         <li>You can change from one door style to another (raised panel to Shaker, for example)</li>
@@ -133,6 +191,12 @@ export default function CabinetRefinishingVsRefacingPage() {
       </ul>
 
       <h2>Cons of Refacing</h2>
+
+      <p>
+        Refacing costs 2 to 3 times more than refinishing, requires 3 to 6 weeks of lead
+        time for custom door orders, and limits your colour and finish options to what the
+        manufacturer stocks. Veneer applied to cabinet boxes can also peel over time.
+      </p>
 
       <ul>
         <li>Costs 2 to 3 times more than refinishing</li>
@@ -144,13 +208,20 @@ export default function CabinetRefinishingVsRefacingPage() {
 
       <h2>Which One Should You Choose?</h2>
 
+      <p>
+        Choose refinishing if your cabinet boxes and doors are structurally sound and you
+        want a hand-finished result with unlimited colour options in under a week. Choose
+        refacing only if your doors are physically damaged or you want a completely
+        different door style.
+      </p>
+
       <h3>Choose Refinishing If...</h3>
 
       <ul>
         <li>Your cabinet boxes and doors are in good structural condition</li>
         <li>You like your current door style and layout</li>
         <li>You want the job done in under a week</li>
-        <li>You want a hand-finished result that factory doors can't replicate</li>
+        <li>You want a hand-finished result that factory doors can&apos;t replicate</li>
         <li>You want to choose from unlimited paint colours</li>
       </ul>
 
@@ -165,6 +236,12 @@ export default function CabinetRefinishingVsRefacingPage() {
       <h2>Why Most Vancouver Homeowners Choose Refinishing</h2>
 
       <p>
+        About 8 out of 10 cabinet projects Shape of Paint sees in Vancouver are
+        refinishing, not refacing. Most cabinets built in the last 25 years have solid
+        boxes and structurally sound doors where only the surface finish has worn out.
+      </p>
+
+      <p>
         About 8 out of 10 kitchen cabinet projects we see in Vancouver are refinishing,
         not refacing. The reason is simple. Most cabinets built in the last 25 years have
         solid boxes and structurally sound doors. The finish has worn out, but the
@@ -172,9 +249,16 @@ export default function CabinetRefinishingVsRefacingPage() {
       </p>
 
       <p>
+        According to the National Kitchen &amp; Bath Association (NKBA), cabinet
+        refinishing has grown steadily as a percentage of kitchen renovation projects
+        across North America, driven by homeowners seeking custom colour options and
+        faster project timelines compared to full replacement or refacing.
+      </p>
+
+      <p>
         A professional spray finish from a skilled painter actually surpasses factory
         coatings — finer atomization, more even coverage, and a colour palette that is
-        not limited to a manufacturer's catalogue. For a deeper look at why spray
+        not limited to a manufacturer&apos;s catalogue. For a deeper look at why spray
         finishing outperforms other methods, read our{" "}
         <Link
           href="/blog/spray-vs-brush-cabinet-painting"
@@ -186,6 +270,13 @@ export default function CabinetRefinishingVsRefacingPage() {
       </p>
 
       <h2>The Bottom Line</h2>
+
+      <p>
+        For 80% of Vancouver kitchens, refinishing delivers a superior, fully customized
+        finish with a faster timeline and more efficient investment than refacing. Shape
+        of Paint recommends refinishing whenever cabinet boxes and doors are structurally
+        sound.
+      </p>
 
       <p>
         Refinishing delivers a superior, fully customized finish — and the timeline and

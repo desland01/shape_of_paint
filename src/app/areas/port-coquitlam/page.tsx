@@ -4,15 +4,58 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from "@/lib/schema";
+
 export const metadata: Metadata = {
   title: "House Painters Port Coquitlam BC | Shape of Paint",
   description:
     "Trusted house painters in Port Coquitlam, BC. Interior, exterior, and cabinet painting with precision craftsmanship. 200+ PoCo homes transformed. Free estimates.",
 };
 
+const faqItems = [
+  {
+    question: "How much does it cost to paint a house in Port Coquitlam?",
+    answer: "Interior painting in Port Coquitlam ranges from $3-8 per square foot, while exterior work runs $4-12 per square foot. PoCo's mix of established Shaughnessy homes and newer Citadel Heights properties means pricing varies by condition and prep needed. Shape of Paint provides free on-site estimates with firm pricing.",
+  },
+  {
+    question: "What exterior paint handles Port Coquitlam weather?",
+    answer: "Premium acrylic latex with mildew inhibitors works best for Port Coquitlam exteriors. PoCo gets similar rainfall to Coquitlam, so Shape of Paint uses professional-grade coatings rated for heavy moisture exposure. Proper surface prep and primer selection are critical for long-lasting results in this climate.",
+  },
+  {
+    question: "How do I find reliable painters in Port Coquitlam?",
+    answer: "Look for licensed, insured painters with a strong review history. Shape of Paint has over 200 five-star reviews from homeowners across the Tri-Cities, including Port Coquitlam. Check for detailed written estimates, proof of insurance, and references from your specific neighbourhood.",
+  },
+  {
+    question: "When should I paint my Port Coquitlam home exterior?",
+    answer: "The best window for exterior painting in Port Coquitlam is May through September when rain is minimal and temperatures stay above 10 degrees Celsius. Book early with Shape of Paint — summer schedules fill fast across the Tri-Cities. Interior painting can be done year-round.",
+  },
+];
+
 export default function PortCoquitlamAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "Port Coquitlam", url: `${siteConfig.url}/areas/port-coquitlam` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting Port Coquitlam",
+      description: "Trusted house painters in Port Coquitlam, BC. Interior, exterior, and cabinet painting with precision craftsmanship. 200+ PoCo homes transformed. Free estimates.",
+      url: `${siteConfig.url}/areas/port-coquitlam`,
+      areaServed: "Port Coquitlam",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      {/* Schema markup - content generated from static config, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Port Coquitlam, BC"
         description="Your PoCo home deserves painters who match your pride in this community. Precision craftsmanship for every neighbourhood."
@@ -113,6 +156,22 @@ export default function PortCoquitlamAreaPage() {
                 — Kitchen and bathroom cabinets sprayed to a showroom finish. Designer-quality results without the renovation.
               </li>
             </ul>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Port Coquitlam
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, i) => (
+              <div key={i}>
+                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

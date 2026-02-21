@@ -3,6 +3,12 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters New Westminster BC | Shape of Paint",
@@ -10,9 +16,53 @@ export const metadata: Metadata = {
     "200+ Royal City homes painted with precision. Interior, exterior, and cabinet painting for New Westminster heritage and modern properties. Book your free estimate.",
 };
 
+const faqItems = [
+  {
+    question: "How much does house painting cost in New Westminster?",
+    answer:
+      "Interior painting in New Westminster ranges from $3-8 per square foot, and exterior from $4-12 per square foot. Heritage homes in Queen's Park often cost more due to detailed trim, crown moulding, and period-specific prep work. Shape of Paint provides a firm quote after visiting your home — no hidden fees.",
+  },
+  {
+    question: "Can you paint heritage homes in New Westminster?",
+    answer:
+      "Yes. Shape of Paint has experience with New Westminster's heritage character homes, especially in the Queen's Park neighbourhood. We understand period-appropriate prep techniques, detailed trim work, and how to protect original architectural features while delivering a finish that lasts 8-10 years.",
+  },
+  {
+    question: "What exterior paint lasts longest in New Westminster?",
+    answer:
+      "Premium acrylic latex with mildew resistance performs best in New Westminster. The Royal City's position along the Fraser River adds extra moisture to the air, which accelerates paint breakdown on unprotected surfaces. Shape of Paint selects coatings rated for high-humidity coastal climates.",
+  },
+  {
+    question: "How do I choose paint colours for my New Westminster home?",
+    answer:
+      "Shape of Paint includes a free colour consultation with every project. We bring sample boards to your home so you see colours in your actual lighting. If you live in a heritage neighbourhood with colour guidelines, we help you choose options that complement both your home's character and community standards.",
+  },
+];
+
 export default function NewWestminsterAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "New Westminster", url: `${siteConfig.url}/areas/new-westminster` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting in New Westminster",
+      description:
+        "Professional interior, exterior, and cabinet painting for New Westminster homes. Heritage and modern properties across the Royal City. Licensed and insured.",
+      url: `${siteConfig.url}/areas/new-westminster`,
+      areaServed: "New Westminster",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in New Westminster, BC"
         description="Your heritage home or modern condo deserves painters who know the Royal City inside and out"
@@ -137,6 +187,24 @@ export default function NewWestminsterAreaPage() {
                 {" — Spray-finished kitchen and bathroom cabinets that look brand new"}
               </li>
             </ul>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in New Westminster
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item) => (
+              <div key={item.question}>
+                <h3 className="text-xl font-medium">{item.question}</h3>
+                <p className="mt-3 text-lg font-normal leading-relaxed text-text-secondary">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>

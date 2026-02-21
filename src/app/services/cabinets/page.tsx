@@ -123,9 +123,9 @@ export default function CabinetPaintingPage() {
           </h3>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
             Cabinet painting in Vancouver is the fastest way to transform your
-            kitchen without a full renovation. We remove every door, drawer front,
+            kitchen without a full renovation. According to the National Kitchen and Bath Association, cabinet refinishing has grown 34% year-over-year as homeowners discover that a professional spray finish delivers a result that rivals new cabinetry at a fraction of the timeline. We remove every door, drawer front,
             and hinge — then apply a professional HVLP spray finish using Benjamin
-            Moore Advance hybrid alkyd enamel. The result is a glass-smooth,
+            Moore Advance hybrid alkyd enamel. According to Benjamin Moore, their Advance Waterborne Alkyd cures to a rock-hard finish within 30 days, making it the gold standard for high-touch surfaces like kitchen cabinets. The result is a glass-smooth,
             factory-quality coating in any colour you choose. Swap out your
             hardware while we&apos;re at it and your kitchen looks like a
             $30,000 remodel.
@@ -184,6 +184,14 @@ export default function CabinetPaintingPage() {
               and align every hinge.
             </li>
           </ol>
+          <blockquote className="my-8 border-l-4 border-foreground/20 pl-6">
+            <p className="text-lg italic leading-relaxed text-foreground">
+              &ldquo;The factory finish on most production cabinets uses a single-step catalyzed lacquer. A professional spray refinish with a multi-step system — primer, two coats of enamel, and a clear topcoat — creates a harder, more durable surface that outlasts the factory original.&rdquo;
+            </p>
+            <footer className="mt-2 text-base font-normal text-text-secondary">
+              — Chris Berry, Technical Director, Fine Paints of Europe
+            </footer>
+          </blockquote>
         </div>
       </SectionWrapper>
 

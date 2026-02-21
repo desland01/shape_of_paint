@@ -3,12 +3,17 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SlideUp } from "@/components/ui/motion";
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 interface BlogPostLayoutProps {
   title: string;
   date: string;
   readingTime: string;
   category?: string;
+  slug?: string;
+  description?: string;
+  image?: string;
+  dateModified?: string;
   children: React.ReactNode;
 }
 
@@ -17,6 +22,10 @@ export function BlogPostLayout({
   date,
   readingTime,
   category,
+  slug,
+  description,
+  image,
+  dateModified,
   children,
 }: BlogPostLayoutProps) {
   const formattedDate = new Date(date).toLocaleDateString("en-CA", {
@@ -25,8 +34,39 @@ export function BlogPostLayout({
     day: "numeric",
   });
 
+  const articleJsonLd = slug
+    ? generateArticleSchema({
+        title,
+        description: description || "",
+        url: `${siteConfig.url}/blog/${slug}`,
+        datePublished: date,
+        dateModified: dateModified || date,
+        image: image ? `${siteConfig.url}${image}` : undefined,
+      })
+    : null;
+
+  const breadcrumbJsonLd = slug
+    ? generateBreadcrumbSchema([
+        { name: "Home", url: siteConfig.url },
+        { name: "Blog", url: `${siteConfig.url}/blog` },
+        { name: title, url: `${siteConfig.url}/blog/${slug}` },
+      ])
+    : null;
+
   return (
     <article className="bg-background">
+      {articleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
+      )}
+      {breadcrumbJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+      )}
       <div className="mx-auto max-w-content px-4 pb-8 pt-16 md:px-8 md:pt-24">
         <nav
           aria-label="Breadcrumb"

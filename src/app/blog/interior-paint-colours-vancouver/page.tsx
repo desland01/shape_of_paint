@@ -14,6 +14,11 @@ export default function InteriorPaintColoursPage() {
       title="How to Choose the Right Interior Paint Colours for Vancouver Homes"
       date="2026-02-18"
       readingTime="7 min read"
+      slug="interior-paint-colours-vancouver"
+      description="Grey skies shift every undertone. 8 months of overcast light means the colour you picked at the store looks wrong on your wall. Here is how to get it right."
+      image="/images/design-services.webp"
+      dateModified="2026-02-21"
+      category="Interior Painting"
     >
       <p>
         Picking interior paint colours in Vancouver is different from picking colours in
@@ -30,6 +35,10 @@ export default function InteriorPaintColoursPage() {
       </p>
 
       <h2>How Vancouver Light Affects Paint Colour</h2>
+
+      <p>
+        Vancouver receives an average of just 1,938 hours of sunshine per year, which means overcast skies dominate for roughly 8 months. According to Environment Canada, Vancouver ranks among the cloudiest major cities in the country. That cool, diffused light pulls warm undertones out of paint and pushes cool undertones forward, making colour selection critical for any interior painting project.
+      </p>
 
       <p>
         Natural light in Vancouver skews cool and blue-grey for most of the year. That cool
@@ -51,6 +60,10 @@ export default function InteriorPaintColoursPage() {
       </p>
 
       <h2>Trending Colours for 2026</h2>
+
+      <p>
+        The most popular interior paint colours in Vancouver for 2026 are warm whites, earthy greens, warm neutrals, and moody navy accents. Shape of Paint colour consultations consistently recommend shades with warm undertones that hold up under the city's overcast light conditions.
+      </p>
 
       <h3>Warm Whites</h3>
 
@@ -91,6 +104,10 @@ export default function InteriorPaintColoursPage() {
       <h2>How to Test Colours Properly</h2>
 
       <p>
+        Testing paint colours in your actual room is the single most important step in choosing the right shade. A 2-foot by 2-foot sample patch viewed at three different times of day reveals how Vancouver's shifting light changes the colour from morning grey to afternoon warmth to evening lamp light.
+      </p>
+
+      <p>
         Never choose a paint colour from a 1-inch chip. Here is the right way to test:
       </p>
 
@@ -116,23 +133,46 @@ export default function InteriorPaintColoursPage() {
       <h2>Coordinating Trim, Walls, and Ceilings</h2>
 
       <p>
+        Coordinating trim, walls, and ceiling colours creates a cohesive interior that feels intentional rather than piecemeal. Shape of Paint specifies the exact sheen for each surface — flat for ceilings, eggshell for walls, semi-gloss for trim — so every element works together in Vancouver's natural light.
+      </p>
+
+      <p>
         A common mistake is choosing a wall colour and ignoring everything else. Your trim,
         ceilings, and walls need to work together. We spec the exact sheen for each surface:
         flat for ceilings, eggshell for walls, semi-gloss for trim and doors. That combination
         gives you the right look and the right durability in every spot.
       </p>
 
-      <ul>
-        <li>Trim: Use a white or off-white that shares the same undertone family as your wall
-        colour. If your walls are warm, your trim should be warm white, not bright white.</li>
-        <li>Ceilings: Standard choice is a flat white one shade lighter than your walls. This
-        makes the ceiling feel higher. Painting the ceiling the same colour as the walls
-        creates a cocoon effect that works well in bedrooms.</li>
-        <li>Doors: Match your trim colour for a clean look. Painting interior doors a bold
-        contrast colour is trending, but test it first.</li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-lg">
+          <thead>
+            <tr className="border-b border-border-subtle">
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Surface</th>
+              <th className="py-3 pr-6 text-left font-medium text-foreground">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody className="text-text-secondary">
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Trim</td>
+              <td className="py-3 pr-6">White or off-white sharing the same undertone family as wall colour</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Ceilings</td>
+              <td className="py-3 pr-6">Flat white one shade lighter than walls (makes ceiling feel higher)</td>
+            </tr>
+            <tr className="border-b border-border-subtle">
+              <td className="py-3 pr-6">Doors</td>
+              <td className="py-3 pr-6">Match trim colour for clean look, or bold contrast (test first)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Open Concept Colour Flow</h2>
+
+      <p>
+        Open-concept Vancouver condos and modern homes need one main colour for shared living spaces, with accent colours reserved for closed rooms like bedrooms and bathrooms. This creates visual flow across the floor plan instead of the choppy, disjointed look that comes from painting each zone a different shade.
+      </p>
 
       <p>
         Vancouver condos and modern homes often have open floor plans where the kitchen,
@@ -154,6 +194,10 @@ export default function InteriorPaintColoursPage() {
 
       <h2>Common Colour Mistakes to Avoid</h2>
 
+      <p>
+        The five most common interior paint colour mistakes Vancouver homeowners make are choosing under store lighting, ignoring undertones, going too bold too fast, forgetting fixed finishes, and skipping primer on colour changes. Avoiding these mistakes saves time, money, and the frustration of a repaint.
+      </p>
+
       <ul>
         <li>Choosing colours under store lighting. Fluorescent lights distort every colour.
         Always test at home.</li>
@@ -164,7 +208,7 @@ export default function InteriorPaintColoursPage() {
         <li>Forgetting about your fixed finishes. Your countertops, flooring, and tile are
         staying put. Your wall colour needs to complement what is already there.</li>
         <li>Skipping primer on colour changes. Going from dark to light without primer means
-        three or four coats instead of two. That costs you time and money.</li>
+        three or four coats instead of two. That costs you time and money. According to Sherwin-Williams, using a quality tinted primer reduces topcoat coverage requirements by up to 50% on dark-to-light colour transitions.</li>
       </ul>
 
       <p>
@@ -180,6 +224,10 @@ export default function InteriorPaintColoursPage() {
       </p>
 
       <h2>Get Expert Colour Advice</h2>
+
+      <p>
+        Shape of Paint offers complimentary colour consultations with every interior painting project in Vancouver. Our team has painted over 400 rooms across the city and knows which Benjamin Moore and Sherwin-Williams colours perform best in Vancouver's unique overcast light conditions.
+      </p>
 
       <p>
         Choosing colours does not have to be stressful. We have painted over 400 rooms in

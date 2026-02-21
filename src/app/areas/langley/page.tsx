@@ -3,15 +3,65 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { siteConfig } from "@/config/site";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Painters Langley BC | Shape of Paint",
   description: "Langley's trusted painters for Walnut Grove, Willoughby, and Fort Langley. Interior, exterior, and cabinet finishes that last. Book your free consultation.",
 };
 
+const faqItems = [
+  {
+    question: "How much does it cost to paint a house in Langley?",
+    answer:
+      "Interior painting in Langley typically runs $3-8 per square foot, while exterior projects range $4-12 per square foot. Langley's mix of newer Willoughby builds and heritage Fort Langley homes means pricing varies by surface condition and detail work. Shape of Paint provides a firm quote after an in-home visit — no surprises.",
+  },
+  {
+    question: "What paint is best for Langley's climate?",
+    answer:
+      "Premium acrylic latex works best for Langley exteriors. While Langley gets slightly less rain than Vancouver proper, moisture and temperature swings still demand coatings with strong adhesion and mildew resistance. Shape of Paint selects professional-grade products matched to your home's specific exposure and substrate.",
+  },
+  {
+    question: "Do I need to prep my house before painters arrive in Langley?",
+    answer:
+      "Basic clearing of furniture away from walls and removing wall hangings helps, but Shape of Paint handles all surface preparation. That includes washing, sanding, caulking, priming, and protecting floors and fixtures. Thorough prep is what separates a 2-year paint job from one that lasts 8-10 years.",
+  },
+  {
+    question: "How long does a professional paint job last in Langley?",
+    answer:
+      "With quality materials and proper preparation, interior paint lasts 8-12 years and exterior paint lasts 8-10 years in Langley. Shape of Paint uses professional-grade coatings and thorough prep on every project, so your finish holds up against BC's seasonal weather without peeling, cracking, or fading.",
+  },
+];
+
 export default function LangleyAreaPage() {
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Areas", url: `${siteConfig.url}/areas` },
+      { name: "Langley", url: `${siteConfig.url}/areas/langley` },
+    ])
+  );
+  const serviceJsonLd = JSON.stringify(
+    generateServiceSchema({
+      name: "House Painting in Langley",
+      description:
+        "Professional interior, exterior, and cabinet painting for Langley homes. From Fort Langley heritage to Willoughby new builds. Licensed and insured.",
+      url: `${siteConfig.url}/areas/langley`,
+      areaServed: "Langley",
+    })
+  );
+  const faqJsonLd = JSON.stringify(generateFAQSchema(faqItems));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serviceJsonLd }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <PageHero
         heading="House Painters in Langley, BC"
         description="Your Langley home deserves painters who know Fort Langley heritage, Willoughby new builds, and Walnut Grove family homes. Licensed, insured, and built for BC weather."
@@ -120,6 +170,24 @@ export default function LangleyAreaPage() {
                 Cabinet Painting
               </Link>
             </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
+            Frequently Asked Questions About Painting in Langley
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item) => (
+              <div key={item.question}>
+                <h3 className="text-xl font-medium">{item.question}</h3>
+                <p className="mt-3 text-lg font-normal leading-relaxed text-text-secondary">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>
