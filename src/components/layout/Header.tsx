@@ -56,7 +56,6 @@ export function Header() {
 
   const handleNavClick = () => {
     document.body.style.overflow = '';
-    window.scrollTo(0, 0);
     setIsOpen(false);
   };
 
@@ -165,16 +164,17 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed inset-0 z-40 md:hidden"
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
               onClick={() => setIsOpen(false)}
               aria-hidden="true"
             />
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="relative z-50 overflow-hidden md:hidden bg-background"
+              className="fixed left-0 right-0 z-50 overflow-y-auto bg-background md:hidden"
+              style={{ top: "var(--header-h)", maxHeight: "calc(100dvh - var(--header-h))" }}
             >
             <nav className="flex flex-col gap-1 px-4 py-6">
               {siteConfig.nav.map((item) => (
