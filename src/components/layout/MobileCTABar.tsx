@@ -47,7 +47,7 @@ export function MobileCTABar() {
             stiffness: 300,
             damping: 30,
           }}
-          className="fixed bottom-0 left-0 right-0 z-50 border-t border-border-subtle bg-background/95 backdrop-blur-sm pb-[env(safe-area-inset-bottom)] md:hidden"
+          className="fixed bottom-0 left-0 right-0 z-40 border-t border-border-subtle bg-background/95 backdrop-blur-sm pb-[env(safe-area-inset-bottom)] md:hidden"
         >
           <div className="flex items-center gap-3 px-4 py-3">
             <a
@@ -59,7 +59,7 @@ export function MobileCTABar() {
               Call Now
             </a>
             <Link
-              href="/contact/estimate"
+              href="/contact#contact-form"
               className="flex min-h-[48px] flex-1 items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
             >
               Get a Quote

@@ -43,6 +43,17 @@ export function Header() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const isTransparent = pathname === "/" && !scrolled;
 
   return (
@@ -121,6 +132,7 @@ export function Header() {
           onClick={() => setIsOpen(!isOpen)}
           className="min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             <X className={cn("h-6 w-6 transition-colors duration-300", isTransparent && "text-white")} />
@@ -141,13 +153,23 @@ export function Header() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden md:hidden"
-          >
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed inset-0 z-40 md:hidden"
+              onClick={() => setIsOpen(false)}
+              aria-hidden="true"
+            />
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="relative z-50 overflow-hidden md:hidden bg-background"
+            >
             <nav className="flex flex-col gap-1 px-4 py-6">
               {siteConfig.nav.map((item) => (
                 <div key={item.href}>
@@ -173,8 +195,16 @@ export function Header() {
                   ))}
                 </div>
               ))}
+              <Link
+                href="/contact#contact-form"
+                onClick={() => setIsOpen(false)}
+                className="mt-4 flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+              >
+                Get a Quote
+              </Link>
             </nav>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

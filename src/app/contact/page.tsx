@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { ViewportFitWrapper } from "@/components/shared/ViewportFitWrapper";
+import { ScrollToHash } from "@/components/shared/ScrollToHash";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ const instagramImages = [
 export default function ContactPage() {
   return (
     <>
+      <ScrollToHash />
       <PageHero
         heading="Get Your Free Estimate"
         image="/images/contact-cta.webp"
