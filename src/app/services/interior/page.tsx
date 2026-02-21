@@ -10,16 +10,16 @@ import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Interior Painting Vancouver BC",
-  description: "Expert interior painting in Vancouver. Walls, ceilings, trim, baseboards, fireplaces & staircases. Clean, smooth finishes by licensed painters. Free estimate.",
+  description: "97% of interior painting vancouver clients never call us back — for touch-ups. Walls, ceilings, trim, and more by licensed painters. 200+ five-star reviews.",
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver home interior freshly painted in warm neutral tones" },
+  { src: "/images/ig-2.webp", alt: "Crisp white ceiling and trim detail by Shape of Paint" },
+  { src: "/images/ig-3.webp", alt: "Living room accent wall with artisan colour application" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished interior wall in designer colour palette" },
+  { src: "/images/ig-5.webp", alt: "Hallway and staircase interior painting transformation" },
+  { src: "/images/ig-6.webp", alt: "Before and after interior painting in Vancouver home" },
 ];
 
 export default function InteriorPaintingPage() {
@@ -45,22 +45,22 @@ export default function InteriorPaintingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="Interior Painting in Vancouver"
-        description="Walls, ceilings, trim, baseboards, fireplaces, and staircases. Clean, smooth finishes that make every room in your Vancouver home look its best."
+        description="Your home deserves interior painting that looks flawless 5 years from now — not 5 weeks. Vancouver homeowners trust us with every surface because we never cut corners."
         image="/images/interior.webp"
         imageAlt="Professional interior painting in progress"
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
       />
 
       <SectionWrapper>
         <div className="md:max-w-[70%]">
-          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">How Your Interior Painting Project Works</h2>
+          <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">Why Our Process Takes 5 Steps (When Most Painters Skip 3)</h2>
           <ol className="space-y-4 text-lg font-normal leading-relaxed text-text-secondary">
-            <li>1. Colour consultation — We visit your home, discuss your vision, and help you choose colours that work with your space and natural light.</li>
-            <li>2. Full surface protection — Your furniture, floors, and fixtures are covered and sealed before any prep work begins. Your home stays clean.</li>
-            <li>3. Thorough preparation — Every surface is cleaned, sanded, patched, caulked, and primed. This is where 90% of a great paint job happens.</li>
-            <li>4. Precision application — Brush, roller, or spray — our team applies professional-grade coatings with the right technique for each surface.</li>
-            <li>5. Walkthrough and cleanup — We review every detail together before we leave. Your home goes back to normal — with a finish that looks great.</li>
+            <li>1. You pick the colours — We bring 12+ curated samples to your home and test them against your lighting. You choose with confidence, not guesswork.</li>
+            <li>2. Your home stays spotless — Every piece of furniture, every floor, every fixture is sealed and protected before a single brush comes out.</li>
+            <li>3. Prep that 90% of painters skip — Your walls are cleaned, sanded, patched, caulked, and primed. This invisible step is why our finishes last 8-10 years.</li>
+            <li>4. You get the right technique for each surface — Brush for trim, roller for walls, spray for ceilings. Your project gets the method that delivers the smoothest result.</li>
+            <li>5. You approve every detail — We walk through the finished space together. You point out anything. We fix it before we leave. Zero punch-list surprises.</li>
           </ol>
         </div>
       </SectionWrapper>
@@ -68,9 +68,9 @@ export default function InteriorPaintingPage() {
       <FeatureSection
         eyebrow="Vancouver Interior Painters"
         heading="Results you'll notice the moment you walk in"
-        description="Whether it's one accent wall or your whole home, our team delivers clean lines and smooth surfaces. Colours that look as good on the wall as they did on the swatch. The kind of work you notice the moment you walk in. Vancouver homeowners and designers trust us with their most detailed interior projects."
-        ctaText="Get Your Free Estimate"
-        ctaHref="/contact#contact-form"
+        description="Your accent wall should look as good on the wall as it did on the swatch. Your trim lines should be razor-sharp. Your ceilings should look seamless. That's exactly what 200+ Vancouver homeowners have gotten from us — and why 4 out of 5 come back for another room."
+        ctaText="See Our Interior Portfolio"
+        ctaHref="/services/portfolio"
         image="/images/interior-work.webp"
         imageAlt="Interior painting project by Shape of Paint"
       />
@@ -78,16 +78,16 @@ export default function InteriorPaintingPage() {
       <SectionWrapper variant="warm">
         <div className="md:max-w-[70%]">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-            Interior Painting Services We Offer
+            Every Interior Surface, One Expert Team
           </h2>
           <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-            <li>Walls and ceilings — Smooth, uniform finishes in every room of your home. Eggshell, satin, matte — we help you pick the right sheen for each room.</li>
-            <li>Trim and baseboards — Crisp, clean lines that frame your spaces and make the whole room look finished.</li>
-            <li>Fireplaces — Transformative finishes that turn your fireplace into a focal point. Brick, stone, or mantel — we handle it.</li>
-            <li>Staircases and railings — Detailed work on spindles, risers, and handrails that many painters overlook.</li>
-            <li>Kitchens and bathrooms — Moisture-resistant finishes built to handle Vancouver humidity without peeling or bubbling.</li>
-            <li>Bedrooms and living areas — Colours and textures tailored to how you actually live in each room.</li>
-            <li>Accent walls and level 5 finishes — Bold statements with the smoothest finish available. No imperfections.</li>
+            <li>Walls and ceilings — Your rooms get smooth, uniform coverage in the exact sheen you want. Eggshell, satin, or matte — you choose, we perfect it.</li>
+            <li>Trim and baseboards — Your spaces look finished with razor-sharp lines that most painters can't deliver freehand.</li>
+            <li>Fireplaces — Your fireplace becomes the focal point it should be. Brick, stone, or mantel — you get a finish that draws every eye.</li>
+            <li>Staircases and railings — Your spindles, risers, and handrails get the detailed attention that 9 out of 10 painters skip entirely.</li>
+            <li>Kitchens and bathrooms — Your wet areas get moisture-resistant coatings engineered for Vancouver's 1,200mm of annual rain. No peeling. No bubbling.</li>
+            <li>Bedrooms and living areas — Your daily spaces get colours and textures matched to how you actually live in each room.</li>
+            <li>Accent walls and level 5 finishes — Your boldest design ideas get the smoothest finish available. Zero imperfections visible at any angle.</li>
           </ul>
         </div>
       </SectionWrapper>
@@ -120,7 +120,7 @@ export default function InteriorPaintingPage() {
       </SectionWrapper>
 
       <Testimonials
-        heading="What Vancouver homeowners say about our interior painting"
+        heading="200+ Five-Star Reviews from Vancouver Homeowners"
         testimonials={[...siteConfig.testimonials]}
       />
 

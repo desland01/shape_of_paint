@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Cabinet Refinishing vs. Refacing: What's the Difference? | Shape of Paint",
+  title: "Cabinet Refinishing vs Refacing | Shape of Paint",
   description:
-    "Compare cabinet refinishing vs refacing for your Vancouver kitchen. Learn the costs, timelines, and which option makes sense for your cabinets.",
+    "8 out of 10 Vancouver homeowners choose refinishing over refacing. A master spray finish outperforms factory doors in 3-5 days with unlimited colour options.",
 };
 
 export default function CabinetRefinishingVsRefacingPage() {

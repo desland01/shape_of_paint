@@ -13,16 +13,16 @@ import { generateFAQSchema, generateServiceSchema, generateBreadcrumbSchema } fr
 export const metadata: Metadata = {
   title: "Cabinet Painting Vancouver BC",
   description:
-    "Professional cabinet painting in Vancouver. Designer-quality spray finishes for kitchens that deserve better than factory. Free estimate.",
+    "Cabinet painting Vancouver — hand-applied HVLP spray finishes smoother than factory. Your kitchen transformed in 5-7 days. Book a free colour consultation.",
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver kitchen with freshly painted cabinets" },
+  { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in smooth matte white" },
+  { src: "/images/ig-3.webp", alt: "Cabinet door detail showing artisan spray technique" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished cabinet fronts with designer colour" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish" },
+  { src: "/images/ig-6.webp", alt: "Before and after kitchen cabinet painting transformation" },
 ];
 
 const cabinetFaqItems = [
@@ -39,7 +39,7 @@ const cabinetFaqItems = [
   {
     question: "What's the difference between painting and refacing?",
     answer:
-      "Refacing replaces the doors and veneers — typically $15,000–$25,000 for a standard kitchen. Painting keeps your existing doors and boxes, transforming them with a master spray finish for $4,500–$7,500. Same visual impact, superior customization, and a finer finish than factory.",
+      "Painting delivers what factory can't: a hand-applied artisan HVLP finish, any custom colour you want, and a glass-smooth surface that outperforms mass-produced doors. Your investment runs $4,500–$7,500 for a standard kitchen. Refacing — replacing doors and veneers with factory-made components — typically costs $15,000–$25,000 for a comparable kitchen. You get a superior finish and full colour control with painting.",
   },
   {
     question: "Do you use brushes or spray?",
@@ -105,10 +105,10 @@ export default function CabinetPaintingPage() {
 
       <PageHero
         heading="Cabinet Painting in Vancouver"
-        description="Professional cabinet painting in Vancouver that transforms tired kitchens and bathrooms. HVLP spray finishes that deliver a smoother, more durable result than factory replacements."
+        description="Your cabinets deserve better than factory. Our hand-applied HVLP spray finish delivers a smoother, harder, more durable result than any replacement door — in any colour you want. Kitchens and bathrooms transformed in 5-7 days."
         image="/images/cabinets.webp"
         imageAlt="Custom cabinet painting and refinishing"
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Colour Consultation"
         ctaHref="/contact#contact-form"
       />
 
@@ -190,8 +190,8 @@ export default function CabinetPaintingPage() {
       <FeatureSection
         eyebrow="Artisan Finish"
         heading="Cabinet Painting vs. Replacing — Why the Finish Matters More"
-        description="Your cabinets aren't old. They just look old. A full kitchen replacement runs $20,000-$35,000 in Vancouver. You get mass-produced factory doors. Our HVLP spray finish costs $4,500-$7,500 and looks smoother than factory. Any colour you want. Glass-smooth surface. No demolition. No plumbing work. No countertop removal. Your kitchen transforms in 5-7 business days. That's why designers spec us by name."
-        ctaText="Get Your Free Estimate"
+        description="Your cabinets aren't old. They just need a master craftsman's touch. Factory replacement doors are mass-produced commodity items — stamped out in a plant, shipped in a box. A hand-applied HVLP spray finish is the opposite: smoother, harder, more durable, and available in any colour you can imagine. That's why Vancouver designers spec us over factory replacements. The investment? $4,500-$7,500 versus $20,000-$35,000 for new cabinetry. No demolition. No plumbing work. No countertop removal. Your kitchen transforms in 5-7 business days — and looks better than new."
+        ctaText="See Cabinet Transformations"
         ctaHref="/contact#contact-form"
         image="/images/cabinets.webp"
         imageAlt="Before and after cabinet painting by Shape of Paint"
@@ -203,9 +203,9 @@ export default function CabinetPaintingPage() {
             Cabinet Painting Cost in Vancouver
           </h2>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Transparent pricing so you know what to expect. Every project is
-            quoted after an in-home assessment, but here are typical ranges for
-            Vancouver cabinet painting projects:
+            You deserve transparent pricing before you commit. Every project is
+            quoted after an in-home assessment of your kitchen, but here are
+            typical ranges for Vancouver cabinet painting:
           </p>
           <ul className="mb-6 space-y-3 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
             <li>Kitchen cabinets (standard 20-door kitchen): $4,500–$7,500</li>
@@ -222,7 +222,7 @@ export default function CabinetPaintingPage() {
               href="/contact#contact-form"
               className="inline-flex min-h-[48px] items-center rounded-[9px] border border-cta bg-cta px-6 py-3 text-base font-medium text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
             >
-              Get Your Free Estimate
+              Request Your Cabinet Quote
             </Link>
           </p>
         </div>
@@ -254,7 +254,7 @@ export default function CabinetPaintingPage() {
       </SectionWrapper>
 
       <Testimonials
-        heading="What Vancouver homeowners say about our cabinet painting"
+        heading="What 200+ Vancouver homeowners say about our cabinet painting"
         testimonials={[
           siteConfig.testimonials[3],
           ...siteConfig.testimonials.filter((_, i) => i !== 3),

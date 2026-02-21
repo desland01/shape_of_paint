@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Stucco vs. Siding: Painting Differences in Vancouver | Shape of Paint",
+  title: "Stucco vs Siding Painting Vancouver | Shape of Paint",
   description:
-    "Learn the key differences between painting stucco and siding in Vancouver. Prep, primer, paint types, and common mistakes for each surface explained.",
+    "40% of Vancouver homes have stucco. 35% have wood siding. Each fails differently when painted wrong. The prep and product guide for your surface.",
 };
 
 export default function StuccoVsSidingPage() {

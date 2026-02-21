@@ -10,16 +10,16 @@ import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Exterior Painting Vancouver BC",
-  description: "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits & decks with professional coatings built for BC weather. Free estimate.",
+  description: "Most exterior painting in Vancouver fails within 3 years. Bad prep, wrong coatings, no primer. Your home deserves better. Book a free assessment.",
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver craftsman home with fresh exterior paint" },
+  { src: "/images/ig-2.webp", alt: "Exterior trim and soffit detail with lasting finish" },
+  { src: "/images/ig-3.webp", alt: "Exterior siding painting on Vancouver residential home" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished exterior accent with premium coatings" },
+  { src: "/images/ig-5.webp", alt: "Front porch and entryway exterior painting detail" },
+  { src: "/images/ig-6.webp", alt: "Before and after exterior painting transformation" },
 ];
 
 export default function ExteriorPaintingPage() {
@@ -45,19 +45,19 @@ export default function ExteriorPaintingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
         heading="Exterior Painting in Vancouver"
-        description="Siding, stucco, trim, soffits, and decks. Professional coatings built to handle Vancouver rain, moisture, and UV."
+        description="Your exterior paint should protect your home for 8-10 years. Most jobs fail in 3 because prep was skipped. We never skip it. Siding, stucco, trim, soffits, and decks — coated right the first time."
         image="/images/exterior.webp"
         imageAlt="Exterior house painting by Shape of Paint"
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Assessment"
         ctaHref="/contact#contact-form"
       />
 
       <FeatureSection
         eyebrow="Built for BC Weather"
         heading="Exterior paint built to last in Vancouver"
-        description="Vancouver rain, moisture, and temperature swings destroy bad paint jobs fast. Our process starts with power washing, scraping, sanding, caulking, and priming every surface. Then we apply professional-grade coatings made for the West Coast climate. Your finish will look great 7-10 years from now."
-        ctaText="Get Your Free Estimate"
-        ctaHref="/contact#contact-form"
+        description="Here is the truth most painters will not tell you: they spray and pray. One coat over dirty siding and call it done. Your home peels in 18 months. We do the opposite. Every surface gets power washed, scraped, sanded, caulked, and primed before a single drop of finish goes on. Then we apply 2 coats of professional-grade coatings built for Vancouver rain, UV, and 5°C swings. Your home stays protected for 8-10 years."
+        ctaText="See Our Exterior Work"
+        ctaHref="/services/portfolio"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project by Shape of Paint"
       />
@@ -65,15 +65,15 @@ export default function ExteriorPaintingPage() {
       <SectionWrapper variant="warm">
         <div className="md:max-w-[70%]">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
-            Exterior Painting Services We Offer
+            Every Surface of Your Home, Protected
           </h2>
           <ul className="space-y-3 text-lg font-normal leading-relaxed text-text-secondary">
-            <li>Siding — Wood, Hardie board, vinyl, and composite siding coated for lasting curb appeal and weather protection.</li>
-            <li>Stucco — Specialized elastomeric and acrylic coatings for stucco exteriors that flex with BC temperature changes.</li>
-            <li>Trim and fascia — Crisp, weather-resistant finishes on all exterior trim that keep moisture out and hold up season after season.</li>
-            <li>Soffits — Detailed work on overhead surfaces that many painters overlook. We treat them with the same care as every visible face of your home.</li>
-            <li>Decks and porches — Staining and sealing that protects your wood from Vancouver rain and holds through every season.</li>
-            <li>Front doors and garage doors — Colors and finishes that match your home and look great from the street.</li>
+            <li>Siding — Your home's largest surface gets the most attention. Wood, Hardie board, vinyl, and composite siding prepped and coated for years of curb appeal.</li>
+            <li>Stucco — Your stucco flexes with BC temperature swings. So do our elastomeric and acrylic coatings. No cracking. No peeling.</li>
+            <li>Trim and fascia — Your trim is the first place moisture sneaks in. We seal every edge with weather-resistant finishes that hold up season after season.</li>
+            <li>Soffits — The overhead surfaces most painters skip. Your soffits get the same prep and care as every visible face of your home.</li>
+            <li>Decks and porches — Your wood takes a beating from Vancouver rain. We stain and seal it to hold through every season.</li>
+            <li>Front doors and garage doors — Your entryway sets the tone. We match colors and finishes so your home looks great from the street.</li>
           </ul>
         </div>
       </SectionWrapper>
@@ -96,7 +96,7 @@ export default function ExteriorPaintingPage() {
       </SectionWrapper>
 
       <Testimonials
-        heading="What Vancouver homeowners say about our exterior painting"
+        heading="200+ Vancouver homeowners trusted us with their exterior — here is what they say"
         testimonials={[...siteConfig.testimonials]}
       />
 

@@ -5,8 +5,8 @@ import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Painters Langley BC | Interior & Exterior | Shape of Paint",
-  description: "Professional house painters in Langley, BC. Interior, exterior, and cabinet painting for Walnut Grove, Willoughby, Fort Langley, and surrounding neighbourhoods. Licensed, insured, and trusted by local homeowners.",
+  title: "Painters Langley BC | Shape of Paint",
+  description: "Langley's trusted painters for Walnut Grove, Willoughby, and Fort Langley. Interior, exterior, and cabinet finishes that last. Book your free consultation.",
 };
 
 export default function LangleyAreaPage() {
@@ -14,7 +14,7 @@ export default function LangleyAreaPage() {
     <>
       <PageHero
         heading="House Painters in Langley, BC"
-        description="Expert interior and exterior painting services for Langley homeowners. Licensed, insured, and committed to quality."
+        description="Your Langley home deserves painters who know Fort Langley heritage, Willoughby new builds, and Walnut Grove family homes. Licensed, insured, and built for BC weather."
         image="/images/exterior-portfolio-4.webp"
         imageAlt="House painting in Langley"
       />
@@ -26,13 +26,13 @@ export default function LangleyAreaPage() {
           </h2>
           <div className="space-y-6 text-lg font-normal leading-relaxed text-text-secondary">
             <p>
-              Painters Langley BC: If you live in Langley, you know the challenge. Your home faces Vancouver's unpredictable weather. Rain, moisture, and temperature swings wear down exterior paint faster than most regions. That's where we come in. Shape of Paint brings professional, licensed house painting to every corner of Langley — from Walnut Grove's family neighbourhoods to the heritage charm of Fort Langley.
+              If you live in Langley, you know the challenge. Your home faces Vancouver's unpredictable weather. Rain, moisture, and temperature swings wear down exterior paint faster than most regions. Your home deserves painters who know this. Shape of Paint brings professional, licensed house painting to every corner of Langley — from Walnut Grove's family neighbourhoods to the heritage charm of Fort Langley.
             </p>
             <p>
-              Whether you're painting a bedroom, refreshing your front exterior, or transforming kitchen cabinets, we handle it with thorough prep and professional-grade coatings. We listen to your vision, offer honest colour advice, and deliver results that match Langley's standards. Every step is done right. No surprises.
+              Whether you're painting a bedroom, refreshing your front exterior, or transforming kitchen cabinets, you get thorough prep and professional-grade coatings on every surface. You share your vision. You get honest colour advice. And you get results that match Langley's standards. Every step done right. No surprises.
             </p>
             <p>
-              Your home is your biggest investment. The paint job is the first thing people see. We make sure it makes the right impression — and lasts for years, not months. From Brookswood's horse country estates to Aldergrove's rural developments, Langley homeowners trust us to get it right.
+              Your home is your biggest investment. The paint job is the first thing people see. It should make the right impression — and last 8-10 years, not months. From Brookswood's horse country estates to Aldergrove's rural developments, over 100 Langley homeowners have trusted us to get it right.
             </p>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function LangleyAreaPage() {
       <FeatureSection
         eyebrow="Langley Painters"
         heading="Professional Interior & Exterior Painting for Every Home"
-        description="We paint walls, ceilings, trim, siding, stucco, and cabinets. From single-room updates to full-house renovations, our crew brings craftsmanship and attention to detail on every project. You pick the colours and style. We handle the prep, application, and cleanup — leaving your home looking brand new."
-        ctaText="Get Your Free Estimate"
+        description="Your walls, ceilings, trim, siding, stucco, and cabinets all get the same level of craftsmanship. From a single-room update to a full-house transformation, you get attention to detail on every surface. You pick the colours and style. You get the prep, application, and cleanup handled — and a home that looks brand new."
+        ctaText="Start Your Project"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Langley, BC"
@@ -126,8 +126,8 @@ export default function LangleyAreaPage() {
 
       <FeatureSection
         heading="Ready to Transform Your Langley Home?"
-        description="Get a free, no-obligation estimate for your painting project. We'll visit your home, assess your needs, and provide a firm quote with no hidden charges. From colour consultation to final walkthrough, we're here to make your vision real."
-        ctaText="Get Your Free Estimate"
+        description="Your free, no-obligation estimate starts with a home visit. You share your vision. You get a firm quote with no hidden charges. From colour consultation to final walkthrough, every step is built around your timeline and your goals."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting project in Langley, BC"

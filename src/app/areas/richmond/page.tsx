@@ -6,9 +6,9 @@ import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Painters Richmond BC | Interior & Exterior | Shape of Paint",
+  title: "Painters Richmond BC | Shape of Paint",
   description:
-    "Professional house painters in Richmond, BC serving Steveston, Ironwood, Brighouse, and more. Interior & exterior painting with master craftsmanship. Licensed, insured. Call 604-353-7378.",
+    "Painters Richmond BC trusted by 200+ homeowners. Interior, exterior, and cabinet painting with artisan craftsmanship. Licensed and insured. Free estimates.",
 };
 
 export default function RichmondAreaPage() {
@@ -16,7 +16,7 @@ export default function RichmondAreaPage() {
     <>
       <PageHero
         heading="House Painters in Richmond, BC"
-        description="Professional interior and exterior painting for Richmond homeowners. Licensed, insured, and trusted with the details that matter."
+        description="Your Richmond home deserves painters trusted with the details that matter. Licensed, insured, and committed to your vision."
         image="/images/hero-2.webp"
         imageAlt="Professional painters in Richmond BC"
       />
@@ -33,7 +33,7 @@ export default function RichmondAreaPage() {
             We've painted hundreds of Richmond homes. We know the moisture problems from sea-level air and the river delta. Many Richmond homes are strata complexes, townhomes, and condos that need precision finishing. Whether you're refreshing a Brighouse family home, updating a Terra Nova townhouse, or keeping a Steveston heritage property sharp, we bring clear timelines, no surprises, and results you'll love.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Shape of Paint has become the go-to choice for Richmond painters because we listen first. You tell us your vision — interior refresh, exterior protection, cabinet transformation — and we deliver with the care that sets great painters apart. No cookie-cutter quotes. No guessing about timelines. Just honest, expert work.
+            You get painters who listen first. You tell us your vision — interior refresh, exterior protection, cabinet transformation — and we deliver with the care that sets great painters apart. No cookie-cutter quotes. No guessing about timelines. Just honest, expert work.
           </p>
         </div>
       </SectionWrapper>
@@ -42,7 +42,7 @@ export default function RichmondAreaPage() {
         eyebrow="Richmond Painters"
         heading="Interior & Exterior Painting for Your Richmond Home"
         description="Your Richmond home faces real challenges — moisture from nearby water, different building styles, and the need for finishes that last. We handle interior walls, ceilings, trim, and baseboards with care. On the exterior, we use professional-grade coatings built for BC's coastal climate. Your siding, stucco, and trim stay protected for years. From Steveston to Ironwood to Broadmoor, we're the Richmond painters homeowners recommend."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting services in Richmond BC"
@@ -78,7 +78,7 @@ export default function RichmondAreaPage() {
             Explore Our Painting Services
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary">
-            Whatever your painting needs in Richmond, we have the expertise and experience to deliver stunning results. Explore how we can transform your home:
+            Whatever your painting needs in Richmond, you get the expertise and experience that delivers stunning results. Explore how we can transform your home:
           </p>
           <div className="space-y-4">
             <div>
@@ -111,7 +111,7 @@ export default function RichmondAreaPage() {
                 Cabinet Painting & Refinishing
               </Link>
               <p className="mt-2 text-lg font-normal leading-relaxed text-text-secondary">
-                Spray-finished kitchen and bathroom cabinets that look brand new at a fraction of replacement cost.
+                Spray-finished kitchen and bathroom cabinets with an artisan finish that rivals custom cabinetry.
               </p>
             </div>
           </div>
@@ -120,8 +120,8 @@ export default function RichmondAreaPage() {
 
       <FeatureSection
         heading="Ready to Transform Your Richmond Home?"
-        description="Schedule a free estimate with Shape of Paint. We'll visit your home, talk about your project, and give you a firm quote with no surprises. Hundreds of Richmond homeowners already trust us with their homes."
-        ctaText="Get Your Free Estimate"
+        description="Request your free estimate today. We'll visit your home, talk about your project, and give you a firm quote with no surprises. Hundreds of Richmond homeowners already trust us with their homes."
+        ctaText="Start Your Project"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting project in Richmond BC home"

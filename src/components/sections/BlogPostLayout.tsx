@@ -127,7 +127,7 @@ export function BlogPostLayout({
                 href="/contact#contact-form"
                 className="inline-block rounded-[9px] bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-colors hover:bg-cta-hover"
               >
-                Get Your Free Estimate
+                Book Your Free Consultation
               </Link>
             </div>
           </SlideUp>

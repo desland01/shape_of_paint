@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "How to Spot Exterior Paint Failure Before It's Too Late | Shape of Paint",
+  title: "Exterior Paint Failure Signs to Watch | Shape of Paint",
   description:
-    "Learn to identify peeling, flaking, bubbling, chalking, and mildew on your home's exterior. Spot paint failure early and protect your home before damage spreads.",
+    "Catch peeling early: $1,500 spot repair. Miss it: $15,000 full repaint. 6 warning signs every Vancouver homeowner should check each spring.",
 };
 
 export default function ExteriorPaintFailureSignsPage() {

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Spray vs. Brush: Why Spray-Finished Cabinets Look Better | Shape of Paint",
+  title: "Spray vs Brush Cabinet Painting | Shape of Paint",
   description:
-    "Learn why spray painting cabinets produces a smoother, factory-like finish than brush and roller. HVLP spray process explained for Vancouver homeowners.",
+    "Most painters don't own spray equipment -- so they brush cabinets instead. Here's what HVLP spray finishing delivers that rollers never will.",
 };
 
 export default function SprayVsBrushCabinetPage() {

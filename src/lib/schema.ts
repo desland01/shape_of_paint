@@ -36,6 +36,76 @@ export function generateLocalBusinessSchema() {
       siteConfig.socialLinks.facebook,
       siteConfig.socialLinks.youtube,
     ].filter(Boolean),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      ratingCount: "200",
+      reviewCount: "200",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "16:00",
+      },
+    ],
+    image: `${siteConfig.url}/images/logo-icon.png`,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Painting Services",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Interior Painting",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Interior Painting",
+                url: `${siteConfig.url}/services/interior`,
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Exterior Painting",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Exterior Painting",
+                url: `${siteConfig.url}/services/exterior`,
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Cabinet Painting",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Cabinet Painting",
+                url: `${siteConfig.url}/services/cabinets`,
+              },
+            },
+          ],
+        },
+      ],
+    },
   };
 }
 

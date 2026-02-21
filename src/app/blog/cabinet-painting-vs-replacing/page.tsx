@@ -3,10 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Cabinet Painting vs. Replacing: Why the Finish Matters More Than the Price | Shape of Paint",
+  title: "Cabinet Painting vs Replacing | Shape of Paint",
   description:
-    "A master spray finish delivers a smoother, more customizable result than factory replacement cabinets. Compare finish quality, cost, timelines, and disruption in Vancouver.",
+    "$40,000 custom cabinets that don't look as good as a 5-day spray finish. Here's why factory coatings can't match a hand-sprayed HVLP result.",
 };
 
 export default function CabinetPaintingVsReplacingPage() {

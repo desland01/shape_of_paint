@@ -22,7 +22,7 @@ export function TrustBar({ className, variant = "dark" }: TrustBarProps) {
   return (
     <div
       role="status"
-      aria-label="4.9 out of 5 stars from 200+ Google Reviews. Licensed and Insured."
+      aria-label="4.9 out of 5 stars from 200+ Five-Star Reviews. Licensed and Insured."
       className={cn(
         "flex flex-wrap items-center gap-x-3 gap-y-2 text-sm",
         className
@@ -58,7 +58,7 @@ export function TrustBar({ className, variant = "dark" }: TrustBarProps) {
 
       {/* Google Reviews */}
       <span className={cn(isLight ? "text-white/90" : "text-text-secondary")}>
-        200+ Google Reviews
+        200+ Five-Star Reviews
       </span>
 
       {/* Separator */}

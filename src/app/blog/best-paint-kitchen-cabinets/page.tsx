@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Best Paint for Kitchen Cabinets (2026 Guide) | Shape of Paint",
+  title: "Best Paint for Kitchen Cabinets (2026) | Shape of Paint",
   description:
-    "Compare the best paint for kitchen cabinets in 2026. Benjamin Moore Advance vs Sherwin-Williams Emerald Urethane, primer options, and sheen recommendations.",
+    "The wrong cabinet paint chips in months. The right one lasts 8-12 years. BM Advance vs SW Emerald Urethane, primer picks, and sheen -- from a master sprayer.",
 };
 
 export default function BestPaintKitchenCabinetsPage() {

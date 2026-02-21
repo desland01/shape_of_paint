@@ -6,9 +6,9 @@ import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Painters Surrey BC | Interior & Exterior | Shape of Paint",
+  title: "Painters Surrey BC | Shape of Paint",
   description:
-    "Professional painters in Surrey BC serving Fleetwood, Newton, and Cloverdale. Interior and exterior painting for your home. Free estimates.",
+    "Hundreds of Surrey homes painted across Fleetwood, Newton, and Cloverdale. Interior, exterior, and cabinet finishes built for BC weather. Free consultation.",
 };
 
 export default function SurreyAreaPage() {
@@ -16,7 +16,7 @@ export default function SurreyAreaPage() {
     <>
       <PageHero
         heading="House Painters in Surrey, BC"
-        description="Professional interior and exterior painting services for Surrey's largest neighbourhoods. Licensed, insured, and built for BC weather."
+        description="Your Surrey home faces tough weather across every season. You need painters who know Fleetwood, Newton, and Cloverdale inside out. Licensed, insured, and trusted by hundreds of homeowners."
         image="/images/hero-3.webp"
         imageAlt="House painting services in Surrey BC"
       />
@@ -27,13 +27,13 @@ export default function SurreyAreaPage() {
             Growing Families, Enduring Finishes
           </h2>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            Surrey is the largest city in the Lower Mainland. Your home needs painters who understand exactly what that means. More humidity. More rain. Weather that changes fast. We're painters Surrey homeowners call when they want results that last.
+            Surrey is the largest city in the Lower Mainland. Your home needs painters who understand exactly what that means. More humidity. More rain. Weather that changes fast. You need results that last — and that starts with the right painter.
           </p>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
             Whether you live in Fleetwood, Newton, Cloverdale, South Surrey, Guildford, or Panorama Ridge, your home faces the same tough conditions. Your exterior takes a beating from constant dampness and salt air. Your interior needs durable, beautiful finishes that handle moisture without peeling or cracking. We paint every room and every surface. Walls, ceilings, trim, baseboards, decks, siding, stucco, and more. You pick the colours. We handle the prep, application, and cleanup.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Our team has painted hundreds of Surrey homes. We know which finishes stand up to our climate. We know which prep steps prevent future problems. And we know how to schedule around Surrey's weather so your project stays on track. No surprises. No delays. Just solid craftsmanship.
+            Your project benefits from hundreds of Surrey homes already completed. You get finishes proven to stand up to this climate. Prep steps that prevent future problems. Scheduling that works around Surrey's weather so your project stays on track. No surprises. No delays. Just solid craftsmanship.
           </p>
         </div>
       </SectionWrapper>
@@ -41,8 +41,8 @@ export default function SurreyAreaPage() {
       <FeatureSection
         eyebrow="Surrey Painters"
         heading="Why Local Knowledge Matters"
-        description="Surrey homes have specific needs. Your exterior paint has to resist persistent dampness and freeze-thaw cycles. Your interior needs coatings that handle humidity without bubbling or peeling. We've painted Surrey homes in every neighbourhood — Fleetwood, Newton, Cloverdale, and beyond. We know the challenges your roof, deck, and siding face. We know which primers seal properly in Surrey's climate. And we know how to deliver professional results on time and within budget. When you hire Shape of Paint, you're hiring painters who live and work in the same communities you do."
-        ctaText="Get Your Free Estimate"
+        description="Surrey homes have specific needs. Your exterior paint has to resist persistent dampness and freeze-thaw cycles. Your interior needs coatings that handle humidity without bubbling or peeling. We've painted Surrey homes in every neighbourhood — Fleetwood, Newton, Cloverdale, and beyond. We know the challenges your roof, deck, and siding face. We know which primers seal properly in Surrey's climate. And we know how to deliver professional results on time and to the highest standard. When you hire Shape of Paint, you're hiring painters who live and work in the same communities you do."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting in Surrey BC"
@@ -115,15 +115,15 @@ export default function SurreyAreaPage() {
             >
               cabinet painting services
             </Link>{" "}
-            can make them look brand new at a fraction of replacement cost. Every service includes a firm quote, daily updates, and a final walkthrough where we don't leave until every detail is right.
+            can give your cabinets an artisan finish rivaling factory new. Every service includes a firm quote, daily updates, and a final walkthrough where we don't leave until every detail is right.
           </p>
         </div>
       </SectionWrapper>
 
       <FeatureSection
         heading="Ready to transform your Surrey home?"
-        description="Surrey homeowners deserve painters who understand their neighbourhoods. Get a free, no-pressure estimate for your interior, exterior, or cabinet project. We'll walk you through options, answer questions, and give you a firm price with no surprises."
-        ctaText="Get Your Free Estimate"
+        description="You deserve painters who understand your neighbourhood. Your free, no-pressure estimate covers your interior, exterior, or cabinet project. You walk through options, ask questions, and get a firm price with no surprises."
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting in Surrey BC"

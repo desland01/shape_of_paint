@@ -5,7 +5,7 @@ import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 export const metadata: Metadata = {
   title: "Best Time to Paint House Exterior in BC | Shape of Paint",
   description:
-    "The best time to paint your house exterior in BC is May through September. Learn the ideal temperature, humidity, and weather conditions for a lasting finish.",
+    "Paint in the wrong month and your $10,000 project fails within a year. This month-by-month guide shows the exact window for BC exteriors.",
 };
 
 export default function BestTimeExteriorPaintingPage() {

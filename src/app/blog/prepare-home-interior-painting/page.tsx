@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "How to Prepare Your Home for Interior Painting | Shape of Paint",
+  title: "Prepare Your Home for Interior Painting | Shape of Paint",
   description:
-    "Learn how to prepare for interior painting: what to move, wall prep tips, protecting floors and furniture, pet planning, and what to ask your painter before they start.",
+    "Projects run 20-30% faster when homeowners prep correctly. Covers what to move, wall checks, pet planning, and 10 questions to ask your painter.",
 };
 
 export default function PrepareHomeInteriorPaintingPage() {

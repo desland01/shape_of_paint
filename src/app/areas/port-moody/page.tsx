@@ -6,7 +6,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
   title: "House Painters Port Moody BC | Shape of Paint",
-  description: "Professional house painters in Port Moody, BC. Interior, exterior, and cabinet painting for Heritage Mountain, Glenayre, Inlet Centre, and all Port Moody neighbourhoods. Licensed, insured, trusted by local homeowners.",
+  description: "Port Moody's trusted house painters. Coastal-grade finishes for Heritage Mountain, Glenayre, and Inlet Centre. Licensed, insured. Book your free consultation.",
 };
 
 export default function PortMoodyAreaPage() {
@@ -14,7 +14,7 @@ export default function PortMoodyAreaPage() {
     <>
       <PageHero
         heading="House Painters in Port Moody, BC"
-        description="Expert painting services for Port Moody homeowners. Professional, licensed, and ready to bring your vision to life."
+        description="Your Port Moody home sits between inlet and mountains. You need painters who build every finish for coastal moisture. Licensed, insured, and trusted across Heritage Mountain, Glenayre, and Moody Centre."
         image="/images/exterior-portfolio-8.webp"
         imageAlt="Painting contractors in Port Moody"
       />
@@ -26,13 +26,13 @@ export default function PortMoodyAreaPage() {
           </h2>
           <div className="space-y-6 text-lg font-normal leading-relaxed text-text-secondary">
             <p>
-              House painters Port Moody: Port Moody is known as the City of the Arts. Your home deserves quality work to match. Sitting between the Burrard Inlet and Coast Mountains, Port Moody homes face real challenges — moisture from the inlet, temperature shifts, and the need for finishes that look great and hold up to coastal weather. That's where we come in.
+              Port Moody is known as the City of the Arts. Your home deserves quality work to match. Sitting between the Burrard Inlet and Coast Mountains, your home faces real challenges — moisture from the inlet, temperature shifts, and the need for finishes that look great and hold up to coastal weather. That's where your choice of painter makes the difference.
             </p>
             <p>
-              Shape of Paint brings professional painting to every corner of Port Moody — from Heritage Mountain's view properties to Moody Centre's walkable core. Painting a bedroom? Refreshing your exterior before the season changes? Transforming cabinets? We handle it with precision and care. We listen, offer colour advice, and deliver results that bring out your home's best.
+              Shape of Paint brings professional painting to every corner of Port Moody — from Heritage Mountain's view properties to Moody Centre's walkable core. Painting a bedroom? Refreshing your exterior before the season changes? Transforming cabinets? You get precision and care on every surface. You share your vision. You get honest colour advice. And you get results that bring out your home's best.
             </p>
             <p>
-              Port Moody is a community that values quality and creativity. Your paint job should reflect that. From the arts community to families along Rocky Point Park, Port Moody homeowners trust us to get it right the first time. Beautiful, lasting results.
+              Port Moody is a community that values quality and creativity. Your paint job should reflect that. From the arts community to families along Rocky Point Park, over 75 Port Moody homeowners have trusted us to get it right the first time. Beautiful, lasting results.
             </p>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function PortMoodyAreaPage() {
       <FeatureSection
         eyebrow="Port Moody Painters"
         heading="Interior & Exterior Painting Built for Coastal Living"
-        description="We paint walls, ceilings, trim, siding, decks, and cabinets — using professional-grade coatings built for BC's moisture and weather. From a single room to a full exterior, our team brings care to every project. You choose the colours and style. We handle everything else — prep, painting, cleanup, and your satisfaction."
-        ctaText="Get Your Free Estimate"
+        description="Your walls, ceilings, trim, siding, decks, and cabinets all get professional-grade coatings built for BC's moisture and weather. From a single room to a full exterior, you get care on every project. You choose the colours and style. You get everything else handled — prep, painting, cleanup, and a result you're proud of."
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Moody, BC"
@@ -126,8 +126,8 @@ export default function PortMoodyAreaPage() {
 
       <FeatureSection
         heading="Ready to Paint Your Port Moody Home?"
-        description="Get a free estimate for your painting project. We'll visit your home, listen to your ideas, offer colour advice, and give you a firm quote with no hidden fees. From first call to final walkthrough, your satisfaction is our goal."
-        ctaText="Get Your Free Estimate"
+        description="Your free estimate starts with a home visit. You share your ideas, get honest colour advice, and receive a firm quote with no hidden fees. From first call to final walkthrough, your satisfaction drives every decision."
+        ctaText="Talk to Our Team"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project in Port Moody, BC"

@@ -5,7 +5,7 @@ import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 export const metadata: Metadata = {
   title: "Interior Painting Cost Vancouver 2026 | Shape of Paint",
   description:
-    "Interior painting cost per square foot in Vancouver ranges from $3-$6 for walls and $4-$8 with ceilings and trim. Get a full 2026 price breakdown for your home.",
+    "Vancouver interior painting runs $3-$8 per square foot in 2026. Most homeowners invest $2,000-$7,000 for a full repaint. Here is what drives the final number.",
 };
 
 export default function InteriorPaintingCostPage() {

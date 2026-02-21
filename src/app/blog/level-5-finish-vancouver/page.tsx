@@ -5,7 +5,7 @@ import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 export const metadata: Metadata = {
   title: "Level 5 Drywall Finish: Why It Matters | Shape of Paint",
   description:
-    "Learn why a level 5 drywall finish matters for Vancouver homes. Understand finish levels 0-5, the skim coat process, and when your walls need this premium treatment.",
+    "Raking light from large windows reveals every drywall seam as shadowy lines called photographing. A level 5 skim coat eliminates it. Do your walls need it?",
 };
 
 export default function Level5FinishPage() {

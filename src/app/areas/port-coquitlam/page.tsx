@@ -7,7 +7,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 export const metadata: Metadata = {
   title: "House Painters Port Coquitlam BC | Shape of Paint",
   description:
-    "Professional house painters in Port Coquitlam, BC. Interior & exterior painting serving Citadel Heights, Oxford Heights, Mary Hill, and all PoCo neighborhoods. Free estimates. Call 604-353-7378.",
+    "Trusted house painters in Port Coquitlam, BC. Interior, exterior, and cabinet painting with precision craftsmanship. 200+ PoCo homes transformed. Free estimates.",
 };
 
 export default function PortCoquitlamAreaPage() {
@@ -15,7 +15,7 @@ export default function PortCoquitlamAreaPage() {
     <>
       <PageHero
         heading="House Painters in Port Coquitlam, BC"
-        description="Expert interior and exterior painting for Port Coquitlam homes. We understand your community and deliver craftsmanship that matches your pride in PoCo."
+        description="Your PoCo home deserves painters who match your pride in this community. Precision craftsmanship for every neighbourhood."
         image="/images/exterior-portfolio-7.webp"
         imageAlt="House painting in Port Coquitlam"
       />
@@ -29,10 +29,10 @@ export default function PortCoquitlamAreaPage() {
             Port Coquitlam — or PoCo as locals call it — has heart. It's family-focused, community-minded, and full of homes with character. Houses from the 1970s and 80s sit next to newer builds. The Traboulay PoCo Trail brings people together. Families gather for the May Day Parade. The Coquitlam River runs through your backyard. Your homes need painters who get it — painters who know how Vancouver's damp climate wears on siding, how older trim needs patient prep, and how new homes need clean, precise finishes.
           </p>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            We're house painters in Port Coquitlam who actually know PoCo. We've painted living rooms in Citadel Heights, refreshed exteriors in Mary Hill, and tackled kitchen cabinets in Birchland Manor. We show up when we say we will. We prep like it's our own home. We talk to you every step. And we leave your space looking better than you expected — on time and on budget.
+            You're hiring house painters who actually know PoCo. We've painted living rooms in Citadel Heights, refreshed exteriors in Mary Hill, and tackled kitchen cabinets in Birchland Manor. Your project gets punctual arrivals, prep like it's our own home, and clear communication every step. Your space ends up looking better than you expected — on time and to the highest standard.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Ready to give your PoCo home the attention it deserves? Call us for a free estimate. No hidden charges, no surprises — just honest painters who care about your neighborhood as much as you do.
+            Ready to give your PoCo home the attention it deserves? Request your free estimate. No hidden charges, no surprises — just honest painters who care about your neighbourhood as much as you do.
           </p>
         </div>
       </SectionWrapper>
@@ -41,7 +41,7 @@ export default function PortCoquitlamAreaPage() {
         eyebrow="Port Coquitlam Painters"
         heading="Painting That Honors Your Home"
         description="Whether your Port Coquitlam home was built in the 70s or last year, it deserves expert care. We handle interior walls, ceilings, and cabinets with smooth finishes that change how your home feels. For exteriors, we use professional-grade coatings that stand up to heavy rain and BC sun — protecting your home for years. From Citadel Heights to Shaughnessy to Downtown PoCo, we bring quality to every neighborhood."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Port Coquitlam"
@@ -119,8 +119,8 @@ export default function PortCoquitlamAreaPage() {
 
       <FeatureSection
         heading="Ready to Transform Your Port Coquitlam Home?"
-        description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise to PoCo homeowners."
-        ctaText="Get Your Free Estimate"
+        description="Request your no-obligation estimate today. We'll walk through your project, discuss colours and finishes, answer your questions, and give you a firm price before we start. That's our promise to PoCo homeowners."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Port Coquitlam"

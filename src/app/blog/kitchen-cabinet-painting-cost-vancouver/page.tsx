@@ -5,7 +5,7 @@ import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 export const metadata: Metadata = {
   title: "Cabinet Painting Cost Vancouver (2026) | Shape of Paint",
   description:
-    "Kitchen cabinet painting in Vancouver costs $2,500-$9,000 in 2026. Get exact pricing by kitchen size, what affects your quote, and hidden costs to avoid.",
+    "Cabinet painting in Vancouver costs $2,500-$9,000 in 2026. What drives your quote, what a proper estimate includes, and the primer step most painters skip.",
 };
 
 export default function KitchenCabinetPaintingCostPage() {

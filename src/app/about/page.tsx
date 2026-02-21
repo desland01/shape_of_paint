@@ -8,17 +8,17 @@ import { ScrollZoom } from "@/components/ui/motion";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "About Shape of Paint | Vancouver Painters",
-  description: "Meet Gabe Penner and the Shape of Paint team. Licensed, insured house painters serving Vancouver and the Lower Mainland with master craftsmanship on every project.",
+  title: "Vancouver's Master Painters | About Shape of Paint",
+  description: "Gabe Penner and the Shape of Paint crew have finished 400+ Vancouver homes. Licensed, insured, and obsessed with the details you'll actually notice.",
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint Instagram post 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint Instagram post 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint Instagram post 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint Instagram post 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint Instagram post 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint Instagram post 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver home interior freshly painted by Shape of Paint" },
+  { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
+  { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
 const portfolioCategories = [
@@ -48,8 +48,8 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        heading="Our Story"
-        description="We show up on time. We protect your home. We do work you can see from across the room."
+        heading="Vancouver Painters Who Do It Right"
+        description="400+ projects. On time. On quote. A finish you can see from across the room."
         image="/images/about-team.webp"
         imageAlt="The Shape of Paint team"
       />
@@ -60,19 +60,19 @@ export default function AboutPage() {
             You shouldn't have to babysit your painters
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            You don't want a painter. You want the result. Floors protected, not spattered. A final bill that matches the quote. A crew that shows up when they said they would. That's what we built this company around.
+            You don't want a painter. You want the result. Floors protected, not spattered. A final bill that matches the quote. A crew that shows up when they said they would. That's what 400+ Vancouver homeowners hired us for — and why most of them call back.
           </p>
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             A finish you can feel, not just see
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Every wall, cabinet, and trim piece in your home says something. We don't do one-size-fits-all. We listen first. Then we pick colours and sheens that work with your light, your materials, and how you use each room. Matte walls, crisp satin trim — everything works together on purpose.
+            Every wall, cabinet, and trim piece in your home says something. Your project doesn't get a one-size-fits-all formula. We listen first. Then we match colours and sheens to your light, your materials, and how you actually use each room. Matte walls, crisp satin trim — everything works together on purpose.
           </p>
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Clear pricing. No surprises.
           </h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Before we touch a brush, you'll know when we start, how long it takes, and what it costs. Firm quotes — the price doesn't change. Daily updates so you're never guessing. A final walkthrough where we check every edge and every detail together. That's how we've earned repeat clients across Vancouver.
+            Before a single brush touches your wall, you'll know the start date, the timeline, and the exact cost. Firm quotes — your price doesn't change. Daily updates so you're never guessing. A final walkthrough where we check every edge and every detail together. That's how we've earned repeat clients across 15 years in Vancouver.
           </p>
         </div>
       </section>
@@ -80,8 +80,8 @@ export default function AboutPage() {
       <FeatureSection
         eyebrow="Meet the Founder"
         heading="Gabe Penner — Master Painter & Finishing Specialist"
-        description="Gabe started Shape of Paint with one belief: good painting starts long before the first coat. After years perfecting coatings, faux finishes, and spray work, he built a company around thorough prep, clear communication, and finishes that hold up to close inspection. Today, designers and homeowners across Vancouver trust Gabe and his crew with their most detailed projects."
-        ctaText="Get Your Free Estimate"
+        description="15+ years of coatings, faux finishes, and spray work. 400+ Vancouver homes finished. Gabe started Shape of Paint with one belief: good painting starts long before the first coat. Every project gets thorough prep, clear communication, and finishes that hold up to close inspection. We don't take every project. If your priority is the lowest price, we're not the right fit. But if you want it done right — designers and homeowners across Vancouver call Gabe first."
+        ctaText="Talk to Gabe"
         ctaHref="/contact#contact-form"
         image="/images/about-founder.webp"
         imageAlt="Gabe Penner, Co-Founder of Shape of Paint"

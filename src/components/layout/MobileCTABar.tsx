@@ -2,10 +2,14 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { scrollToElement } from "@/lib/utils";
 
 export function MobileCTABar() {
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact" || pathname.startsWith("/contact/");
   const [isVisible, setIsVisible] = useState(false);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
@@ -58,12 +62,21 @@ export function MobileCTABar() {
               <Phone className="h-4 w-4" aria-hidden="true" />
               Call Now
             </a>
-            <Link
-              href="/contact#contact-form"
-              className="flex min-h-[48px] flex-1 items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
-            >
-              Get a Quote
-            </Link>
+            {!isContactPage && (
+              <Link
+                href="/contact#contact-form"
+                onClick={(e) => {
+                  if (pathname === "/contact" || pathname.startsWith("/contact/")) {
+                    e.preventDefault();
+                    window.history.pushState(null, "", "/contact#contact-form");
+                    scrollToElement("contact-form");
+                  }
+                }}
+                className="flex min-h-[48px] flex-1 items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+              >
+                Book Your Estimate
+              </Link>
+            )}
           </div>
         </motion.div>
       )}

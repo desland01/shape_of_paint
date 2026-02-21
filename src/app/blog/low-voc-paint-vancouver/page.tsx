@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Low-VOC Paint Options for Vancouver Families | Shape of Paint",
+  title: "Low-VOC Paint for Vancouver Families | Shape of Paint",
   description:
-    "Eco friendly paint options for Vancouver families. Compare Benjamin Moore Natura vs Sherwin-Williams Harmony, learn about VOC health risks, and choose safer paint.",
+    "Conventional paint off-gasses chemicals for 3-5 years. Modern zero-VOC formulas match the same coverage and durability without the fumes. Compare top options.",
 };
 
 export default function LowVocPaintPage() {

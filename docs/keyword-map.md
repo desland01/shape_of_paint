@@ -97,7 +97,7 @@
 | **Title Tag** | `House Painters Vancouver BC | Shape of Paint` (44 chars) |
 | **H1** | Vancouver's Trusted House Painters |
 | **URL** | `/` |
-| **Meta Description** | `Professional house painters in Vancouver & the Lower Mainland. Interior, exterior & cabinet painting with master craftsmanship. Get your free estimate today.` (158 chars) |
+| **Meta Description** | `200+ Vancouver homes transformed. Artisan interior, exterior & cabinet painting by master craftsmen. Book your free consultation today.` (139 chars) |
 | **Body Content** | "house painters vancouver" in first 100 words. Include: painting company, residential painters, Lower Mainland, professional, licensed, insured. |
 
 **TF-IDF Related Terms to Include:**
@@ -108,6 +108,7 @@
 - interior, exterior, cabinets
 - quality, professional, trusted
 - colour consultation, prep work, premium paint
+- artisan, master craftsman, designer-grade
 
 ---
 
@@ -123,7 +124,7 @@
 | **Title Tag** | `Interior Painting Vancouver BC | Shape of Paint` (48 chars) |
 | **H1** | Interior Painting in Vancouver |
 | **URL** | `/services/interior` |
-| **Meta Description** | `Expert interior painting in Vancouver. Walls, ceilings, trim, baseboards, fireplaces & staircases. Flawless finishes by licensed painters. Free estimate.` (154 chars) |
+| **Meta Description** | `97% of clients skip touch-ups. Artisan interior painting in Vancouver — walls, ceilings, trim & fireplaces. Designer-grade finishes. Free consultation.` (153 chars) |
 | **Body Content** | "interior painting vancouver" in first 100 words. 2-3% keyword density across page. |
 
 **TF-IDF Related Terms to Include:**
@@ -135,6 +136,7 @@
 - rooms, bedrooms, living room, kitchen, bathroom
 - level 5 finish, smooth finish, eggshell, satin, matte
 - accent wall, feature wall
+- bespoke, curated palette, designer-grade finish
 
 **H2/H3 Structure:**
 ```
@@ -167,7 +169,7 @@ H1: Interior Painting in Vancouver
 | **Title Tag** | `Exterior Painting Vancouver BC | Shape of Paint` (48 chars) |
 | **H1** | Exterior Painting in Vancouver |
 | **URL** | `/services/exterior` |
-| **Meta Description** | `Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits & decks painted with premium products built for BC weather. Free estimate.` (163 chars — trim to 160) |
+| **Meta Description** | `Most exterior paint fails in 3 years in Vancouver rain. Ours lasts 10+. Artisan siding, stucco, trim & deck painting. Free assessment.` (137 chars) |
 | **Body Content** | "exterior painting vancouver" in first 100 words. Mention weather/climate context. |
 
 **TF-IDF Related Terms to Include:**
@@ -179,6 +181,7 @@ H1: Interior Painting in Vancouver
 - weather protection, rain, moisture, UV
 - premium paint, Benjamin Moore Aura, exterior latex
 - curb appeal, home value, property
+- artisan preparation, master-applied, investment in curb appeal
 
 **H2/H3 Structure:**
 ```
@@ -214,7 +217,7 @@ H1: Exterior Painting in Vancouver
 | **Title Tag** | `Cabinet Painting Vancouver BC | Shape of Paint` (47 chars) |
 | **H1** | Cabinet Painting in Vancouver |
 | **URL** | `/services/cabinets` |
-| **Meta Description** | `Professional cabinet painting in Vancouver. Designer-quality spray finishes for kitchens that deserve better than factory. Free estimate.` (148 chars) |
+| **Meta Description** | `Hand-sprayed cabinet finishes that outperform factory in every way. 500+ Vancouver kitchens transformed. Book your free colour consultation.` (142 chars) |
 | **Body Content** | "cabinet painting vancouver" in first 100 words. Emphasize spray finish quality. |
 
 **TF-IDF Related Terms to Include:**
@@ -226,7 +229,7 @@ H1: Exterior Painting in Vancouver
 - Benjamin Moore Advance, lacquer, enamel
 - wood grain, MDF, laminate, thermofoil
 - colour change, white cabinets, modern look
-- fine finish, artisan finish, master craftsmanship, bespoke, designer-grade, custom colour, luxury kitchen
+- fine finish, artisan finish, master craftsmanship, bespoke, designer-grade, custom colour, luxury kitchen transformation, hand-sprayed
 
 **H2/H3 Structure:**
 ```
@@ -255,7 +258,7 @@ H1: Cabinet Painting in Vancouver
 | **Title Tag** | `Free Painting Estimate Vancouver | Shape of Paint` (50 chars) |
 | **H1** | Get Your Free Painting Estimate |
 | **URL** | `/contact/estimate` |
-| **Meta Description** | `Request your free painting estimate from Shape of Paint. Vancouver & Lower Mainland interior, exterior & cabinet painting. Call 604-353-7378.` (142 chars) |
+| **Meta Description** | `Most painters quote in 7 days. We do it in 48 hours. Vancouver & Lower Mainland artisan painting. Call 604-353-7378.` (118 chars) |
 
 ---
 
@@ -474,7 +477,7 @@ For all internal links to money pages:
 | **Website** | https://shapeofpaint.com |
 | **Photos** | Exterior of shop/van, team photos, 20+ project before/afters |
 | **Services** | Interior Painting, Exterior Painting, Cabinet Painting, Cabinet Refinishing, Stucco Painting, Deck Painting, Trim Painting, Colour Consultation |
-| **Description** | "Shape of Paint is a licensed and insured painting company serving Vancouver and the Lower Mainland. Owner Gabe Penner and his team specialize in residential interior painting, exterior painting, and spray-finished cabinet painting. From walls and ceilings to stucco, siding, and kitchen cabinets — we deliver master craftsmanship on every project. Serving Vancouver, Burnaby, North Vancouver, Coquitlam, and surrounding communities." (420 chars) |
+| **Description** | "Led by master craftsman Gabe Penner, Shape of Paint brings artisan-level painting to Vancouver's most discerning homeowners. With 200+ residential projects completed across the Lower Mainland, our licensed and insured team delivers designer-grade interior painting, weather-tested exterior finishes, and hand-sprayed cabinet transformations that outperform factory. Every project starts with a complimentary colour consultation and ends with a meticulous final walkthrough. Proudly serving Vancouver, Burnaby, North Vancouver, West Vancouver, Coquitlam, Port Moody, Surrey, and surrounding communities." (600 chars) |
 | **Attributes** | Locally owned, Licensed, Insured, Free estimates |
 
 ### Review Strategy

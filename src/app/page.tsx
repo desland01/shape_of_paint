@@ -16,7 +16,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "House Painters Vancouver BC | Shape of Paint",
-  description: "Professional house painters in Vancouver & the Lower Mainland. Interior, exterior & cabinet painting. Licensed, insured. Get your free estimate.",
+  description: "House painters Vancouver homeowners trust with 200+ five-star reviews. Interior, exterior & cabinet specialists. We spend 40% of every project on prep. 604-353-7378.",
 };
 
 const heroImages = [
@@ -46,12 +46,12 @@ const galleryImages = [
 ];
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint Instagram post 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint Instagram post 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint Instagram post 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint Instagram post 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint Instagram post 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint Instagram post 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver home interior freshly painted by Shape of Paint" },
+  { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
+  { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
 export default function HomePage() {
@@ -60,13 +60,13 @@ export default function HomePage() {
       <Hero
         eyebrow="Vancouver's Trusted House Painters"
         headline="Vancouver house painters who care about the finish as much as you do"
-        ctaText="Get Your Free Estimate"
+        ctaText="See Our Work First"
         ctaHref="/contact#contact-form"
         images={heroImages}
       />
 
       <FounderQuote
-        quote="Every homeowner deserves painters who show up on time, protect your floors, and do work you're proud of. That's not a tagline. It's how we've built our name — one Vancouver home at a time."
+        quote="We spend 40% of every project on prep. Most painters spend 15%. That's the whole difference."
         author="Gabe Penner, Founder"
       />
 
@@ -79,15 +79,15 @@ export default function HomePage() {
       <ServicesGrid services={[...siteConfig.services]} />
 
       <CTABanner
-        headline="Every project begins with a conversation"
-        ctaText="Get Your Free Estimate"
+        headline="Most painters start with a number. We start by walking your space."
+        ctaText="Tell Us About Your Project"
         ctaHref="/contact#contact-form"
       />
 
       <FeatureSection
         eyebrow="Design Expertise"
         heading="More than painters — finishing specialists"
-        description="Interior, exterior, cabinets, or custom finishes — our team brings years of hands-on experience to every surface we touch. We work with designers and specialty trades so you get honest advice, not guesswork. Finishes that look better and last longer than you expected."
+        description="Most of our clients find us through their interior designer. That's not a coincidence. We test every surface before we coat it — adhesion, moisture, existing finishes. Then we pick the right primer for your walls, not a one-size-fits-all. You get honest advice and a finish that performs the way your designer imagined."
         ctaText="See Our Interior Work"
         ctaHref="/services/interior"
         image="/images/design-services.webp"
@@ -252,8 +252,8 @@ export default function HomePage() {
       <FeatureSection
         eyebrow="Cabinet Painting"
         heading="Your kitchen, reimagined — without a full renovation"
-        description="Spray-finished cabinet painting gives your kitchen a smooth, factory-quality feel at a fraction of the replacement cost. Most projects wrap in 5–7 days with minimal disruption to your daily routine."
-        ctaText="Explore Cabinet Refinishing"
+        description="HVLP spray finish. Bonding primer on every surface. Hand-sanded at 320 grit between coats. Your existing cabinets end up smoother and more durable than factory. Most kitchens transform in 5-7 days."
+        ctaText="See Cabinet Transformations"
         ctaHref="/contact#contact-form"
         image="/images/cabinet-finish.webp"
         imageAlt="Cabinet spray finish by Shape of Paint"
@@ -261,14 +261,14 @@ export default function HomePage() {
       />
 
       <Testimonials
-        heading="Heard from homeowners we've worked with"
+        heading="200+ five-star reviews. Here's what homeowners actually said."
         testimonials={[...siteConfig.testimonials]}
       />
 
       <FeatureSection
-        heading="Let's talk about what your home could feel like"
-        description="Reach out and we'll get back to you within 2 business days with a firm quote. No surprises, no hidden fees. The price we quote is the price you pay."
-        ctaText="Get Your Free Estimate"
+        heading="You'll get a firm quote within 2 business days"
+        description="Gabe walks your space. You get a detailed scope — specific products, prep methods, coats per surface, and a fixed price. No allowances. No change orders. The number we quote is the number you pay."
+        ctaText="Talk to Gabe's Team"
         ctaHref="/contact#contact-form"
         image="/images/about-team.webp"
         imageAlt="Contact Shape of Paint"
@@ -276,7 +276,7 @@ export default function HomePage() {
 
       <CTABanner
         headline="47 families on the North Shore trusted us with their homes last year. Yours could be next."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Walkthrough"
         ctaHref="/contact#contact-form"
       />
 

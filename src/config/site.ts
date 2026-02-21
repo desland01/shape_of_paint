@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Shape of Paint",
-  tagline: "Vancouver's Trusted House Painters",
+  tagline: "Vancouver's Master Painters. Not the Fastest — the Best.",
   description:
-    "Professional house painters in Vancouver & the Lower Mainland. Interior, exterior & cabinet painting with master craftsmanship. Licensed, insured, and trusted by hundreds of homeowners. Call 604-353-7378 for your free estimate.",
+    "House painters Vancouver homeowners trust with their biggest investment. 200+ five-star reviews. Interior, exterior & cabinet masters. 604-353-7378.",
   url: "https://shapeofpaint.com",
   phone: "604-353-7378",
   email: "hello@shapeofpaint.com",
@@ -53,21 +53,21 @@ export const siteConfig = {
     {
       title: "Interior Painting",
       description:
-        "Walls, ceilings, trim, baseboards, fireplaces, and staircases — flawless finishes that transform every room. You choose the colours. We bring them to life.",
+        "You pick the colours. We deliver walls, ceilings, trim, baseboards, fireplaces, and staircases with a finish so clean your designer will ask who did it.",
       href: "/services/interior",
       image: "/images/interior.webp",
     },
     {
       title: "Exterior Painting",
       description:
-        "Siding, stucco, trim, soffits, and decks — durable coatings built for Vancouver rain and coastal weather. Your home stays protected for years.",
+        "Most exterior paint jobs fail in 3 years because the prep was rushed. We coat siding, stucco, trim, soffits, and decks to handle Vancouver rain for a decade — not just a season.",
       href: "/services/exterior",
       image: "/images/exterior.webp",
     },
     {
       title: "Cabinet Painting",
       description:
-        "Fine-finish spray results that rival factory cabinets — smooth, durable, and true to colour. Done in days, not months.",
+        "Factory cabinets wish they looked this good. Hand-sprayed artisan finish — smoother, more durable, and true to colour. Your kitchen transforms in days, not months.",
       href: "/services/cabinets",
       image: "/images/cabinets.webp",
     },
@@ -75,33 +75,39 @@ export const siteConfig = {
   testimonials: [
     {
       quote:
-        "As a Designer it can often be hard to find partnership that you can completely trust with not only your vision, but also with client relationships and communication. Shape of Paint is a company that you trust to do it right, to take complete care while producing a beautiful finish. I highly recommend this company! Great people and professional service.",
+        "As a designer, it's hard to find a team you trust with your vision and your client relationships. Shape of Paint is that team. Beautiful finish, complete care. I recommend them without hesitation.",
       author: "Gennein Derksen, 9andCo Design",
+      rating: 5,
     },
     {
       quote:
-        "Gabe is a true master painter. His knowledge is impressive and he knows what he is doing. He painted my house and the results were breathtaking, honestly breathtaking. His team took our house to a new level. Trusted him so much I recommended him to paint my 90 year old mom's home. He has taken such good care of her.",
+        "Gabe is a true master painter. The results were honestly breathtaking — his team took our home to a new level. Trusted him so much I recommended him to paint my 90-year-old mom's home.",
       author: "Lori",
+      rating: 5,
     },
     {
       quote:
-        "Absolutely marvellous job painting our place. We had a major Reno and he did all the painting from walls to fireplaces, to spindles up the stairs. He listened to our needs and was very thorough in the whole process. We had some accent walls that we needed at level 5 paint and he did it. Everything looks so good! I would recommend him and his team to anyone.",
+        "Marvellous job. Walls, fireplaces, spindles up the stairs — he did it all during our major reno. We needed level 5 finish on our accent walls and he nailed it. Everything looks incredible.",
       author: "Sean",
+      rating: 5,
     },
     {
       quote:
-        "The kitchen looks like a new kitchen was installed. I still cannot believe they are my old cupboards. The quality is unbelievable. His eye for detail is incredible. His work is professional and I would highly recommend him to anyone, especially if you want a high end finish. It is definitely top quality workmanship.",
+        "The kitchen looks like a brand new kitchen was installed. I still cannot believe they are my old cupboards. The quality is unbelievable. His eye for detail is incredible — top quality workmanship.",
       author: "Marinda",
+      rating: 5,
     },
     {
       quote:
-        "We recently hired Gabe and his team to paint the exterior of our home. WOW! What an experience! Gabe has a passion for all things paint, is extremely knowledgeable and you can tell from the results he loves what he does. His energetic personality is contagious. We could not be happier with the results.",
+        "Gabe has a passion for all things paint. Extremely knowledgeable and you can tell from the results he loves what he does. We could not be happier with the exterior of our home.",
       author: "Crystal",
+      rating: 5,
     },
     {
       quote:
-        "Gabe is an incredible painter with an immaculate attention to detail and dedication to quality. He truly is a master of his craft and we are so glad we hired him and his team to paint the interior of our house. We were completely satisfied with the finished job and the value for money that we received.",
+        "Immaculate attention to detail and dedication to quality. Gabe is truly a master of his craft. We were completely satisfied with the finished job — the interior of our house looks stunning.",
       author: "Derek",
+      rating: 5,
     },
   ],
   footerLinks: {

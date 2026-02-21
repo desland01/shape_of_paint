@@ -7,7 +7,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 export const metadata: Metadata = {
   title: "House Painters Pitt Meadows BC | Shape of Paint",
   description:
-    "Professional house painters in Pitt Meadows, BC. Interior & exterior painting serving Central Pitt Meadows, Osprey Village, and all local neighborhoods. Free estimates. Call 604-353-7378.",
+    "Trusted house painters in Pitt Meadows, BC. 200+ homes painted with precision. Interior, exterior, and cabinet finishes built for your climate. Free estimates.",
 };
 
 export default function PittMeadowsAreaPage() {
@@ -15,7 +15,7 @@ export default function PittMeadowsAreaPage() {
     <>
       <PageHero
         heading="House Painters in Pitt Meadows, BC"
-        description="Expert interior and exterior painting for Pitt Meadows homes. We know your neighborhood, your weather, and what it takes to protect your investment."
+        description="Your Pitt Meadows home faces unique weather challenges. You deserve painters who understand your neighbourhood and deliver finishes that last."
         image="/images/exterior-portfolio-6.webp"
         imageAlt="Exterior painting in Pitt Meadows"
       />
@@ -29,10 +29,10 @@ export default function PittMeadowsAreaPage() {
             Pitt Meadows is a tight-knit community with real character. Your homes tell stories — from cranberry farm roots to newer builds near the WCE station. Whether your house sits near the dyke trails or in Central Pitt Meadows, it faces challenges that generic painters miss. Heavy rain seeps into exterior gaps. Damp air damages interior paint and trim. New builds need clean finishes. Older homes need painters who know 70s-era materials and how they shift with BC seasons.
           </p>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            We're not just house painters in Pitt Meadows — we're your neighbors who get it. We've painted living rooms in Osprey Village, refreshed exteriors near Golden Ears, and handled kitchen cabinets that needed skill, not shortcuts. We show up on time, prep like it's our own home, and leave your space looking better than you expected. That's the Shape of Paint difference.
+            You're not hiring generic painters — you're getting neighbours who understand your community. We've painted living rooms in Osprey Village, refreshed exteriors near Golden Ears, and handled kitchen cabinets that needed skill, not shortcuts. Your project gets on-time arrivals, prep like it's our own home, and a finished space that looks better than you expected. That's the Shape of Paint difference.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Ready to transform your Pitt Meadows home? Call us for a free estimate. No pressure, no hidden fees — just honest painters and a commitment to excellence.
+            Ready to transform your Pitt Meadows home? Request your free estimate. No pressure, no hidden fees — just honest painters and a commitment to excellence.
           </p>
         </div>
       </SectionWrapper>
@@ -41,7 +41,7 @@ export default function PittMeadowsAreaPage() {
         eyebrow="Pitt Meadows Painters"
         heading="Interior and Exterior Painting That Lasts"
         description="Your Pitt Meadows home deserves painters who know the local climate and your neighborhood's needs. We handle interior walls, ceilings, and cabinets with smooth, lasting finishes. For exteriors, we use professional-grade coatings rated for heavy rain and BC sun. From Central Pitt Meadows to the quieter areas near Golden Ears, we deliver quality on every project."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Pitt Meadows"
@@ -116,8 +116,8 @@ export default function PittMeadowsAreaPage() {
 
       <FeatureSection
         heading="Ready to Paint Your Pitt Meadows Home?"
-        description="Get a free, no-obligation estimate from our team. We'll walk through your project, discuss colors and finishes, answer your questions, and give you a firm price before we start. That's our promise."
-        ctaText="Get Your Free Estimate"
+        description="Request your no-obligation estimate today. We'll walk through your project, discuss colours and finishes, answer your questions, and give you a firm price before we start. That's our promise."
+        ctaText="Start Your Project"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Professional exterior painting in Pitt Meadows"

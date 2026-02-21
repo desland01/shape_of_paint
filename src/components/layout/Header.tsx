@@ -2,18 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { cn, scrollToElement } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 10);
@@ -59,6 +61,28 @@ export function Header() {
     setIsOpen(false);
   };
 
+  const handleDropdownEnter = useCallback((label: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpenDropdown(label);
+  }, []);
+
+  const handleDropdownLeave = useCallback(() => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 150);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const isTransparent = pathname === "/" && !scrolled;
 
   return (
@@ -92,18 +116,94 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {siteConfig.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:text-link-hover",
-                isTransparent ? "text-white/90" : "text-foreground"
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {siteConfig.nav.map((item) => {
+            const hasChildren = "children" in item && item.children && item.children.length > 0;
+            const isDropdownOpen = openDropdown === item.label;
+
+            if (!hasChildren) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "text-sm font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:text-link-hover",
+                    isTransparent ? "text-white/90" : "text-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={item.href}
+                className="relative"
+                onMouseEnter={() => handleDropdownEnter(item.label)}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "inline-flex items-center gap-1 text-sm font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:text-link-hover",
+                    isTransparent ? "text-white/90" : "text-foreground"
+                  )}
+                  aria-haspopup="true"
+                  aria-expanded={isDropdownOpen}
+                >
+                  {item.label}
+                  <ChevronDown
+                    className={cn(
+                      "h-3 w-3 transition-transform duration-200",
+                      isDropdownOpen && "rotate-180"
+                    )}
+                  />
+                </Link>
+
+                <AnimatePresence>
+                  {isDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="absolute left-0 top-full pt-2"
+                    >
+                      <div
+                        className="min-w-[200px] rounded-lg border border-border-subtle bg-background p-2 shadow-lg"
+                        role="menu"
+                        aria-label={`${item.label} submenu`}
+                      >
+                        {item.children?.map((child) => {
+                          const hashIndex = child.href.indexOf("#");
+                          const childPath = hashIndex >= 0 ? child.href.slice(0, hashIndex) : child.href;
+                          const childHash = hashIndex >= 0 ? child.href.slice(hashIndex + 1) : null;
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              role="menuitem"
+                              onClick={childHash ? (e) => {
+                                if (pathname === childPath || pathname.startsWith(childPath + "/")) {
+                                  e.preventDefault();
+                                  window.history.pushState(null, "", child.href);
+                                  setOpenDropdown(null);
+                                  scrollToElement(childHash);
+                                }
+                              } : undefined}
+                              className="block min-h-[48px] rounded-md px-4 py-3 text-xs font-medium uppercase tracking-[0.12em] text-foreground transition-colors duration-200 hover:bg-warm hover:text-link-hover"
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -122,6 +222,13 @@ export function Header() {
           </a>
           <Link
             href="/contact#contact-form"
+            onClick={(e) => {
+              if (pathname === "/contact" || pathname.startsWith("/contact/")) {
+                e.preventDefault();
+                window.history.pushState(null, "", "/contact#contact-form");
+                scrollToElement("contact-form");
+              }
+            }}
             className={cn(
               "inline-flex items-center px-5 py-2 text-sm font-semibold uppercase tracking-widest min-h-[48px] transition-colors",
               isTransparent
@@ -129,7 +236,7 @@ export function Header() {
                 : "rounded-[9px] border border-cta bg-cta text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
             )}
           >
-            Free Estimate
+            Book Your Estimate
           </Link>
         </div>
 
@@ -189,24 +296,47 @@ export function Header() {
                   >
                     {item.label}
                   </Link>
-                  {"children" in item && item.children?.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={handleNavClick}
-                      className="block min-h-[48px] py-3.5 pl-4 text-base font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                  {"children" in item && item.children?.map((child) => {
+                    const hashIdx = child.href.indexOf("#");
+                    const cPath = hashIdx >= 0 ? child.href.slice(0, hashIdx) : child.href;
+                    const cHash = hashIdx >= 0 ? child.href.slice(hashIdx + 1) : null;
+                    return (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={(e) => {
+                          handleNavClick();
+                          if (cHash && (pathname === cPath || pathname.startsWith(cPath + "/"))) {
+                            e.preventDefault();
+                            window.history.pushState(null, "", child.href);
+                            setTimeout(() => {
+                              scrollToElement(cHash);
+                            }, 350);
+                          }
+                        }}
+                        className="block min-h-[48px] py-3.5 pl-4 text-base font-normal tracking-[0.1em] text-text-secondary hover:text-link-hover transition-colors duration-300"
+                      >
+                        {child.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               ))}
               <Link
                 href="/contact#contact-form"
-                onClick={handleNavClick}
+                onClick={(e) => {
+                  handleNavClick();
+                  if (pathname === "/contact" || pathname.startsWith("/contact/")) {
+                    e.preventDefault();
+                    window.history.pushState(null, "", "/contact#contact-form");
+                    setTimeout(() => {
+                      scrollToElement("contact-form");
+                    }, 350);
+                  }
+                }}
                 className="mt-4 flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
               >
-                Get a Quote
+                Book Your Estimate
               </Link>
             </nav>
           </motion.div>

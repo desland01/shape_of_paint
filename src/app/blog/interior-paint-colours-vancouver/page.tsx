@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Interior Paint Colours for Vancouver Homes (2026) | Shape of Paint",
+  title: "Interior Paint Colours for Vancouver Homes | Shape of Paint",
   description:
-    "Choose the right interior paint colours for Vancouver homes. Learn how grey skies affect undertones, trending 2026 colours, and how to test before you commit.",
+    "Grey skies shift every undertone. 8 months of overcast light means the colour you picked at the store looks wrong on your wall. Here is how to get it right.",
 };
 
 export default function InteriorPaintColoursPage() {

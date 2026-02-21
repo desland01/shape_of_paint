@@ -17,7 +17,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         heading="Painting Services in Vancouver"
-        description="Interior, exterior, and cabinet painting. Every job done right, on time, on budget."
+        description="Interior, exterior, and cabinet painting. Every job done right, on time, with precision."
       />
 
       <section className="bg-background py-16 md:py-24">
@@ -55,7 +55,7 @@ export default function ServicesPage() {
       <FeatureSection
         heading="Not sure where to start?"
         description="Share a few details about your home and we'll recommend the right approach. Most estimates are ready within 24 hours."
-        ctaText="Get Your Free Estimate"
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/about-team.webp"
         imageAlt="Shape of Paint team at work in Vancouver"

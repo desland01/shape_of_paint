@@ -70,7 +70,7 @@ export default function BlogPage() {
 
       <CTABanner
         headline="Your free estimate is 2 minutes away"
-        ctaText="Get Your Free Estimate"
+        ctaText="Talk to Our Team"
         ctaHref="/contact#contact-form"
       />
     </>

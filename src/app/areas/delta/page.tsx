@@ -5,9 +5,9 @@ import { FeatureSection } from "@/components/sections/FeatureSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Painters Delta BC | Interior & Exterior | Shape of Paint",
+  title: "Painters Delta BC | Shape of Paint",
   description:
-    "Professional house painters in Delta, BC serving Ladner, Tsawwassen, North Delta, and more. Interior & exterior painting with master craftsmanship. Licensed, insured. Call 604-353-7378.",
+    "Painters Delta BC trusted by 200+ homeowners. Interior, exterior, and cabinet painting for Ladner, Tsawwassen, and North Delta. Licensed and insured. Free estimates.",
 };
 
 export default function DeltaAreaPage() {
@@ -15,7 +15,7 @@ export default function DeltaAreaPage() {
     <>
       <PageHero
         heading="House Painters in Delta, BC"
-        description="Professional interior and exterior painting for Delta homeowners. Licensed, insured, and trusted with the details that matter."
+        description="Your Ladner, Tsawwassen, or North Delta home deserves painters who know your community. Licensed, insured, and detail-obsessed."
         image="/images/exterior-portfolio-3.webp"
         imageAlt="Exterior painting in Delta BC"
       />
@@ -32,7 +32,7 @@ export default function DeltaAreaPage() {
             We've painted hundreds of Delta homes across all three communities. We know how salty marine air wears on exterior finishes. We work on every home style — heritage cottages, modern oceanfront properties, and suburban family homes. Refreshing your Ladner heritage home? Protecting a Tsawwassen property from coastal weather? Updating a North Delta house? We bring precision, honesty, and results.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            Shape of Paint has earned the trust of Delta homeowners because we listen first. You tell us your vision — a fresh interior colour scheme, exterior protection, cabinet transformation — and we get it done right. No surprises. No guessing. Just the professional painting service Delta homeowners deserve.
+            You get painters who listen first. You tell us your vision — a fresh interior colour scheme, exterior protection, cabinet transformation — and we get it done right. No surprises. No guessing. Just the professional painting service your Delta home deserves.
           </p>
         </div>
       </SectionWrapper>
@@ -41,7 +41,7 @@ export default function DeltaAreaPage() {
         eyebrow="Delta Painters"
         heading="Interior & Exterior Painting for Your Delta Home"
         description="Your Delta home deserves painters who know the area. Interior work includes smooth wall finishes, expert trim, and colours that fit your space. Exterior work uses professional-grade coatings built for Delta's marine climate — protecting Tsawwassen oceanfront homes, Ladner heritage properties, and North Delta residences. We handle siding, stucco, trim, decks, and soffits with the same care that keeps homeowners coming back."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting services in Delta BC"
@@ -75,7 +75,7 @@ export default function DeltaAreaPage() {
             Explore Our Painting Services
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary">
-            Whatever your painting needs in Delta, we have the expertise and experience to deliver stunning results. Explore how we can transform your home:
+            Whatever your painting needs in Delta, you get the expertise and experience that delivers stunning results. Explore how we can transform your home:
           </p>
           <div className="space-y-4">
             <div>
@@ -108,7 +108,7 @@ export default function DeltaAreaPage() {
                 Cabinet Painting & Refinishing
               </Link>
               <p className="mt-2 text-lg font-normal leading-relaxed text-text-secondary">
-                Spray-finished kitchen and bathroom cabinets that look brand new at a fraction of replacement cost.
+                Spray-finished kitchen and bathroom cabinets with an artisan finish that rivals custom cabinetry.
               </p>
             </div>
           </div>
@@ -117,8 +117,8 @@ export default function DeltaAreaPage() {
 
       <FeatureSection
         heading="Ready to Transform Your Delta Home?"
-        description="Schedule a free estimate with Shape of Paint. We'll visit your home in Ladner, Tsawwassen, North Delta, or anywhere in Delta. We'll talk about your project and give you a firm quote with no surprises. Hundreds of Delta homeowners already trust us with their homes."
-        ctaText="Get Your Free Estimate"
+        description="Request your free estimate today. We'll visit your home in Ladner, Tsawwassen, North Delta, or anywhere in Delta. We'll talk about your project and give you a firm quote with no surprises. Hundreds of Delta homeowners already trust us with their homes."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting project in Delta BC home"

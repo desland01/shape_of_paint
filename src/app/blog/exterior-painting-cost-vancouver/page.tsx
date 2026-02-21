@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "How Much to Paint a House Exterior in Vancouver (2026) | Shape of Paint",
+  title: "Exterior Painting Cost Vancouver (2026) | Shape of Paint",
   description:
-    "Exterior house painting costs in Vancouver range from $5,000 to $20,000 depending on size, siding type, and prep work. Get accurate pricing for 2026.",
+    "Vancouver homes cost $5,000 to $20,000 to paint. 6 factors determine where yours falls. Here is how to read a quote like a pro.",
 };
 
 export default function ExteriorPaintingCostPage() {

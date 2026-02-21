@@ -7,7 +7,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 export const metadata: Metadata = {
   title: "Painters New Westminster BC | Shape of Paint",
   description:
-    "Professional house painters in New Westminster, BC. Interior, exterior, and cabinet painting for heritage homes and modern properties. Call 604-353-7378 for your free estimate.",
+    "200+ Royal City homes painted with precision. Interior, exterior, and cabinet painting for New Westminster heritage and modern properties. Book your free estimate.",
 };
 
 export default function NewWestminsterAreaPage() {
@@ -15,7 +15,7 @@ export default function NewWestminsterAreaPage() {
     <>
       <PageHero
         heading="House Painters in New Westminster, BC"
-        description="Expert painters for heritage homes, modern condos, and everything in between across the Royal City"
+        description="Your heritage home or modern condo deserves painters who know the Royal City inside and out"
         image="/images/hero-1.webp"
         imageAlt="Painting services in New Westminster"
       />
@@ -29,10 +29,10 @@ export default function NewWestminsterAreaPage() {
             New Westminster is one of BC's most historic communities. Your home — whether it's a Victorian gem in Queens Park or a modern condo overlooking the Fraser River — deserves painters who know the Royal City. Moisture, temperature swings, and tough seasonal weather can damage paint fast. That's why painters in New Westminster need to know which coatings last, which prep stops peeling, and how to protect your home year after year.
           </p>
           <p className="mb-6 text-lg font-normal leading-relaxed text-text-secondary">
-            Shape of Paint serves New Westminster families with a simple approach: listen first, prep well, finish right. We handle interior repaints for Uptown apartments, exterior coatings for Queensborough waterfront properties, and cabinet refinishing across Downtown and Sapperton. Every project gets our full attention — no surprises and a firm quote before we start.
+            Shape of Paint serves New Westminster families with a simple approach: listen first, prep well, finish right. Your Uptown apartment gets a precision interior repaint. Your Queensborough waterfront property gets coatings built for moisture. Your Downtown or Sapperton cabinets get a factory-smooth spray finish. Every project gets our full attention — no surprises and a firm quote before we start.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
-            When you hire Shape of Paint in New Westminster, you get painters who show up on time and communicate daily. We leave your home looking better than you expected. That's how we've earned the trust of hundreds of homeowners across the Royal City.
+            When you hire Shape of Paint in New Westminster, you get painters who show up on time and communicate daily. Your home ends up looking better than you expected. That's how we've earned the trust of hundreds of homeowners across the Royal City.
           </p>
         </div>
       </SectionWrapper>
@@ -41,7 +41,7 @@ export default function NewWestminsterAreaPage() {
         eyebrow="New Westminster Painters"
         heading="Heritage Details, Modern Precision"
         description="Your New Westminster home has its own personality. Maybe it's a character home with crown moulding that needs careful work. Maybe it's a modern Queensborough condo with clean lines. Or a Sapperton family home that needs a full refresh. We match our approach to your space — thorough prep, professional-grade coatings, and finishes that last. Walls, ceilings, trim, cabinets, exterior siding — we handle it all. You pick the colours. We handle the rest."
-        ctaText="Get Your Free Estimate"
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting in New Westminster homes"
@@ -143,8 +143,8 @@ export default function NewWestminsterAreaPage() {
 
       <FeatureSection
         heading="Ready to Transform Your New Westminster Home?"
-        description="From Queens Park heritage homes to Queensborough waterfront properties, we're ready to paint your home with the care and precision it deserves. Get your free estimate today — no pressure, no sales pitch, just honest advice and professional service."
-        ctaText="Get Your Free Estimate"
+        description="From Queens Park heritage homes to Queensborough waterfront properties, your home gets the care and precision it deserves. Request your estimate today — no pressure, no sales pitch, just honest advice and professional service."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting services in New Westminster"

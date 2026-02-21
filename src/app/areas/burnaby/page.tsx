@@ -6,7 +6,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
   title: "Painters Burnaby BC | Shape of Paint",
-  description: "Professional painters in Burnaby BC. Interior and exterior painting for homes and condos. Free estimates. Serving Metrotown, Brentwood, and all Burnaby neighbourhoods.",
+  description: "Over 200 Burnaby homes painted. Interior, exterior, and cabinet painters trusted across Metrotown, Brentwood, and Burnaby Heights. Book your free consultation.",
 };
 
 export default function BurnabyAreaPage() {
@@ -14,7 +14,7 @@ export default function BurnabyAreaPage() {
     <>
       <PageHero
         heading="House Painters in Burnaby, BC"
-        description="Professional painters Burnaby residents trust for interior, exterior, and cabinet painting. Licensed, insured, and serving all Burnaby neighbourhoods."
+        description="Your Burnaby home deserves painters who understand every neighbourhood — from Burnaby Heights heritage to Metrotown condos. Interior, exterior, and cabinet painting. Licensed and insured."
         image="/images/exterior-portfolio-1.webp"
         imageAlt="Exterior house painting in Burnaby"
       />
@@ -25,10 +25,10 @@ export default function BurnabyAreaPage() {
             Heritage to Modern — Every Burnaby Home, Understood
           </h2>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            As painters in Burnaby, we've seen the full range of homes this community has to offer. You might own a heritage character home in Burnaby Heights with original trim that deserves careful restoration. Or you live in a modern condo in Metrotown that needs a fresh palette. Maybe you're in Brentwood with a mid-century home, or near Deer Lake with a family property. Whatever your Burnaby home looks like, we've painted it.
+            You might own a heritage character home in Burnaby Heights with original trim that deserves careful restoration. Or you live in a modern condo in Metrotown that needs a fresh palette. Maybe you're in Brentwood with a mid-century home, or near Deer Lake with a family property. Whatever your Burnaby home looks like, we've painted it — over 200 times across every neighbourhood in this city.
           </p>
           <p className="mb-4 text-lg font-normal leading-relaxed text-text-secondary">
-            We handle interior walls, ceilings, trim, and baseboards. We paint exterior siding, stucco, soffits, and decks built for Vancouver rain. We refinish kitchen and bathroom cabinets. And we know Burnaby's weather patterns — rain, fog, salt air near the mountain. That means we use professional-grade coatings that don't peel, fade, or crack. Your home gets protection that lasts.
+            Your interior gets walls, ceilings, trim, and baseboards done right. Your exterior gets siding, stucco, soffits, and decks built for Vancouver rain. Your kitchen and bathroom cabinets get a hand-sprayed finish that looks factory fresh. And because Burnaby's weather patterns — rain, fog, salt air near the mountain — demand it, every surface gets professional-grade coatings that don't peel, fade, or crack. Your home gets protection that lasts 8-10 years.
           </p>
           <p className="text-lg font-normal leading-relaxed text-text-secondary">
             You pick the colours. You set the timeline. We handle prep, protection, and cleanup without surprises. Firm quotes. Daily updates. One final walkthrough where we don't leave until every detail is right.
@@ -39,8 +39,8 @@ export default function BurnabyAreaPage() {
       <FeatureSection
         eyebrow="Burnaby Painters"
         heading="Expert Painters for Every Burnaby Home"
-        description="From Burnaby Heights heritage homes with original wood trim to modern Metrotown condos to Brentwood's mid-century character properties — we know Burnaby's neighbourhoods and housing styles. We prep right, paint right, and finish with care on every project."
-        ctaText="Get Your Free Estimate"
+        description="Your Burnaby Heights heritage home with original wood trim gets a different approach than your Metrotown condo or Brentwood mid-century property. That's the point. You get painters who know your neighbourhood and your housing style. Every surface prepped right, painted right, and finished with care."
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Interior painting service in Burnaby BC"
@@ -104,15 +104,15 @@ export default function BurnabyAreaPage() {
             >
               cabinet painting services
             </Link>{" "}
-            that make old cabinets look brand new — at a fraction of replacement cost. Every service includes a free colour consultation, firm pricing, and a satisfaction guarantee.
+            that give your cabinets an artisan finish rivaling factory new. Every service includes a free colour consultation, firm pricing, and a satisfaction guarantee.
           </p>
         </div>
       </SectionWrapper>
 
       <FeatureSection
         heading="Ready to transform your Burnaby home?"
-        description="Request a free painting estimate. We'll visit your home, listen to your vision, answer questions, and provide a firm quote — no pressure, no surprises. Call 604-353-7378 or fill out our online form to get started."
-        ctaText="Get Your Free Estimate"
+        description="Your free estimate starts with a visit to your home. You share the vision. We listen, answer questions, and give you a firm quote — no pressure, no surprises. Call 604-353-7378 or fill out the form to get started."
+        ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting in Burnaby BC"

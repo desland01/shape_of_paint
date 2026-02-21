@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver home interior freshly painted by Shape of Paint" },
+  { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
+  { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
 const interiorImages = [
@@ -86,7 +86,7 @@ export default function PortfolioPage() {
       <FeatureSection
         heading="Ready to transform your space?"
         description="Whether it's a single room or a complete exterior, we'd love to show you what's possible. Get your free estimate and join the portfolio."
-        ctaText="Get Your Free Estimate"
+        ctaText="Start Your Project"
         ctaHref="/contact#contact-form"
         image="/images/contact-cta.webp"
         imageAlt="Shape of Paint team at work"

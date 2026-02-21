@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlogPostLayout } from "@/components/sections/BlogPostLayout";
 
 export const metadata: Metadata = {
-  title: "Best Exterior Paint for Vancouver Weather (2026) | Shape of Paint",
+  title: "Best Exterior Paint for Vancouver Weather (2026)",
   description:
-    "Find the best exterior paint for Vancouver's rain, humidity, and mildew. Compare Benjamin Moore Aura Exterior vs Sherwin-Williams Duration and learn what works.",
+    "1,200 mm of rain per year destroys the wrong paint in 2 seasons. These 3 products hold up for 10 to 15 years on Vancouver homes.",
 };
 
 export default function BestExteriorPaintPage() {

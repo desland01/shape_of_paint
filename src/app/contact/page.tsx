@@ -10,17 +10,17 @@ import { ScrollToHash } from "@/components/shared/ScrollToHash";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact Vancouver Painters",
-  description: "Contact Shape of Paint for professional painting services. Request a quote for interior or exterior painting across Vancouver and the Lower Mainland. Call 604-353-7378.",
+  title: "Vancouver Painting Estimate | Shape of Paint",
+  description: "Get your Vancouver painting estimate in 24 hours. 400+ homes finished. Interior, exterior & cabinet specialists. 604-353-7378.",
 };
 
 const instagramImages = [
-  { src: "/images/ig-1.webp", alt: "Shape of Paint project 1" },
-  { src: "/images/ig-2.webp", alt: "Shape of Paint project 2" },
-  { src: "/images/ig-3.webp", alt: "Shape of Paint project 3" },
-  { src: "/images/ig-4.webp", alt: "Shape of Paint project 4" },
-  { src: "/images/ig-5.webp", alt: "Shape of Paint project 5" },
-  { src: "/images/ig-6.webp", alt: "Shape of Paint project 6" },
+  { src: "/images/ig-1.webp", alt: "Vancouver home interior freshly painted by Shape of Paint" },
+  { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
+  { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
+  { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
 export default function ContactPage() {
@@ -28,7 +28,7 @@ export default function ContactPage() {
     <>
       <ScrollToHash />
       <PageHero
-        heading="Get Your Free Estimate"
+        heading="Get Your Vancouver Painting Estimate"
         image="/images/contact-cta.webp"
         imageAlt="Get in touch with Shape of Paint"
       />
@@ -42,8 +42,8 @@ export default function ContactPage() {
             Want a room-by-room number before booking?
           </h2>
           <p className="mt-3 text-base leading-relaxed text-text-secondary md:text-lg">
-            Use our interior cost calculator to build a quick planning estimate, then
-            submit your project details here for a firm quote.
+            Build your room-by-room number in 2 minutes. Then submit your project
+            details here for a firm quote from our team.
           </p>
           <Link
             href="/tools/cost-calculator"
@@ -63,7 +63,7 @@ export default function ContactPage() {
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-content">
           <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-            Firm quotes — no surprises. The price we give is the price you pay. No hidden fees. Shape of Paint is licensed and insured, serving 400+ homes across Vancouver and the Lower Mainland. A 30% deposit is collected when the quote is accepted, with the balance due upon final walkthrough. We accept cash, credit, or e-transfer.
+            Firm quotes — no surprises. The price we quote is the price you pay. No hidden fees, ever. We are licensed, insured, and have finished 400+ homes across Vancouver and the Lower Mainland. You pay a 30% deposit when the quote is accepted. The balance is due after your final walkthrough. We accept credit, e-transfer, or cash.
           </p>
         </div>
       </SectionWrapper>

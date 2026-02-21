@@ -8,7 +8,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Painters Coquitlam BC | Shape of Paint",
   description:
-    "Professional painters in Coquitlam, BC. Interior & exterior painting for Burke Mountain, Westwood Plateau & Maillardville. Free estimate.",
+    "Trusted by 150+ Coquitlam homeowners. Interior, exterior, and cabinet painters for Burke Mountain, Westwood Plateau, and Maillardville. Book a free consultation.",
   alternates: {
     canonical: `${siteConfig.url}/areas/coquitlam`,
   },
@@ -26,7 +26,7 @@ export default function CoquitlamAreaPage() {
     <>
       <PageHero
         heading="House Painters in Coquitlam, BC"
-        description="Trusted painters serving Burke Mountain, Westwood Plateau, Maillardville, and every neighbourhood in Coquitlam. Interior, exterior, and cabinet painting."
+        description="Your Coquitlam home deserves painters who know Burke Mountain new builds and Maillardville heritage equally well. Interior, exterior, and cabinet painting with guaranteed results."
         image="/images/exterior-portfolio-2.webp"
         imageAlt="House painters in Coquitlam"
       />
@@ -38,26 +38,25 @@ export default function CoquitlamAreaPage() {
           </h2>
           <div className="space-y-4 text-lg font-normal leading-relaxed text-muted-foreground">
             <p>
-              As painters in Coquitlam, we know this is one of the Lower Mainland's fastest-growing
-              communities. Your home deserves painters who understand the unique challenges of this
-              diverse city. Whether you live in a brand-new Burke Mountain build or an established
-              home near Lafarge Lake, our team is ready to transform your space.
+              Coquitlam is one of the Lower Mainland's fastest-growing communities. If you live here,
+              your home deserves painters who understand the unique challenges of this diverse city.
+              Whether you own a brand-new Burke Mountain build or an established home near Lafarge
+              Lake, you get a team ready to transform your space.
             </p>
             <p>
-              We handle interior painting that brings your vision to life. Think fresh walls, crisp
-              trim, perfectly painted ceilings, and detailed baseboards. We also paint fireplaces,
-              staircases, and every surface that matters. You pick the colours. We handle the
-              craftsmanship.
+              Your interior painting brings your vision to life. Think fresh walls, crisp trim,
+              perfectly painted ceilings, and detailed baseboards. Fireplaces, staircases, and every
+              surface that matters to you. You pick the colours. You get the craftsmanship.
             </p>
             <p>
-              Our exterior painting protects your investment against Vancouver's rain and BC
-              weather. Siding, stucco, trim, soffits, decks — we use professional-grade coatings that last
-              for years. Your Coquitlam home stays beautiful and protected.
+              Your exterior painting protects your investment against Vancouver's rain and BC
+              weather. Siding, stucco, trim, soffits, decks — all finished with professional-grade
+              coatings that last 8-10 years. Your Coquitlam home stays beautiful and protected.
             </p>
             <p>
               From new builds in Westwood Plateau to heritage homes in Maillardville, we've painted
-              every type of property across Coquitlam. Every project gets our full attention. Every
-              homeowner gets results they're proud to show off.
+              over 150 Coquitlam properties. Every project gets our full attention. Every homeowner
+              gets results they're proud to show off.
             </p>
           </div>
         </div>
@@ -66,8 +65,8 @@ export default function CoquitlamAreaPage() {
       <FeatureSection
         eyebrow="Coquitlam Painters"
         heading="Local Expertise for Your Neighbourhood"
-        description="We know Coquitlam's mix of new builds and older homes. We handle fresh finishes in Burke Mountain new construction and careful restoration in Maillardville. Whether your home sits near Austin Heights or overlooks the Evergreen SkyTrain corridor, we bring the same care to every project. Quality work, reliable timelines, and painters you can trust in your home."
-        ctaText="Get Your Free Estimate"
+        description="Your Coquitlam home gets painters who know the difference between a Burke Mountain new build and a Maillardville heritage restoration. Whether your home sits near Austin Heights or overlooks the Evergreen SkyTrain corridor, you get the same care on every project. Quality work, reliable timelines, and painters you can trust in your home."
+        ctaText="Book Your Free Consultation"
         ctaHref="/contact#contact-form"
         image="/images/interior.webp"
         imageAlt="Professional interior painting in Coquitlam home"
@@ -123,7 +122,7 @@ export default function CoquitlamAreaPage() {
             >
               {" cabinet painting"}
             </Link>
-            {" that gives kitchens and bathrooms a brand-new look without the renovation cost."}
+            {" that gives kitchens and bathrooms a brand-new look without a full renovation."}
             {" Each service reflects our commitment to quality finishes and reliable craftsmanship."}
           </p>
         </div>
@@ -131,8 +130,8 @@ export default function CoquitlamAreaPage() {
 
       <FeatureSection
         heading="Ready to transform your Coquitlam home?"
-        description="Get a free, no-obligation estimate from Shape of Paint. We'll visit your home, listen to your vision, and show you exactly what's possible."
-        ctaText="Get Your Free Estimate"
+        description="Your free, no-obligation estimate starts with a home visit. You share your vision. We show you exactly what's possible and give you a firm quote."
+        ctaText="Talk to Our Team"
         ctaHref="/contact#contact-form"
         image="/images/exterior.webp"
         imageAlt="Exterior painting in Coquitlam BC"
