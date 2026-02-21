@@ -26,9 +26,9 @@ interface NumberPadSheetProps {
 const KEY_SPRING = { type: "spring" as const, stiffness: 500, damping: 30 }
 
 const KEYS = [
-  ["7", "8", "9"],
-  ["4", "5", "6"],
   ["1", "2", "3"],
+  ["4", "5", "6"],
+  ["7", "8", "9"],
   [".", "0", "backspace"],
 ] as const
 
