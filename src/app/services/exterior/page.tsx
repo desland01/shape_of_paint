@@ -100,12 +100,12 @@ export default function ExteriorPaintingPage() {
             <li>Decks and porches — Your wood takes a beating from Vancouver rain. We stain and seal it to hold through every season.</li>
             <li>Front doors and garage doors — Your entryway sets the tone. We match colors and finishes so your home looks great from the street.</li>
           </ul>
-          <blockquote className="my-8 border-l-4 border-foreground/20 pl-6">
-            <p className="text-lg italic leading-relaxed text-foreground">
+          <blockquote className="my-10 rounded-sm border-l-4 border-accent-gold bg-warm-light py-8 px-8 md:my-12 md:px-10">
+            <p className="text-lg italic leading-relaxed text-foreground md:text-xl">
               &ldquo;In coastal climates like Vancouver, the enemy is not just rain — it is the combination of moisture, UV exposure, and temperature cycling. A 100% acrylic latex formula with mildew-resistant additives is the only coating system that consistently performs in these conditions.&rdquo;
             </p>
-            <footer className="mt-2 text-base font-normal text-text-secondary">
-              — Rick Watson, Director of Product Information, Sherwin-Williams
+            <footer className="mt-4 text-sm font-normal text-text-muted">
+              <span className="font-medium text-text-secondary">Rick Watson</span>, Director of Product Information, Sherwin-Williams
             </footer>
           </blockquote>
         </div>
@@ -138,10 +138,10 @@ export default function ExteriorPaintingPage() {
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-8">
+          <div className="divide-y divide-border-subtle">
             {faqItems.map((item, i) => (
-              <div key={i}>
-                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+              <div key={i} className={i === 0 ? "pb-8" : "py-8"}>
+                <h3 className="mb-3 text-xl font-medium text-foreground">{item.question}</h3>
                 <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
               </div>
             ))}

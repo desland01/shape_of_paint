@@ -196,13 +196,11 @@ export default function NewWestminsterAreaPage() {
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Frequently Asked Questions About Painting in New Westminster
           </h2>
-          <div className="space-y-8">
-            {faqItems.map((item) => (
-              <div key={item.question}>
-                <h3 className="text-xl font-medium">{item.question}</h3>
-                <p className="mt-3 text-lg font-normal leading-relaxed text-text-secondary">
-                  {item.answer}
-                </p>
+          <div className="divide-y divide-border-subtle">
+            {faqItems.map((item, i) => (
+              <div key={item.question} className={i === 0 ? "pb-8" : "py-8"}>
+                <h3 className="mb-3 text-xl font-medium text-foreground">{item.question}</h3>
+                <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
               </div>
             ))}
           </div>

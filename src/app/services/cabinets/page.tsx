@@ -184,12 +184,12 @@ export default function CabinetPaintingPage() {
               and align every hinge.
             </li>
           </ol>
-          <blockquote className="my-8 border-l-4 border-foreground/20 pl-6">
-            <p className="text-lg italic leading-relaxed text-foreground">
+          <blockquote className="my-10 rounded-sm border-l-4 border-accent-gold bg-warm-light py-8 px-8 md:my-12 md:px-10">
+            <p className="text-lg italic leading-relaxed text-foreground md:text-xl">
               &ldquo;The factory finish on most production cabinets uses a single-step catalyzed lacquer. A professional spray refinish with a multi-step system — primer, two coats of enamel, and a clear topcoat — creates a harder, more durable surface that outlasts the factory original.&rdquo;
             </p>
-            <footer className="mt-2 text-base font-normal text-text-secondary">
-              — Chris Berry, Technical Director, Fine Paints of Europe
+            <footer className="mt-4 text-sm font-normal text-text-muted">
+              <span className="font-medium text-text-secondary">Chris Berry</span>, Technical Director, Fine Paints of Europe
             </footer>
           </blockquote>
         </div>

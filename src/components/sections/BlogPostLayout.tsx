@@ -130,7 +130,7 @@ export function BlogPostLayout({
           </header>
         </SlideUp>
 
-        <div className="prose-custom space-y-6 text-xl font-normal leading-relaxed text-text-secondary md:text-2xl [&_blockquote]:border-l-4 [&_blockquote]:border-foreground/20 [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-3xl [&_h2]:font-normal [&_h2]:leading-[1.2] [&_h2]:text-foreground md:[&_h2]:text-4xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-2xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+        <div className="prose-custom space-y-6 text-xl font-normal leading-relaxed text-text-secondary md:text-2xl [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-3xl [&_h2]:font-normal [&_h2]:leading-[1.2] [&_h2]:text-foreground md:[&_h2]:text-4xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-2xl [&_h3]:font-medium [&_h3]:text-foreground [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
           {children}
         </div>
       </div>

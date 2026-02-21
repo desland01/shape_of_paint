@@ -121,6 +121,15 @@ src/
 | Add services | Edit `services` array in `src/config/site.ts` — shape: `{ title, description, href, image }`. |
 | Add FAQ items | Edit the `faqItems` array in `src/app/contact/faq/page.tsx`. |
 
+### Interactive Elements
+
+| "I want to..." | Do this |
+|-----------------|---------|
+| Build a new interactive element (form, calculator, wizard) | Read `.claude/skills/interactive-elements/SKILL.md` or run `/interactive-elements` |
+| Add bottom sheet input to a form field | Read `.claude/skills/interactive-elements/mobile-input-reference.md` |
+| Add steps to a step wizard | Read `.claude/skills/interactive-elements/step-wizard-reference.md` |
+| Build or modify calculator logic | Read `.claude/skills/interactive-elements/calculator-reference.md` |
+
 ### Forms & Integrations
 
 | "I want to..." | Do this |
@@ -238,6 +247,8 @@ Use plain `<Link>` not shadcn `<Button>` — shadcn overrides hover colors.
 | TrustBar | shared/TrustBar.tsx | (trust signals: review count, years, etc.) |
 | Header | layout/Header.tsx | (sticky, transparent-on-hero, scroll-aware, reads site config) |
 | Footer | layout/Footer.tsx | (reads from site config) |
+| NumberPadSheet | ui/number-pad-sheet.tsx | open, onValueChange, value, maxLength?, maxValue?, allowDecimal?, label |
+| TextInputSheet | ui/text-input-sheet.tsx | open, onOpenChange, value, onValueChange, label, placeholder? |
 
 ## Site Config
 

@@ -87,12 +87,12 @@ export default function InteriorPaintingPage() {
             <li>4. You get the right technique for each surface — Brush for trim, roller for walls, spray for ceilings. Your project gets the method that delivers the smoothest result.</li>
             <li>5. You approve every detail — We walk through the finished space together. You point out anything. We fix it before we leave. Zero punch-list surprises.</li>
           </ol>
-          <blockquote className="my-8 border-l-4 border-foreground/20 pl-6">
-            <p className="text-lg italic leading-relaxed text-foreground">
+          <blockquote className="my-10 rounded-sm border-l-4 border-accent-gold bg-warm-light py-8 px-8 md:my-12 md:px-10">
+            <p className="text-lg italic leading-relaxed text-foreground md:text-xl">
               &ldquo;The difference between a good paint job and a great one is always in the preparation. A properly primed and sanded surface allows the topcoat to bond at the molecular level, delivering the colour depth and durability that homeowners expect from a premium product like Regal Select.&rdquo;
             </p>
-            <footer className="mt-2 text-base font-normal text-text-secondary">
-              — Andrea Magno, Director of Colour Marketing, Benjamin Moore
+            <footer className="mt-4 text-sm font-normal text-text-muted">
+              <span className="font-medium text-text-secondary">Andrea Magno</span>, Director of Colour Marketing, Benjamin Moore
             </footer>
           </blockquote>
         </div>
@@ -162,10 +162,10 @@ export default function InteriorPaintingPage() {
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-8">
+          <div className="divide-y divide-border-subtle">
             {faqItems.map((item, i) => (
-              <div key={i}>
-                <h3 className="mb-3 text-xl font-medium">{item.question}</h3>
+              <div key={i} className={i === 0 ? "pb-8" : "py-8"}>
+                <h3 className="mb-3 text-xl font-medium text-foreground">{item.question}</h3>
                 <p className="text-lg font-normal leading-relaxed text-text-secondary">{item.answer}</p>
               </div>
             ))}
