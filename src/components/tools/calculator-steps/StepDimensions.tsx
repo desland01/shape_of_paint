@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import type { RoomData } from "@/lib/cost-calculator/types";
 import { MAX_DIMENSIONS } from "@/lib/cost-calculator/constants";
 import { cn } from "@/lib/utils";
-import { X } from "lucide-react";
+import { Pencil, X } from "lucide-react";
+import { NumberPadSheet } from "@/components/ui/number-pad-sheet";
+import { TextInputSheet } from "@/components/ui/text-input-sheet";
 
 const parseNum = (v: string) => { const n = Number(v); return Number.isFinite(n) ? n : 0; };
 
@@ -18,10 +23,13 @@ const DIM_FIELDS = [
   { key: "height" as const, label: "Height", max: MAX_DIMENSIONS.height },
 ] as const;
 
+type SheetId = "room-name" | "length" | "width" | "height";
+
 export const StepDimensions = ({
   rooms, currentRoomIndex, currentRoom, error,
   updateCurrentRoom, addRoom, removeRoom, setCurrentRoomIndex, onContinue,
 }: StepDimensionsProps) => {
+  const [activeSheet, setActiveSheet] = useState<SheetId | null>(null);
 
   return (
     <div className="space-y-5">
@@ -60,7 +68,8 @@ export const StepDimensions = ({
         </div>
       )}
 
-      <div>
+      {/* Room name — desktop input */}
+      <div className="hidden md:block">
         <label htmlFor="room-name" className="sr-only">Room name</label>
         <input
           id="room-name"
@@ -75,6 +84,23 @@ export const StepDimensions = ({
         />
       </div>
 
+      {/* Room name — mobile tappable display */}
+      <div className="md:hidden">
+        <button
+          type="button"
+          aria-label="Edit room name"
+          onClick={() => setActiveSheet("room-name")}
+          className={cn(
+            "min-h-12 w-full rounded-xl border bg-background px-4 py-3 text-left text-base flex items-center justify-between transition-colors focus:outline-none focus:border-accent-gold",
+            error ? "border-red-500" : "border-border-subtle",
+            currentRoom.name ? "text-foreground" : "text-text-muted"
+          )}
+        >
+          <span>{currentRoom.name || "Living Room, Bedroom, Office..."}</span>
+          <Pencil className="h-4 w-4 shrink-0 text-text-secondary" />
+        </button>
+      </div>
+
       <div className="rounded-2xl border border-border-subtle bg-warm-light p-4">
         <p className="text-base font-semibold uppercase tracking-[0.09em] text-foreground">Dimensions</p>
         <div className="mt-3 grid grid-cols-3 gap-3">
@@ -83,7 +109,9 @@ export const StepDimensions = ({
               <label htmlFor={`dim-${field.key}`} className="mb-1 block text-xs font-semibold uppercase tracking-wider text-text-secondary">
                 {field.label}
               </label>
-              <div className="relative">
+
+              {/* Desktop input */}
+              <div className="relative hidden md:block">
                 <input
                   id={`dim-${field.key}`}
                   type="number"
@@ -96,6 +124,25 @@ export const StepDimensions = ({
                 />
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-text-secondary">ft</span>
               </div>
+
+              {/* Mobile tappable display */}
+              <button
+                type="button"
+                aria-label={`Edit ${field.label}`}
+                onClick={() => setActiveSheet(field.key)}
+                className="md:hidden min-h-12 w-full rounded-xl border border-border-subtle bg-background px-3 py-3 text-base flex items-center justify-between transition-colors focus:outline-none focus:border-accent-gold"
+              >
+                <span className={cn(
+                  "flex-1 text-center",
+                  currentRoom[field.key] ? "text-foreground" : "text-text-muted"
+                )}>
+                  {currentRoom[field.key] || "0"}
+                </span>
+                <span className="flex items-center gap-1.5 shrink-0">
+                  <span className="text-xs text-text-secondary">ft</span>
+                  <Pencil className="h-3.5 w-3.5 text-text-secondary" />
+                </span>
+              </button>
             </div>
           ))}
         </div>
@@ -123,6 +170,30 @@ export const StepDimensions = ({
           Continue
         </button>
       </div>
+
+      {/* Bottom sheets — only one open at a time */}
+      <TextInputSheet
+        open={activeSheet === "room-name"}
+        onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+        value={currentRoom.name}
+        onChange={(val) => updateCurrentRoom({ name: val })}
+        label="Room Name"
+        placeholder="Living Room, Bedroom, Office..."
+      />
+
+      {DIM_FIELDS.map((field) => (
+        <NumberPadSheet
+          key={field.key}
+          open={activeSheet === field.key}
+          onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+          value={currentRoom[field.key]}
+          onChange={(val) => updateCurrentRoom({ [field.key]: val })}
+          label={field.label}
+          suffix="ft"
+          allowDecimal={true}
+          maxValue={field.max}
+        />
+      ))}
     </div>
   );
 };

@@ -1,8 +1,10 @@
-import { Check } from "lucide-react";
+import { useState } from "react";
+import { Check, Pencil } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MAX_DIMENSIONS } from "@/lib/cost-calculator/constants";
 import type { RoomData, RoomMetrics } from "@/lib/cost-calculator/types";
+import { NumberPadSheet } from "@/components/ui/number-pad-sheet";
 
 interface StepSurfacesProps {
   currentRoom: RoomData;
@@ -73,6 +75,8 @@ export function StepSurfaces({
   onBack,
   onContinue,
 }: StepSurfacesProps) {
+  const [doorPadOpen, setDoorPadOpen] = useState(false);
+
   return (
     <div className="space-y-3 md:space-y-5">
       <p className="text-base text-text-secondary">
@@ -123,11 +127,13 @@ export function StepSurfaces({
       <div className="rounded-2xl border border-border-subtle bg-warm-light p-3 md:p-4">
         <label
           htmlFor="door-sides"
-          className="block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted"
+          className="block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted md:mb-0"
         >
           Door sides
         </label>
-        <div className="mt-2 flex items-center gap-3">
+
+        {/* Desktop: standard number input */}
+        <div className="mt-2 hidden items-center gap-3 md:flex">
           <input
             id="door-sides"
             type="number"
@@ -147,6 +153,24 @@ export function StepSurfaces({
               : "Enter total sides, not number of doors."}
           </p>
         </div>
+
+        {/* Mobile: tappable display that opens NumberPadSheet */}
+        <button
+          type="button"
+          onClick={() => setDoorPadOpen(true)}
+          className="mt-2 flex w-full items-center gap-3 md:hidden"
+          aria-label={`Door sides: ${currentRoom.doorSides}. Tap to edit.`}
+        >
+          <span className="flex min-h-12 w-20 shrink-0 items-center justify-center rounded-xl border border-border-subtle bg-background text-lg font-semibold text-foreground">
+            {currentRoom.doorSides}
+          </span>
+          <span className="flex-1 text-left text-base text-text-secondary">
+            {currentRoom.doorSides > 0
+              ? `${Math.ceil(currentRoom.doorSides / 2)} door${Math.ceil(currentRoom.doorSides / 2) > 1 ? "s" : ""} (two sides each)`
+              : "Enter total sides, not number of doors."}
+          </span>
+          <Pencil className="h-4 w-4 shrink-0 text-text-muted" aria-hidden="true" />
+        </button>
       </div>
 
       <p className="text-center text-sm text-text-muted">
@@ -169,6 +193,17 @@ export function StepSurfaces({
           Continue
         </button>
       </div>
+
+      <NumberPadSheet
+        open={doorPadOpen}
+        onOpenChange={setDoorPadOpen}
+        value={currentRoom.doorSides}
+        onChange={(val) => updateCurrentRoom({ doorSides: val })}
+        label="Door Sides"
+        suffix="sides"
+        allowDecimal={false}
+        maxValue={MAX_DIMENSIONS.doorSides}
+      />
     </div>
   );
 }

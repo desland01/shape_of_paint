@@ -7,6 +7,9 @@ import { z } from "zod";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Pencil } from "lucide-react";
+import { NumberPadSheet } from "@/components/ui/number-pad-sheet";
+import { TextInputSheet } from "@/components/ui/text-input-sheet";
 
 /* -------------------------------------------------------------------------- */
 /*  Schema                                                                     */
@@ -80,6 +83,12 @@ export function ContactForm() {
   });
 
   const selectedProject = watch("projectType");
+  const nameValue = watch("name");
+  const phoneValue = watch("phone");
+  const emailValue = watch("email");
+  const messageValue = watch("message");
+
+  const [activeSheet, setActiveSheet] = useState<string | null>(null);
 
   /* ------ Navigation helpers ------ */
 
@@ -308,76 +317,145 @@ export function ContactForm() {
               >
                 {/* Name */}
                 <div>
-                  <div className="relative">
-                    <input
-                      id="name"
-                      type="text"
-                      placeholder=" "
-                      autoComplete="name"
-                      aria-invalid={errors.name ? "true" : undefined}
-                      aria-describedby={errors.name ? "name-error" : undefined}
-                      className={INPUT_CLASS}
-                      {...register("name")}
-                    />
-                    <label htmlFor="name" className={LABEL_CLASS}>
-                      Your Name
-                    </label>
+                  {/* Desktop: floating-label input */}
+                  <div className="hidden md:block">
+                    <div className="relative">
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder=" "
+                        autoComplete="name"
+                        aria-invalid={errors.name ? "true" : undefined}
+                        aria-describedby={errors.name ? "name-error" : undefined}
+                        className={INPUT_CLASS}
+                        {...register("name")}
+                      />
+                      <label htmlFor="name" className={LABEL_CLASS}>
+                        Your Name
+                      </label>
+                    </div>
+                    {errors.name && (
+                      <p id="name-error" className="text-xs text-red-600 mt-1">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
-                  {errors.name && (
-                    <p id="name-error" className="text-xs text-red-600 mt-1">
-                      {errors.name.message}
-                    </p>
-                  )}
+                  {/* Mobile: tappable display */}
+                  <div className="md:hidden">
+                    <button
+                      type="button"
+                      onClick={() => setActiveSheet("name")}
+                      aria-label={nameValue ? `Edit name: ${nameValue}` : "Enter your name"}
+                      className={`min-h-12 w-full border bg-background px-3 py-3 text-left text-base flex items-center justify-between ${
+                        errors.name ? "border-red-500" : "border-border-subtle"
+                      }`}
+                    >
+                      <span className={nameValue ? "text-foreground" : "text-text-muted"}>
+                        {nameValue || "Your Name"}
+                      </span>
+                      <Pencil className="h-4 w-4 text-text-secondary flex-shrink-0" />
+                    </button>
+                    {errors.name && (
+                      <p className="text-xs text-red-600 mt-1">
+                        {errors.name.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* Phone */}
                 <div>
-                  <div className="relative">
-                    <input
-                      id="phone"
-                      type="tel"
-                      placeholder=" "
-                      autoComplete="tel"
-                      className={INPUT_CLASS}
-                      {...register("phone")}
-                    />
-                    <label htmlFor="phone" className={LABEL_CLASS}>
-                      Phone -- fastest way to reach you
-                    </label>
+                  {/* Desktop: floating-label input */}
+                  <div className="hidden md:block">
+                    <div className="relative">
+                      <input
+                        id="phone"
+                        type="tel"
+                        placeholder=" "
+                        autoComplete="tel"
+                        className={INPUT_CLASS}
+                        {...register("phone")}
+                      />
+                      <label htmlFor="phone" className={LABEL_CLASS}>
+                        Phone -- fastest way to reach you
+                      </label>
+                    </div>
+                  </div>
+                  {/* Mobile: tappable display */}
+                  <div className="md:hidden">
+                    <button
+                      type="button"
+                      onClick={() => setActiveSheet("phone")}
+                      aria-label={phoneValue ? `Edit phone: ${phoneValue}` : "Enter your phone number"}
+                      className="min-h-12 w-full border border-border-subtle bg-background px-3 py-3 text-left text-base flex items-center justify-between"
+                    >
+                      <span className={phoneValue ? "text-foreground" : "text-text-muted"}>
+                        {phoneValue || "Phone -- fastest way to reach you"}
+                      </span>
+                      <Pencil className="h-4 w-4 text-text-secondary flex-shrink-0" />
+                    </button>
                   </div>
                 </div>
 
                 {/* Email */}
                 <div>
-                  <div className="relative">
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder=" "
-                      autoComplete="email"
-                      aria-invalid={errors.email ? "true" : undefined}
-                      aria-describedby={
-                        errors.email ? "email-error" : "email-trust-copy"
-                      }
-                      className={INPUT_CLASS}
-                      {...register("email")}
-                    />
-                    <label htmlFor="email" className={LABEL_CLASS}>
-                      Email Address
-                    </label>
+                  {/* Desktop: floating-label input */}
+                  <div className="hidden md:block">
+                    <div className="relative">
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder=" "
+                        autoComplete="email"
+                        aria-invalid={errors.email ? "true" : undefined}
+                        aria-describedby={
+                          errors.email ? "email-error" : "email-trust-copy"
+                        }
+                        className={INPUT_CLASS}
+                        {...register("email")}
+                      />
+                      <label htmlFor="email" className={LABEL_CLASS}>
+                        Email Address
+                      </label>
+                    </div>
+                    {errors.email ? (
+                      <p id="email-error" className="text-xs text-red-600 mt-1">
+                        {errors.email.message}
+                      </p>
+                    ) : (
+                      <p
+                        id="email-trust-copy"
+                        className="text-xs text-text-muted mt-1"
+                      >
+                        We never share your info
+                      </p>
+                    )}
                   </div>
-                  {errors.email ? (
-                    <p id="email-error" className="text-xs text-red-600 mt-1">
-                      {errors.email.message}
-                    </p>
-                  ) : (
-                    <p
-                      id="email-trust-copy"
-                      className="text-xs text-text-muted mt-1"
+                  {/* Mobile: tappable display */}
+                  <div className="md:hidden">
+                    <button
+                      type="button"
+                      onClick={() => setActiveSheet("email")}
+                      aria-label={emailValue ? `Edit email: ${emailValue}` : "Enter your email address"}
+                      className={`min-h-12 w-full border bg-background px-3 py-3 text-left text-base flex items-center justify-between ${
+                        errors.email ? "border-red-500" : "border-border-subtle"
+                      }`}
                     >
-                      We never share your info
-                    </p>
-                  )}
+                      <span className={emailValue ? "text-foreground" : "text-text-muted"}>
+                        {emailValue || "Email Address"}
+                      </span>
+                      <Pencil className="h-4 w-4 text-text-secondary flex-shrink-0" />
+                    </button>
+                    {errors.email ? (
+                      <p className="text-xs text-red-600 mt-1">
+                        {errors.email.message}
+                      </p>
+                    ) : (
+                      <p className="text-xs text-text-muted mt-1">
+                        We never share your info
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* Navigation */}
@@ -419,21 +497,41 @@ export function ContactForm() {
                       Optional
                     </span>
                   </div>
-                  <div className="relative">
-                    <textarea
-                      id="message"
-                      placeholder=" "
-                      rows={3}
-                      className={`${INPUT_CLASS} resize-y`}
-                      {...register("message")}
-                    />
-                    <label htmlFor="message" className={LABEL_CLASS}>
-                      Tell us about your project
-                    </label>
+                  {/* Desktop: floating-label textarea */}
+                  <div className="hidden md:block">
+                    <div className="relative">
+                      <textarea
+                        id="message"
+                        placeholder=" "
+                        rows={3}
+                        className={`${INPUT_CLASS} resize-y`}
+                        {...register("message")}
+                      />
+                      <label htmlFor="message" className={LABEL_CLASS}>
+                        Tell us about your project
+                      </label>
+                    </div>
+                    <p className="text-xs text-text-muted mt-1">
+                      Rooms, square footage, timeline -- whatever you know so far
+                    </p>
                   </div>
-                  <p className="text-xs text-text-muted mt-1">
-                    Rooms, square footage, timeline -- whatever you know so far
-                  </p>
+                  {/* Mobile: tappable display */}
+                  <div className="md:hidden">
+                    <button
+                      type="button"
+                      onClick={() => setActiveSheet("message")}
+                      aria-label={messageValue ? "Edit project details" : "Tell us about your project"}
+                      className="min-h-12 w-full border border-border-subtle bg-background px-3 py-3 text-left text-base flex items-center justify-between"
+                    >
+                      <span className={`${messageValue ? "text-foreground" : "text-text-muted"} line-clamp-2`}>
+                        {messageValue || "Tell us about your project"}
+                      </span>
+                      <Pencil className="h-4 w-4 text-text-secondary flex-shrink-0" />
+                    </button>
+                    <p className="text-xs text-text-muted mt-1">
+                      Rooms, square footage, timeline -- whatever you know so far
+                    </p>
+                  </div>
                 </div>
 
                 {/* Navigation */}
@@ -465,6 +563,49 @@ export function ContactForm() {
           </AnimatePresence>
         </div>
       </form>
+
+      {/* ---- Bottom sheets (mobile only, rendered via portal) ---- */}
+      <TextInputSheet
+        open={activeSheet === "name"}
+        onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+        value={nameValue || ""}
+        onChange={(val) => setValue("name", val, { shouldValidate: true })}
+        label="Your Name"
+        type="text"
+        autoComplete="name"
+        error={errors.name?.message}
+      />
+
+      <NumberPadSheet
+        open={activeSheet === "phone"}
+        onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+        value={phoneValue || ""}
+        onChange={(val) => setValue("phone", String(val))}
+        label="Phone -- fastest way to reach you"
+        allowDecimal={false}
+        maxLength={10}
+      />
+
+      <TextInputSheet
+        open={activeSheet === "email"}
+        onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+        value={emailValue || ""}
+        onChange={(val) => setValue("email", val, { shouldValidate: true })}
+        label="Email Address"
+        type="email"
+        autoComplete="email"
+        error={errors.email?.message}
+      />
+
+      <TextInputSheet
+        open={activeSheet === "message"}
+        onOpenChange={(open) => { if (!open) setActiveSheet(null); }}
+        value={messageValue || ""}
+        onChange={(val) => setValue("message", val)}
+        label="Tell us about your project"
+        multiline
+        rows={3}
+      />
     </div>
   );
 }
