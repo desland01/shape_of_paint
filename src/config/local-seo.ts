@@ -133,7 +133,7 @@ export const SERVICE_CONTENT = {
       "Siding, stucco, trim, and decks coated with prep-driven systems built for Lower Mainland rain, UV, and seasonal temperature shifts.",
     heroImage: "/images/exterior.webp",
     heroAlt: "Exterior painting service by Shape of Paint",
-    image: "/images/exterior-work.webp",
+    image: "/images/exterior-portfolio-3.webp",
     imageAlt: "Exterior painting detail by Shape of Paint",
     brands: ["Benjamin Moore", "Novocolor", "Metropolis"],
   },
