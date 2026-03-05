@@ -25,6 +25,7 @@ interface FeatureSectionProps {
   ctaHref: string;
   image: string;
   imageAlt: string;
+  imageAspect?: "landscape" | "square" | "portrait";
   reversed?: boolean;
   variant?: "default" | "warm";
 }
@@ -37,9 +38,15 @@ export function FeatureSection({
   ctaHref,
   image,
   imageAlt,
+  imageAspect = "landscape",
   reversed = false,
   variant = "default",
 }: FeatureSectionProps) {
+  const aspectClass = {
+    landscape: "aspect-[4/3]",
+    square: "aspect-square",
+    portrait: "aspect-[3/4]",
+  }[imageAspect];
   const sectionRef = useRef<HTMLElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const parallax = getParallaxConfig();
@@ -74,13 +81,13 @@ export function FeatureSection({
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         {/*
           CSS Grid overlap layout:
-          - 12 columns on desktop
-          - Image spans columns 5-12 (default) or 1-8 (reversed)
-          - Card spans columns 1-7 (default) or 6-12 (reversed)
-          - Both share row 1, creating the overlap
+         - 12 columns on desktop
+         - Image spans columns 5-12 (default) or 1-8 (reversed)
+         - Card spans columns 1-7 (default) or 6-12 (reversed)
+         - Both share row 1, creating the overlap
         */}
         <div className="relative md:grid md:grid-cols-12 md:items-center">
-          {/* Image area — positioned to the right (default) or left (reversed) */}
+          {/* Image area - positioned to the right (default) or left (reversed) */}
           <motion.div
             style={{ y: imageY }}
             className={cn(
@@ -91,7 +98,7 @@ export function FeatureSection({
             )}
           >
             <div className="relative overflow-visible">
-              {/* Watercolor splash — prominent organic painterly element */}
+              {/* Watercolor splash - prominent organic painterly element */}
               <motion.div style={{ y: blobY, x: blobX }} className={cn(
                   "absolute z-[2] pointer-events-none",
                   reversed
@@ -126,7 +133,7 @@ export function FeatureSection({
                 </svg>
               </motion.div>
               {/* Image container with subtle shadow */}
-              <motion.div style={{ scale: imageScale }} className="relative z-[1] aspect-[4/3] overflow-hidden shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700">
+              <motion.div style={{ scale: imageScale }} className={`relative z-[1] ${aspectClass} overflow-hidden shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_50px_80px_-50px_rgba(222,150,125,1)] transition-shadow duration-700`}>
                 <Image
                   src={image}
                   alt={imageAlt}
@@ -138,7 +145,7 @@ export function FeatureSection({
             </div>
           </motion.div>
 
-          {/* Text card — overlaps the image via shared grid row */}
+          {/* Text card - overlaps the image via shared grid row */}
           <motion.div
             style={{ y: textCardY }}
             className={cn(

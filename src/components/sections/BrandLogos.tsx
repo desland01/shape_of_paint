@@ -87,7 +87,7 @@ export const BrandLogos = ({
     return (
       <div className="flex flex-wrap items-center justify-center gap-6">
         {brands.map((brand) => (
-          <div key={brand.name} className="opacity-40">
+          <div key={brand.name} className="opacity-50">
             <LogoImage
               src={brand.logo}
               alt={brand.name}

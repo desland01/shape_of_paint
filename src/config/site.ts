@@ -1,20 +1,17 @@
 import {
   CITY_CONTENT,
   CITY_SLUGS,
+  INDEXABLE_SERVICE_SLUGS,
   PRIMARY_CITY_SLUG,
   SERVICE_CONTENT,
   getCityPath,
   getCityServicePath,
   getVancouverServicePath,
   type CitySlug,
-  type ServiceSlug,
+  type IndexableServiceSlug,
 } from "@/config/local-seo";
 
-const PRIMARY_SERVICES = [
-  "interior-painting",
-  "exterior-painting",
-  "cabinet-painting",
-] as const satisfies ServiceSlug[];
+const PRIMARY_SERVICES = [...INDEXABLE_SERVICE_SLUGS] as const satisfies readonly IndexableServiceSlug[];
 
 const NAV_LOCATION_SLUGS = [
   "burnaby",
@@ -29,7 +26,7 @@ const GOOGLE_MAPS_URL = "https://www.google.com/maps?cid=9497625668518470323";
 
 export const siteConfig = {
   name: "Shape of Paint",
-  tagline: "Vancouver's Master Painters. Not the Fastest — the Best.",
+  tagline: "Vancouver's Master Painters. Not the Fastest. The Best.",
   description:
     "House painters Vancouver homeowners trust with their biggest investment. Interior, exterior, and cabinet masters. 604-353-7378.",
   url: "https://shapeofpaint.com",
@@ -118,19 +115,19 @@ export const siteConfig = {
     },
     {
       quote:
-        "Gabe is a true master painter. The results were honestly breathtaking — his team took our home to a new level. Trusted him so much I recommended him to paint my 90-year-old mom's home.",
+        "Gabe is a true master painter. The results were honestly breathtaking - his team took our home to a new level. Trusted him so much I recommended him to paint my 90-year-old mom's home.",
       author: "Lori",
       rating: 5,
     },
     {
       quote:
-        "Marvellous job. Walls, fireplaces, spindles up the stairs — he did it all during our major reno. We needed level 5 finish on our accent walls and he nailed it. Everything looks incredible.",
+        "Marvellous job. Walls, fireplaces, spindles up the stairs - he did it all during our major reno. We needed level 5 finish on our accent walls and he nailed it. Everything looks incredible.",
       author: "Sean",
       rating: 5,
     },
     {
       quote:
-        "The kitchen looks like a brand new kitchen was installed. I still cannot believe they are my old cupboards. The quality is unbelievable. His eye for detail is incredible — top quality workmanship.",
+        "The kitchen looks like a brand new kitchen was installed. I still cannot believe they are my old cupboards. The quality is unbelievable. His eye for detail is incredible - top quality workmanship.",
       author: "Marinda",
       rating: 5,
     },
@@ -142,7 +139,7 @@ export const siteConfig = {
     },
     {
       quote:
-        "Immaculate attention to detail and dedication to quality. Gabe is truly a master of his craft. We were completely satisfied with the finished job — the interior of our house looks stunning.",
+        "Immaculate attention to detail and dedication to quality. Gabe is truly a master of his craft. We were completely satisfied with the finished job - the interior of our house looks stunning.",
       author: "Derek",
       rating: 5,
     },
@@ -154,6 +151,7 @@ export const siteConfig = {
       category: "artisan",
       services: ["interior"],
       description: "Handcrafted colour with over 500 curated hues",
+      logoScale: 1.5,
     },
     {
       name: "Renner",
@@ -191,7 +189,7 @@ export const siteConfig = {
       category: "artisan",
       services: ["interior", "exterior"],
       description: "Premium architectural paints and decorative finishes",
-      logoScale: 2,
+      logoScale: 1.5,
     },
   ],
   footerLinks: {

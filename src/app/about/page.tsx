@@ -19,7 +19,7 @@ const instagramImages = [
   { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
   { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
   { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
-  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth - artisan finish process" },
   { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
@@ -68,37 +68,38 @@ export default function AboutPage() {
             You shouldn't have to babysit your painters
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            You don't want a painter. You want the result. Floors protected, not spattered. A final bill that matches the quote. A crew that shows up when they said they would. That's what 400+ Vancouver homeowners hired us for — and why most of them call back.
+            You don't want a painter. You want the result. Floors protected, not spattered. A final bill that matches the quote. A crew that shows up when they said they would. That's what 400+ Vancouver homeowners hired us for - and why most of them call back.
           </p>
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             A finish you can feel, not just see
           </h2>
           <p className="mb-8 text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Every wall, cabinet, and trim piece in your home says something. Your project doesn't get a one-size-fits-all formula. We listen first. Then we match colours and sheens to your light, your materials, and how you actually use each room. Matte walls, crisp satin trim — everything works together on purpose.
+            Every wall, cabinet, and trim piece in your home says something. Your project doesn't get a one-size-fits-all formula. We listen first. Then we match colours and sheens to your light, your materials, and how you actually use each room. Matte walls, crisp satin trim - everything works together on purpose.
           </p>
           <h2 className="mb-6 text-3xl font-normal leading-[1.2] md:text-4xl">
             Clear pricing. No surprises.
           </h2>
           <p className="text-lg font-normal leading-relaxed text-text-secondary md:text-xl">
-            Before a single brush touches your wall, you'll know the start date, the timeline, and the exact cost. Firm quotes — your price doesn't change. Daily updates so you're never guessing. A final walkthrough where we check every edge and every detail together. That's how we've earned repeat clients across 15 years in Vancouver.
+            Before a single brush touches your wall, you'll know the start date, the timeline, and the exact cost. Firm quotes - your price doesn't change. Daily updates so you're never guessing. A final walkthrough where we check every edge and every detail together. That's how we've earned repeat clients across 15 years in Vancouver.
           </p>
         </div>
       </section>
 
       <FeatureSection
         eyebrow="Meet the Founder"
-        heading="Gabe Penner — Master Painter & Finishing Specialist"
-        description="15+ years of coatings, faux finishes, and spray work. 400+ Vancouver homes finished. Gabe started Shape of Paint with one belief: good painting starts long before the first coat. Every project gets thorough prep, clear communication, and finishes that hold up to close inspection. We don't take every project. If your priority is the lowest price, we're not the right fit. But if you want it done right — designers and homeowners across Vancouver call Gabe first."
+        heading="Gabe Penner - Master Painter & Finishing Specialist"
+        description="15+ years of coatings, faux finishes, and spray work. 400+ Vancouver homes finished. Gabe started Shape of Paint with one belief: good painting starts long before the first coat. Every project gets thorough prep, clear communication, and finishes that hold up to close inspection. We don't take every project. If your priority is the lowest price, we're not the right fit. But if you want it done right - designers and homeowners across Vancouver call Gabe first."
         ctaText="Talk to Gabe"
         ctaHref="/contact#contact-form"
         image="/images/photos/about/team/vancouver-painting-team-photo-02.jpg"
         imageAlt="Gabe Penner with family in Vancouver"
+        imageAspect="square"
       />
 
       <BrandLogos
         variant="full"
         heading="Our materials"
-        subtitle="Italian plasters, artisan paints, eco-friendly oils, and professional-grade coatings — the products that make the difference between good and extraordinary."
+        subtitle="Italian plasters, artisan paints, eco-friendly oils, and professional-grade coatings - the products that make the difference between good and extraordinary."
       />
 
       <section className="bg-warm py-16 md:py-24">
