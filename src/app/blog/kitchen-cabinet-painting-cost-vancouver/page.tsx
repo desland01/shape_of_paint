@@ -24,7 +24,7 @@ export default function KitchenCabinetPaintingCostPage() {
         Kitchen cabinet painting in Vancouver costs between $2,500 and $9,000 in 2026.
         The exact investment depends on your kitchen size, the number of doors, the type of
         finish, and the condition of your existing cabinets. I put this guide together so
-        you know exactly what goes into a proper fine-finish cabinet job — and
+        you know exactly what goes into a proper fine-finish cabinet job - and
         why the process and materials matter.
       </p>
 
@@ -33,7 +33,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         Cabinet painting costs in Vancouver range from $2,500 for a small condo kitchen
         to $9,000 or more for a large custom home. Shape of Paint bases every quote on
-        door count, finish type, and cabinet condition — the three factors that drive
+        door count, finish type, and cabinet condition - the three factors that drive
         the real investment.
       </p>
 
@@ -51,7 +51,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         The average Vancouver kitchen falls here. Expect $4,000 to $6,000 for a complete
         spray finish on all doors, drawer fronts, and cabinet frames. This is the most
-        common range we quote — and where you really see the difference a master sprayer
+        common range we quote - and where you really see the difference a master sprayer
         makes. Plan for 4 days of work.
       </p>
 
@@ -88,7 +88,7 @@ export default function KitchenCabinetPaintingCostPage() {
         Going from dark stained wood to white or light grey is one of the most
         technically demanding transformations in cabinet work. The existing finish needs
         heavier sanding. A coat of shellac-based primer is essential to block tannin
-        bleed — skip this step and yellow blotches appear within weeks. That precision
+        bleed - skip this step and yellow blotches appear within weeks. That precision
         adds $300 to $800 to the total.
       </p>
 
@@ -96,7 +96,7 @@ export default function KitchenCabinetPaintingCostPage() {
 
       <p>
         A professional spray finish with a product like Benjamin Moore Advance delivers
-        a beautiful result. Catalyzed lacquer or conversion varnish takes it further —
+        a beautiful result. Catalyzed lacquer or conversion varnish takes it further - 
         producing a harder, more chemical-resistant surface that rivals factory finishes.
         High-performance finishes add $500 to $1,500 and are worth every dollar in
         high-traffic kitchens. For help choosing the right product, check our guide on{" "}
@@ -115,7 +115,7 @@ export default function KitchenCabinetPaintingCostPage() {
         Cabinets with peeling laminate, grease buildup, or minor damage need extra prep
         before they can accept a fine finish. A skilled crew will degrease with TSP, sand
         thoroughly, fill dents with wood filler, and spot-prime problem areas. This
-        foundation work can add 1 to 2 days and $500 to $1,000 to the total — but it is
+        foundation work can add 1 to 2 days and $500 to $1,000 to the total - but it is
         what separates a finish that lasts from one that chips in a year.
       </p>
 
@@ -131,7 +131,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         A complete cabinet painting quote in Vancouver should cover every step from
         door removal to final touch-ups. Shape of Paint includes all 9 steps below
-        in every estimate — if any are missing from another quote, the painter may lack
+        in every estimate - if any are missing from another quote, the painter may lack
         the process or equipment for a lasting result.
       </p>
 
@@ -149,7 +149,7 @@ export default function KitchenCabinetPaintingCostPage() {
 
       <p>
         Some painters skip the primer coat to cut corners. Without a proper bonding
-        primer, the finish will chip within 6 to 12 months — and you end up paying
+        primer, the finish will chip within 6 to 12 months - and you end up paying
         twice. This is what happens when you hire someone without the spray skill or
         the right materials. Always ask specifically what primer they use. BIN
         shellac-based and Stix bonding primer are the industry standards that
@@ -169,7 +169,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         New knobs and pulls typically cost $3 to $15 per piece. A kitchen with 30 doors
         and drawers needs 30+ pieces. That is $90 to $450 for hardware alone. Many of
-        our clients choose to upgrade hardware at the same time — the visual difference
+        our clients choose to upgrade hardware at the same time - the visual difference
         is striking.
       </p>
 
@@ -202,7 +202,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         Choosing the right cabinet painter in Vancouver comes down to equipment,
         process, and transparency. Shape of Paint recommends getting 3 spray-only quotes
-        and verifying that bonding primer is included — not just topcoat.
+        and verifying that bonding primer is included - not just topcoat.
       </p>
 
       <div className="overflow-x-auto">
@@ -252,7 +252,7 @@ export default function KitchenCabinetPaintingCostPage() {
         updates recoup 75% to 100% of their cost at resale in the Canadian housing
         market. At $4,000 to $6,000 for an average kitchen, a professional cabinet transformation
         is one of the highest-ROI home improvements you can make. The investment is
-        less than full cabinet replacement — and the finish quality from a master sprayer
+        less than full cabinet replacement - and the finish quality from a master sprayer
         with HVLP equipment, bonding primers, and multiple precision coats is often
         superior to factory.
       </p>
@@ -260,7 +260,7 @@ export default function KitchenCabinetPaintingCostPage() {
       <p>
         According to Benjamin Moore, their Advance waterborne alkyd formula reaches full
         hardness in 14 to 21 days when spray-applied at the recommended 2-to-3-mil film
-        thickness — delivering a furniture-grade surface that resists chipping and
+        thickness - delivering a furniture-grade surface that resists chipping and
         yellowing for years.
       </p>
 

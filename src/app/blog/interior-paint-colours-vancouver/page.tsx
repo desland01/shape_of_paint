@@ -133,7 +133,7 @@ export default function InteriorPaintColoursPage() {
       <h2>Coordinating Trim, Walls, and Ceilings</h2>
 
       <p>
-        Coordinating trim, walls, and ceiling colours creates a cohesive interior that feels intentional rather than piecemeal. Shape of Paint specifies the exact sheen for each surface — flat for ceilings, eggshell for walls, semi-gloss for trim — so every element works together in Vancouver's natural light.
+        Coordinating trim, walls, and ceiling colours creates a cohesive interior that feels intentional rather than piecemeal. Shape of Paint specifies the exact sheen for each surface - flat for ceilings, eggshell for walls, semi-gloss for trim - so every element works together in Vancouver's natural light.
       </p>
 
       <p>

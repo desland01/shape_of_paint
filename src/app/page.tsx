@@ -39,11 +39,11 @@ const heroImages = [
 const galleryImages = [
   { src: "/images/interior-portfolio-1.webp", alt: "Bright living room with designer paint finish" },
   { src: "/images/cabinet-portfolio-5.webp", alt: "Staircase railing with hand-stained dark handrail and crisp white spindles" },
-  { src: "/images/exterior-portfolio-1.webp", alt: "Exterior home painting — classic Vancouver craftsman" },
+  { src: "/images/exterior-portfolio-1.webp", alt: "Exterior home painting - classic Vancouver craftsman" },
   { src: "/images/interior-portfolio-3.webp", alt: "Elegant hallway with hand-finished walls" },
   { src: "/images/exterior-portfolio-2.webp", alt: "Modern exterior with fresh trim paint" },
   { src: "/images/interior-portfolio-2.webp", alt: "Modern bathroom with crisp white walls" },
-  { src: "/images/cabinet-portfolio-1.webp", alt: "Kitchen transformation — cabinet refinishing" },
+  { src: "/images/cabinet-portfolio-1.webp", alt: "Kitchen transformation - cabinet refinishing" },
   { src: "/images/cabinet-portfolio-4.webp", alt: "Spray-finished kitchen cabinets in matte white" },
 ];
 
@@ -52,7 +52,7 @@ const instagramImages = [
   { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
   { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
   { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
-  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth - artisan finish process" },
   { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
@@ -101,15 +101,15 @@ export default function HomePage() {
 
       <FeatureSection
         eyebrow="Design Expertise"
-        heading="More than painters — finishing specialists"
-        description="Most of our clients find us through their interior designer. That's not a coincidence. We test every surface before we coat it — adhesion, moisture, existing finishes. Then we pick the right primer for your walls, not a one-size-fits-all. You get honest advice and a finish that performs the way your designer imagined."
+        heading="More than painters - finishing specialists"
+        description="Most of our clients find us through their interior designer. That's not a coincidence. We test every surface before we coat it - adhesion, moisture, existing finishes. Then we pick the right primer for your walls, not a one-size-fits-all. You get honest advice and a finish that performs the way your designer imagined."
         ctaText="See Our Interior Work"
         ctaHref="/vancouver/interior-painting"
         image="/images/design-services.webp"
         imageAlt="Shape of Paint design consulting"
       />
 
-      {/* Cost Calculator — Premium Tool Invitation */}
+      {/* Cost Calculator - Premium Tool Invitation */}
       <section className="relative overflow-hidden bg-warm-light py-16 md:py-24 lg:py-32">
         {/* Decorative background blobs */}
         <div className="pointer-events-none absolute inset-0">
@@ -209,7 +209,7 @@ export default function HomePage() {
                 </SlideUp>
               </div>
 
-              {/* Right image column — visual anchor */}
+              {/* Right image column - visual anchor */}
               <SlideUp delay={0.15} className="relative hidden lg:block">
                 <div className="relative h-full min-h-[480px]">
                   {/* Primary image */}
@@ -238,7 +238,7 @@ export default function HomePage() {
                 </div>
               </SlideUp>
 
-              {/* Mobile image — shown below CTA on small screens */}
+              {/* Mobile image - shown below CTA on small screens */}
               <SlideUp delay={0.2} className="relative lg:hidden">
                 <div className="relative mx-5 mb-8 overflow-hidden rounded-2xl">
                   <div className="relative aspect-[16/9]">
@@ -266,7 +266,7 @@ export default function HomePage() {
 
       <FeatureSection
         eyebrow="Cabinet Painting"
-        heading="Your kitchen, reimagined — without a full renovation"
+        heading="Your kitchen, reimagined - without a full renovation"
         description="HVLP spray finish. Bonding primer on every surface. Hand-sanded at 320 grit between coats. Your existing cabinets end up smoother and more durable than factory. Most kitchens transform in 5-7 days."
         ctaText="See Cabinet Transformations"
         ctaHref="/contact#contact-form"
@@ -288,7 +288,7 @@ export default function HomePage() {
 
       <FeatureSection
         heading="You'll get a firm quote within 2 business days"
-        description="Gabe walks your space. You get a detailed scope — specific products, prep methods, coats per surface, and a fixed price. No allowances. No change orders. The number we quote is the number you pay."
+        description="Gabe walks your space. You get a detailed scope - specific products, prep methods, coats per surface, and a fixed price. No allowances. No change orders. The number we quote is the number you pay."
         ctaText="Talk to Gabe's Team"
         ctaHref="/contact#contact-form"
         image="/images/about-team.webp"

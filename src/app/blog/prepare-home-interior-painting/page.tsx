@@ -35,7 +35,7 @@ export default function PrepareHomeInteriorPaintingPage() {
       <h2>What to Move Out of the Rooms</h2>
 
       <p>
-        Clear small furniture, wall decor, electronics, fragile items, curtains, and bedding from rooms being painted before the crew arrives. The more you remove, the faster and cleaner the paint job goes — most Vancouver homeowners can clear a room in under 30 minutes by working through this checklist.
+        Clear small furniture, wall decor, electronics, fragile items, curtains, and bedding from rooms being painted before the crew arrives. The more you remove, the faster and cleaner the paint job goes - most Vancouver homeowners can clear a room in under 30 minutes by working through this checklist.
       </p>
 
       <p>
@@ -56,13 +56,13 @@ export default function PrepareHomeInteriorPaintingPage() {
         Large furniture like sofas, beds, and dressers can stay in the room. Professional
         painters will move them to the center and cover them with plastic sheeting. But if
         you can move them yourself, it gives the crew unobstructed access to every
-        surface from the start — which means cleaner lines and faster turnaround.
+        surface from the start - which means cleaner lines and faster turnaround.
       </p>
 
       <h2>Wall Prep: What to Check Before the Crew Arrives</h2>
 
       <p>
-        Walk through every room before your painting crew arrives and note nail holes, dents, cracks, nail pops, peeling paint, and water stains. You do not need to fix these yourself — a professional painter handles all repairs during the prep phase — but identifying them early helps you discuss the scope and avoid surprises on the quote.
+        Walk through every room before your painting crew arrives and note nail holes, dents, cracks, nail pops, peeling paint, and water stains. You do not need to fix these yourself - a professional painter handles all repairs during the prep phase - but identifying them early helps you discuss the scope and avoid surprises on the quote.
       </p>
 
       <p>

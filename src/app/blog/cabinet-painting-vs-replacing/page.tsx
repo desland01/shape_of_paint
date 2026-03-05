@@ -45,7 +45,7 @@ export default function CabinetPaintingVsReplacingPage() {
       </p>
 
       <p>
-        When you buy replacement cabinets — even expensive ones — you get a
+        When you buy replacement cabinets - even expensive ones - you get a
         factory-applied finish. That means automated spray lines, standard
         sheen levels, and whatever colours the manufacturer stocks. Walk through
         any showroom and you will see the same 12 finishes on every door.
@@ -53,7 +53,7 @@ export default function CabinetPaintingVsReplacingPage() {
 
       <p>
         When we spray your existing cabinets, you choose any colour from any
-        manufacturer. Benjamin Moore, Sherwin-Williams, Farrow &amp; Ball —
+        manufacturer. Benjamin Moore, Sherwin-Williams, Farrow &amp; Ball - 
         whatever matches your design vision. We apply it in a controlled setup
         with HVLP spray equipment, building up thin, even coats that cure to a
         glass-smooth surface.
@@ -93,13 +93,13 @@ export default function CabinetPaintingVsReplacingPage() {
       <p>
         According to CMHC (Canada Mortgage and Housing Corporation), minor kitchen
         renovations like cabinet refinishing recoup 75% to 100% of the investment at
-        resale — making it one of the highest-ROI home improvements in the Canadian
+        resale - making it one of the highest-ROI home improvements in the Canadian
         housing market.
       </p>
 
       <p>
         The investment difference is significant. But the reason to refinish is
-        not the lower price tag — it is the superior finish. A skilled spray
+        not the lower price tag - it is the superior finish. A skilled spray
         application with premium paint outperforms factory-applied coatings on
         colour accuracy, surface smoothness, and sheen consistency. The fact
         that it costs less is a bonus. Want a detailed cost breakdown by kitchen
@@ -144,7 +144,7 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>Disruption Level</h2>
 
       <p>
-        Cabinet painting causes minimal disruption to your Vancouver home — you keep
+        Cabinet painting causes minimal disruption to your Vancouver home - you keep
         access to your sink, stove, and fridge throughout the 3-to-5-day process. Full
         replacement turns your kitchen into a construction zone for weeks.
       </p>
@@ -188,7 +188,7 @@ export default function CabinetPaintingVsReplacingPage() {
       <h2>When Refinishing Is the Right Choice</h2>
 
       <p>
-        Refinishing is the right choice for about 85% of Vancouver kitchens — any home
+        Refinishing is the right choice for about 85% of Vancouver kitchens - any home
         where the cabinet boxes are structurally solid and the layout works. Shape of
         Paint sees this in most kitchens built in the last 30 years.
       </p>
@@ -233,7 +233,7 @@ export default function CabinetPaintingVsReplacingPage() {
       <p>
         That describes about 85% of the kitchens we see in Vancouver. Most
         cabinets built in the last 30 years have solid plywood or MDF boxes
-        that hold up fine. It is the finish that ages — and the finish is
+        that hold up fine. It is the finish that ages - and the finish is
         exactly what we replace.
       </p>
 
@@ -241,7 +241,7 @@ export default function CabinetPaintingVsReplacingPage() {
 
       <p>
         Full cabinet replacement is the right call when boxes are structurally
-        compromised — warped, water-damaged, or delaminating — or when you need a
+        compromised - warped, water-damaged, or delaminating - or when you need a
         completely new kitchen layout with different plumbing and electrical.
       </p>
 
@@ -263,13 +263,13 @@ export default function CabinetPaintingVsReplacingPage() {
         If any of those apply, replacement is the right call. But be honest
         with yourself. If the bones are good, a professional spray finish
         delivers a result that looks and feels better than off-the-shelf
-        replacements — because it is built to your exact specification.
+        replacements - because it is built to your exact specification.
       </p>
 
       <h2>What About Refacing?</h2>
 
       <p>
-        Refacing is a middle option between painting and replacing — you keep
+        Refacing is a middle option between painting and replacing - you keep
         the boxes but get new doors, typically costing $8,000 to $15,000 in
         Vancouver. For most homeowners, a spray refinish still delivers a
         smoother, more customizable result.
@@ -285,7 +285,7 @@ export default function CabinetPaintingVsReplacingPage() {
       <p>
         For most homeowners, a spray refinish still delivers the better result.
         A hand-finished cabinet door has a smoother, more uniform surface than
-        a factory-produced replacement — and you choose the exact colour and
+        a factory-produced replacement - and you choose the exact colour and
         sheen instead of picking from a catalogue.
       </p>
 
@@ -293,7 +293,7 @@ export default function CabinetPaintingVsReplacingPage() {
 
       <p>
         For Vancouver homeowners with structurally sound cabinets, a master HVLP spray
-        refinish delivers the highest-quality kitchen finish available — better than
+        refinish delivers the highest-quality kitchen finish available - better than
         factory, faster than replacement, and with zero waste sent to the landfill.
       </p>
 

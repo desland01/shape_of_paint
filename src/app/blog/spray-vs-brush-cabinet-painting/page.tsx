@@ -31,13 +31,13 @@ export default function SprayVsBrushCabinetPage() {
 
       <p>
         Brush and roller marks are visible on cabinet doors because you view them at
-        eye level from 2 feet away every day. Any texture — strokes, stipple, drips —
+        eye level from 2 feet away every day. Any texture - strokes, stipple, drips - 
         is immediately obvious on flat cabinet surfaces in a way it never is on walls.
       </p>
 
       <p>
         Cabinet doors sit at eye level. You see them up close every single day. Any
-        texture — brush strokes, roller stipple, drip marks — is immediately obvious.
+        texture - brush strokes, roller stipple, drip marks - is immediately obvious.
       </p>
 
       <p>
@@ -80,7 +80,7 @@ export default function SprayVsBrushCabinetPage() {
       <p>
         The result is a surface that feels glass-smooth. No brush texture. No roller
         stipple. Just a clean, even sheen that catches light uniformly. Choosing the right
-        product matters too — read our guide on the{" "}
+        product matters too - read our guide on the{" "}
         <Link
           href="/blog/best-paint-kitchen-cabinets"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
@@ -154,7 +154,7 @@ export default function SprayVsBrushCabinetPage() {
 
       <p>
         According to Benjamin Moore, their Advance waterborne alkyd formula achieves
-        optimal film hardness when applied at 2 to 3 mils per coat — a thickness that
+        optimal film hardness when applied at 2 to 3 mils per coat - a thickness that
         HVLP spray equipment delivers consistently but brushes and rollers cannot match.
       </p>
 
@@ -169,11 +169,11 @@ export default function SprayVsBrushCabinetPage() {
       <p>
         Sprayed cabinet coats dry to touch in 30 to 60 minutes and can be recoated in
         4 to 6 hours. Brushed coats need 6 to 8 hours between coats and 24 hours before
-        handling — adding 2 to 4 extra days to a Vancouver cabinet project.
+        handling - adding 2 to 4 extra days to a Vancouver cabinet project.
       </p>
 
       <p>
-        Sprayed coats are thin — typically 2 to 3 mils per coat. They dry to touch in
+        Sprayed coats are thin - typically 2 to 3 mils per coat. They dry to touch in
         30 to 60 minutes and can be recoated in 4 to 6 hours. A full spray job with
         primer and 2 topcoats can be completed in 2 to 3 days for the spraying alone.
       </p>
@@ -189,7 +189,7 @@ export default function SprayVsBrushCabinetPage() {
 
       <p>
         Brush and roller application is appropriate for small touch-ups, tight interior
-        corners, and single-door repairs — situations where setting up spray equipment
+        corners, and single-door repairs - situations where setting up spray equipment
         is not practical. For all visible cabinet surfaces, spray is the better choice.
       </p>
 
@@ -201,8 +201,8 @@ export default function SprayVsBrushCabinetPage() {
       </ul>
 
       <p>
-        For the exterior surfaces of your cabinets — the doors, drawer fronts, and frames
-        that everyone sees — spray is always the better choice.
+        For the exterior surfaces of your cabinets - the doors, drawer fronts, and frames
+        that everyone sees - spray is always the better choice.
       </p>
 
       <h2>Why Not All Painters Spray</h2>
@@ -223,14 +223,14 @@ export default function SprayVsBrushCabinetPage() {
 
       <p>
         According to Sherwin-Williams, their ProClassic and Emerald Urethane lines are
-        specifically formulated for spray application on cabinetry — achieving optimal
+        specifically formulated for spray application on cabinetry - achieving optimal
         levelling and film hardness only when atomized through professional spray equipment.
       </p>
 
       <p>
         Many general painters do not own spray equipment or have the setup to use it
         properly. That is why they offer brush-and-roller on cabinets. It requires
-        less equipment on their end — but the result is far worse for you. If a painter quotes cabinets and does not mention spray
+        less equipment on their end - but the result is far worse for you. If a painter quotes cabinets and does not mention spray
         finishing, keep looking.
       </p>
 

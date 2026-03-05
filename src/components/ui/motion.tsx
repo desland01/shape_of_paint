@@ -9,7 +9,7 @@ type ScrollOffset = NonNullable<Parameters<typeof useScroll>[0]>["offset"];
 // Duration and easing constants from _reference/animations.md
 const DURATION_DEFAULT = 0.4; // Matches Webflow IX2 default 400ms
 const DURATION_IMAGE = 0.6; // Matches Webflow image reveal 600ms
-// cubic-bezier(0.25, 0.46, 0.45, 0.94) — matched from whiteoakpainting.com
+// cubic-bezier(0.25, 0.46, 0.45, 0.94) - matched from whiteoakpainting.com
 const EASE_DEFAULT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 const EASE_OUT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 

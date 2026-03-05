@@ -21,7 +21,7 @@ export default function ExteriorPaintFailureSignsPage() {
       category="Exterior Painting"
     >
       <p>
-        Peeling paint on your exterior is more than ugly — it is your home
+        Peeling paint on your exterior is more than ugly - it is your home
         telling you something is wrong. Every year, Vancouver homeowners
         spend thousands more than they needed to because they ignored the
         early warning signs. Catching paint failure early can mean the
@@ -80,7 +80,7 @@ export default function ExteriorPaintFailureSignsPage() {
         primed, and repainted as a spot repair. If peeling covers more than
         10% of a wall, the entire wall needs to be scraped back and repainted.
         If moisture is the cause, you need to find and fix the water source
-        first — otherwise the new paint will peel too.
+        first - otherwise the new paint will peel too.
       </p>
 
       <h2>2. Bubbling and Blistering</h2>
@@ -114,7 +114,7 @@ export default function ExteriorPaintFailureSignsPage() {
         <li>
           <strong>Moisture blistering.</strong> Water vapor moves through the
           wall and gets trapped under the paint film. This is more common
-          on walls near bathrooms, kitchens, and laundry rooms — anywhere
+          on walls near bathrooms, kitchens, and laundry rooms - anywhere
           humid indoor air pushes moisture outward.
         </li>
         <li>
@@ -129,7 +129,7 @@ export default function ExteriorPaintFailureSignsPage() {
 
       <p>
         Pop the blisters. If you see bare substrate, moisture is the likely
-        cause — fix the moisture source. If you see a previous paint layer,
+        cause - fix the moisture source. If you see a previous paint layer,
         heat or application error is more likely. Scrape, sand, prime, and
         repaint affected areas. Consider a lighter colour if the wall gets
         intense sun.
@@ -159,7 +159,7 @@ export default function ExteriorPaintFailureSignsPage() {
       <p>
         UV light breaks down the paint binder over time, releasing pigment
         particles as loose powder. Some chalking is normal after 8 to 10
-        years — it is actually a self-cleaning mechanism designed into some
+        years - it is actually a self-cleaning mechanism designed into some
         exterior paints. Heavy chalking within 3 to 5 years means the paint
         quality was too low for the exposure level.
       </p>
@@ -283,7 +283,7 @@ export default function ExteriorPaintFailureSignsPage() {
         Alligator cracking is a pattern of deep, interconnected cracks
         caused by too many rigid paint layers that can no longer flex with
         the building. Unlike peeling, alligator cracking cannot be
-        spot-repaired — all cracked paint must be scraped or chemically
+        spot-repaired - all cracked paint must be scraped or chemically
         stripped back to a sound surface.
       </p>
 
@@ -312,7 +312,7 @@ export default function ExteriorPaintFailureSignsPage() {
         be scraped or stripped back to a sound surface. The area is then
         primed and repainted. On heavily cracked surfaces, chemical
         stripping may be necessary. Timing your repaint properly makes a
-        difference — check our guide on the{" "}
+        difference - check our guide on the{" "}
         <Link
           href="/blog/best-time-exterior-painting-bc"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
@@ -326,15 +326,15 @@ export default function ExteriorPaintFailureSignsPage() {
 
       <p>
         Vancouver homeowners should walk the perimeter of their home once
-        a year — ideally in spring after the wet season — and check every
+        a year - ideally in spring after the wet season - and check every
         wall for 8 specific warning signs. According to CMHC, annual
         exterior inspections catch small problems before they become
         major repairs, reducing long-term maintenance costs by up to 50%.
       </p>
 
       <p>
-        Walk around your home once a year — ideally in spring after the wet
-        season — and check each wall for:
+        Walk around your home once a year - ideally in spring after the wet
+        season - and check each wall for:
       </p>
 
       <ol>
@@ -380,7 +380,7 @@ export default function ExteriorPaintFailureSignsPage() {
         >
           exterior painting in Vancouver
         </Link>{" "}
-        — we will inspect your walls, diagnose the issue, and give you
+       - we will inspect your walls, diagnose the issue, and give you
         honest advice on what your home needs.
       </p>
     </BlogPostLayout>

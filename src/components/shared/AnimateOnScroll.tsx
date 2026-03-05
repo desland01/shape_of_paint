@@ -12,7 +12,7 @@ interface AnimateOnScrollProps {
   scale?: boolean;
 }
 
-// cubic-bezier(0.25, 0.46, 0.45, 0.94) — matched from whiteoakpainting.com
+// cubic-bezier(0.25, 0.46, 0.45, 0.94) - matched from whiteoakpainting.com
 const EASE_DEFAULT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 const EASE_OUT: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 

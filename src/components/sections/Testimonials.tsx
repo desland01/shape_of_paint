@@ -27,27 +27,27 @@ const WatercolorPeony = () => (
     {/* Soft outer glow */}
     <ellipse cx="40" cy="40" rx="24" ry="22" fill="rgba(222,160,140,0.1)" />
 
-    {/* Outer petal ring — five organic petals radiating from center */}
+    {/* Outer petal ring - five organic petals radiating from center */}
     <ellipse cx="40" cy="24" rx="11" ry="14" transform="rotate(-5 40 24)" fill="rgba(215,140,120,0.3)" />
     <ellipse cx="54" cy="34" rx="10" ry="13" transform="rotate(65 54 34)" fill="rgba(205,125,105,0.28)" />
     <ellipse cx="50" cy="50" rx="10" ry="12" transform="rotate(35 50 50)" fill="rgba(220,145,120,0.25)" />
     <ellipse cx="30" cy="50" rx="10" ry="12" transform="rotate(-35 30 50)" fill="rgba(210,135,115,0.27)" />
     <ellipse cx="26" cy="34" rx="10" ry="13" transform="rotate(-65 26 34)" fill="rgba(200,130,110,0.3)" />
 
-    {/* Middle petal ring — tighter, warmer */}
+    {/* Middle petal ring - tighter, warmer */}
     <ellipse cx="40" cy="30" rx="8" ry="10" transform="rotate(10 40 30)" fill="rgba(210,120,95,0.35)" />
     <ellipse cx="48" cy="38" rx="7" ry="9" transform="rotate(70 48 38)" fill="rgba(200,110,90,0.32)" />
     <ellipse cx="44" cy="48" rx="7" ry="9" transform="rotate(35 44 48)" fill="rgba(215,125,100,0.3)" />
     <ellipse cx="36" cy="48" rx="7" ry="9" transform="rotate(-35 36 48)" fill="rgba(205,115,95,0.32)" />
     <ellipse cx="32" cy="38" rx="7" ry="9" transform="rotate(-70 32 38)" fill="rgba(210,120,100,0.35)" />
 
-    {/* Inner petals — concentrated, rich */}
+    {/* Inner petals - concentrated, rich */}
     <ellipse cx="40" cy="35" rx="6" ry="7" fill="rgba(210,115,90,0.4)" />
     <ellipse cx="45" cy="40" rx="5" ry="6" transform="rotate(60 45 40)" fill="rgba(200,105,85,0.38)" />
     <ellipse cx="40" cy="45" rx="5" ry="6" fill="rgba(215,120,95,0.35)" />
     <ellipse cx="35" cy="40" rx="5" ry="6" transform="rotate(-60 35 40)" fill="rgba(205,110,88,0.38)" />
 
-    {/* Center bloom — warm saturated core */}
+    {/* Center bloom - warm saturated core */}
     <ellipse cx="40" cy="40" rx="7" ry="6" fill="rgba(210,110,85,0.5)" />
     <ellipse cx="40" cy="39" rx="4.5" ry="4" fill="rgba(195,95,75,0.45)" />
     <ellipse cx="40" cy="38" rx="2" ry="1.5" fill="rgba(185,85,65,0.35)" />

@@ -68,7 +68,7 @@ export const StepDimensions = ({
         </div>
       )}
 
-      {/* Room name — desktop input */}
+      {/* Room name - desktop input */}
       <div className="hidden md:block">
         <label htmlFor="room-name" className="sr-only">Room name</label>
         <input
@@ -84,7 +84,7 @@ export const StepDimensions = ({
         />
       </div>
 
-      {/* Room name — mobile tappable display */}
+      {/* Room name - mobile tappable display */}
       <div className="md:hidden">
         <button
           type="button"
@@ -171,7 +171,7 @@ export const StepDimensions = ({
         </button>
       </div>
 
-      {/* Bottom sheets — only one open at a time */}
+      {/* Bottom sheets - only one open at a time */}
       <TextInputSheet
         open={activeSheet === "room-name"}
         onOpenChange={(open) => { if (!open) setActiveSheet(null); }}

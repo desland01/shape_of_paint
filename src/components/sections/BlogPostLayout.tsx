@@ -148,7 +148,7 @@ export function BlogPostLayout({
                   {siteConfig.name}
                 </Link>
                 . Through this blog, I share the advice I give homeowners every
-                day — honest answers about costs, timelines, and what actually
+                day - honest answers about costs, timelines, and what actually
                 matters when it comes to painting your home.
               </p>
             </div>

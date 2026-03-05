@@ -19,7 +19,7 @@ const instagramImages = [
   { src: "/images/ig-2.webp", alt: "Kitchen cabinet spray finish in matte white" },
   { src: "/images/ig-3.webp", alt: "Exterior painting detail on Vancouver craftsman home" },
   { src: "/images/ig-4.webp", alt: "Hand-finished accent wall with designer colour palette" },
-  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth — artisan finish process" },
+  { src: "/images/ig-5.webp", alt: "Cabinet door drying in spray booth - artisan finish process" },
   { src: "/images/ig-6.webp", alt: "Before and after interior painting transformation" },
 ];
 
@@ -47,7 +47,7 @@ export default function ReviewsPage() {
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <p className="text-xs font-medium uppercase tracking-[0.15em] text-text-secondary">
-                — {testimonial.author}
+               - {testimonial.author}
               </p>
             </div>
           </SlideUp>

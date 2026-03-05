@@ -192,7 +192,7 @@ export default function InteriorPaintingCostPage() {
 
       <p>
         If a quote does not mention prep work or the number of coats, ask. A suspiciously
-        low quote usually signals corners being cut — one thin coat, no primer, and prep work
+        low quote usually signals corners being cut - one thin coat, no primer, and prep work
         skipped entirely. That kind of job peels within a year.
       </p>
 
@@ -228,7 +228,7 @@ export default function InteriorPaintingCostPage() {
       </p>
 
       <ol>
-        <li>Get three quotes. Compare scope, materials, and warranty — not just the bottom
+        <li>Get three quotes. Compare scope, materials, and warranty - not just the bottom
         line number.</li>
         <li>Ask about paint brands. A contractor who specifies Benjamin Moore or
         Sherwin-Williams by name is committed to a proven product.</li>
@@ -239,7 +239,7 @@ export default function InteriorPaintingCostPage() {
         and you will have more flexibility on scheduling.</li>
         <li>Clear rooms before the crew arrives. Moving furniture, taking down art, and
         covering anything you want protected gives your painters unobstructed access to
-        every surface — and that translates directly into cleaner lines and faster
+        every surface - and that translates directly into cleaner lines and faster
         turnaround.</li>
       </ol>
 

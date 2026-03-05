@@ -38,7 +38,7 @@ export default function TermsPage() {
               Estimates are provided free of charge based on an in-person or
               virtual assessment of your project. Written quotes are valid for 30
               days from the date of issue. The final price reflects the scope
-              agreed upon — no surprise charges. Any changes to the scope of work
+              agreed upon - no surprise charges. Any changes to the scope of work
               will be discussed and approved before additional costs are
               incurred.
             </p>

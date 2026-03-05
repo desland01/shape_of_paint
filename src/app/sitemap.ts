@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import {
   CITY_SLUGS,
-  SERVICE_SLUGS,
+  INDEXABLE_SERVICE_SLUGS,
   getCityPath,
   getCityServicePath,
 } from "@/config/local-seo";
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const citySpokes: MetadataRoute.Sitemap = CITY_SLUGS.flatMap((city) =>
-    SERVICE_SLUGS.map((service) => ({
+    INDEXABLE_SERVICE_SLUGS.map((service) => ({
       url: `${baseUrl}${getCityServicePath(city, service)}`,
       lastModified: now,
       changeFrequency: "monthly",

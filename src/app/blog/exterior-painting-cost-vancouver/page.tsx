@@ -43,7 +43,7 @@ export default function ExteriorPaintingCostPage() {
         Exterior painting costs in Vancouver range from $5,000 for a small
         bungalow to $20,000 for a large multi-storey home. Shape of Paint
         prices every project based on square footage, siding type, and
-        preparation scope — so your quote reflects your home, not a generic
+        preparation scope - so your quote reflects your home, not a generic
         estimate.
       </p>
 
@@ -85,7 +85,7 @@ export default function ExteriorPaintingCostPage() {
       <p>
         These numbers include labour, premium paint, primer, complete surface
         preparation, and cleanup. They do not include major structural repairs
-        like replacing rotted boards or full stucco patching — those are quoted
+        like replacing rotted boards or full stucco patching - those are quoted
         separately based on scope.
       </p>
 
@@ -127,7 +127,7 @@ export default function ExteriorPaintingCostPage() {
         for your siding type.
       </p>
 
-      <h3>3. Surface Preparation — The Craftsmanship That Makes a Finish Last</h3>
+      <h3>3. Surface Preparation - The Craftsmanship That Makes a Finish Last</h3>
 
       <p>
         Preparation is where skilled crews distinguish themselves. A proper
@@ -148,7 +148,7 @@ export default function ExteriorPaintingCostPage() {
       <p>
         A gallon of premium exterior paint like Benjamin Moore Aura or
         Sherwin-Williams Duration runs $75 to $95. Lower-grade coatings cost
-        $35 to $45. The difference is not just price per gallon — premium
+        $35 to $45. The difference is not just price per gallon - premium
         formulations resist fading, chalking, and moisture penetration for 10
         to 15 years in Vancouver weather. According to Sherwin-Williams,
         their Duration Exterior line maintains colour and sheen retention
@@ -164,7 +164,7 @@ export default function ExteriorPaintingCostPage() {
         Trim, soffits, fascia, window frames, and railings all need separate
         preparation and careful brushwork. A home with simple trim adds $500 to
         $1,000. A heritage home with detailed woodwork, corbels, and
-        multi-piece trim profiles can add $2,000 to $4,000 — and that detail
+        multi-piece trim profiles can add $2,000 to $4,000 - and that detail
         work is often what gives a finished exterior its character.
       </p>
 
@@ -173,8 +173,8 @@ export default function ExteriorPaintingCostPage() {
       <p>
         Rotted fascia boards, cracked stucco, damaged caulking, and mildewed
         surfaces all need attention before any coating goes on. Minor repairs
-        are typically included in the quote. Major work — replacing boards,
-        patching large stucco sections, or treating wood rot — is itemized
+        are typically included in the quote. Major work - replacing boards,
+        patching large stucco sections, or treating wood rot - is itemized
         separately so you see exactly what you are paying for.
       </p>
 
@@ -223,7 +223,7 @@ export default function ExteriorPaintingCostPage() {
       </p>
 
       <p>
-        The difference was not price — it was scope. The lower quote specified
+        The difference was not price - it was scope. The lower quote specified
         a single coat instead of two, no primer on bare wood, no caulking, and
         a lower-grade coating that would need replacing within 3 to 5 years.
         It was a different job entirely.
@@ -234,7 +234,7 @@ export default function ExteriorPaintingCostPage() {
         paint brand and product line they plan to use. Ask whether primer is
         part of the scope. Ask about their warranty. A crew that skips
         preparation or uses inferior products is not offering the same service
-        at a lower price — they are offering a different service altogether.
+        at a lower price - they are offering a different service altogether.
       </p>
 
       <h2>How to Get an Accurate Quote</h2>
@@ -276,7 +276,7 @@ export default function ExteriorPaintingCostPage() {
         decade. Larger homes and complex projects run $12,000 to $20,000. The
         biggest factors are house size, siding condition, and the quality of
         materials and preparation. Get 2 to 3 detailed quotes, compare the
-        full scope of work, and choose the crew that explains their process —
+        full scope of work, and choose the crew that explains their process - 
         not just their price.
       </p>
 

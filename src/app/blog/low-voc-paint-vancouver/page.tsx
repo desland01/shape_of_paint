@@ -262,7 +262,7 @@ export default function LowVocPaintPage() {
       <h2>Choose Safer Paint for Your Family</h2>
 
       <p>
-        Low-VOC and zero-VOC paints deliver the same coverage, durability, and colour accuracy as conventional products — without the chemical off-gassing that lasts years after application. Shape of Paint switched to low-VOC products on every Vancouver project 5 years ago and has seen zero performance trade-offs.
+        Low-VOC and zero-VOC paints deliver the same coverage, durability, and colour accuracy as conventional products - without the chemical off-gassing that lasts years after application. Shape of Paint switched to low-VOC products on every Vancouver project 5 years ago and has seen zero performance trade-offs.
       </p>
 
       <p>

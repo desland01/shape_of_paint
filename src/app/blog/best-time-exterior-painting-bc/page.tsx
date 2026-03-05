@@ -22,7 +22,7 @@ export default function BestTimeExteriorPaintingPage() {
     >
       <p>
         The best time to paint exterior surfaces in BC is during the dry
-        season — roughly May through September. But that answer only gets you
+        season - roughly May through September. But that answer only gets you
         halfway. You also need the right temperature, the right humidity, and
         a dry window of at least 4 hours for the paint to cure properly.
         Paint in the wrong conditions and your $10,000 project could start
@@ -159,8 +159,8 @@ export default function BestTimeExteriorPaintingPage() {
       <p>
         Morning dew on Vancouver home exteriors can trap moisture under
         fresh paint and cause peeling within months. Professional crews
-        wait until surfaces warm and dry — typically 9 to 10 AM in summer
-        — and stop painting by 5 to 6 PM so the last coat cures before
+        wait until surfaces warm and dry - typically 9 to 10 AM in summer
+       - and stop painting by 5 to 6 PM so the last coat cures before
         evening moisture settles.
       </p>
 
@@ -172,7 +172,7 @@ export default function BestTimeExteriorPaintingPage() {
       </p>
 
       <p>
-        A professional crew knows to wait until surfaces warm up and dry —
+        A professional crew knows to wait until surfaces warm up and dry - 
         usually 9 to 10 AM on most summer days. They also stop painting by 5
         to 6 PM so the last coat has time to cure before evening moisture
         settles. According to the National Research Council Canada, moisture
@@ -186,7 +186,7 @@ export default function BestTimeExteriorPaintingPage() {
         Painting in bad conditions causes four common failures: soft films
         from cold application, blistering from trapped moisture, pigment
         washout from rain, and wrinkling from extreme heat. Each one
-        requires scraping and repainting the affected area — turning a
+        requires scraping and repainting the affected area - turning a
         single project into two.
       </p>
 
@@ -279,7 +279,7 @@ export default function BestTimeExteriorPaintingPage() {
         September, with July and August as the safest months. According
         to Environment Canada, Vancouver averages only 4 to 6 rain days
         per month in July and August compared to 15 to 20 days per month
-        in winter — making summer the only reliable window for exterior
+        in winter - making summer the only reliable window for exterior
         coatings.
       </p>
 
@@ -288,7 +288,7 @@ export default function BestTimeExteriorPaintingPage() {
         July and August are the most reliable months. April and October can
         work with the right products and a flexible schedule. Always check
         temperature, humidity, and the forecast before your crew starts. A
-        good painter will never rush a project into bad weather — and neither
+        good painter will never rush a project into bad weather - and neither
         should you.
       </p>
 

@@ -31,7 +31,7 @@ export default function StuccoVsSidingPage() {
       </p>
 
       <p>
-        Here is exactly how the process differs for each surface — and the
+        Here is exactly how the process differs for each surface - and the
         mistakes that cause most paint failures on Vancouver homes.
       </p>
 
@@ -73,7 +73,7 @@ export default function StuccoVsSidingPage() {
 
       <p>
         After repairs, the entire surface gets pressure-washed at low
-        pressure (1,500 to 2,000 PSI max — higher pressure damages stucco).
+        pressure (1,500 to 2,000 PSI max - higher pressure damages stucco).
         Then it needs 48 to 72 hours to dry completely before priming.
       </p>
 
@@ -148,7 +148,7 @@ export default function StuccoVsSidingPage() {
         Wood siding prep starts with a thorough inspection. Every board gets
         checked for rot, especially at the bottom 12 inches where splash-back
         from rain keeps wood wet. Rotten boards must be replaced before
-        painting. Painting over rot is a waste of money — the paint will fail
+        painting. Painting over rot is a waste of money - the paint will fail
         within a year.
       </p>
 
@@ -163,7 +163,7 @@ export default function StuccoVsSidingPage() {
       <h3>Primer: Wood-Specific Formulas</h3>
 
       <p>
-        Bare cedar and other softwoods bleed tannins — those brown stains
+        Bare cedar and other softwoods bleed tannins - those brown stains
         that bleed through fresh paint. A stain-blocking primer (oil-based
         like Zinsser Cover Stain or shellac-based like BIN) seals tannins
         and prevents bleed-through. Latex primers alone cannot block tannins
@@ -176,7 +176,7 @@ export default function StuccoVsSidingPage() {
         Two coats of 100% acrylic latex in satin or semi-gloss. Satin is the
         most popular choice for wood siding bodies. Semi-gloss goes on trim,
         fascia, and window frames. Both sheens shed water well and resist
-        mildew. The cost question comes up for every surface — see our{" "}
+        mildew. The cost question comes up for every surface - see our{" "}
         <Link
           href="/blog/exterior-painting-cost-vancouver"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
@@ -301,7 +301,7 @@ export default function StuccoVsSidingPage() {
         >
           exterior painting in Vancouver
         </Link>{" "}
-        — we will assess your surfaces and recommend exactly the right
+       - we will assess your surfaces and recommend exactly the right
         products and prep for your home.
       </p>
     </BlogPostLayout>

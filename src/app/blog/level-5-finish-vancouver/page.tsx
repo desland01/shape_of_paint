@@ -142,7 +142,7 @@ export default function Level5FinishPage() {
           <tbody className="text-text-secondary">
             <tr className="border-b border-border-subtle">
               <td className="py-3 pr-6">Flat or matte paint finishes</td>
-              <td className="py-3 pr-6">These sheens hide nothing — every bump and joint shows through</td>
+              <td className="py-3 pr-6">These sheens hide nothing - every bump and joint shows through</td>
             </tr>
             <tr className="border-b border-border-subtle">
               <td className="py-3 pr-6">Rooms with large windows</td>
@@ -240,7 +240,7 @@ export default function Level5FinishPage() {
       <h2>Get a Flawless Finish for Your Home</h2>
 
       <p>
-        Shape of Paint completes 3 to 4 level 5 drywall projects per month in Vancouver. Each project takes extra time, but the result is a surface you can run your hand across and feel nothing but smooth drywall from corner to corner — the foundation for a paint finish that looks flawless under any lighting condition.
+        Shape of Paint completes 3 to 4 level 5 drywall projects per month in Vancouver. Each project takes extra time, but the result is a surface you can run your hand across and feel nothing but smooth drywall from corner to corner - the foundation for a paint finish that looks flawless under any lighting condition.
       </p>
 
       <p>

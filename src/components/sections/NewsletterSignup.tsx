@@ -24,7 +24,7 @@ export function NewsletterSignup() {
             </SlideUp>
             <SlideUp delay={0.1}>
               <p className="mb-6 text-base font-normal leading-relaxed text-text-secondary">
-                Colour trends, prep advice, and before-and-after transformations — straight to your inbox. No spam. Unsubscribe anytime.
+                Colour trends, prep advice, and before-and-after transformations - straight to your inbox. No spam. Unsubscribe anytime.
               </p>
             </SlideUp>
             <SlideUp delay={0.15}>

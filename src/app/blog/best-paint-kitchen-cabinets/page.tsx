@@ -48,7 +48,7 @@ export default function BestPaintKitchenCabinetsPage() {
       <ul>
         <li>Excellent self-levelling eliminates brush and roller marks</li>
         <li>Hard, durable finish once fully cured (14 to 21 days)</li>
-        <li>Low odour — safe for occupied homes</li>
+        <li>Low odour - safe for occupied homes</li>
         <li>Available in thousands of Benjamin Moore colours</li>
         <li>Easy touch-up if needed down the road</li>
       </ul>
@@ -113,7 +113,7 @@ export default function BestPaintKitchenCabinetsPage() {
       <h2>Primer Matters More Than You Think</h2>
 
       <p>
-        Primer is the single most critical step in cabinet refinishing — it determines
+        Primer is the single most critical step in cabinet refinishing - it determines
         adhesion, stain blocking, and long-term durability. Shape of Paint uses BIN
         shellac-based primer for dark-to-light conversions and Stix bonding primer for
         on-site frame work in Vancouver kitchens.
@@ -137,7 +137,7 @@ export default function BestPaintKitchenCabinetsPage() {
         <li>Bonds to wood, MDF, laminate, and previously finished surfaces</li>
         <li>Blocks tannin bleed that causes yellow spots on white paint</li>
         <li>Dries fast so the project stays on schedule</li>
-        <li>Strong odour requires ventilation — best applied off-site in a spray booth</li>
+        <li>Strong odour requires ventilation - best applied off-site in a spray booth</li>
       </ul>
 
       <h3>Stix Bonding Primer (Insl-x)</h3>
@@ -152,7 +152,7 @@ export default function BestPaintKitchenCabinetsPage() {
         <li>Bonds to glossy and slick surfaces without heavy sanding</li>
         <li>Lower odour than shellac-based primers</li>
         <li>Good choice for on-site cabinet frame priming</li>
-        <li>Does not block tannin as well as BIN — not ideal for dark-to-light conversions</li>
+        <li>Does not block tannin as well as BIN - not ideal for dark-to-light conversions</li>
       </ul>
 
       <h2>Sheen Levels for Cabinets</h2>
@@ -280,8 +280,8 @@ export default function BestPaintKitchenCabinetsPage() {
       <h2>The Bottom Line</h2>
 
       <p>
-        The best paint for Vancouver kitchen cabinets is an acrylic alkyd formula —
-        Benjamin Moore Advance or Sherwin-Williams Emerald Urethane — applied over a
+        The best paint for Vancouver kitchen cabinets is an acrylic alkyd formula - 
+        Benjamin Moore Advance or Sherwin-Williams Emerald Urethane - applied over a
         proper bonding primer in semi-gloss or satin sheen using HVLP spray equipment.
       </p>
 

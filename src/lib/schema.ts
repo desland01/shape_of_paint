@@ -1,9 +1,9 @@
 import {
   CITY_CONTENT,
+  INDEXABLE_SERVICE_SLUGS,
   SERVICE_CONTENT,
-  SERVICE_SLUGS,
   getCityServicePath,
-  type ServiceSlug,
+  type IndexableServiceSlug,
 } from "@/config/local-seo";
 import { siteConfig } from "@/config/site";
 
@@ -106,7 +106,7 @@ export function generateLocalBusinessSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Painting Services",
-      itemListElement: SERVICE_SLUGS.map((serviceSlug) => ({
+      itemListElement: INDEXABLE_SERVICE_SLUGS.map((serviceSlug) => ({
         "@type": "OfferCatalog",
         name: SERVICE_CONTENT[serviceSlug].name,
         itemListElement: [
@@ -161,7 +161,7 @@ export function generateServiceSchema(service: {
 export function generateLocationHubSchema(location: {
   city: string;
   url: string;
-  serviceSlugs: ServiceSlug[];
+  serviceSlugs: IndexableServiceSlug[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -190,7 +190,7 @@ export function generateLocationHubSchema(location: {
 
 export function generateLocationServiceSchema(service: {
   city: string;
-  serviceSlug: ServiceSlug;
+  serviceSlug: IndexableServiceSlug;
   description: string;
   url: string;
 }) {

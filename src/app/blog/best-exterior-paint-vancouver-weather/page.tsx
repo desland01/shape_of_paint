@@ -30,7 +30,7 @@ export default function BestExteriorPaintPage() {
       </p>
 
       <p>
-        Here is what actually works on Vancouver homes — based on thousands of
+        Here is what actually works on Vancouver homes - based on thousands of
         projects across the Lower Mainland, not just the label on the can.
       </p>
 
@@ -223,12 +223,12 @@ export default function BestExteriorPaintPage() {
         Elastomeric coatings are thick, rubber-like paints that stretch up
         to 300% without cracking, making them the top choice for stucco
         homes in Vancouver. They cost $90 to $120 per gallon but last 15
-        to 20 years — nearly double the lifespan of standard paint on
+        to 20 years - nearly double the lifespan of standard paint on
         stucco.
       </p>
 
       <p>
-        If your home has stucco — and roughly 40% of Vancouver homes do —
+        If your home has stucco - and roughly 40% of Vancouver homes do - 
         consider an elastomeric coating. These are thick, rubber-like paints
         that stretch up to 300% without cracking. They bridge hairline cracks
         in stucco and create a waterproof membrane that keeps rain out.
@@ -238,7 +238,7 @@ export default function BestExteriorPaintPage() {
         Elastomeric coatings cost more per gallon ($90 to $120) and require
         more product per square foot. But they last 15 to 20 years on stucco
         in Vancouver conditions. Standard paint on stucco rarely lasts more
-        than 7 to 10 years. The timing of your project matters too — read our
+        than 7 to 10 years. The timing of your project matters too - read our
         guide on the{" "}
         <Link
           href="/blog/best-time-exterior-painting-bc"
@@ -326,7 +326,7 @@ export default function BestExteriorPaintPage() {
         >
           exterior painting in Vancouver
         </Link>{" "}
-        — we will walk you through exactly what your walls need.
+       - we will walk you through exactly what your walls need.
       </p>
     </BlogPostLayout>
   );
