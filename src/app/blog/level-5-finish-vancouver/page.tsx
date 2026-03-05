@@ -253,7 +253,7 @@ export default function Level5FinishPage() {
       <p>
         Want walls that look flawless from every angle?{" "}
         <Link
-          href="/services/interior"
+          href="/vancouver/interior-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           See our interior painting services in Vancouver

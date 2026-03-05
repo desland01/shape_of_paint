@@ -268,7 +268,7 @@ export default function KitchenCabinetPaintingCostPage() {
         Ready to see what a professional spray finish looks like for your kitchen? See
         what is included in our{" "}
         <Link
-          href="/services/cabinets"
+          href="/vancouver/cabinet-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver

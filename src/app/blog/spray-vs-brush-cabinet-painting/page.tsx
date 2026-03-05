@@ -251,7 +251,7 @@ export default function SprayVsBrushCabinetPage() {
       <p>
         Want a factory-smooth finish on your kitchen cabinets? Learn more about our{" "}
         <Link
-          href="/services/cabinets"
+          href="/vancouver/cabinet-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver

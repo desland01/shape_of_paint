@@ -22,7 +22,7 @@ Link equity flows FROM supporting posts DOWN to the target page, concentrating r
 
 ## Silo 1: Interior Painting
 
-**Target Page:** `/services/interior`
+**Target Page:** `/vancouver/interior-painting`
 
 | # | Post Title | URL | Target Keyword | Vol |
 |---|-----------|-----|----------------|-----|
@@ -45,7 +45,7 @@ Post 5 → TARGET + Post 3
 
 ## Silo 2: Exterior Painting
 
-**Target Page:** `/services/exterior`
+**Target Page:** `/vancouver/exterior-painting`
 
 | # | Post Title | URL | Target Keyword | Vol |
 |---|-----------|-----|----------------|-----|
@@ -68,7 +68,7 @@ Post 5 → TARGET + Post 3
 
 ## Silo 3: Cabinet Painting
 
-**Target Page:** `/services/cabinets`
+**Target Page:** `/vancouver/cabinet-painting`
 
 | # | Post Title | URL | Target Keyword | Vol |
 |---|-----------|-----|----------------|-----|

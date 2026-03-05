@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 interface TrustBarProps {
   className?: string;
@@ -18,11 +19,13 @@ const StarIcon = () => (
 
 export function TrustBar({ className, variant = "dark" }: TrustBarProps) {
   const isLight = variant === "light";
+  const rating = siteConfig.googleBusiness.rating.toFixed(1);
+  const reviewCount = siteConfig.googleBusiness.reviewCount;
 
   return (
     <div
       role="status"
-      aria-label="4.9 out of 5 stars from 200+ Five-Star Reviews. Licensed and Insured."
+      aria-label={`${rating} out of 5 stars from ${reviewCount} Google reviews. Licensed and Insured.`}
       className={cn(
         "flex flex-wrap items-center gap-x-3 gap-y-2 text-sm",
         className
@@ -41,7 +44,7 @@ export function TrustBar({ className, variant = "dark" }: TrustBarProps) {
             isLight ? "text-white" : "text-foreground"
           )}
         >
-          4.9/5
+          {rating}/5
         </span>
       </div>
 
@@ -58,7 +61,7 @@ export function TrustBar({ className, variant = "dark" }: TrustBarProps) {
 
       {/* Google Reviews */}
       <span className={cn(isLight ? "text-white/90" : "text-text-secondary")}>
-        200+ Five-Star Reviews
+        {reviewCount} Google Reviews
       </span>
 
       {/* Separator */}

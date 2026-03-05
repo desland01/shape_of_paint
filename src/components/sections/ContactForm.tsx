@@ -189,7 +189,7 @@ export function ContactForm() {
         <p className="text-sm text-text-secondary mb-6">
           While you wait, browse our{" "}
           <Link
-            href="/services/portfolio"
+            href="/portfolio"
             className="font-medium text-foreground underline underline-offset-2 hover:text-accent-gold"
           >
             recent projects

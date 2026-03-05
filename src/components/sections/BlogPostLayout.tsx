@@ -165,7 +165,7 @@ export function BlogPostLayout({
               </p>
               <Link
                 href="/contact#contact-form"
-                className="inline-block rounded-[9px] bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-colors hover:bg-cta-hover"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-400 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
               >
                 Book Your Free Consultation
               </Link>

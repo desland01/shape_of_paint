@@ -30,7 +30,7 @@ Kyle Roof's testing confirms these four areas have the highest impact:
 - No dates unless news/blog
 
 **Good:** `/interior-painting-[city]/`
-**Bad:** `/services/page.php?id=123&cat=painting`
+**Bad:** `/vancouver/interior-painting`
 
 ### 4. Body Content
 - Natural keyword inclusion

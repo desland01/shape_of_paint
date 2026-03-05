@@ -288,7 +288,7 @@ export default function CabinetRefinishingVsRefacingPage() {
       <p>
         Ready to see what refinishing can do for your kitchen? Explore our{" "}
         <Link
-          href="/services/cabinets"
+          href="/vancouver/cabinet-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver

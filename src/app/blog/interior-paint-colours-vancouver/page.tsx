@@ -239,7 +239,7 @@ export default function InteriorPaintColoursPage() {
       <p>
         Ready to transform your space with the right colours and a flawless finish?{" "}
         <Link
-          href="/services/interior"
+          href="/vancouver/interior-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Explore our interior painting services in Vancouver

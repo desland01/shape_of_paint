@@ -29,7 +29,7 @@ Steps:
 ```mdx
 {/* Primary keyword: [keyword] */}
 {/* Silo: [SiloId] | Position: [1|2|3] */}
-{/* Links to: [/services/page, /blog/post] */}
+{/* Links to: [/vancouver/interior-painting, /blog/post] */}
 
 ---
 title: "[Title]"
@@ -108,7 +108,7 @@ Steps:
 5. The Bottom Line
 
 ### Internal Links to Include
-- [/services/page] — anchor: [descriptive text]
+- [/vancouver/interior-painting] — anchor: [descriptive text]
 - [/blog/related-post] — anchor: [descriptive text]
 - [/blog/another-post] — anchor: [descriptive text]
 

@@ -87,7 +87,7 @@ export const BrandLogos = ({
     return (
       <div className="flex flex-wrap items-center justify-center gap-6">
         {brands.map((brand) => (
-          <div key={brand.name} className="opacity-70 grayscale">
+          <div key={brand.name} className="opacity-40">
             <LogoImage
               src={brand.logo}
               alt={brand.name}
@@ -119,9 +119,9 @@ export const BrandLogos = ({
               <SlideUp key={brand.name}>
                 <div
                   className={cn(
-                    "grayscale brightness-75 opacity-60",
+                    "opacity-50",
                     "transition-all duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]",
-                    "hover:grayscale-0 hover:brightness-100 hover:opacity-100"
+                    "hover:opacity-100"
                   )}
                 >
                   <LogoImage
@@ -171,9 +171,9 @@ export const BrandLogos = ({
             <SlideUp key={brand.name}>
               <div
                 className={cn(
-                  "grayscale brightness-75 opacity-60",
+                  "opacity-50",
                   "transition-all duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]",
-                  "hover:grayscale-0 hover:brightness-100 hover:opacity-100"
+                  "hover:opacity-100"
                 )}
               >
                 <LogoImage

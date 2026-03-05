@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Our Work",
   description:
     "See interior, exterior, and cabinet painting projects by Shape of Paint. Before & after transformations across Vancouver homes. Get inspired for your project.",
+  alternates: {
+    canonical: `${siteConfig.url}/portfolio`,
+  },
 };
 
 const instagramImages = [
@@ -55,11 +58,12 @@ const cabinetImages = [
 ];
 
 export default function PortfolioPage() {
-  const breadcrumbJsonLd = JSON.stringify(generateBreadcrumbSchema([
-    { name: "Home", url: siteConfig.url },
-    { name: "Services", url: `${siteConfig.url}/services` },
-    { name: "Portfolio", url: `${siteConfig.url}/services/portfolio` },
-  ]));
+  const breadcrumbJsonLd = JSON.stringify(
+    generateBreadcrumbSchema([
+      { name: "Home", url: siteConfig.url },
+      { name: "Portfolio", url: `${siteConfig.url}/portfolio` },
+    ])
+  );
 
   return (
     <>
@@ -93,7 +97,7 @@ export default function PortfolioPage() {
 
       <FeatureSection
         heading="Ready to transform your space?"
-        description="Whether it's a single room or a complete exterior, we'd love to show you what's possible. Get your free estimate and join the portfolio."
+        description="Whether it is a single room or a complete exterior, we would love to show you what is possible. Get your free estimate and join the portfolio."
         ctaText="Start Your Project"
         ctaHref="/contact#contact-form"
         image="/images/contact-cta.webp"

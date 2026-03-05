@@ -316,7 +316,7 @@ export default function CabinetPaintingVsReplacingPage() {
         Want a spray finish that makes factory cabinets look
         ordinary? Learn more about our{" "}
         <Link
-          href="/services/cabinets"
+          href="/vancouver/cabinet-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver

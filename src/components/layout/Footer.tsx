@@ -6,7 +6,7 @@ import { BrandLogos } from "@/components/sections/BrandLogos";
 export function Footer() {
   return (
     <footer className="bg-background">
-      <div className="mx-auto max-w-[1440px] px-4 pt-12 pb-24 md:px-8 md:py-16">
+      <div className="mx-auto max-w-section px-4 pt-12 pb-24 md:px-8 md:py-16">
         <div className="grid gap-12 md:grid-cols-5">
           <SlideUp>
             <div className="flex flex-col gap-4">
@@ -40,7 +40,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
+                      className="inline-flex min-h-[48px] items-center text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -60,7 +60,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
+                      className="inline-flex min-h-[48px] items-center text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -80,7 +80,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
+                      className="inline-flex min-h-[48px] items-center text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -100,7 +100,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block py-2 text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
+                      className="inline-flex min-h-[48px] items-center text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
                     >
                       {link.label}
                     </Link>

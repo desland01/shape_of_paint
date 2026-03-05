@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef } from "react";
 import {
   Sheet,
   SheetContent,
@@ -43,18 +43,10 @@ const TextInputSheet = ({
   rows = 3,
   error,
 }: TextInputSheetProps) => {
-  const [localValue, setLocalValue] = useState(value);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const errorId = useId();
   const { keyboardHeight } = useKeyboardHeight();
-
-  // Sync local state when parent value changes or sheet opens
-  useEffect(() => {
-    if (open) {
-      setLocalValue(value);
-    }
-  }, [open, value]);
 
   // Auto-focus the input after sheet open animation completes
   useEffect(() => {
@@ -71,10 +63,17 @@ const TextInputSheet = ({
     return () => clearTimeout(timer);
   }, [open, multiline]);
 
+  const getCurrentValue = useCallback(() => {
+    if (multiline) {
+      return textareaRef.current?.value ?? value;
+    }
+    return inputRef.current?.value ?? value;
+  }, [multiline, value]);
+
   const handleDone = useCallback(() => {
-    onChange(localValue);
+    onChange(getCurrentValue());
     onOpenChange(false);
-  }, [localValue, onChange, onOpenChange]);
+  }, [getCurrentValue, onChange, onOpenChange]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -90,6 +89,7 @@ const TextInputSheet = ({
     "w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-accent-gold";
 
   const hasError = Boolean(error);
+  const fieldKey = `${open ? "open" : "closed"}-${value}`;
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -109,9 +109,9 @@ const TextInputSheet = ({
         <div className="flex flex-col gap-3">
           {multiline ? (
             <textarea
+              key={fieldKey}
               ref={textareaRef}
-              value={localValue}
-              onChange={(e) => setLocalValue(e.target.value)}
+              defaultValue={value}
               rows={rows}
               placeholder={placeholder}
               autoComplete={autoComplete}
@@ -122,11 +122,11 @@ const TextInputSheet = ({
             />
           ) : (
             <input
+              key={fieldKey}
               ref={inputRef}
               type={type}
               inputMode={INPUT_MODE_MAP[type]}
-              value={localValue}
-              onChange={(e) => setLocalValue(e.target.value)}
+              defaultValue={value}
               onKeyDown={handleKeyDown}
               placeholder={placeholder}
               autoComplete={autoComplete}

@@ -13,6 +13,7 @@ export function ContactCards() {
         siteConfig.address.street,
         `${siteConfig.address.city} ${siteConfig.address.state} ${siteConfig.address.zip}`,
       ],
+      href: siteConfig.socialLinks.google,
     },
     {
       icon: Mail,
@@ -30,7 +31,7 @@ export function ContactCards() {
 
   return (
     <section className="bg-background py-12">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
+        <div className="mx-auto max-w-section px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card, i) => (
             <SlideUp key={card.title} delay={i * 0.1}>
@@ -45,7 +46,9 @@ export function ContactCards() {
                     <a
                       key={j}
                       href={card.href}
-                      className="block text-lg font-normal text-text-secondary underline underline-offset-2 hover:text-link-hover transition-colors duration-300"
+                      target={card.href.startsWith("http") ? "_blank" : undefined}
+                      rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="inline-flex min-h-[48px] items-center text-lg font-normal text-text-secondary underline underline-offset-2 hover:text-link-hover transition-colors duration-300"
                     >
                       {line}
                     </a>

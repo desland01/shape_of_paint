@@ -33,7 +33,7 @@ export function NewsletterSignup() {
                 className="flex flex-col gap-3"
               >
                 <div className="flex flex-col gap-1 text-left">
-                  <label htmlFor="newsletter-email" className="text-sm font-medium text-text-secondary">
+                  <label htmlFor="newsletter-email" className="text-base font-medium text-text-secondary">
                     Email address
                   </label>
                   <Input
@@ -49,7 +49,7 @@ export function NewsletterSignup() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-cta-hover-foreground transition-all duration-[400ms] rounded-[12px] text-base px-4 py-3 font-normal tracking-wide min-h-12"
+                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-cta-hover-foreground transition-all duration-400 rounded-[12px] text-base px-4 py-3 font-normal tracking-wide min-h-12"
                 >
                   Subscribe
                 </button>

@@ -272,7 +272,7 @@ export default function PrepareHomeInteriorPaintingPage() {
       <p>
         Ready to book your project?{" "}
         <Link
-          href="/services/interior"
+          href="/vancouver/interior-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           Learn about our interior painting in Vancouver

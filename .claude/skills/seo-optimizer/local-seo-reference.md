@@ -1,6 +1,6 @@
 # Local SEO Reference — Shape of Paint
 
-Sterling Sky / Joy Hawkins research-backed methodology combined with Kyle Roof's Core 30 citation method. Use for GBP optimization, citation building, review management, and service area pages.
+Sterling Sky / Joy Hawkins research-backed methodology combined with Kyle Roof's Core 30 citation method. Use for GBP optimization, citation building, review management, and city hub and service spoke pages.
 
 ## NAP (Name, Address, Phone)
 
@@ -112,7 +112,7 @@ Build in priority order. NAP must be identical on every listing.
 
 ---
 
-## Service Area Pages
+## City-First Location Pages
 
 ### Priority Tiers
 
@@ -120,30 +120,30 @@ Build in priority order. NAP must be identical on every listing.
 
 | City | URL | Primary Keyword | Vol/mo | KD |
 |------|-----|-----------------|--------|----|
-| Burnaby | `/areas/burnaby` | painters burnaby | 320 | — |
-| North Vancouver | `/areas/north-vancouver` | painters north vancouver | 260 | — |
-| Coquitlam | `/areas/coquitlam` | painters coquitlam | 260 | 4 |
-| Surrey | `/areas/surrey` | painters surrey bc | 480 | 4 |
+| Burnaby | `/burnaby` | painters burnaby | 320 | — |
+| North Vancouver | `/north-vancouver` | painters north vancouver | 260 | — |
+| Coquitlam | `/coquitlam` | painters coquitlam | 260 | 4 |
+| Surrey | `/surrey` | painters surrey bc | 480 | 4 |
 
 **Tier 2:**
 
 | City | URL | Primary Keyword | Vol/mo |
 |------|-----|-----------------|--------|
-| Langley | `/areas/langley` | painters langley bc | 210 |
-| Port Moody | `/areas/port-moody` | house painters port moody | 90 |
-| New Westminster | `/areas/new-westminster` | painters new westminster | 70 |
+| Langley | `/langley` | painters langley bc | 210 |
+| Port Moody | `/port-moody` | house painters port moody | 90 |
+| New Westminster | `/new-westminster` | painters new westminster | 70 |
 
 **Tier 3:**
 
 | City | URL | Primary Keyword | Vol/mo |
 |------|-----|-----------------|--------|
-| West Vancouver | `/areas/west-vancouver` | painters west vancouver | 50 |
-| Pitt Meadows | `/areas/pitt-meadows` | house painters pitt meadows | 70 |
-| Port Coquitlam | `/areas/port-coquitlam` | house painters port coquitlam | 20 |
-| Richmond | `/areas/richmond` | painters richmond bc | 30 |
-| Delta | `/areas/delta` | painters delta bc | 30 |
+| West Vancouver | `/west-vancouver` | painters west vancouver | 50 |
+| Pitt Meadows | `/pitt-meadows` | house painters pitt meadows | 70 |
+| Port Coquitlam | `/port-coquitlam` | house painters port coquitlam | 20 |
+| Richmond | `/richmond` | painters richmond bc | 30 |
+| Delta | `/delta` | painters delta bc | 30 |
 
-### Service Area Page Requirements
+### Location Hub Requirements
 
 - **Title:** `Painters [City] BC | Interior & Exterior | Shape of Paint`
 - **H1:** `House Painters in [City], BC`
@@ -152,7 +152,7 @@ Build in priority order. NAP must be identical on every listing.
 - Include area-specific testimonials if available
 - Note distance/drive time from Shape of Paint
 - `areaServed` schema pointing to the specific city
-- Internal links UP to parent service pages (interior, exterior, cabinets)
+- Internal links to local service spokes (`/[city]/interior-painting`, `/[city]/exterior-painting`, `/[city]/cabinet-painting`) and matching Vancouver money pages
 
 ---
 

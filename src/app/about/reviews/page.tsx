@@ -9,9 +9,9 @@ import { siteConfig } from "@/config/site";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "200+ Reviews | Vancouver Painters | Shape of Paint",
+  title: `${siteConfig.googleBusiness.reviewCount} Google Reviews | Vancouver Painters | Shape of Paint`,
   description:
-    "4.9 stars across 200+ reviews. Vancouver homeowners share exactly what happened when Shape of Paint transformed their homes. Read their stories.",
+    `${siteConfig.googleBusiness.rating.toFixed(1)} stars across ${siteConfig.googleBusiness.reviewCount} Google reviews. Lower Mainland homeowners share what happened when Shape of Paint transformed their homes.`,
 };
 
 const instagramImages = [
@@ -34,8 +34,8 @@ export default function ReviewsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <PageHero
-        heading="200+ Five-Star Reviews from Vancouver Homeowners"
-        description="4.9-star average. Zero shortcuts. Every review below is from a real Vancouver family who trusted us with their home. Read what they said — then decide for yourself."
+        heading={`${siteConfig.googleBusiness.reviewCount} Google Reviews from Lower Mainland Homeowners`}
+        description={`${siteConfig.googleBusiness.rating.toFixed(1)}-star average on Google. Every review below is from a real homeowner who trusted us with their home. Read what they said, then decide for yourself.`}
       />
 
       <SectionWrapper>

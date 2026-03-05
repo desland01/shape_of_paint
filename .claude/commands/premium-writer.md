@@ -36,6 +36,8 @@ If priorities conflict, lower priority loses.
 - NEVER remove target keywords from the first 100 words.
 - NEVER break heading hierarchy (H1 > H2 > H3).
 - Keep CTA wording required by the keyword map.
+- Keep internal URL references aligned to city-first architecture: `/{city}`, `/{city}/{service}`, `/portfolio`.
+- Never reintroduce legacy route references such as `/areas/*` or `/services/*`.
 
 ---
 

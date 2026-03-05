@@ -295,7 +295,7 @@ export default function BestPaintKitchenCabinetsPage() {
       <p>
         Want to see these products in action on real Vancouver kitchens? Check out our{" "}
         <Link
-          href="/services/cabinets"
+          href="/vancouver/cabinet-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           cabinet painting in Vancouver

@@ -61,7 +61,7 @@ export function FAQ({
           {items.length > 4 && !showAll && (
             <button
               onClick={() => setShowAll(true)}
-              className="mt-6 mx-auto flex items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors"
+              className="mt-6 mx-auto flex min-h-[48px] items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors"
             >
               Show All {items.length} Questions
             </button>

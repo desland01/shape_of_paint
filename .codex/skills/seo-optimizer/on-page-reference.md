@@ -26,7 +26,7 @@ house painting, residential painting, painting services, licensed, insured, bond
 
 ---
 
-### Interior Painting (/services/interior)
+### Interior Painting (/vancouver/interior-painting)
 
 **Title Tag:** `Interior Painting Vancouver BC | Shape of Paint` (48 chars)
 **H1:** Interior Painting in Vancouver
@@ -58,7 +58,7 @@ H1: Interior Painting in Vancouver
 
 ---
 
-### Exterior Painting (/services/exterior)
+### Exterior Painting (/vancouver/exterior-painting)
 
 **Title Tag:** `Exterior Painting Vancouver BC | Shape of Paint` (48 chars)
 **H1:** Exterior Painting in Vancouver
@@ -93,7 +93,7 @@ H1: Exterior Painting in Vancouver
 
 ---
 
-### Cabinet Painting (/services/cabinets)
+### Cabinet Painting (/vancouver/cabinet-painting)
 
 **Title Tag:** `Cabinet Painting Vancouver BC | Shape of Paint` (47 chars)
 **H1:** Cabinet Painting in Vancouver
@@ -125,7 +125,7 @@ H1: Cabinet Painting in Vancouver
 
 ---
 
-### Service Area Pages (/areas/[city])
+### Location Hub Pages (/[city])
 
 **Title Pattern:** `Painters [City] BC | Interior & Exterior | Shape of Paint`
 **H1 Pattern:** `House Painters in [City], BC`
@@ -136,7 +136,7 @@ Each service area page must have:
 - Area-specific testimonials if available
 - Note distance/drive time from Shape of Paint
 - `areaServed` schema pointing to the specific city
-- Internal links UP to parent service pages (interior, exterior, cabinets)
+- Internal links to local service spokes (`/[city]/interior-painting`, `/[city]/exterior-painting`, `/[city]/cabinet-painting`) and matching Vancouver money pages
 
 ---
 

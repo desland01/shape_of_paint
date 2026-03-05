@@ -1,6 +1,6 @@
 ---
 name: seo-optimizer
-description: Optimizes pages, plans blog content, writes SEO copy, and manages local SEO for Shape of Paint (Vancouver painting contractor). Use for on-page optimization, keyword targeting, reverse silo blog planning, service area pages, heading structure, schema markup, internal linking, GBP optimization, citation building, review strategy, and conversion copywriting. Combines Kyle Roof scientific SEO, Sterling Sky local SEO, and Hormozi/Sanchez copy methodology.
+description: Optimizes pages, plans blog content, writes SEO copy, and manages local SEO for Shape of Paint (Vancouver painting contractor). Use for on-page optimization, keyword targeting, reverse silo blog planning, city hub pages and service spokes, heading structure, schema markup, internal linking, GBP optimization, citation building, review strategy, and conversion copywriting. Combines Kyle Roof scientific SEO, Sterling Sky local SEO, and Hormozi/Sanchez copy methodology.
 ---
 
 # SEO Optimizer — Shape of Paint
@@ -29,17 +29,17 @@ GBP Category: Painter (primary), House Painter (secondary)
 | Page | URL | Primary Keyword | Vol/mo | KD |
 |------|-----|-----------------|--------|----|
 | Homepage | `/` | house painters vancouver | 1,000 | 15 |
-| Interior | `/services/interior` | interior painting vancouver | 320 | 20 |
-| Exterior | `/services/exterior` | exterior painting vancouver | 480 | 13 |
-| Cabinets | `/services/cabinets` | cabinet painting vancouver | 210 | 1 |
+| Interior | `/vancouver/interior-painting` | interior painting vancouver | 320 | 20 |
+| Exterior | `/vancouver/exterior-painting` | exterior painting vancouver | 480 | 13 |
+| Cabinets | `/vancouver/cabinet-painting` | cabinet painting vancouver | 210 | 1 |
 | Estimate | `/contact/estimate` | free painting estimate vancouver | — | — |
 | FAQ | `/contact/faq` | painters vancouver FAQ | — | — |
 | About | `/about` | about Shape of Paint | — | — |
-| Burnaby | `/areas/burnaby` | painters burnaby | 320 | — |
-| North Van | `/areas/north-vancouver` | painters north vancouver | 260 | — |
-| Coquitlam | `/areas/coquitlam` | painters coquitlam | 260 | 4 |
-| Surrey | `/areas/surrey` | painters surrey bc | 480 | 4 |
-| Langley | `/areas/langley` | painters langley bc | 210 | — |
+| Burnaby | `/burnaby` | painters burnaby | 320 | — |
+| North Van | `/north-vancouver` | painters north vancouver | 260 | — |
+| Coquitlam | `/coquitlam` | painters coquitlam | 260 | 4 |
+| Surrey | `/surrey` | painters surrey bc | 480 | 4 |
+| Langley | `/langley` | painters langley bc | 210 | — |
 
 **Easiest win:** Cabinet painting vancouver (KD 1, 210/mo). Painters surrey bc and painters coquitlam (KD 4) are next.
 
@@ -56,7 +56,7 @@ Read [reverse-silo-reference.md](reverse-silo-reference.md) for all 3 silo plans
 **Writing any copy (headlines, CTAs, descriptions)?**
 Read [copywriting-reference.md](copywriting-reference.md) for Hormozi/Sanchez frameworks.
 
-**Working on local SEO, GBP, citations, reviews, or service area pages?**
+**Working on local SEO, GBP, citations, reviews, or city hub pages or service spokes?**
 Read [local-seo-reference.md](local-seo-reference.md) for Sterling Sky methodology and citation lists.
 
 **Need full keyword data, competitor analysis, or implementation phases?**
@@ -182,7 +182,7 @@ These rules are non-negotiable for all blog content:
 3. NO daisy chaining (if A links to B, A does NOT also link to C through B)
 4. NO other internal links outside the silo
 
-Three silos exist: Interior (`/services/interior`), Exterior (`/services/exterior`), Cabinets (`/services/cabinets`). See [reverse-silo-reference.md](reverse-silo-reference.md) for complete post lists and linking matrices.
+Three silos exist: Interior (`/vancouver/interior-painting`), Exterior (`/vancouver/exterior-painting`), Cabinets (`/vancouver/cabinet-painting`). See [reverse-silo-reference.md](reverse-silo-reference.md) for complete post lists and linking matrices.
 
 ## Anchor Text Distribution
 
@@ -236,7 +236,7 @@ Cabinet painting has the most stable demand year-round. Prioritize the cabinets 
 |------|-----------|
 | [on-page-reference.md](on-page-reference.md) | Optimizing any page (TF-IDF terms, H2/H3 structures, audit checklist) |
 | [reverse-silo-reference.md](reverse-silo-reference.md) | Planning or writing blog posts (3 silo plans, linking matrices) |
-| [local-seo-reference.md](local-seo-reference.md) | GBP, citations, reviews, service area pages, NAP |
+| [local-seo-reference.md](local-seo-reference.md) | GBP, citations, reviews, city hubs/spokes, NAP |
 | [copywriting-reference.md](copywriting-reference.md) | Writing any headline, CTA, description, or body copy |
 | [docs/keyword-map.md](../../../docs/keyword-map.md) | Full keyword data, competitor analysis, implementation phases |
 

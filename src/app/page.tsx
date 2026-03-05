@@ -18,7 +18,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "House Painters Vancouver BC | Shape of Paint",
-  description: "House painters Vancouver homeowners trust with 200+ five-star reviews. Interior, exterior & cabinet specialists. We spend 40% of every project on prep. 604-353-7378.",
+  description: `House painters Vancouver homeowners trust with ${siteConfig.googleBusiness.rating.toFixed(1)} stars on ${siteConfig.googleBusiness.reviewCount} Google reviews. Interior, exterior & cabinet specialists. We spend 40% of every project on prep. 604-353-7378.`,
 };
 
 const heroImages = [
@@ -104,7 +104,7 @@ export default function HomePage() {
         heading="More than painters — finishing specialists"
         description="Most of our clients find us through their interior designer. That's not a coincidence. We test every surface before we coat it — adhesion, moisture, existing finishes. Then we pick the right primer for your walls, not a one-size-fits-all. You get honest advice and a finish that performs the way your designer imagined."
         ctaText="See Our Interior Work"
-        ctaHref="/services/interior"
+        ctaHref="/vancouver/interior-painting"
         image="/images/design-services.webp"
         imageAlt="Shape of Paint design consulting"
       />
@@ -276,7 +276,7 @@ export default function HomePage() {
       />
 
       <Testimonials
-        heading="200+ five-star reviews. Here's what homeowners actually said."
+        heading={`${siteConfig.googleBusiness.reviewCount} Google reviews. Here's what homeowners actually said.`}
         testimonials={[...siteConfig.testimonials]}
       />
 

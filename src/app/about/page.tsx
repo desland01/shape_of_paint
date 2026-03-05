@@ -26,17 +26,17 @@ const instagramImages = [
 const portfolioCategories = [
   {
     title: "Interiors",
-    href: "/services/interior",
+    href: "/vancouver/interior-painting",
     image: "/images/interior.webp",
   },
   {
     title: "Exteriors",
-    href: "/services/exterior",
+    href: "/vancouver/exterior-painting",
     image: "/images/exterior.webp",
   },
   {
     title: "Cabinets",
-    href: "/services/cabinets",
+    href: "/vancouver/cabinet-painting",
     image: "/images/cabinets.webp",
   },
   {

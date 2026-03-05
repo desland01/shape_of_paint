@@ -97,7 +97,7 @@ export function Testimonials({
 
   return (
     <section className="bg-white py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1440px] px-4 text-center md:px-8">
+      <div className="mx-auto max-w-section px-4 text-center md:px-8">
         <SlideUp>
           <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
         </SlideUp>
@@ -160,7 +160,7 @@ export function Testimonials({
 
         {/* Indicator dots */}
         {testimonials.length > 1 && (
-          <div className="mt-8 flex items-center justify-center gap-2" role="tablist" aria-label="Testimonial navigation">
+          <div className="mt-8 flex items-center justify-center" role="tablist" aria-label="Testimonial navigation">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -168,15 +168,19 @@ export function Testimonials({
                   setDirection(index > current ? 1 : -1);
                   setCurrent(index);
                 }}
-                className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                  index === current
-                    ? "bg-text-secondary scale-125"
-                    : "bg-text-secondary/30 hover:bg-text-secondary/50"
-                }`}
+                className="flex min-h-[48px] min-w-[48px] items-center justify-center"
                 role="tab"
                 aria-selected={index === current}
                 aria-label={`Go to testimonial ${index + 1}`}
-              />
+              >
+                <span
+                  className={`block h-2 w-2 rounded-full transition-all duration-300 ${
+                    index === current
+                      ? "bg-text-secondary scale-125"
+                      : "bg-text-secondary/30 hover:bg-text-secondary/50"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

@@ -375,7 +375,7 @@ export default function ExteriorPaintFailureSignsPage() {
       <p>
         Seeing signs of paint failure on your home? Learn more about our{" "}
         <Link
-          href="/services/exterior"
+          href="/vancouver/exterior-painting"
           className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
         >
           exterior painting in Vancouver

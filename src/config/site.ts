@@ -1,34 +1,88 @@
+import {
+  CITY_CONTENT,
+  CITY_SLUGS,
+  PRIMARY_CITY_SLUG,
+  SERVICE_CONTENT,
+  getCityPath,
+  getCityServicePath,
+  getVancouverServicePath,
+  type CitySlug,
+  type ServiceSlug,
+} from "@/config/local-seo";
+
+const PRIMARY_SERVICES = [
+  "interior-painting",
+  "exterior-painting",
+  "cabinet-painting",
+] as const satisfies ServiceSlug[];
+
+const NAV_LOCATION_SLUGS = [
+  "burnaby",
+  "north-vancouver",
+  "coquitlam",
+  "surrey",
+  "richmond",
+  "langley",
+] as const satisfies CitySlug[];
+
+const GOOGLE_MAPS_URL = "https://www.google.com/maps?cid=9497625668518470323";
+
 export const siteConfig = {
   name: "Shape of Paint",
   tagline: "Vancouver's Master Painters. Not the Fastest — the Best.",
   description:
-    "House painters Vancouver homeowners trust with their biggest investment. 200+ five-star reviews. Interior, exterior & cabinet masters. 604-353-7378.",
+    "House painters Vancouver homeowners trust with their biggest investment. Interior, exterior, and cabinet masters. 604-353-7378.",
   url: "https://shapeofpaint.com",
   phone: "604-353-7378",
   email: "hello@shapeofpaint.com",
   address: {
-    street: "",
-    city: "Vancouver",
+    street: "4860 207 St #6",
+    city: "Langley",
     state: "BC",
-    zip: "",
+    zip: "V3A 2E3",
   },
   serviceArea: "Vancouver and the Lower Mainland",
   ownerName: "Gabe Penner",
+  googleBusiness: {
+    placeId: "ChIJL5SpffoFzEERs-KsITIYzoM",
+    cid: "9497625668518470323",
+    businessProfileId: "286926383742558330",
+    kgId: "/g/11ssk3wccp",
+    categories: ["Painter", "Painting"],
+    rating: 4.8,
+    reviewCount: 48,
+    coordinates: {
+      latitude: 49.0910658,
+      longitude: -122.6491605,
+    },
+  },
   socialLinks: {
     instagram: "https://instagram.com/shapeofpaint",
     facebook: "https://facebook.com/shapeofpaint",
     youtube: "",
-    google: "https://www.google.com/maps/place/Shape+of+Paint",
+    google: GOOGLE_MAPS_URL,
   },
   nav: [
     {
       label: "Services",
-      href: "/services",
+      href: getCityPath(PRIMARY_CITY_SLUG),
       children: [
-        { label: "Interior Painting", href: "/services/interior" },
-        { label: "Exterior Painting", href: "/services/exterior" },
-        { label: "Cabinets", href: "/services/cabinets" },
-        { label: "Portfolio", href: "/services/portfolio" },
+        ...PRIMARY_SERVICES.map((service) => ({
+          label: SERVICE_CONTENT[service].name,
+          href: getVancouverServicePath(service),
+        })),
+        { label: "Portfolio", href: "/portfolio" },
+      ],
+    },
+    {
+      label: "Locations",
+      href: "/locations",
+      children: [
+        { label: "All Locations", href: "/locations" },
+        ...NAV_LOCATION_SLUGS.map((city) => ({
+          label: CITY_CONTENT[city].name,
+          href: getCityPath(city),
+        })),
       ],
     },
     {
@@ -49,29 +103,12 @@ export const siteConfig = {
     },
     { label: "Blog", href: "/blog" },
   ],
-  services: [
-    {
-      title: "Interior Painting",
-      description:
-        "You pick the colours. We deliver walls, ceilings, trim, baseboards, fireplaces, and staircases with a finish so clean your designer will ask who did it.",
-      href: "/services/interior",
-      image: "/images/interior.webp",
-    },
-    {
-      title: "Exterior Painting",
-      description:
-        "Most exterior paint jobs fail in 3 years because the prep was rushed. We coat siding, stucco, trim, soffits, and decks to handle Vancouver rain for a decade — not just a season.",
-      href: "/services/exterior",
-      image: "/images/exterior.webp",
-    },
-    {
-      title: "Cabinet Painting",
-      description:
-        "Factory cabinets wish they looked this good. Hand-sprayed artisan finish — smoother, more durable, and true to colour. Your kitchen transforms in days, not months.",
-      href: "/services/cabinets",
-      image: "/images/cabinets.webp",
-    },
-  ],
+  services: PRIMARY_SERVICES.map((service) => ({
+    title: SERVICE_CONTENT[service].name,
+    description: SERVICE_CONTENT[service].summary,
+    href: getVancouverServicePath(service),
+    image: SERVICE_CONTENT[service].heroImage,
+  })),
   testimonials: [
     {
       quote:
@@ -162,30 +199,35 @@ export const siteConfig = {
       { label: "About Us", href: "/about" },
       { label: "Testimonials", href: "/about/reviews" },
       { label: "Blog", href: "/blog" },
-      { label: "Portfolio", href: "/services/portfolio" },
-      { label: "Google Reviews", href: "#" },
+      { label: "Locations", href: "/locations" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Google Reviews", href: GOOGLE_MAPS_URL },
     ],
     recommendations: [
-      { label: "Interior Painting", href: "/services/interior" },
-      { label: "Exterior Painting", href: "/services/exterior" },
-      { label: "Cabinets", href: "/services/cabinets" },
+      ...PRIMARY_SERVICES.map((service) => ({
+        label: SERVICE_CONTENT[service].name,
+        href: getVancouverServicePath(service),
+      })),
       { label: "Cost Calculator", href: "/tools/cost-calculator" },
       { label: "Free Estimate", href: "/contact#contact-form" },
       { label: "FAQ", href: "/contact/faq" },
       { label: "Contact", href: "/contact" },
     ],
-    areas: [
-      { label: "Surrey", href: "/areas/surrey" },
-      { label: "Burnaby", href: "/areas/burnaby" },
-      { label: "North Vancouver", href: "/areas/north-vancouver" },
-      { label: "Coquitlam", href: "/areas/coquitlam" },
-      { label: "Richmond", href: "/areas/richmond" },
-      { label: "Langley", href: "/areas/langley" },
-    ],
+    areas: CITY_SLUGS.filter((city) => city !== PRIMARY_CITY_SLUG).map((city) => ({
+      label: CITY_CONTENT[city].name,
+      href: getCityPath(city),
+    })),
     legal: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
+  },
+  seo: {
+    primaryCity: PRIMARY_CITY_SLUG,
+    cities: CITY_SLUGS,
+    services: PRIMARY_SERVICES,
+    getCityPath,
+    getCityServicePath,
   },
 } as const;
 

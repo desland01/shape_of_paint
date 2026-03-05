@@ -1,6 +1,16 @@
+import {
+  CITY_CONTENT,
+  SERVICE_CONTENT,
+  SERVICE_SLUGS,
+  getCityServicePath,
+  type ServiceSlug,
+} from "@/config/local-seo";
 import { siteConfig } from "@/config/site";
 
 export function generateLocalBusinessSchema() {
+  const reviewCount = String(siteConfig.googleBusiness.reviewCount);
+  const ratingValue = String(siteConfig.googleBusiness.rating);
+
   return {
     "@context": "https://schema.org",
     "@type": "HousePainter",
@@ -19,30 +29,51 @@ export function generateLocalBusinessSchema() {
       postalCode: siteConfig.address.zip,
       addressCountry: "CA",
     },
-    areaServed: [
-      "Vancouver",
-      "Burnaby",
-      "North Vancouver",
-      "West Vancouver",
-      "Coquitlam",
-      "Port Moody",
-      "Surrey",
-      "New Westminster",
-      "Langley",
-      "Richmond",
-    ].map((city) => ({ "@type": "City", name: city })),
+    areaServed: Object.values(CITY_CONTENT).map((city) => ({
+      "@type": "City",
+      name: city.name,
+    })),
     sameAs: [
       siteConfig.socialLinks.instagram,
       siteConfig.socialLinks.facebook,
       siteConfig.socialLinks.youtube,
+      siteConfig.socialLinks.google,
     ].filter(Boolean),
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
+      ratingValue,
       bestRating: "5",
-      ratingCount: "200",
-      reviewCount: "200",
+      ratingCount: reviewCount,
+      reviewCount,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.googleBusiness.coordinates.latitude,
+      longitude: siteConfig.googleBusiness.coordinates.longitude,
+    },
+    hasMap: siteConfig.socialLinks.google,
+    identifier: [
+      {
+        "@type": "PropertyValue",
+        name: "Google Place ID",
+        value: siteConfig.googleBusiness.placeId,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Google CID",
+        value: siteConfig.googleBusiness.cid,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Google Business Profile ID",
+        value: siteConfig.googleBusiness.businessProfileId,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Knowledge Graph ID",
+        value: siteConfig.googleBusiness.kgId,
+      },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -75,50 +106,20 @@ export function generateLocalBusinessSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Painting Services",
-      itemListElement: [
-        {
-          "@type": "OfferCatalog",
-          name: "Interior Painting",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Interior Painting",
-                url: `${siteConfig.url}/services/interior`,
-              },
+      itemListElement: SERVICE_SLUGS.map((serviceSlug) => ({
+        "@type": "OfferCatalog",
+        name: SERVICE_CONTENT[serviceSlug].name,
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: SERVICE_CONTENT[serviceSlug].name,
+              url: `${siteConfig.url}${getCityServicePath("vancouver", serviceSlug)}`,
             },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Exterior Painting",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Exterior Painting",
-                url: `${siteConfig.url}/services/exterior`,
-              },
-            },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Cabinet Painting",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Cabinet Painting",
-                url: `${siteConfig.url}/services/cabinets`,
-              },
-            },
-          ],
-        },
-      ],
+          },
+        ],
+      })),
     },
   };
 }
@@ -128,7 +129,7 @@ export function generateServiceSchema(service: {
   description: string;
   url: string;
   areaServed?: string | string[];
-  brand?: string[];
+  brand?: readonly string[];
 }) {
   const areaServed = service.areaServed
     ? Array.isArray(service.areaServed)
@@ -155,6 +156,51 @@ export function generateServiceSchema(service: {
       })),
     }),
   };
+}
+
+export function generateLocationHubSchema(location: {
+  city: string;
+  url: string;
+  serviceSlugs: ServiceSlug[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `House Painters in ${location.city}`,
+    url: location.url,
+    about: {
+      "@type": "LocalBusiness",
+      name: siteConfig.name,
+      areaServed: {
+        "@type": "City",
+        name: location.city,
+      },
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: location.serviceSlugs.map((serviceSlug, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: SERVICE_CONTENT[serviceSlug].name,
+        url: `${location.url}/${serviceSlug}`,
+      })),
+    },
+  };
+}
+
+export function generateLocationServiceSchema(service: {
+  city: string;
+  serviceSlug: ServiceSlug;
+  description: string;
+  url: string;
+}) {
+  return generateServiceSchema({
+    name: `${SERVICE_CONTENT[service.serviceSlug].name} in ${service.city}`,
+    description: service.description,
+    url: service.url,
+    areaServed: service.city,
+    brand: SERVICE_CONTENT[service.serviceSlug].brands,
+  });
 }
 
 export function generateFAQSchema(items: { question: string; answer: string }[]) {
