@@ -300,4 +300,4 @@ All new content must follow:
 - **Local SEO:** NAP consistency (Shape of Paint / Vancouver, BC / 604-353-7378). LocalBusiness schema on every page. Service area mentions.
 - **Reverse Silo Rules:** Blog posts link ONLY to target page + 1-2 siblings. No other internal links. No daisy chaining.
 
-See `docs/keyword-map.md` for full keyword data and `CLAUDE.md` for project structure reference.
+See `docs/keyword-map.md` for full keyword data and `GEMINI.md` for project structure reference.

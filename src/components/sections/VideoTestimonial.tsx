@@ -1,101 +1,62 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SlideUp, ScaleIn } from "@/components/ui/motion";
 
-declare global {
-  interface Window {
-    YT: typeof YT;
-    onYouTubeIframeAPIReady: (() => void) | undefined;
-  }
-}
-
 interface VideoTestimonialProps {
   eyebrow: string;
   heading: string;
-  videoId?: string;
-}
-
-function loadYTApi(): Promise<void> {
-  if (window.YT?.Player) return Promise.resolve();
-  return new Promise((resolve) => {
-    const prev = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      prev?.();
-      resolve();
-    };
-    if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      document.head.appendChild(tag);
-    }
-  });
+  videoSrc?: string;
+  posterSrc?: string;
 }
 
 export function VideoTestimonial({
   eyebrow,
   heading,
-  videoId,
+  videoSrc,
+  posterSrc,
 }: VideoTestimonialProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const playerRef = useRef<YT.Player | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const playAttemptedRef = useRef(false);
   const [visible, setVisible] = useState(false);
   const [muted, setMuted] = useState(true);
+  const [showControls, setShowControls] = useState(false);
 
-  useEffect(() => {
-    if (!videoId) return;
+  const handleCanPlay = useCallback(async () => {
+    const video = videoRef.current;
+    if (!video) return;
 
-    let destroyed = false;
-    loadYTApi().then(() => {
-      if (destroyed || !containerRef.current) return;
-      playerRef.current = new window.YT.Player(containerRef.current, {
-        videoId,
-        playerVars: {
-          autoplay: 1,
-          mute: 1,
-          controls: 0,
-          modestbranding: 1,
-          loop: 1,
-          rel: 0,
-          showinfo: 0,
-          playsinline: 1,
-          iv_load_policy: 3,
-          disablekb: 1,
-          playlist: videoId,
-          enablejsapi: 1,
-          origin: window.location.origin,
-        },
-        events: {
-          onReady: () => {
-            setTimeout(() => {
-              if (!destroyed) setVisible(true);
-            }, 3000);
-          },
-        },
-      });
-    });
+    setVisible(true);
 
-    return () => {
-      destroyed = true;
-      playerRef.current?.destroy();
-      playerRef.current = null;
-    };
-  }, [videoId]);
+    if (playAttemptedRef.current) return;
+    playAttemptedRef.current = true;
+
+    try {
+      await video.play();
+      setShowControls(false);
+    } catch {
+      // If autoplay is blocked by browser policy, fall back to native controls.
+      setShowControls(true);
+    }
+  }, []);
 
   const toggleMute = useCallback(() => {
-    const p = playerRef.current;
-    if (!p) return;
-    if (muted) {
-      p.unMute();
-      p.setVolume(100);
-    } else {
-      p.mute();
+    const video = videoRef.current;
+    if (!video) return;
+
+    const nextMuted = !video.muted;
+    video.muted = nextMuted;
+    setMuted(nextMuted);
+
+    if (!nextMuted && video.paused) {
+      void video.play().catch(() => {
+        setShowControls(true);
+      });
     }
-    setMuted(!muted);
-  }, [muted]);
+  }, []);
 
   return (
     <section className="bg-warm py-16 md:py-24 lg:py-32">
@@ -111,12 +72,36 @@ export function VideoTestimonial({
         </SlideUp>
         <ScaleIn delay={0.3}>
           <div className="relative mx-auto aspect-video max-w-[1100px] overflow-hidden rounded-none md:rounded-lg bg-warm-light -mx-4 md:mx-auto">
-            {videoId ? (
+            {videoSrc ? (
               <>
                 <div
-                  className={`pointer-events-none h-full w-full transition-opacity duration-[1500ms] ${visible ? "opacity-100" : "opacity-0"}`}
+                  className={`${showControls ? "pointer-events-auto" : "pointer-events-none"} h-full w-full transition-opacity duration-[1500ms] ${visible ? "opacity-100" : "opacity-0"}`}
                 >
-                  <div ref={containerRef} className="h-full w-full" />
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    loop
+                    muted={muted}
+                    playsInline
+                    preload="metadata"
+                    controls={showControls}
+                    poster={posterSrc}
+                    onLoadStart={() => {
+                      playAttemptedRef.current = false;
+                      setVisible(false);
+                      setMuted(true);
+                      setShowControls(false);
+                    }}
+                    onCanPlay={handleCanPlay}
+                    onVolumeChange={() => {
+                      const video = videoRef.current;
+                      if (!video) return;
+                      setMuted(video.muted || video.volume === 0);
+                    }}
+                    className="h-full w-full object-cover"
+                  >
+                    <source src={videoSrc} type="video/mp4" />
+                  </video>
                 </div>
                 {visible && (
                   <button

@@ -54,12 +54,19 @@ If user direction conflicts with prior project preference, follow the user unles
 
 ### Brand & Copy
 
-- Premium/artisan positioning only.
-- Avoid budget framing terms (`cheap`, `affordable`, `save thousands`, etc.).
-- Use specific, concrete language over vague claims.
+- Hard enforcement: treat copy rules as constraints, not suggestions. Reject copy that fails tone criteria.
+- Voice contract: Our voice is intentional and assured, grounded in respect for the craft. We prioritize clarity and structure over embellishment.
+- Tone contract: intentional/composed, structured, understated/premium, informed/knowledgeable.
+- Keep 5th-grade language and short sentences.
+- Use strong hooks and contrarian framing, but keep contrarian delivery calm and evidence-led.
+- Allowed tactics: specific numbers, clear process proof, direct language, concrete outcomes.
+- Disallowed tactics: hype, clickbait, aggressive swagger, loud/combative contrarian lines, embellished storytelling.
+- Premium/artisan positioning only. Avoid budget framing terms (`cheap`, `affordable`, `save thousands`, etc.).
 
 ### Design System
 
+- **EXCLUSION:** Do NOT use the `frontend-trades-design` skill. That is for the `~/sales-console/` project and uses an incorrect industrial aesthetic.
+- **Aesthetic:** Strictly follow the Artisan/Premium aesthetic defined in `CLAUDE.md` and `globals.css`.
 - Preserve existing visual language (colors, typography, spacing, motion).
 - Keep touch targets `min-h-[48px]`.
 - Respect established layout conventions (`max-w-[1200px]`, `px-6 md:px-8`).

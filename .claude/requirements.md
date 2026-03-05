@@ -18,12 +18,23 @@
 
 ## Copywriting Standards
 
-**Source:** `.claude/commands/hormozi-sanchez-writer.md`
+**Source:** `.claude/commands/hormozi-sanchez-writer.md`, `.claude/commands/premium-writer.md`
+
+### Voice Contract (Hard Enforcement)
+Our voice is intentional and assured, grounded in respect for the craft. We prioritize clarity and structure over embellishment.
+
+Tone:
+- Intentional / Composed
+- Structured
+- Understated / Premium
+- Informed / Knowledgeable
+
+If output fails this contract, it fails pre-publish.
 
 ### Core Philosophy
 - Lead with VALUE, not hype
-- Be CONTRARIAN - challenge conventional wisdom
-- Sound like a human, not a corporation
+- Be CONTRARIAN with calm, evidence-led framing
+- Sound like a clear, informed human
 - Every word must EARN its place
 
 ### Hook Formulas
@@ -47,8 +58,10 @@ VALUE = (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort)
 - Write at 5th grade reading level
 - Use "you" more than "we" or "I"
 - Short sentences. Like this.
+- Open with a strong hook
 - Specific numbers always ("47 families" not "many families")
 - Damaging admissions build trust
+- Keep premium understated: show standards, do not self-label
 
 ### CTA Rules
 - Specific: "Get the 47-page playbook" not "Download now"
@@ -134,9 +147,14 @@ Every page needs LocalBusiness schema with: name, address, phone, hours, coordin
 
 ### Content
 - [ ] Hook creates instant curiosity
-- [ ] Contrarian angle present
+- [ ] Contrarian angle present and calm
 - [ ] Specific numbers used (not vague claims)
 - [ ] Written at 5th grade level
+- [ ] Short sentences throughout
+- [ ] Tone is intentional and composed
+- [ ] Flow is structured and easy to scan
+- [ ] Premium is understated (shown through process/proof)
+- [ ] Voice sounds informed and knowledgeable
 - [ ] Sounds human, not corporate
 
 ### SEO
@@ -161,7 +179,7 @@ Read these when performing specific task types:
 
 | Task Type | Reference File |
 |-----------|----------------|
-| Deep copywriting | `.claude/commands/hormozi-sanchez-writer.md` |
+| Deep copywriting | `.claude/commands/hormozi-sanchez-writer.md`, `.claude/commands/premium-writer.md` |
 | SEO analysis | `.claude/commands/kyle-roof-seo.md` |
 | Page optimization | `.claude/commands/on-page-seo.md` |
 | Content silo planning | `.claude/commands/reverse-silo.md` |

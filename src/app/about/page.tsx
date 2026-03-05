@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { ScrollZoom } from "@/components/ui/motion";
@@ -90,8 +91,14 @@ export default function AboutPage() {
         description="15+ years of coatings, faux finishes, and spray work. 400+ Vancouver homes finished. Gabe started Shape of Paint with one belief: good painting starts long before the first coat. Every project gets thorough prep, clear communication, and finishes that hold up to close inspection. We don't take every project. If your priority is the lowest price, we're not the right fit. But if you want it done right — designers and homeowners across Vancouver call Gabe first."
         ctaText="Talk to Gabe"
         ctaHref="/contact#contact-form"
-        image="/images/about-founder.webp"
-        imageAlt="Gabe Penner, Co-Founder of Shape of Paint"
+        image="/images/photos/about/team/vancouver-painting-team-photo-02.jpg"
+        imageAlt="Gabe Penner with family in Vancouver"
+      />
+
+      <BrandLogos
+        variant="full"
+        heading="Our materials"
+        subtitle="Italian plasters, artisan paints, eco-friendly oils, and professional-grade coatings — the products that make the difference between good and extraordinary."
       />
 
       <section className="bg-warm py-16 md:py-24">

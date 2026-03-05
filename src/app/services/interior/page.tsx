@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
@@ -33,7 +34,7 @@ const faqItems = [
   },
   {
     question: "What interior paint does Shape of Paint use?",
-    answer: "We use Benjamin Moore Regal Select on 90% of projects. It self-levels to a smooth finish, covers in two coats, and holds its colour for 8-12 years.",
+    answer: "We use Benjamin Moore Regal Select for most wall and trim work -- it self-levels to a smooth finish, covers in two coats, and holds its colour for 8-12 years. For decorative finishes and accent walls, we specify C2 Paint for their curated colour depth and Meoded Italian plasters for hand-applied textures like Marmorino and Venetian plaster.",
   },
   {
     question: "Do I need to move furniture before painters arrive?",
@@ -52,6 +53,7 @@ export default function InteriorPaintingPage() {
       description:
         "Expert interior painting in Vancouver. Walls, ceilings, trim, baseboards, fireplaces and staircases with clean, lasting finishes.",
       url: `${siteConfig.url}/services/interior`,
+      brand: ["Benjamin Moore", "C2 Paint", "Meoded", "Metropolis", "Novacolor"],
     })
   );
   const breadcrumbJsonLd = JSON.stringify(
@@ -155,6 +157,12 @@ export default function InteriorPaintingPage() {
       <Testimonials
         heading="200+ Five-Star Reviews from Vancouver Homeowners"
         testimonials={[...siteConfig.testimonials]}
+      />
+
+      <BrandLogos
+        variant="compact"
+        filter={["interior"]}
+        heading="Brands we specify for interior projects"
       />
 
       <SectionWrapper variant="warm">

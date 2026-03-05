@@ -110,6 +110,53 @@ export const siteConfig = {
       rating: 5,
     },
   ],
+  brands: [
+    {
+      name: "C2 Paint",
+      logo: "/images/brands/C2-Circle.svg",
+      category: "artisan",
+      services: ["interior"],
+      description: "Handcrafted colour with over 500 curated hues",
+    },
+    {
+      name: "Renner",
+      logo: "/images/brands/Renner-Vert.svg",
+      category: "italian",
+      services: ["cabinets"],
+      description: "Italian wood coatings for professional spray finishing",
+    },
+    {
+      name: "ALCEA",
+      logo: "/images/brands/alcea.svg",
+      category: "italian",
+      services: ["cabinets"],
+      description: "Italian industrial coatings for furniture and cabinetry",
+      logoScale: 2,
+    },
+    {
+      name: "Livos",
+      logo: "/images/brands/livos.svg",
+      category: "natural",
+      services: ["interior", "cabinets"],
+      description: "Natural plant-based oils and finishes from Germany",
+      logoScale: 1.75,
+    },
+    {
+      name: "Novocolor",
+      logo: "/images/brands/novocolor.svg",
+      category: "italian",
+      services: ["interior", "exterior"],
+      description: "Italian precision colour-matching and tinting technology",
+    },
+    {
+      name: "Metropolis",
+      logo: "/images/brands/METROLPOLIS.svg",
+      category: "artisan",
+      services: ["interior", "exterior"],
+      description: "Premium architectural paints and decorative finishes",
+      logoScale: 2,
+    },
+  ],
   footerLinks: {
     links: [
       { label: "About Us", href: "/about" },

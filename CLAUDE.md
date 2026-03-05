@@ -18,16 +18,41 @@ If in doubt, use `/orchestrator`. Err on the side of orchestration.
 
 **Engineering:** Don't guess when fixing issues. Find the official docs for the framework/library involved. Code from first principles — don't patch broken things, fix them correctly, even if that means starting from scratch.
 
-**Visual design:** Use images liberally. This is a visual site. Movement, images, and colors keep visitors engaged. When in doubt, add a photo. Every section should have something to look at.
+## Visual design
 
-**Brand voice:** Artisan / premium positioning only. No budget language ("save thousands", "fraction of cost", "cheap", "affordable"). Frame cost as investment. See Copywriting Standards below.
+- **EXCLUSION:** Do NOT use the `frontend-trades-design` skill. That is for the `~/sales-console/` project.
+- **Aesthetic:** Artisan/Premium. Navy + limestone + cream palette. Serif headings (Cormorant Garamond), clean sans body (Nunito Sans). Soft shadows, warm neutrals. Avoid industrial/machined looks.
+- **Brand palette (locked -- from SOP_Design Summary 2026.pdf):**
+  - Navy `#202A44` -- primary dark, headings, foreground, link hover
+  - Limestone `#C9C2B6` -- accent, CTA bg (default state), brand-secondary
+  - Copper `#D2956F` -- **CTA hover background (DO NOT CHANGE)**
+  - Putty `#D6CEC0` -- alternating section bg, subtle borders
+  - Cream `#F5F3E6` -- page background
+  - Black `#000000` -- logo, high-contrast text
+- **Fonts (locked):**
+  - Headings: Cormorant Garamond (Google Fonts, closest to design doc's Yu Mincho Pr6N)
+  - Body: Nunito Sans (Google Fonts, closest to design doc's Avenir Next World)
+  - Loaded via `next/font/google` in layout.tsx. No manual font files.
+- Do NOT revert to sage/salmon palette or Eros/Proxima Vara fonts.
+- **CTA hover IS copper `#D2956F` by design.** Do NOT change it to navy or any other color.
+- Use images liberally. This is a visual site. Movement, images, and colors keep visitors engaged. When in doubt, add a photo. Every section should have something to look at.
+
+**Brand voice (hard enforcement):** Our voice is intentional and assured, grounded in respect for the craft. We prioritize clarity and structure over embellishment.
+
+**Tone (hard enforcement):**
+- Intentional / Composed
+- Structured
+- Understated / Premium
+- Informed / Knowledgeable
+
+Artisan / premium positioning only. No budget language ("save thousands", "fraction of cost", "cheap", "affordable"). Frame cost as investment. See Copywriting Standards below.
 
 ## Project Map
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx                    # Root layout, self-hosted fonts (Eros + ProximaVara), metadata defaults
+│   ├── layout.tsx                    # Root layout, Google Fonts (Cormorant Garamond + Nunito Sans), metadata defaults
 │   ├── page.tsx                      # Homepage (14 sections)
 │   ├── globals.css                   # Design tokens (colors, typography, spacing)
 │   ├── about/page.tsx                # About / Our Story page
@@ -94,7 +119,7 @@ src/
 | "I want to..." | Do this |
 |-----------------|---------|
 | Change brand colors | Edit CSS custom properties in `src/app/globals.css`. Reference colors from target site are in `_reference/design-system.md`. |
-| Change fonts | Fonts are self-hosted in `public/fonts/`. Edit `@font-face` + `@layer base` rules in `globals.css`. Heading = `Eros-Regular.woff2`, body = `ProximaVara-Roman.woff2`. Do NOT use Tailwind `font-[]` arbitrary syntax — breaks in v4. |
+| Change fonts | Fonts loaded via `next/font/google` in `layout.tsx`. Heading = Cormorant Garamond (`--font-cormorant`), body = Nunito Sans (`--font-nunito`). Edit weight/subset in layout.tsx. Do NOT use Tailwind `font-[]` arbitrary syntax -- breaks in v4. |
 | Adjust spacing | Edit section padding in `src/components/shared/SectionWrapper.tsx` (currently py-16 md:py-24 lg:py-32). |
 | Change border radius | Edit `--radius` in `src/app/globals.css` (currently 0.25rem for minimal rounding). |
 | Adjust decorative icons | Edit `src/components/shared/DecorativeIcon.tsx` — uses Lucide `Leaf` icon in gold/sage variants. |
@@ -187,22 +212,28 @@ All primitives automatically disable on `prefers-reduced-motion`. Easing: `cubic
 
 **Max content width:** `max-w-[1200px]` with `px-6 md:px-8` padding. Used in Header, Footer, and most sections.
 
-**CTA button exact spec:**
+**CTA button exact spec (LOCKED — do not modify these values):**
 ```
+Default state: bg-cta (#C9C2B6 limestone), text-cta-foreground (#000000), border-cta
+Hover state:   bg-cta-hover (#D2956F copper), text-cta-hover-foreground (#212121), border-cta-hover
+Shadow:        hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] (warm tan glow)
+
+Full classes:
 rounded-[9px] border border-cta bg-cta text-cta-foreground
 transition-[background-color,box-shadow,border-color] duration-[400ms]
 [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]
 hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]
 ```
+The warm copper hover with tan glow is the signature CTA interaction. Do NOT change these colors.
 Use plain `<Link>` not shadcn `<Button>` — shadcn overrides hover colors.
 
 **Decorative illustrations:** Inline SVG, not image files (see `WatercolorPeony` in Testimonials). This keeps them colorable and avoids extra HTTP requests.
 
 **TrustBar content is hardcoded** in `src/components/shared/TrustBar.tsx` (4.9/5, 200+ reviews, Licensed & Insured). Update manually when real data is available.
 
-**Font license:** `globals.css` notes "License required for production use: Eros Regular + Proxima Vara." These are extracted from whiteoakpainting.com. Replace with licensed fonts before launching for a client.
+**Fonts:** Cormorant Garamond + Nunito Sans loaded via `next/font/google`. Free Google Fonts, no license concerns. `public/fonts/` directory removed.
 
-**Section backgrounds alternate:** `--background` (#FFFCF8 warm off-white) and `--warm` (#F5F0EA warm cream). Avoid pure white `#FFFFFF` — it looks cold against the brand palette.
+**Section backgrounds alternate:** `--background` (#F5F3E6 Cream) and `--warm` (#D6CEC0 Putty). Avoid pure white `#FFFFFF` -- it looks cold against the brand palette.
 
 ## Placeholder Tokens
 
@@ -297,13 +328,29 @@ Blog posts follow strict linking rules from `docs/keyword-map.md`:
 
 ### Copywriting Standards
 
-Per `.claude/commands/hormozi-sanchez-writer.md`:
+Per `.claude/commands/hormozi-sanchez-writer.md` and `.claude/commands/premium-writer.md`:
 
-- 5th grade reading level
+#### Hard Enforcement (Non-Negotiable)
+- Voice: intentional and assured, grounded in respect for the craft.
+- Tone: intentional/composed, structured, understated/premium, informed/knowledgeable.
+- 5th grade reading level.
+- Short sentences.
+- Strong hooks at the opening.
+- Contrarian framing must be calm and evidence-led, never loud or combative.
+- If any Hormozi/Sanchez tactic conflicts with the brand voice contract, brand voice wins.
+
+#### Required
 - Specific numbers ("47 families" not "many")
 - "You" more than "we"
 - Short sentences
 - VALUE = (Dream Outcome × Likelihood) / (Time × Effort)
+- Clear process proof over vague claims
+
+#### Disallowed Style
+- Hype-heavy claims or clickbait framing
+- Loud, combative, or chest-thumping contrarian language
+- "Industry doesn't want you to know this" style hooks
+- Generic corporate filler or embellished prose
 
 **Premium brand — banned language:** "save thousands", "fraction of the cost", "cheap", "affordable", "budget". Frame cost as investment in quality. Artisan positioning only.
 

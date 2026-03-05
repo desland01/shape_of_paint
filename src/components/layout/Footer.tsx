@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { SlideUp } from "@/components/ui/motion";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 
 export function Footer() {
   return (
@@ -11,14 +11,11 @@ export function Footer() {
           <SlideUp>
             <div className="flex flex-col gap-4">
               <Link href="/" className="flex items-center gap-2">
-                <Image
-                  src="/images/logo-icon.png"
-                  width={80}
-                  height={80}
-                  className="h-20 w-auto"
+                <img
+                  src="/images/sop-square.svg"
+                  className="h-16 w-auto md:h-20"
                   alt=""
                   aria-hidden="true"
-                  unoptimized
                 />
                 <span className="text-sm font-medium uppercase tracking-[0.2em]">
                   {siteConfig.name}
@@ -115,6 +112,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border-subtle pt-8 text-center">
+          <div className="mb-6">
+            <BrandLogos variant="footer" />
+          </div>
           <p className="text-xs font-normal text-text-muted">
             &copy; {new Date().getFullYear()} {siteConfig.name}
           </p>

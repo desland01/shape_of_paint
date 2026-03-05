@@ -8,6 +8,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { NewsletterSignup } from "@/components/sections/NewsletterSignup";
 import Image from "next/image";
@@ -86,7 +87,8 @@ export default function HomePage() {
       <VideoTestimonial
         eyebrow="Featured Project"
         heading="Elevating a West Coast fireplace with hand-applied Marmorino plaster"
-        videoId="8lwJrnkJRXc"
+        videoSrc="/videos/sop-choo-fireplace.mp4"
+        posterSrc="/images/sop-choo-fireplace-poster.jpg"
       />
 
       <ServicesGrid services={[...siteConfig.services]} />
@@ -186,7 +188,7 @@ export default function HomePage() {
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Link
                       href="/tools/cost-calculator"
-                      className="inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                      className="inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-cta bg-cta px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
                     >
                       Try The Cost Calculator
                     </Link>
@@ -276,6 +278,12 @@ export default function HomePage() {
       <Testimonials
         heading="200+ five-star reviews. Here's what homeowners actually said."
         testimonials={[...siteConfig.testimonials]}
+      />
+
+      <BrandLogos
+        variant="full"
+        heading="The finishes behind our work"
+        subtitle="We specify Italian plasters, artisan paints, and professional-grade coatings most painters have never heard of."
       />
 
       <FeatureSection

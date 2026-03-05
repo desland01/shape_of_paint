@@ -58,6 +58,20 @@ export function generateLocalBusinessSchema() {
       },
     ],
     image: `${siteConfig.url}/images/logo-icon.png`,
+    knowsAbout: [
+      "Benjamin Moore paints",
+      "C2 Paint artisan colours",
+      "Meoded decorative plasters",
+      "Metropolis Italian decorative paints",
+      "Novacolor decorative finishes",
+      "Renner wood coatings",
+      "ALCEA industrial coatings",
+      "Livos plant-based wood oils",
+      "Italian plaster application",
+      "HVLP spray finishing",
+      "Decorative wall finishes",
+      "Cabinet refinishing",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Painting Services",
@@ -114,6 +128,7 @@ export function generateServiceSchema(service: {
   description: string;
   url: string;
   areaServed?: string | string[];
+  brand?: string[];
 }) {
   const areaServed = service.areaServed
     ? Array.isArray(service.areaServed)
@@ -133,6 +148,12 @@ export function generateServiceSchema(service: {
       url: siteConfig.url,
     },
     areaServed,
+    ...(service.brand && service.brand.length > 0 && {
+      brand: service.brand.map((name) => ({
+        "@type": "Brand" as const,
+        name,
+      })),
+    }),
   };
 }
 

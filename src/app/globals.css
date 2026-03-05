@@ -2,32 +2,14 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Self-hosted fonts — actual files from whiteoakpainting.com */
-/* License required for production use: Eros Regular + Proxima Vara */
-@font-face {
-  font-family: "Eros Regular";
-  src: url("/fonts/Eros-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proximavara Roman";
-  src: url("/fonts/ProximaVara-Roman.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Proximavara Roman", Arial, sans-serif;
-  --font-heading: "Eros Regular", "Trebuchet MS", serif;
-  --font-display: "Eros Regular", "Trebuchet MS", serif;
+  --font-sans: var(--font-nunito), Arial, sans-serif;
+  --font-heading: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
   --font-mono: var(--font-geist-mono);
   --max-width-content: 960px;
 
@@ -93,52 +75,55 @@
   --radius: 0.25rem;
   --header-h: 72px;
 
-  /* ref: #FFFCF8 — warm off-white page background */
-  --background: #FFFCF8;
-  /* ref: #212121 — near-black primary text */
-  --foreground: #212121;
+  /* Cream -- page background */
+  --background: #F5F3E6;
+  /* Navy -- primary dark, headings, foreground */
+  --foreground: #202A44;
 
-  /* ref: #F5F0EA — warm cream alternating sections */
-  --warm: #F5F0EA;
-  /* ref: #F8F6F3 — light warm off-white */
-  --warm-light: #F8F6F3;
-  /* ref: #D2956F — copper/terracotta accent */
+  /* Putty -- warm neutral alternating sections */
+  --warm: #D6CEC0;
+  /* Light Cream -- subtle warm off-white */
+  --warm-light: #E8E5D8;
+  /* Copper -- decorative accent (WatercolorPeony, etc.) */
   --accent-gold: #D2956F;
-  /* ref: #A0A48E — sage decorative accents */
-  --accent-sage: #A0A48E;
-  /* ref: #DE967D — salmon/peach hover accent */
-  --accent-hover: #DE967D;
-  /* ref: #DBE3E4 — cool blue-grey CTA button background */
+  /* Limestone -- decorative accents */
+  --accent-sage: #C9C2B6;
+  /* Navy -- hover accent */
+  --accent-hover: #202A44;
+  /* ⚠️  CTA COLORS ARE LOCKED — DO NOT CHANGE ⚠️ */
+  /* Cool blue-grey -- CTA button background */
   --cta: #DBE3E4;
-  /* ref: #D2956F — copper terracotta hover (same as accent) */
+  /* Copper -- CTA hover background (warm peach, NOT navy) */
   --cta-hover: #D2956F;
-  /* ref: #1A1A1A — CTA button text (default state) */
+  /* Near-black -- CTA button text (default state) */
   --cta-foreground: #1A1A1A;
-  /* ref: #212121 — CTA button text on hover (dark text stays dark) */
+  /* Dark -- CTA button text on hover (dark on copper, NOT cream) */
   --cta-hover-foreground: #212121;
-  /* ref: rgb(192,164,135) — warm tan glow for button hover shadow */
+  /* Warm tan RGB -- button hover shadow glow */
   --shadow-button-glow: 192 164 135;
-  /* ref: #424242 — secondary text (gray-800) */
-  --text-secondary: #424242;
-  /* ref: #757575 — muted text (gray-600) */
-  --text-muted: #757575;
-  /* ref: #E0E0E0 — neutral gray subtle borders */
-  --border-subtle: #E0E0E0;
-  /* ref: #C0A487 — warm tan secondary brand color */
-  --brand-secondary: #C0A487;
-  /* ref: #B3751B — brown clay accent */
-  --brand-clay: #B3751B;
-  /* ref: #EDE9DB — image overflow container background */
-  --image-placeholder: #EDE9DB;
-  /* RGB triplet for salmon glow box-shadows */
-  --shadow-hover-glow: 222 150 125;
-  /* link hover salmon accent */
-  --link-hover: #DE967C;
-  /* eyebrow/heading dark text */
-  --text-dark: #111111;
-  /* newsletter dark button */
-  --newsletter-btn: #212121;
-  --newsletter-btn-text: #FAFAFA;
+  /* ⚠️  END CTA LOCK ⚠️ */
+  /* Navy muted -- secondary text */
+  --text-secondary: #3A4460;
+  /* Warm gray -- muted text */
+  --text-muted: #7A7A72;
+  /* Putty -- subtle borders */
+  --border-subtle: #D6CEC0;
+  /* Limestone -- secondary brand color */
+  --brand-secondary: #C9C2B6;
+  /* Navy -- clay accent replaced with navy */
+  --brand-clay: #202A44;
+  /* Light Cream -- image placeholder background */
+  --image-placeholder: #E8E5D8;
+  /* Navy RGB -- hover glow box-shadows */
+  --shadow-hover-glow: 32 42 68;
+  /* Navy -- link hover accent */
+  --link-hover: #202A44;
+  /* Black -- eyebrow/heading dark text */
+  --text-dark: #000000;
+  /* Navy -- newsletter dark button */
+  --newsletter-btn: #202A44;
+  /* Cream -- newsletter button text */
+  --newsletter-btn-text: #F5F3E6;
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -177,10 +162,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Proximavara Roman", Arial, sans-serif;
+    font-family: var(--font-nunito), Arial, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Eros Regular", "Trebuchet MS", serif;
+    font-family: var(--font-cormorant), Georgia, serif;
   }
   /* Prevent iOS Safari viewport zoom on input focus (requires >= 16px) */
   input, textarea, select {

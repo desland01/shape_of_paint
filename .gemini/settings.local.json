@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(orchestrator)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "Bash(npx vercel ls:*)",
+      "mcp__gemini_ai_Vercel__web_fetch_vercel_url",
+      "mcp__gemini_ai_Vercel__get_access_to_vercel_url",
+      "Bash(python3:*)",
+      "Bash(npx vercel inspect:*)",
+      "mcp__gemini_ai_Vercel__list_projects",
+      "mcp__gemini_ai_Vercel__list_deployments",
+      "mcp__gemini_ai_Vercel__get_deployment_build_logs"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "dataforseo"
+  ],
+  "enableAllProjectMcpServers": true
+}

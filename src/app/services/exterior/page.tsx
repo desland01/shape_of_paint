@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
@@ -52,6 +53,7 @@ export default function ExteriorPaintingPage() {
       description:
         "Exterior painting in Vancouver by licensed professionals. Siding, stucco, trim, soffits and decks with professional coatings built for BC weather.",
       url: `${siteConfig.url}/services/exterior`,
+      brand: ["Benjamin Moore", "Novacolor"],
     })
   );
   const breadcrumbJsonLd = JSON.stringify(
@@ -131,6 +133,12 @@ export default function ExteriorPaintingPage() {
       <Testimonials
         heading="200+ Vancouver homeowners trusted us with their exterior — here is what they say"
         testimonials={[...siteConfig.testimonials]}
+      />
+
+      <BrandLogos
+        variant="compact"
+        filter={["exterior"]}
+        heading="Brands we specify for exterior projects"
       />
 
       <SectionWrapper variant="warm">

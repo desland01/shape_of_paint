@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { InstagramGrid } from "@/components/sections/InstagramGrid";
 import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
 import { FAQ } from "@/components/sections/FAQ";
+import { BrandLogos } from "@/components/sections/BrandLogos";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { siteConfig } from "@/config/site";
 import { generateFAQSchema, generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
@@ -49,7 +50,7 @@ const cabinetFaqItems = [
   {
     question: "What paint do you use on cabinets?",
     answer:
-      "Benjamin Moore Advance or equivalent hybrid alkyd enamel. These paints self-level for an ultra-smooth finish, cure rock-hard, and resist chipping, yellowing, and sticky-drawer syndrome better than standard latex.",
+      "Benjamin Moore Advance hybrid alkyd enamel for most kitchen cabinet projects -- it self-levels for an ultra-smooth finish, cures rock-hard, and resists chipping and yellowing. For specialty cabinet work requiring maximum durability, we use Renner Italian wood coatings and ALCEA industrial-grade finishes designed for professional spray application. For natural wood finishes, we specify Livos plant-based oils and waxes.",
   },
 ];
 
@@ -87,6 +88,7 @@ export default function CabinetPaintingPage() {
       description:
         "Professional cabinet painting in Vancouver. Designer-quality HVLP spray finishes that deliver a result factory cabinets cannot match.",
       url: `${siteConfig.url}/services/cabinets`,
+      brand: ["Benjamin Moore", "Renner", "ALCEA", "Livos"],
     })
   );
   const breadcrumbJsonLd = JSON.stringify(
@@ -240,6 +242,12 @@ export default function CabinetPaintingPage() {
         eyebrow="Our Work"
         heading="Gallery — Before & After"
         images={galleryImages}
+      />
+
+      <BrandLogos
+        variant="compact"
+        filter={["cabinets"]}
+        heading="Brands we specify for cabinet projects"
       />
 
       <FAQ heading="Frequently Asked Questions" items={cabinetFaqItems} />

@@ -54,7 +54,7 @@ export default function ContactPage() {
           </p>
           <Link
             href="/tools/cost-calculator"
-            className="mt-5 inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-foreground bg-foreground px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+            className="mt-5 inline-flex min-h-[48px] items-center justify-center rounded-[9px] border border-foreground bg-foreground px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
           >
             Open Cost Calculator
           </Link>

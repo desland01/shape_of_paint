@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
@@ -95,24 +94,15 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-4 md:py-6 md:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/images/logo-icon.png"
-            width={50}
-            height={50}
-            className="h-10 w-auto md:h-[50px]"
+          <img
+            src="/images/sop-horizontal.svg"
+            className={cn(
+              "h-8 w-auto md:h-10 transition-[filter] duration-300",
+              isTransparent && "brightness-0 invert"
+            )}
             alt=""
             aria-hidden="true"
-            unoptimized
-            priority
           />
-          <span
-            className={cn(
-              "text-sm font-medium uppercase tracking-[0.2em] transition-colors duration-300",
-              isTransparent ? "text-white" : "text-foreground"
-            )}
-          >
-            {siteConfig.name}
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

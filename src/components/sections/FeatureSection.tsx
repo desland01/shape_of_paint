@@ -177,7 +177,7 @@ export function FeatureSection({
               <SlideUp delay={0.25}>
                 <Link
                   href={ctaHref}
-                  className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-foreground bg-foreground px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-foreground bg-foreground px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:text-cta-hover-foreground hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
                 >
                   {ctaText}
                 </Link>

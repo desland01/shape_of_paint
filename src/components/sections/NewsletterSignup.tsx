@@ -49,7 +49,7 @@ export function NewsletterSignup() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-foreground transition-all duration-[400ms] rounded-[12px] text-base px-4 py-3 font-normal tracking-wide min-h-12"
+                  className="w-full bg-newsletter-btn text-newsletter-btn-text hover:bg-cta-hover hover:text-cta-hover-foreground transition-all duration-[400ms] rounded-[12px] text-base px-4 py-3 font-normal tracking-wide min-h-12"
                 >
                   Subscribe
                 </button>
