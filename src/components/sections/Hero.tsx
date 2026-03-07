@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { Phone } from "lucide-react";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { TrustBar } from "@/components/shared/TrustBar";
 import { SlideUp } from "@/components/ui/motion";
@@ -93,9 +94,10 @@ export function Hero({ eyebrow, headline, ctaText, ctaHref, images }: HeroProps)
 
           <a
             href="tel:6043537378"
-            className="inline-flex min-h-[48px] items-center text-sm font-medium text-white underline underline-offset-4 transition-colors hover:text-white/80"
+            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[9px] border border-white/30 bg-white/10 px-8 py-3 text-base font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition-[background-color,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-white/50 hover:bg-white/20 md:w-auto"
           >
-            604-353-7378
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            Call Now
           </a>
         </div>
 

@@ -31,17 +31,16 @@ export function CTABanner({ headline, ctaText, ctaHref }: CTABannerProps) {
               {ctaText}
             </Link>
           </div>
-          <p className="mt-4 text-base text-text-secondary">
-            Or call us:{" "}
+          <div className="mt-4">
             <a
               href={`tel:+1${phoneDigits}`}
-              className="inline-flex min-h-[48px] items-center gap-1 underline underline-offset-2"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-foreground/20 px-8 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors duration-300 hover:border-foreground/40 hover:bg-foreground/5"
               aria-label={`Call ${siteConfig.phone}`}
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
-              <span>{siteConfig.phone}</span>
+              Call Now
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </section>

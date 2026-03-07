@@ -69,10 +69,11 @@ export const StepEstimate = ({
         </Link>
         <a
           href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`}
-          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-border-subtle bg-background px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
+          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-border-subtle bg-background px-5 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors hover:border-accent-gold/60 hover:bg-warm"
+          aria-label={`Call ${siteConfig.phone}`}
         >
-          <Phone className="h-4 w-4" />
-          {siteConfig.phone}
+          <Phone className="h-4 w-4" aria-hidden="true" />
+          Call Now
         </a>
       </div>
 

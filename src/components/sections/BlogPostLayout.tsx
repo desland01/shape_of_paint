@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { SlideUp } from "@/components/ui/motion";
 import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema";
@@ -172,16 +173,15 @@ export function BlogPostLayout({
             </div>
           </SlideUp>
 
-          <div className="mt-12 text-center text-base font-normal text-text-secondary">
-            <p>
-              Questions? Call us at{" "}
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="font-medium text-foreground hover:text-link-hover transition-colors duration-300"
-              >
-                {siteConfig.phone}
-              </a>
-            </p>
+          <div className="mt-12 text-center">
+            <a
+              href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-foreground/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors duration-300 hover:border-foreground/40 hover:bg-foreground/5"
+              aria-label={`Call ${siteConfig.phone}`}
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Call Now
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { SlideUp } from "@/components/ui/motion";
 import { BrandLogos } from "@/components/sections/BrandLogos";
@@ -23,9 +24,11 @@ export function Footer() {
               </Link>
               <a
                 href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
-                className="inline-block py-2 text-base font-normal text-foreground"
+                className="inline-flex min-h-[48px] items-center gap-2 py-2 text-sm font-medium uppercase tracking-[0.12em] text-foreground transition-colors duration-300 hover:text-link-hover"
+                aria-label={`Call ${siteConfig.phone}`}
               >
-                {siteConfig.phone}
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                Call Now
               </a>
             </div>
           </SlideUp>

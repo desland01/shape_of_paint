@@ -74,7 +74,7 @@ export default function HomePage() {
       <Hero
         eyebrow="Vancouver's Trusted House Painters"
         headline="Vancouver house painters who care about the finish as much as you do"
-        ctaText="See Our Work First"
+        ctaText="Get a Free Estimate"
         ctaHref="/contact#contact-form"
         images={heroImages}
       />
@@ -269,7 +269,7 @@ export default function HomePage() {
         heading="Your kitchen, reimagined - without a full renovation"
         description="HVLP spray finish. Bonding primer on every surface. Hand-sanded at 320 grit between coats. Your existing cabinets end up smoother and more durable than factory. Most kitchens transform in 5-7 days."
         ctaText="See Cabinet Transformations"
-        ctaHref="/contact#contact-form"
+        ctaHref="/vancouver/cabinet-painting"
         image="/images/cabinet-finish.webp"
         imageAlt="Cabinet spray finish by Shape of Paint"
         reversed

@@ -7,7 +7,7 @@ import { z } from "zod";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Pencil } from "lucide-react";
+import { Pencil, Phone } from "lucide-react";
 import { NumberPadSheet } from "@/components/ui/number-pad-sheet";
 import { TextInputSheet } from "@/components/ui/text-input-sheet";
 
@@ -195,15 +195,13 @@ export function ContactForm() {
             recent projects
           </Link>
         </p>
-        <p className="text-sm text-text-muted">
-          Or call us now:{" "}
-          <a
-            href="tel:6043537378"
-            className="text-foreground font-medium hover:underline"
-          >
-            604-353-7378
-          </a>
-        </p>
+        <a
+          href="tel:6043537378"
+          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[9px] border border-foreground/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors duration-300 hover:border-foreground/40 hover:bg-foreground/5"
+        >
+          <Phone className="h-4 w-4" aria-hidden="true" />
+          Call Now
+        </a>
       </div>
     );
   }
