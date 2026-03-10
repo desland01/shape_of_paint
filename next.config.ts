@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
       { source: "/staining", destination: "/services", permanent: true },
       { source: "/design", destination: "/services", permanent: true },
       { source: "/spray-finishes", destination: "/services", permanent: true },
-      { source: "/portfolio", destination: "/services/portfolio", permanent: true },
       { source: "/testimonials", destination: "/about/reviews", permanent: true },
       { source: "/faq", destination: "/contact/faq", permanent: true },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
