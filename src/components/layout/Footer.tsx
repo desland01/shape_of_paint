@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-background">
       <div className="mx-auto max-w-section px-4 pt-12 pb-24 md:px-8 md:py-16">
-        <div className="grid gap-12 md:grid-cols-5 md:items-start">
+        <div className="grid gap-12 md:grid-cols-6 md:items-start">
           <SlideUp>
             <div className="flex flex-col gap-4">
               <Link href="/" className="block h-28 w-28 overflow-hidden md:h-40 md:w-40">
@@ -69,7 +69,27 @@ export function Footer() {
             </div>
           </SlideUp>
 
-          <SlideUp delay={0.2}>
+          <SlideUp delay={0.15}>
+            <div>
+              <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
+                Guides
+              </h5>
+              <ul className="flex flex-col gap-1">
+                {siteConfig.footerLinks.guides.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="inline-flex min-h-[48px] items-center text-base font-normal text-text-secondary tracking-[0.15em] hover:text-link-hover transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </SlideUp>
+
+          <SlideUp delay={0.25}>
             <div>
               <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Service Areas
@@ -89,7 +109,7 @@ export function Footer() {
             </div>
           </SlideUp>
 
-          <SlideUp delay={0.3}>
+          <SlideUp delay={0.35}>
             <div>
               <h5 className="mb-4 text-3xl md:text-4xl font-normal tracking-[1px]">
                 Legal

@@ -3,14 +3,23 @@
 import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { Menu, X, Phone, ChevronDown, ChevronRight } from "lucide-react";
+import { siteConfig, megaMenuLocations } from "@/config/site";
 import { cn, scrollToElement } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 type NavChild = {
   label: string;
   href: string;
+  group?: string;
+  description?: string;
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  variant?: "mega";
+  children?: readonly NavChild[];
 };
 
 export function Header() {
@@ -39,13 +48,27 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen && !openDropdown) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsOpen(false);
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        setOpenDropdown(null);
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, openDropdown]);
+
+  useEffect(() => {
+    if (!openDropdown) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [openDropdown]);
 
   useEffect(() => {
     if (isOpen) {
@@ -94,44 +117,27 @@ export function Header() {
 
   const isTransparent = pathname === "/" && !scrolled;
 
-  const isGroveDropdown = (label: string) => label === "Services" || label === "Locations";
-
-  const displayLabel = (label: string) => (label === "Locations" ? "Areas" : label);
-
   const normalizeChildren = (children?: readonly NavChild[]) => (children ?? []) as NavChild[];
 
-  const serviceGroups = (children: NavChild[]) => {
-    const interior: NavChild[] = [];
-    const exterior: NavChild[] = [];
-    const commercial: NavChild[] = [];
-    const other: NavChild[] = [];
+  const getMenuGroups = (children: NavChild[]) => {
+    const groups = new Map<string, NavChild[]>();
+    const ungrouped: NavChild[] = [];
 
     children.forEach((child) => {
-      const slug = child.label.toLowerCase();
-      if (slug.includes("interior") || slug.includes("cabinet")) {
-        interior.push(child);
-        return;
+      if (child.group) {
+        const existing = groups.get(child.group) || [];
+        existing.push(child);
+        groups.set(child.group, existing);
+      } else {
+        ungrouped.push(child);
       }
-      if (slug.includes("exterior") || slug.includes("deck") || slug.includes("pressure") || slug.includes("wash") || slug.includes("siding")) {
-        exterior.push(child);
-        return;
-      }
-      if (slug.includes("commercial")) {
-        commercial.push(child);
-        return;
-      }
-      other.push(child);
     });
 
-    const grouped = [] as { title: string; links: NavChild[] }[];
-    if (interior.length) grouped.push({ title: "Interior Services", links: interior });
-    if (exterior.length) grouped.push({ title: "Exterior Services", links: exterior });
-    if (commercial.length) grouped.push({ title: "Commercial Services", links: commercial });
-    if (other.length) {
-      grouped.push({ title: "Additional Services", links: other });
-    }
+    if (groups.size === 0) return [{ title: "", links: children }];
 
-    return grouped.length ? grouped : [{ title: "Services", links: children }];
+    const result = Array.from(groups.entries()).map(([title, links]) => ({ title, links }));
+    if (ungrouped.length) result.push({ title: "", links: ungrouped });
+    return result;
   };
 
   const renderChildLink = (child: NavChild) => {
@@ -186,104 +192,123 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {siteConfig.nav.map((item) => {
+          {(siteConfig.nav as unknown as NavItem[]).map((item) => {
             const hasChildren = !!item.children?.length;
-            const showDropdown = isGroveDropdown(item.label) && hasChildren;
             const isDropdownOpen = openDropdown === item.label;
 
-            if (!showDropdown) {
+            /* --- Mega menu trigger (panel renders outside nav) --- */
+            if (item.variant === "mega") {
               return (
-                <Link
+                <div
                   key={item.label}
-                  href={item.href}
-                  className={cn(
-                    "text-sm font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-link-hover",
-                    isTransparent ? "text-white/90" : "text-foreground"
-                  )}
+                  onMouseEnter={() => handleDropdownEnter(item.label)}
+                  onMouseLeave={handleDropdownLeave}
                 >
-                  {item.label}
-                </Link>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "inline-flex items-center gap-1 text-sm font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-link-hover",
+                      isTransparent ? "text-white/90" : "text-foreground"
+                    )}
+                    aria-haspopup="true"
+                    aria-expanded={isDropdownOpen}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={cn(
+                        "h-3 w-3 transition-transform duration-200",
+                        isDropdownOpen && "rotate-180"
+                      )}
+                    />
+                  </Link>
+                </div>
               );
             }
 
-            return (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => handleDropdownEnter(item.label)}
-                onMouseLeave={handleDropdownLeave}
-              >
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "inline-flex items-center gap-1 text-sm font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-link-hover",
-                    isTransparent ? "text-white/90" : "text-foreground"
-                  )}
-                  aria-haspopup="true"
-                  aria-expanded={isDropdownOpen}
+            /* --- Regular dropdown (FAQ, Paint Guides) --- */
+            if (hasChildren) {
+              return (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => handleDropdownEnter(item.label)}
+                  onMouseLeave={handleDropdownLeave}
                 >
-                  {displayLabel(item.label)}
-                  <ChevronDown
+                  <Link
+                    href={item.href}
                     className={cn(
-                      "h-3 w-3 transition-transform duration-200",
-                      isDropdownOpen && "rotate-180"
+                      "inline-flex items-center gap-1 text-sm font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-link-hover",
+                      isTransparent ? "text-white/90" : "text-foreground"
                     )}
-                  />
-                </Link>
-
-                <AnimatePresence>
-                  {isDropdownOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    aria-haspopup="true"
+                    aria-expanded={isDropdownOpen}
+                  >
+                    {item.label}
+                    <ChevronDown
                       className={cn(
-                        "absolute left-0 top-full pt-2",
-                        item.label === "Services" ? "w-[640px]" : "w-72"
+                        "h-3 w-3 transition-transform duration-200",
+                        isDropdownOpen && "rotate-180"
                       )}
-                    >
-                      <div
-                        className="rounded-lg border border-border-subtle bg-background p-4 shadow-lg"
-                        role="menu"
-                        aria-label={`${item.label} submenu`}
-                      >
-                        {item.label === "Services" ? (
-                          <div className="grid grid-cols-2 gap-6">
-                            {serviceGroups(normalizeChildren(item.children)).map((group) => (
-                              <div key={group.title}>
-                                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
-                                  {group.title}
-                                </p>
-                                <div className="space-y-1">
-                                  {group.links.map((child) => (
-                                    <div key={child.href} onClick={() => setOpenDropdown(null)}>
-                                      {renderChildLink(child)}
-                                    </div>
-                                  ))}
+                    />
+                  </Link>
+
+                  <AnimatePresence>
+                    {isDropdownOpen && (() => {
+                      const groups = getMenuGroups(normalizeChildren(item.children));
+                      const colCount = groups.length;
+                      const dropdownWidth = colCount >= 3 ? "w-[780px]" : colCount === 2 ? "w-[520px]" : "w-72";
+                      return (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                          className={cn("absolute left-0 top-full pt-2", dropdownWidth)}
+                        >
+                          <div
+                            className="rounded-lg border border-border-subtle bg-background p-4 shadow-lg"
+                            role="menu"
+                            aria-label={`${item.label} submenu`}
+                          >
+                            <div className={`grid gap-6 ${colCount >= 3 ? "grid-cols-3" : colCount === 2 ? "grid-cols-2" : "grid-cols-1"}`}>
+                              {groups.map((group) => (
+                                <div key={group.title || "default"}>
+                                  {group.title && (
+                                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                                      {group.title}
+                                    </p>
+                                  )}
+                                  <div className="space-y-1">
+                                    {group.links.map((child) => (
+                                      <div key={child.href} onClick={() => setOpenDropdown(null)}>
+                                        {renderChildLink(child)}
+                                      </div>
+                                    ))}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              ))}
+                            </div>
                           </div>
-                        ) : (
-                          <div className="space-y-1">
-                            {normalizeChildren(item.children).map((child) => (
-                              <div
-                                key={child.href}
-                                onClick={() => {
-                                  setOpenDropdown(null);
-                                }}
-                              >
-                                {renderChildLink(child)}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                        </motion.div>
+                      );
+                    })()}
+                  </AnimatePresence>
+                </div>
+              );
+            }
+
+            /* --- Plain link (no children) --- */
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={cn(
+                  "text-sm font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-link-hover",
+                  isTransparent ? "text-white/90" : "text-foreground"
+                )}
+              >
+                {item.label}
+              </Link>
             );
           })}
         </nav>
@@ -345,6 +370,142 @@ export function Header() {
         />
       </div>
 
+      {/* Mega-menu panel */}
+      <AnimatePresence>
+        {openDropdown === "Painting Services" && (() => {
+          const megaItem = (siteConfig.nav as unknown as NavItem[]).find(
+            (item) => item.variant === "mega"
+          );
+          if (!megaItem?.children) return null;
+          const children = [...megaItem.children] as NavChild[];
+          const interiorServices = children.filter((c) => c.group === "Interior Services");
+          const exteriorServices = children.filter((c) => c.group === "Exterior Services");
+
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="absolute left-0 right-0 z-40 hidden md:block"
+              onMouseEnter={() => handleDropdownEnter("Painting Services")}
+              onMouseLeave={handleDropdownLeave}
+            >
+              {/* Hover bridge */}
+              <div className="h-3" />
+              <div className="border-t border-border-subtle bg-background shadow-lg">
+                <div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_1fr_1fr_280px] gap-0 px-4 py-8 md:px-8">
+                  {/* Col 1: Interior Services */}
+                  <div className="pr-6">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                      Interior Services
+                    </p>
+                    <div className="space-y-1">
+                      {interiorServices.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setOpenDropdown(null)}
+                          className="group/link flex items-start gap-3 rounded-md px-3 py-3 transition-colors duration-200 hover:bg-warm"
+                        >
+                          <div className="flex-1">
+                            <span className="font-heading text-base font-medium text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
+                              {child.label}
+                            </span>
+                            {child.description && (
+                              <span className="mt-0.5 block text-sm leading-snug text-text-secondary">
+                                {child.description}
+                              </span>
+                            )}
+                          </div>
+                          <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-text-muted transition-transform duration-200 group-hover/link:translate-x-0.5" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Col 2: Exterior Services */}
+                  <div className="border-l border-border-subtle px-6">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                      Exterior Services
+                    </p>
+                    <div className="space-y-1">
+                      {exteriorServices.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setOpenDropdown(null)}
+                          className="group/link flex items-start gap-3 rounded-md px-3 py-3 transition-colors duration-200 hover:bg-warm"
+                        >
+                          <div className="flex-1">
+                            <span className="font-heading text-base font-medium text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
+                              {child.label}
+                            </span>
+                            {child.description && (
+                              <span className="mt-0.5 block text-sm leading-snug text-text-secondary">
+                                {child.description}
+                              </span>
+                            )}
+                          </div>
+                          <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-text-muted transition-transform duration-200 group-hover/link:translate-x-0.5" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Col 3: Where We Work */}
+                  <div className="border-l border-border-subtle px-6">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                      Where We Work
+                    </p>
+                    <div className="space-y-1">
+                      {megaMenuLocations.map((loc) => (
+                        <Link
+                          key={loc.href}
+                          href={loc.href}
+                          onClick={() => setOpenDropdown(null)}
+                          className="block rounded-md px-3 py-2 text-sm font-normal tracking-[0.08em] text-text-secondary transition-colors duration-200 hover:bg-warm hover:text-link-hover"
+                        >
+                          {loc.label}
+                        </Link>
+                      ))}
+                      <Link
+                        href="/areas"
+                        onClick={() => setOpenDropdown(null)}
+                        className="mt-2 inline-flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[0.08em] text-foreground transition-colors duration-200 hover:text-link-hover"
+                      >
+                        View All Areas
+                        <ChevronRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Col 4: Calculator CTA */}
+                  <div className="rounded-lg bg-[#202A44] px-6 py-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+                      Free Tool
+                    </p>
+                    <h3 className="mt-2 font-heading text-xl font-semibold text-white">
+                      Painting Cost Calculator
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-white/70">
+                      Get a room-by-room estimate in under 2 minutes. No email required.
+                    </p>
+                    <Link
+                      href="/tools/cost-calculator"
+                      onClick={() => setOpenDropdown(null)}
+                      className="mt-4 inline-flex items-center rounded-[9px] border border-cta bg-cta px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                    >
+                      Try the Calculator
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })()}
+      </AnimatePresence>
+
       <AnimatePresence>
         {isOpen && (
           <>
@@ -366,8 +527,8 @@ export function Header() {
               style={{ top: "var(--header-h)", maxHeight: "calc(100dvh - var(--header-h))" }}
             >
               <nav className="flex flex-col gap-1 px-4 py-6">
-                {siteConfig.nav.map((item) => {
-                  const shouldDropdown = isGroveDropdown(item.label) && !!item.children?.length;
+                {(siteConfig.nav as unknown as NavItem[]).map((item) => {
+                  const shouldDropdown = !!item.children?.length;
 
                   if (!shouldDropdown) {
                     return (
@@ -375,17 +536,13 @@ export function Header() {
                         key={item.label}
                         href={item.href}
                         onClick={handleNavClick}
-                        className={cn(
-                          "block min-h-[48px] py-3.5 text-base font-medium uppercase tracking-[0.12em] text-foreground hover:text-link-hover transition-colors duration-300",
-                          item.label === "Blog" && "text-base"
-                        )}
+                        className="block min-h-[48px] py-3.5 text-base font-medium uppercase tracking-[0.12em] text-foreground hover:text-link-hover transition-colors duration-300"
                       >
                         {item.label}
                       </Link>
                     );
                   }
 
-                  const isServices = item.label === "Services";
                   const isOpenMobile = !!openMobileDropdowns[item.label];
                   const items = normalizeChildren(item.children);
 
@@ -398,14 +555,14 @@ export function Header() {
                         aria-expanded={isOpenMobile}
                         aria-controls={`${item.label.toLowerCase()}-mobile-nav`}
                       >
-                        <span>{displayLabel(item.label)}</span>
+                        <span>{item.label}</span>
                         <ChevronDown
                           className={cn("h-4 w-4 transition-transform duration-200", isOpenMobile && "rotate-180")}
                         />
                       </button>
 
                       <AnimatePresence>
-                        {isOpenMobile && (
+                        {isOpenMobile && item.variant === "mega" && (
                           <motion.div
                             id={`${item.label.toLowerCase()}-mobile-nav`}
                             initial={{ height: 0, opacity: 0 }}
@@ -415,76 +572,112 @@ export function Header() {
                             className="overflow-hidden"
                           >
                             <div className="pl-1 pt-1">
-                              {isServices ? (
-                                serviceGroups(items).map((group) => (
-                                  <div key={group.title}>
+                              {getMenuGroups(items).map((group) => (
+                                <div key={group.title || "default"}>
+                                  {group.title && (
                                     <p className="mb-2 mt-2 px-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
                                       {group.title}
                                     </p>
-                                    <div className="space-y-1">
-                                      {group.links.map((child) => {
-                                        const hashIdx = child.href.indexOf("#");
-                                        const childPath = hashIdx >= 0 ? child.href.slice(0, hashIdx) : child.href;
-                                        const childHash = hashIdx >= 0 ? child.href.slice(hashIdx + 1) : null;
-
-                                        return (
-                                          <Link
-                                            key={child.href}
-                                            href={child.href}
-                                            onClick={(e) => {
-                                              handleNavClick();
-                                              if (
-                                                childHash &&
-                                                (pathname === childPath || pathname.startsWith(childPath + "/"))
-                                              ) {
-                                                e.preventDefault();
-                                                window.history.pushState(null, "", child.href);
-                                                setTimeout(() => {
-                                                  scrollToElement(childHash);
-                                                }, 350);
-                                              }
-                                            }}
-                                            className="block min-h-[48px] py-3.5 px-4 text-base font-normal tracking-[0.08em] text-text-secondary hover:text-link-hover transition-colors duration-300"
-                                          >
-                                            {child.label}
-                                          </Link>
-                                        );
-                                      })}
-                                    </div>
-                                  </div>
-                                ))
-                              ) : (
-                                <div className="space-y-1">
-                                  {items.map((child) => {
-                                    const hashIdx = child.href.indexOf("#");
-                                    const childPath = hashIdx >= 0 ? child.href.slice(0, hashIdx) : child.href;
-                                    const childHash = hashIdx >= 0 ? child.href.slice(hashIdx + 1) : null;
-
-                                    return (
+                                  )}
+                                  <div className="space-y-1">
+                                    {group.links.map((child) => (
                                       <Link
                                         key={child.href}
                                         href={child.href}
-                                        onClick={(e) => {
-                                          handleNavClick();
-                                          if (
-                                            childHash &&
-                                            (pathname === childPath || pathname.startsWith(childPath + "/"))
-                                          ) {
-                                            e.preventDefault();
-                                            window.history.pushState(null, "", child.href);
-                                            setTimeout(() => {
-                                              scrollToElement(childHash);
-                                            }, 350);
-                                          }
-                                        }}
-                                        className="block min-h-[48px] py-3.5 px-4 text-base font-normal tracking-[0.08em] text-text-secondary hover:text-link-hover transition-colors duration-300"
+                                        onClick={handleNavClick}
+                                        className="block px-4 py-3.5 min-h-[48px]"
                                       >
-                                        {child.label}
+                                        <span className="block text-base font-normal tracking-[0.08em] text-foreground">
+                                          {child.label}
+                                        </span>
+                                        {child.description && (
+                                          <span className="mt-0.5 block text-sm leading-snug text-text-secondary">
+                                            {child.description}
+                                          </span>
+                                        )}
                                       </Link>
-                                    );
-                                  })}
+                                    ))}
+                                  </div>
                                 </div>
-                              )}
+                              ))}
+                              {/* Where We Work */}
+                              <div className="mt-2">
+                                <p className="mb-2 mt-2 px-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                                  Where We Work
+                                </p>
+                                <div className="space-y-1">
+                                  {megaMenuLocations.map((loc) => (
+                                    <Link
+                                      key={loc.href}
+                                      href={loc.href}
+                                      onClick={handleNavClick}
+                                      className="block min-h-[48px] py-3.5 px-4 text-base font-normal tracking-[0.08em] text-text-secondary hover:text-link-hover transition-colors duration-300"
+                                    >
+                                      {loc.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                              {/* Cost Calculator CTA */}
+                              <Link
+                                href="/tools/cost-calculator"
+                                onClick={handleNavClick}
+                                className="mt-3 block min-h-[48px] py-3.5 px-4 text-base font-medium tracking-[0.08em] text-foreground hover:text-link-hover transition-colors duration-300"
+                              >
+                                Painting Cost Calculator
+                              </Link>
+                            </div>
+                          </motion.div>
+                        )}
+                        {isOpenMobile && item.variant !== "mega" && (
+                          <motion.div
+                            id={`${item.label.toLowerCase()}-mobile-nav`}
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-1 pt-1">
+                              {getMenuGroups(items).map((group) => (
+                                <div key={group.title || "default"}>
+                                  {group.title && (
+                                    <p className="mb-2 mt-2 px-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                                      {group.title}
+                                    </p>
+                                  )}
+                                  <div className="space-y-1">
+                                    {group.links.map((child) => {
+                                      const hashIdx = child.href.indexOf("#");
+                                      const childPath = hashIdx >= 0 ? child.href.slice(0, hashIdx) : child.href;
+                                      const childHash = hashIdx >= 0 ? child.href.slice(hashIdx + 1) : null;
+
+                                      return (
+                                        <Link
+                                          key={child.href}
+                                          href={child.href}
+                                          onClick={(e) => {
+                                            handleNavClick();
+                                            if (
+                                              childHash &&
+                                              (pathname === childPath || pathname.startsWith(childPath + "/"))
+                                            ) {
+                                              e.preventDefault();
+                                              window.history.pushState(null, "", child.href);
+                                              setTimeout(() => {
+                                                scrollToElement(childHash);
+                                              }, 350);
+                                            }
+                                          }}
+                                          className="block min-h-[48px] py-3.5 px-4 text-base font-normal tracking-[0.08em] text-text-secondary hover:text-link-hover transition-colors duration-300"
+                                        >
+                                          {child.label}
+                                        </Link>
+                                      );
+                                    })}
+                                  </div>
+                                </div>
+                              ))}
                             </div>
                           </motion.div>
                         )}

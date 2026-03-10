@@ -87,8 +87,7 @@ export default function HomePage() {
       <VideoTestimonial
         eyebrow="Featured Project"
         heading="Elevating a West Coast fireplace with hand-applied Marmorino plaster"
-        videoSrc="/videos/sop-choo-fireplace.mp4"
-        posterSrc="/images/sop-choo-fireplace-poster.jpg"
+        videoId="8lwJrnkJRXc"
       />
 
       <ServicesGrid services={[...siteConfig.services]} />

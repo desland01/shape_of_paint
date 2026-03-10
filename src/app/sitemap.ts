@@ -7,7 +7,7 @@ import {
 } from "@/config/local-seo";
 import { siteConfig } from "@/config/site";
 
-const blogSlugs = [
+const guideSlugs = [
   "cabinet-painting-vs-replacing",
   "kitchen-cabinet-painting-cost-vancouver",
   "spray-vs-brush-cabinet-painting",
@@ -25,6 +25,15 @@ const blogSlugs = [
   "exterior-paint-failure-signs",
 ] as const;
 
+const faqSlugs = [
+  "interior-painting",
+  "exterior-painting",
+  "cabinet-painting",
+  "pricing-estimates",
+  "process-timeline",
+  "paint-materials",
+] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url || "https://example.com";
   const now = new Date();
@@ -32,13 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/about/reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/contact/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/locations`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/tools/cost-calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${baseUrl}/paint-guides`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
@@ -59,12 +68,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  const faqPages: MetadataRoute.Sitemap = faqSlugs.map((slug) => ({
+    url: `${baseUrl}/faq/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const guidePages: MetadataRoute.Sitemap = guideSlugs.map((slug) => ({
+    url: `${baseUrl}/paint-guides/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
-  return [...staticPages, ...cityHubs, ...citySpokes, ...blogPages];
+  return [...staticPages, ...cityHubs, ...citySpokes, ...faqPages, ...guidePages];
 }

@@ -22,6 +22,14 @@ const NAV_LOCATION_SLUGS = [
   "langley",
 ] as const satisfies CitySlug[];
 
+export const megaMenuLocations = [
+  { label: CITY_CONTENT[PRIMARY_CITY_SLUG].name, href: getCityPath(PRIMARY_CITY_SLUG) },
+  ...NAV_LOCATION_SLUGS.map((slug) => ({
+    label: CITY_CONTENT[slug].name,
+    href: getCityPath(slug),
+  })),
+] as const;
+
 const GOOGLE_MAPS_URL = "https://www.google.com/maps?cid=9497625668518470323";
 
 export const siteConfig = {
@@ -61,44 +69,46 @@ export const siteConfig = {
   },
   nav: [
     {
-      label: "Services",
+      label: "Painting Services",
       href: getCityPath(PRIMARY_CITY_SLUG),
+      variant: "mega",
       children: [
-        ...PRIMARY_SERVICES.map((service) => ({
-          label: SERVICE_CONTENT[service].name,
-          href: getVancouverServicePath(service),
-        })),
-        { label: "Portfolio", href: "/portfolio" },
+        { label: SERVICE_CONTENT["interior-painting"].name, description: SERVICE_CONTENT["interior-painting"].summary, href: getVancouverServicePath("interior-painting"), group: "Interior Services" },
+        { label: SERVICE_CONTENT["cabinet-painting"].name, description: SERVICE_CONTENT["cabinet-painting"].summary, href: getVancouverServicePath("cabinet-painting"), group: "Interior Services" },
+        { label: SERVICE_CONTENT["custom-millwork-feature-walls"].name, description: SERVICE_CONTENT["custom-millwork-feature-walls"].summary, href: getVancouverServicePath("custom-millwork-feature-walls"), group: "Interior Services" },
+        { label: SERVICE_CONTENT["exterior-painting"].name, description: SERVICE_CONTENT["exterior-painting"].summary, href: getVancouverServicePath("exterior-painting"), group: "Exterior Services" },
+        { label: SERVICE_CONTENT["deck-fence-staining"].name, description: SERVICE_CONTENT["deck-fence-staining"].summary, href: getVancouverServicePath("deck-fence-staining"), group: "Exterior Services" },
+        { label: SERVICE_CONTENT["decorative-finishes"].name, description: SERVICE_CONTENT["decorative-finishes"].summary, href: getVancouverServicePath("decorative-finishes"), group: "Exterior Services" },
+      ],
+    },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Reviews", href: "/reviews" },
+    {
+      label: "FAQ",
+      href: "/faq",
+      children: [
+        { label: "Interior Painting FAQ", href: "/faq/interior-painting", group: "Service FAQs" },
+        { label: "Exterior Painting FAQ", href: "/faq/exterior-painting", group: "Service FAQs" },
+        { label: "Cabinet Painting FAQ", href: "/faq/cabinet-painting", group: "Service FAQs" },
+        { label: "Pricing & Estimates", href: "/faq/pricing-estimates", group: "General FAQs" },
+        { label: "Process & Timeline", href: "/faq/process-timeline", group: "General FAQs" },
+        { label: "Paint & Materials", href: "/faq/paint-materials", group: "General FAQs" },
       ],
     },
     {
-      label: "Locations",
-      href: "/locations",
+      label: "Paint Guides",
+      href: "/paint-guides",
       children: [
-        { label: "All Locations", href: "/locations" },
-        ...NAV_LOCATION_SLUGS.map((city) => ({
-          label: CITY_CONTENT[city].name,
-          href: getCityPath(city),
-        })),
+        { label: "Cabinet Painting vs. Replacing", href: "/paint-guides/cabinet-painting-vs-replacing", group: "Cabinet Guides" },
+        { label: "Cabinet Painting Cost", href: "/paint-guides/kitchen-cabinet-painting-cost-vancouver", group: "Cabinet Guides" },
+        { label: "Spray vs. Brush", href: "/paint-guides/spray-vs-brush-cabinet-painting", group: "Cabinet Guides" },
+        { label: "Interior Painting Cost", href: "/paint-guides/interior-painting-cost-vancouver", group: "Interior Guides" },
+        { label: "Choosing Interior Colours", href: "/paint-guides/interior-paint-colours-vancouver", group: "Interior Guides" },
+        { label: "Exterior Painting Cost", href: "/paint-guides/exterior-painting-cost-vancouver", group: "Exterior Guides" },
+        { label: "Best Paint for Rain", href: "/paint-guides/best-exterior-paint-vancouver-weather", group: "Exterior Guides" },
+        { label: "View All Guides", href: "/paint-guides", group: "Exterior Guides" },
       ],
     },
-    {
-      label: "About",
-      href: "/about",
-      children: [
-        { label: "Our Story", href: "/about" },
-        { label: "Testimonials", href: "/about/reviews" },
-      ],
-    },
-    {
-      label: "Contact",
-      href: "/contact",
-      children: [
-        { label: "Contact Us", href: "/contact" },
-        { label: "Free Estimate", href: "/contact#contact-form" },
-      ],
-    },
-    { label: "Blog", href: "/blog" },
   ],
   services: PRIMARY_SERVICES.map((service) => ({
     title: SERVICE_CONTENT[service].name,
@@ -195,9 +205,8 @@ export const siteConfig = {
   footerLinks: {
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Testimonials", href: "/about/reviews" },
-      { label: "Blog", href: "/blog" },
-      { label: "Locations", href: "/locations" },
+      { label: "Contact", href: "/contact" },
+      { label: "Reviews", href: "/reviews" },
       { label: "Portfolio", href: "/portfolio" },
       { label: "Google Reviews", href: GOOGLE_MAPS_URL },
     ],
@@ -208,8 +217,13 @@ export const siteConfig = {
       })),
       { label: "Cost Calculator", href: "/tools/cost-calculator" },
       { label: "Free Estimate", href: "/contact#contact-form" },
-      { label: "FAQ", href: "/contact/faq" },
-      { label: "Contact", href: "/contact" },
+      { label: "FAQ", href: "/faq" },
+    ],
+    guides: [
+      { label: "Paint Guides", href: "/paint-guides" },
+      { label: "Cabinet Painting Cost", href: "/paint-guides/kitchen-cabinet-painting-cost-vancouver" },
+      { label: "Interior Painting Cost", href: "/paint-guides/interior-painting-cost-vancouver" },
+      { label: "Exterior Painting Cost", href: "/paint-guides/exterior-painting-cost-vancouver" },
     ],
     areas: CITY_SLUGS.filter((city) => city !== PRIMARY_CITY_SLUG).map((city) => ({
       label: CITY_CONTENT[city].name,

@@ -39,7 +39,7 @@ export function BlogPostLayout({
     ? generateArticleSchema({
         title,
         description: description || "",
-        url: `${siteConfig.url}/blog/${slug}`,
+        url: `${siteConfig.url}/paint-guides/${slug}`,
         datePublished: date,
         dateModified: dateModified || date,
         image: image ? `${siteConfig.url}${image}` : undefined,
@@ -49,8 +49,8 @@ export function BlogPostLayout({
   const breadcrumbJsonLd = slug
     ? generateBreadcrumbSchema([
         { name: "Home", url: siteConfig.url },
-        { name: "Blog", url: `${siteConfig.url}/blog` },
-        { name: title, url: `${siteConfig.url}/blog/${slug}` },
+        { name: "Paint Guides", url: `${siteConfig.url}/paint-guides` },
+        { name: title, url: `${siteConfig.url}/paint-guides/${slug}` },
       ])
     : null;
 
@@ -87,10 +87,10 @@ export function BlogPostLayout({
             </li>
             <li>
               <Link
-                href="/blog"
+                href="/paint-guides"
                 className="transition-colors hover:text-foreground"
               >
-                Blog
+                Paint Guides
               </Link>
             </li>
             <li aria-hidden="true" className="text-text-muted">
@@ -148,7 +148,7 @@ export function BlogPostLayout({
                 >
                   {siteConfig.name}
                 </Link>
-                . Through this blog, I share the advice I give homeowners every
+                . Through these guides, I share the advice I give homeowners every
                 day - honest answers about costs, timelines, and what actually
                 matters when it comes to painting your home.
               </p>

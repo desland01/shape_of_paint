@@ -1,65 +1,101 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SlideUp, ScaleIn } from "@/components/ui/motion";
 
+declare global {
+  interface Window {
+    YT: typeof YT;
+    onYouTubeIframeAPIReady: (() => void) | undefined;
+  }
+}
+
 interface VideoTestimonialProps {
   eyebrow: string;
   heading: string;
-  videoSrc?: string;
-  posterSrc?: string;
+  videoId?: string;
+}
+
+function loadYTApi(): Promise<void> {
+  if (window.YT?.Player) return Promise.resolve();
+  return new Promise((resolve) => {
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      prev?.();
+      resolve();
+    };
+    if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(tag);
+    }
+  });
 }
 
 export function VideoTestimonial({
   eyebrow,
   heading,
-  videoSrc,
-  posterSrc,
+  videoId,
 }: VideoTestimonialProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const playAttemptedRef = useRef(false);
-  const [ready, setReady] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<YT.Player | null>(null);
+  const [visible, setVisible] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
 
-  const attemptPlayback = useCallback(async () => {
-    const video = videoRef.current;
-    if (!video) return;
+  useEffect(() => {
+    if (!videoId) return;
 
-    if (playAttemptedRef.current) return;
-    playAttemptedRef.current = true;
+    let destroyed = false;
+    loadYTApi().then(() => {
+      if (destroyed || !containerRef.current) return;
+      playerRef.current = new window.YT.Player(containerRef.current, {
+        videoId,
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 0,
+          modestbranding: 1,
+          loop: 1,
+          rel: 0,
+          showinfo: 0,
+          playsinline: 1,
+          iv_load_policy: 3,
+          disablekb: 1,
+          playlist: videoId,
+          enablejsapi: 1,
+          origin: window.location.origin,
+        },
+        events: {
+          onReady: () => {
+            setTimeout(() => {
+              if (!destroyed) setVisible(true);
+            }, 3000);
+          },
+        },
+      });
+    });
 
-    try {
-      await video.play();
-      setAutoplayBlocked(false);
-    } catch {
-      // Keep controls available so users can always start playback manually.
-      setAutoplayBlocked(true);
-    }
-  }, []);
-
-  const handleReady = useCallback(() => {
-    setReady(true);
-    void attemptPlayback();
-  }, [attemptPlayback]);
+    return () => {
+      destroyed = true;
+      playerRef.current?.destroy();
+      playerRef.current = null;
+    };
+  }, [videoId]);
 
   const toggleMute = useCallback(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const nextMuted = !video.muted;
-    video.muted = nextMuted;
-    setMuted(nextMuted);
-
-    if (!nextMuted && video.paused) {
-      void video.play().catch(() => {
-        setAutoplayBlocked(true);
-      });
+    const p = playerRef.current;
+    if (!p) return;
+    if (muted) {
+      p.unMute();
+      p.setVolume(100);
+    } else {
+      p.mute();
     }
-  }, []);
+    setMuted(!muted);
+  }, [muted]);
 
   return (
     <section className="bg-warm py-16 md:py-24 lg:py-32">
@@ -75,39 +111,14 @@ export function VideoTestimonial({
         </SlideUp>
         <ScaleIn delay={0.3}>
           <div className="relative mx-auto aspect-video max-w-[1100px] overflow-hidden rounded-none md:rounded-lg bg-warm-light -mx-4 md:mx-auto">
-            {videoSrc ? (
+            {videoId ? (
               <>
                 <div
-                  className={`h-full w-full transition-opacity duration-700 ${ready ? "opacity-100" : "opacity-0"}`}
+                  className={`pointer-events-none h-full w-full transition-opacity duration-[1500ms] ${visible ? "opacity-100" : "opacity-0"}`}
                 >
-                  <video
-                    ref={videoRef}
-                    autoPlay
-                    loop
-                    muted={muted}
-                    playsInline
-                    preload="auto"
-                    controls
-                    poster={posterSrc}
-                    onLoadStart={() => {
-                      playAttemptedRef.current = false;
-                      setReady(false);
-                      setMuted(true);
-                      setAutoplayBlocked(false);
-                    }}
-                    onCanPlay={handleReady}
-                    onLoadedData={handleReady}
-                    onVolumeChange={() => {
-                      const video = videoRef.current;
-                      if (!video) return;
-                      setMuted(video.muted || video.volume === 0);
-                    }}
-                    className="h-full w-full object-cover"
-                  >
-                    <source src={videoSrc} type="video/mp4" />
-                  </video>
+                  <div ref={containerRef} className="h-full w-full" />
                 </div>
-                {ready && (
+                {visible && (
                   <button
                     onClick={toggleMute}
                     aria-label={muted ? "Turn sound on" : "Turn sound off"}
@@ -115,11 +126,6 @@ export function VideoTestimonial({
                   >
                     {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
                   </button>
-                )}
-                {autoplayBlocked && (
-                  <p className="absolute bottom-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white">
-                    Autoplay blocked. Press play to start.
-                  </p>
                 )}
               </>
             ) : (
