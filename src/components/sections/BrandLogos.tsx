@@ -41,12 +41,12 @@ const LogoImage = ({
   loading?: "lazy" | "eager";
 }) => {
   const sizeClasses = {
-    sm: "h-6 max-w-[100px] md:h-7 md:max-w-[120px]",
-    md: "h-8 max-w-[120px] md:h-10 md:max-w-[140px]",
-    lg: "h-10 max-w-[140px] md:h-12 md:max-w-[160px]",
+    sm: "h-5 max-w-[100px] md:h-6 md:max-w-[120px]",
+    md: "h-7 max-w-[120px] md:h-8 md:max-w-[140px]",
+    lg: "h-8 max-w-[130px] md:h-10 md:max-w-[150px]",
   };
 
-  const scaleStyle = scale && scale !== 1 ? { transform: `scale(${scale})` } : undefined;
+  const scaleStyle = scale && scale !== 1 ? { zoom: scale } : undefined;
   const isSvg = src.endsWith(".svg");
 
   if (isSvg) {
@@ -85,9 +85,9 @@ export const BrandLogos = ({
 
   if (variant === "footer") {
     return (
-      <div className="flex flex-wrap items-center justify-center gap-6">
+      <div className="flex flex-wrap items-center justify-evenly gap-y-6">
         {brands.map((brand) => (
-          <div key={brand.name} className="opacity-50">
+          <div key={brand.name} className="opacity-40">
             <LogoImage
               src={brand.logo}
               alt={brand.name}
@@ -103,7 +103,7 @@ export const BrandLogos = ({
   if (variant === "compact") {
     return (
       <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+        <div className="px-4 md:px-8 lg:px-12">
           {heading && (
             <SlideUp>
               <h2 className="mb-8 text-center font-cormorant text-2xl font-normal text-foreground md:mb-10">
@@ -112,7 +112,7 @@ export const BrandLogos = ({
             </SlideUp>
           )}
           <StaggerContainer
-            className="flex flex-wrap items-center justify-center gap-6 md:gap-8"
+            className="flex flex-wrap items-center justify-evenly gap-y-6"
             staggerChildren={0.08}
           >
             {brands.map((brand) => (
@@ -142,8 +142,8 @@ export const BrandLogos = ({
   // Full variant (default)
   return (
     <section className="bg-warm py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
-        <div className="mb-10 text-center md:mb-14">
+      <div>
+        <div className="mb-10 text-center px-4 md:px-8">
           <SlideUp>
             <p className="mb-3 text-xs font-medium uppercase tracking-widest text-text-muted">
               Premium Materials
@@ -164,7 +164,7 @@ export const BrandLogos = ({
         </div>
 
         <StaggerContainer
-          className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
+          className="flex flex-wrap items-center justify-evenly gap-y-8"
           staggerChildren={0.08}
         >
           {brands.map((brand) => (

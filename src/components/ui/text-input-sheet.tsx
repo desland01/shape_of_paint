@@ -146,7 +146,7 @@ const TextInputSheet = ({
           <button
             type="button"
             onClick={handleDone}
-            className="min-h-12 w-full rounded-[9px] border border-cta bg-cta text-base font-semibold text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+            className="min-h-12 w-full rounded-[9px] border border-cta bg-cta text-center text-base font-semibold text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
           >
             Done
           </button>

@@ -187,7 +187,7 @@ const NumberPadSheet = ({
         <button
           type="button"
           onClick={handleDone}
-          className="mt-3 w-full rounded-[9px] border border-cta bg-cta py-3.5 text-base font-semibold text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cta-hover"
+          className="mt-3 w-full rounded-[9px] border border-cta bg-cta py-3.5 text-center text-base font-semibold text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cta-hover"
           aria-label={`Done editing ${label}`}
         >
           Done

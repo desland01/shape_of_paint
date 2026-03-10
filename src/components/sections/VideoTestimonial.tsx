@@ -21,27 +21,30 @@ export function VideoTestimonial({
 }: VideoTestimonialProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const playAttemptedRef = useRef(false);
-  const [visible, setVisible] = useState(false);
+  const [ready, setReady] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [showControls, setShowControls] = useState(false);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
 
-  const handleCanPlay = useCallback(async () => {
+  const attemptPlayback = useCallback(async () => {
     const video = videoRef.current;
     if (!video) return;
-
-    setVisible(true);
 
     if (playAttemptedRef.current) return;
     playAttemptedRef.current = true;
 
     try {
       await video.play();
-      setShowControls(false);
+      setAutoplayBlocked(false);
     } catch {
-      // If autoplay is blocked by browser policy, fall back to native controls.
-      setShowControls(true);
+      // Keep controls available so users can always start playback manually.
+      setAutoplayBlocked(true);
     }
   }, []);
+
+  const handleReady = useCallback(() => {
+    setReady(true);
+    void attemptPlayback();
+  }, [attemptPlayback]);
 
   const toggleMute = useCallback(() => {
     const video = videoRef.current;
@@ -53,7 +56,7 @@ export function VideoTestimonial({
 
     if (!nextMuted && video.paused) {
       void video.play().catch(() => {
-        setShowControls(true);
+        setAutoplayBlocked(true);
       });
     }
   }, []);
@@ -75,7 +78,7 @@ export function VideoTestimonial({
             {videoSrc ? (
               <>
                 <div
-                  className={`${showControls ? "pointer-events-auto" : "pointer-events-none"} h-full w-full transition-opacity duration-[1500ms] ${visible ? "opacity-100" : "opacity-0"}`}
+                  className={`h-full w-full transition-opacity duration-700 ${ready ? "opacity-100" : "opacity-0"}`}
                 >
                   <video
                     ref={videoRef}
@@ -83,16 +86,17 @@ export function VideoTestimonial({
                     loop
                     muted={muted}
                     playsInline
-                    preload="metadata"
-                    controls={showControls}
+                    preload="auto"
+                    controls
                     poster={posterSrc}
                     onLoadStart={() => {
                       playAttemptedRef.current = false;
-                      setVisible(false);
+                      setReady(false);
                       setMuted(true);
-                      setShowControls(false);
+                      setAutoplayBlocked(false);
                     }}
-                    onCanPlay={handleCanPlay}
+                    onCanPlay={handleReady}
+                    onLoadedData={handleReady}
                     onVolumeChange={() => {
                       const video = videoRef.current;
                       if (!video) return;
@@ -103,7 +107,7 @@ export function VideoTestimonial({
                     <source src={videoSrc} type="video/mp4" />
                   </video>
                 </div>
-                {visible && (
+                {ready && (
                   <button
                     onClick={toggleMute}
                     aria-label={muted ? "Turn sound on" : "Turn sound off"}
@@ -111,6 +115,11 @@ export function VideoTestimonial({
                   >
                     {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
                   </button>
+                )}
+                {autoplayBlocked && (
+                  <p className="absolute bottom-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white">
+                    Autoplay blocked. Press play to start.
+                  </p>
                 )}
               </>
             ) : (

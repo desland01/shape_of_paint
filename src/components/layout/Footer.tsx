@@ -8,19 +8,15 @@ export function Footer() {
   return (
     <footer className="bg-background">
       <div className="mx-auto max-w-section px-4 pt-12 pb-24 md:px-8 md:py-16">
-        <div className="grid gap-12 md:grid-cols-5">
+        <div className="grid gap-12 md:grid-cols-5 md:items-start">
           <SlideUp>
             <div className="flex flex-col gap-4">
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/" className="block h-28 w-28 overflow-hidden md:h-40 md:w-40">
                 <img
                   src="/images/sop-square.svg"
-                  className="h-16 w-auto md:h-20"
-                  alt=""
-                  aria-hidden="true"
+                  className="-mt-[20%] h-auto w-full"
+                  alt={siteConfig.name}
                 />
-                <span className="text-sm font-medium uppercase tracking-[0.2em]">
-                  {siteConfig.name}
-                </span>
               </Link>
               <a
                 href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
@@ -114,14 +110,15 @@ export function Footer() {
           </SlideUp>
         </div>
 
-        <div className="mt-12 border-t border-border-subtle pt-8 text-center">
-          <div className="mb-6">
-            <BrandLogos variant="footer" />
-          </div>
-          <p className="text-xs font-normal text-text-muted">
-            &copy; {new Date().getFullYear()} {siteConfig.name}
-          </p>
+      </div>
+
+      <div className="border-t border-border-subtle py-8 text-center">
+        <div className="mb-6">
+          <BrandLogos variant="footer" />
         </div>
+        <p className="text-xs font-normal text-text-muted">
+          &copy; {new Date().getFullYear()} {siteConfig.name}
+        </p>
       </div>
     </footer>
   );

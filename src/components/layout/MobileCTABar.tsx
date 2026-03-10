@@ -56,7 +56,7 @@ export function MobileCTABar() {
           <div className="flex items-center gap-3 px-4 py-3">
             <a
               href="tel:6043537378"
-              className="flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-[9px] border border-foreground/20 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors duration-300"
+              className="flex min-h-[48px] flex-1 items-center justify-center gap-2 text-center rounded-[9px] border border-foreground/20 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors duration-300"
               aria-label="Call 604-353-7378"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
@@ -72,7 +72,7 @@ export function MobileCTABar() {
                     scrollToElement("contact-form");
                   }
                 }}
-                className="flex min-h-[48px] flex-1 items-center justify-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
+                className="flex min-h-[48px] flex-1 items-center justify-center text-center rounded-[9px] border border-cta bg-cta text-sm font-semibold uppercase tracking-[0.15em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
               >
                 Book Your Estimate
               </Link>
