@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DecorativeIcon } from "@/components/shared/DecorativeIcon";
 import { BlogCard } from "@/components/sections/BlogCard";
+import { ColorGuide } from "@/components/sections/ColorGuide";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { blogPosts } from "@/config/blog";
 import { siteConfig } from "@/config/site";
@@ -75,6 +76,8 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      <ColorGuide />
 
       <CTABanner
         headline="Your free estimate is 2 minutes away"

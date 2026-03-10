@@ -129,7 +129,7 @@ export default async function CityPage({ params }: CityPageProps) {
         <div className="mx-auto max-w-content">
           <SlideUp>
             <h2 className="mb-5 text-3xl font-normal leading-[1.2] md:text-4xl">
-              Answer first: choosing the right painter in {cityData.name}
+              Choosing the right painter in {cityData.name}
             </h2>
           </SlideUp>
           <SlideUp delay={0.05}>

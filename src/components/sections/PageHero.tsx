@@ -28,7 +28,7 @@ export function PageHero({
     <section
       className={
         hasImage
-          ? "relative flex min-h-[55vh] items-center justify-center text-center"
+          ? "relative flex min-h-[55vh] items-center justify-center text-center py-24 md:py-32"
           : "bg-background py-16 text-center md:py-24"
       }
     >
@@ -77,7 +77,7 @@ export function PageHero({
           <SlideUp immediate delay={0.3}>
             <Link
               href={ctaHref}
-              className={`mt-8 inline-flex min-h-[48px] items-center justify-center rounded-[9px] border px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]${hasImage ? " border-white/60 bg-white/15 text-white hover:text-cta-hover-foreground" : " border-cta bg-cta text-cta-foreground"}`}
+              className={`mt-8 md:mt-12 inline-flex min-h-[48px] items-center justify-center rounded-[9px] border px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]${hasImage ? " border-white/60 bg-white/15 text-white hover:text-cta-hover-foreground" : " border-cta bg-cta text-cta-foreground"}`}
             >
               {ctaText}
             </Link>

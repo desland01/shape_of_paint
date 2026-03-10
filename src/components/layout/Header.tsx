@@ -82,7 +82,10 @@ export function Header() {
   }, [isOpen]);
 
   const handleNavClick = () => {
-    document.body.style.overflow = '';
+    if (typeof document !== 'undefined') {
+      // eslint-disable-next-line react-hooks/immutability
+      document.body.style.overflow = '';
+    }
     setIsOpen(false);
   };
 
@@ -391,9 +394,7 @@ export function Header() {
               onMouseEnter={() => handleDropdownEnter("Painting Services")}
               onMouseLeave={handleDropdownLeave}
             >
-              {/* Hover bridge */}
-              <div className="h-3" />
-              <div className="border-t border-border-subtle bg-background shadow-lg">
+              <div className="bg-background shadow-lg">
                 <div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_1fr_1fr_280px] gap-0 px-4 py-8 md:px-8">
                   {/* Col 1: Interior Services */}
                   <div className="pr-6">
@@ -483,7 +484,7 @@ export function Header() {
                   {/* Col 4: Calculator CTA */}
                   <div className="rounded-lg bg-[#202A44] px-6 py-6">
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
-                      Free Tool
+                      Helpful Resources
                     </p>
                     <h3 className="mt-2 font-heading text-xl font-semibold text-white">
                       Painting Cost Calculator
@@ -497,6 +498,14 @@ export function Header() {
                       className="mt-4 inline-flex items-center rounded-[9px] border border-cta bg-cta px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-cta-foreground transition-[background-color,box-shadow,border-color] duration-[400ms] [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:border-cta-hover hover:bg-cta-hover hover:shadow-[0_12px_50px_-5px_rgb(192,164,135)]"
                     >
                       Try the Calculator
+                    </Link>
+                    <Link
+                      href="/paint-guides"
+                      onClick={() => setOpenDropdown(null)}
+                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium tracking-[0.08em] text-white/70 transition-colors duration-200 hover:text-white"
+                    >
+                      Paint Guides
+                      <ChevronRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -625,6 +634,13 @@ export function Header() {
                                 className="mt-3 block min-h-[48px] py-3.5 px-4 text-base font-medium tracking-[0.08em] text-foreground hover:text-link-hover transition-colors duration-300"
                               >
                                 Painting Cost Calculator
+                              </Link>
+                              <Link
+                                href="/paint-guides"
+                                onClick={handleNavClick}
+                                className="block min-h-[48px] py-3.5 px-4 text-base font-medium tracking-[0.08em] text-foreground hover:text-link-hover transition-colors duration-300"
+                              >
+                                Paint Guides
                               </Link>
                             </div>
                           </motion.div>

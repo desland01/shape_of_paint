@@ -95,20 +95,6 @@ export const siteConfig = {
         { label: "Paint & Materials", href: "/faq/paint-materials", group: "General FAQs" },
       ],
     },
-    {
-      label: "Paint Guides",
-      href: "/paint-guides",
-      children: [
-        { label: "Cabinet Painting vs. Replacing", href: "/paint-guides/cabinet-painting-vs-replacing", group: "Cabinet Guides" },
-        { label: "Cabinet Painting Cost", href: "/paint-guides/kitchen-cabinet-painting-cost-vancouver", group: "Cabinet Guides" },
-        { label: "Spray vs. Brush", href: "/paint-guides/spray-vs-brush-cabinet-painting", group: "Cabinet Guides" },
-        { label: "Interior Painting Cost", href: "/paint-guides/interior-painting-cost-vancouver", group: "Interior Guides" },
-        { label: "Choosing Interior Colours", href: "/paint-guides/interior-paint-colours-vancouver", group: "Interior Guides" },
-        { label: "Exterior Painting Cost", href: "/paint-guides/exterior-painting-cost-vancouver", group: "Exterior Guides" },
-        { label: "Best Paint for Rain", href: "/paint-guides/best-exterior-paint-vancouver-weather", group: "Exterior Guides" },
-        { label: "View All Guides", href: "/paint-guides", group: "Exterior Guides" },
-      ],
-    },
   ],
   services: PRIMARY_SERVICES.map((service) => ({
     title: SERVICE_CONTENT[service].name,

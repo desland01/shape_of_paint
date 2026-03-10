@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { FounderQuote } from "@/components/sections/FounderQuote";
 import { VideoTestimonial } from "@/components/sections/VideoTestimonial";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { ColorGuide } from "@/components/sections/ColorGuide";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { PortfolioGallery } from "@/components/sections/PortfolioGallery";
@@ -89,6 +90,8 @@ export default function HomePage() {
         heading="Elevating a West Coast fireplace with hand-applied Marmorino plaster"
         videoId="8lwJrnkJRXc"
       />
+
+      <ColorGuide />
 
       <ServicesGrid services={[...siteConfig.services]} />
 
