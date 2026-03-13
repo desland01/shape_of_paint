@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { siteConfig } from "@/config/site";
 import { generateLocalBusinessSchema } from "@/lib/schema";
-import { PaintSplatterParticles } from "@/components/effects/PaintSplatterParticles";
 
 const heading = Cormorant_Garamond({
   subsets: ["latin"],
@@ -66,7 +65,6 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <PaintSplatterParticles />
         <MobileCTABar />
         {/* <!-- CHAT_WIDGET --> */}
       </body>
