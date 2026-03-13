@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { scrollToElement } from "@/lib/utils";
 
 export function MobileCTABar() {
@@ -37,6 +37,8 @@ export function MobileCTABar() {
     return () => observer.disconnect();
   }, []);
 
+  const shouldReduceMotion = useReducedMotion();
+
   const shouldShow = isVisible && !isContactFormVisible;
 
   return (
@@ -46,7 +48,7 @@ export function MobileCTABar() {
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
-          transition={{
+          transition={shouldReduceMotion ? { duration: 0 } : {
             type: "spring",
             stiffness: 300,
             damping: 30,

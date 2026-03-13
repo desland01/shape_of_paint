@@ -276,11 +276,25 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
                 {serviceData.introLead}
               </p>
             </SlideUp>
+            {serviceData.cityOverrides?.[city]?.localChallenge && (
+              <SlideUp delay={0.17}>
+                <p className="mt-4 text-lg font-normal leading-relaxed text-text-secondary">
+                  {serviceData.cityOverrides[city]!.localChallenge}
+                </p>
+              </SlideUp>
+            )}
             <SlideUp delay={0.2}>
               <p className="mt-6 rounded-[28px] border border-border-subtle bg-background/90 p-6 text-lg font-normal leading-relaxed text-text-secondary shadow-[0_30px_80px_-55px_rgba(32,42,68,0.65)] md:p-8">
                 {localizedAnswer}
               </p>
             </SlideUp>
+            {serviceData.cityOverrides?.[city]?.pricingContext && (
+              <SlideUp delay={0.25}>
+                <p className="mt-4 text-base font-normal leading-relaxed text-text-secondary">
+                  {serviceData.cityOverrides[city]!.pricingContext}
+                </p>
+              </SlideUp>
+            )}
           </div>
 
           <StaggerContainer
@@ -519,6 +533,11 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
                 Book a walkthrough and get a firm quote, start dates, and written prep standards
                 before anything is scheduled.
               </p>
+              {serviceData.cityOverrides?.[city]?.seasonalTip && (
+                <p className="mt-3 text-base font-normal leading-relaxed text-text-secondary">
+                  {serviceData.cityOverrides[city]!.seasonalTip}
+                </p>
+              )}
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact#contact-form"

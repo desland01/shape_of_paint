@@ -1,11 +1,10 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 
 interface SectionWrapperProps {
   children: React.ReactNode;
   className?: string;
   variant?: "default" | "warm" | "warm-light";
+  layout?: "flow" | "wide";
   id?: string;
 }
 
@@ -13,6 +12,7 @@ export function SectionWrapper({
   children,
   className,
   variant = "default",
+  layout = "wide",
   id,
 }: SectionWrapperProps) {
   const bgClasses = {
@@ -25,12 +25,20 @@ export function SectionWrapper({
     <section
       id={id}
       className={cn(
-        "py-16 md:py-24 lg:py-32",
+        "py-[var(--space-section)]",
         bgClasses[variant],
         className
       )}
     >
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8">{children}</div>
+      <div
+        className={
+          layout === "flow"
+            ? "breakout-grid"
+            : "mx-auto max-w-[1440px] px-4 md:px-8"
+        }
+      >
+        {children}
+      </div>
     </section>
   );
 }

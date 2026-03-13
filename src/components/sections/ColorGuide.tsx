@@ -69,7 +69,7 @@ export function ColorGuide() {
         aria-hidden="true"
       >
         <span
-          className="font-heading whitespace-nowrap text-[16vw] font-bold leading-none tracking-tight"
+          className="font-heading whitespace-nowrap text-[16vw] font-semibold leading-none tracking-tight"
           style={{ color: "rgba(255, 255, 255, 0.025)" }}
         >
           Colour

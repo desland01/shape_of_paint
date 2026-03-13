@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, ChevronRight } from "lucide-react";
 import { siteConfig, megaMenuLocations } from "@/config/site";
 import { cn, scrollToElement } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 type NavChild = {
   label: string;
@@ -28,6 +28,8 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
   const pathname = usePathname();
+  const shouldReduceMotion = useReducedMotion();
+  const instantTransition = { duration: 0 };
   const headerRef = useRef<HTMLElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -166,7 +168,7 @@ export function Header() {
             setIsOpen(false);
           }
         }}
-        className="block rounded-md px-4 py-2 text-sm font-normal tracking-[0.08em] text-text-secondary transition-colors duration-200 hover:text-link-hover hover:bg-warm"
+        className="type-small block rounded-md px-4 py-2 text-text-secondary transition-colors duration-200 hover:bg-warm hover:text-link-hover"
       >
         {child.label}
       </Link>
@@ -186,7 +188,7 @@ export function Header() {
           <img
             src="/images/sop-horizontal.svg"
             className={cn(
-              "h-8 w-auto md:h-10 transition-[filter] duration-300",
+              "h-16 w-auto md:h-20 transition-[filter] duration-300",
               isTransparent && "brightness-0 invert"
             )}
             alt=""
@@ -194,7 +196,7 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {(siteConfig.nav as unknown as NavItem[]).map((item) => {
             const hasChildren = !!item.children?.length;
             const isDropdownOpen = openDropdown === item.label;
@@ -265,7 +267,7 @@ export function Header() {
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
-                          transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                          transition={shouldReduceMotion ? instantTransition : { duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                           className={cn("absolute left-0 top-full pt-2", dropdownWidth)}
                         >
                           <div
@@ -277,7 +279,7 @@ export function Header() {
                               {groups.map((group) => (
                                 <div key={group.title || "default"}>
                                   {group.title && (
-                                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                                    <p className="caption mb-2 font-semibold uppercase text-text-secondary">
                                       {group.title}
                                     </p>
                                   )}
@@ -316,7 +318,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <a
             href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
             title={siteConfig.phone}
@@ -352,7 +354,7 @@ export function Header() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 md:hidden"
+          className="min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 lg:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
@@ -389,8 +391,8 @@ export function Header() {
               initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
-              transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="absolute left-0 right-0 z-40 hidden md:block"
+              transition={shouldReduceMotion ? instantTransition : { duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="absolute left-0 right-0 z-40 hidden lg:block"
               onMouseEnter={() => handleDropdownEnter("Painting Services")}
               onMouseLeave={handleDropdownLeave}
             >
@@ -398,7 +400,7 @@ export function Header() {
                 <div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_1fr_1fr_280px] gap-0 px-4 py-8 md:px-8">
                   {/* Col 1: Interior Services */}
                   <div className="pr-6">
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                    <p className="type-body-lg mb-4 font-heading font-semibold leading-[1.08] text-foreground">
                       Interior Services
                     </p>
                     <div className="space-y-1">
@@ -410,11 +412,11 @@ export function Header() {
                           className="group/link flex items-start gap-3 rounded-md px-3 py-3 transition-colors duration-200 hover:bg-warm"
                         >
                           <div className="flex-1">
-                            <span className="font-heading text-base font-medium text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
+                            <span className="type-body-lg font-heading font-semibold leading-[1.08] text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
                               {child.label}
                             </span>
                             {child.description && (
-                              <span className="mt-0.5 block text-sm leading-snug text-text-secondary">
+                              <span className="type-small mt-1.5 block font-medium leading-[1.65] text-text-secondary">
                                 {child.description}
                               </span>
                             )}
@@ -427,7 +429,7 @@ export function Header() {
 
                   {/* Col 2: Exterior Services */}
                   <div className="border-l border-border-subtle px-6">
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                    <p className="type-body-lg mb-4 font-heading font-semibold leading-[1.08] text-foreground">
                       Exterior Services
                     </p>
                     <div className="space-y-1">
@@ -439,11 +441,11 @@ export function Header() {
                           className="group/link flex items-start gap-3 rounded-md px-3 py-3 transition-colors duration-200 hover:bg-warm"
                         >
                           <div className="flex-1">
-                            <span className="font-heading text-base font-medium text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
+                            <span className="type-body-lg font-heading font-semibold leading-[1.08] text-foreground transition-colors duration-200 group-hover/link:text-link-hover">
                               {child.label}
                             </span>
                             {child.description && (
-                              <span className="mt-0.5 block text-sm leading-snug text-text-secondary">
+                              <span className="type-small mt-1.5 block font-medium leading-[1.65] text-text-secondary">
                                 {child.description}
                               </span>
                             )}
@@ -456,7 +458,7 @@ export function Header() {
 
                   {/* Col 3: Where We Work */}
                   <div className="border-l border-border-subtle px-6">
-                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-text-secondary">
+                    <p className="type-body-lg mb-4 font-heading font-semibold leading-[1.08] text-foreground">
                       Where We Work
                     </p>
                     <div className="space-y-1">
@@ -465,15 +467,15 @@ export function Header() {
                           key={loc.href}
                           href={loc.href}
                           onClick={() => setOpenDropdown(null)}
-                          className="block rounded-md px-3 py-2 text-sm font-normal tracking-[0.08em] text-text-secondary transition-colors duration-200 hover:bg-warm hover:text-link-hover"
+                          className="type-body block rounded-md px-3 py-2 text-text-secondary transition-colors duration-200 hover:bg-warm hover:text-link-hover"
                         >
                           {loc.label}
                         </Link>
                       ))}
                       <Link
-                        href="/areas"
+                        href="/locations"
                         onClick={() => setOpenDropdown(null)}
-                        className="mt-2 inline-flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[0.08em] text-foreground transition-colors duration-200 hover:text-link-hover"
+                        className="type-body mt-2 inline-flex items-center gap-1 px-3 py-2 font-semibold text-foreground transition-colors duration-200 hover:text-link-hover"
                       >
                         View All Areas
                         <ChevronRight className="h-3.5 w-3.5" />
@@ -483,13 +485,13 @@ export function Header() {
 
                   {/* Col 4: Calculator CTA */}
                   <div className="rounded-lg bg-[#202A44] px-6 py-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+                    <p className="kicker text-white/60">
                       Helpful Resources
                     </p>
-                    <h3 className="mt-2 font-heading text-xl font-semibold text-white">
+                    <h3 className="type-h3 mt-2 font-heading leading-[1.08] text-white">
                       Painting Cost Calculator
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/70">
+                    <p className="type-small mt-2 max-w-[22ch] text-white/72">
                       Get a room-by-room estimate in under 2 minutes. No email required.
                     </p>
                     <Link
@@ -502,7 +504,7 @@ export function Header() {
                     <Link
                       href="/paint-guides"
                       onClick={() => setOpenDropdown(null)}
-                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium tracking-[0.08em] text-white/70 transition-colors duration-200 hover:text-white"
+                      className="type-small mt-3 inline-flex items-center gap-1 font-semibold text-white/70 transition-colors duration-200 hover:text-white"
                     >
                       Paint Guides
                       <ChevronRight className="h-3.5 w-3.5" />
@@ -522,8 +524,8 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              transition={shouldReduceMotion ? instantTransition : { duration: 0.3, ease: "easeInOut" }}
+              className="fixed inset-0 z-40 bg-black/40 lg:hidden"
               onClick={() => setIsOpen(false)}
               aria-hidden="true"
             />
@@ -531,8 +533,8 @@ export function Header() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed left-0 right-0 z-50 overflow-y-auto bg-background md:hidden"
+              transition={shouldReduceMotion ? instantTransition : { duration: 0.3, ease: "easeInOut" }}
+              className="fixed left-0 right-0 z-50 overflow-y-auto bg-background lg:hidden"
               style={{ top: "var(--header-h)", maxHeight: "calc(100dvh - var(--header-h))" }}
             >
               <nav className="flex flex-col gap-1 px-4 py-6">
@@ -577,7 +579,7 @@ export function Header() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
+                            transition={shouldReduceMotion ? instantTransition : { duration: 0.2 }}
                             className="overflow-hidden"
                           >
                             <div className="pl-1 pt-1">
@@ -651,7 +653,7 @@ export function Header() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
+                            transition={shouldReduceMotion ? instantTransition : { duration: 0.2 }}
                             className="overflow-hidden"
                           >
                             <div className="pl-1 pt-1">

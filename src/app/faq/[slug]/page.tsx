@@ -61,7 +61,7 @@ export default async function FAQCategoryPage({
 
       <PageHero heading={category.title} description={category.description} />
 
-      <FAQ heading={category.title} items={category.items} />
+      <FAQ heading={category.title} items={category.items} showHeader={false} />
 
       <SectionWrapper>
         <div className="mx-auto max-w-content text-center">

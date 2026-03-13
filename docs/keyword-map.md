@@ -112,7 +112,7 @@
 
 ---
 
-### Interior Painting (/services/interior)
+### Interior Painting (/vancouver/interior-painting)
 
 **Combined Monthly Volume: ~420+**
 
@@ -123,7 +123,7 @@
 | **Long-tail** | interior painting cost per square foot (90/mo), interior painters near me |
 | **Title Tag** | `Interior Painting Vancouver BC | Shape of Paint` (48 chars) |
 | **H1** | Interior Painting in Vancouver |
-| **URL** | `/services/interior` |
+| **URL** | `/vancouver/interior-painting` |
 | **Meta Description** | `97% of clients skip touch-ups. Artisan interior painting in Vancouver — walls, ceilings, trim & fireplaces. Designer-grade finishes. Free consultation.` (153 chars) |
 | **Body Content** | "interior painting vancouver" in first 100 words. 2-3% keyword density across page. |
 
@@ -157,7 +157,7 @@ H1: Interior Painting in Vancouver
 
 ---
 
-### Exterior Painting (/services/exterior)
+### Exterior Painting (/vancouver/exterior-painting)
 
 **Combined Monthly Volume: ~600+**
 
@@ -168,7 +168,7 @@ H1: Interior Painting in Vancouver
 | **Long-tail** | best exterior paint for vancouver weather, stucco painting vancouver (20/mo) |
 | **Title Tag** | `Exterior Painting Vancouver BC | Shape of Paint` (48 chars) |
 | **H1** | Exterior Painting in Vancouver |
-| **URL** | `/services/exterior` |
+| **URL** | `/vancouver/exterior-painting` |
 | **Meta Description** | `Most exterior paint fails in 3 years in Vancouver rain. Ours lasts 10+. Artisan siding, stucco, trim & deck painting. Free assessment.` (137 chars) |
 | **Body Content** | "exterior painting vancouver" in first 100 words. Mention weather/climate context. |
 
@@ -205,7 +205,7 @@ H1: Exterior Painting in Vancouver
 
 ---
 
-### Cabinet Painting (/services/cabinets)
+### Cabinet Painting (/vancouver/cabinet-painting)
 
 **Combined Monthly Volume: ~370+**
 
@@ -216,7 +216,7 @@ H1: Exterior Painting in Vancouver
 | **Long-tail** | cabinet painting vs replacing vancouver, kitchen cabinet spray finish |
 | **Title Tag** | `Cabinet Painting Vancouver BC | Shape of Paint` (47 chars) |
 | **H1** | Cabinet Painting in Vancouver |
-| **URL** | `/services/cabinets` |
+| **URL** | `/vancouver/cabinet-painting` |
 | **Meta Description** | `Hand-sprayed cabinet finishes that outperform factory in every way. 500+ Vancouver kitchens transformed. Book your free colour consultation.` (142 chars) |
 | **Body Content** | "cabinet painting vancouver" in first 100 words. Emphasize spray finish quality. |
 
@@ -262,14 +262,14 @@ H1: Cabinet Painting in Vancouver
 
 ---
 
-### FAQ Page (/contact/faq)
+### FAQ Page (/faq)
 
 | Element | Optimization |
 |---------|-------------|
 | **Primary Keywords** | painters vancouver FAQ, painting questions vancouver |
 | **Title Tag** | `Painting FAQ - Vancouver Painters | Shape of Paint` (51 chars) |
 | **H1** | Frequently Asked Questions |
-| **URL** | `/contact/faq` |
+| **URL** | `/faq` |
 | **Schema** | FAQPage schema required |
 
 ---
@@ -294,9 +294,9 @@ Create individual pages for each municipality to capture "[service] [city]" sear
 
 | City | URL | Primary Keyword | Vol/mo | KD |
 |------|-----|-----------------|--------|-----|
-| Burnaby | `/areas/burnaby` | painters burnaby | 320 | — |
-| North Vancouver | `/areas/north-vancouver` | painters north vancouver | 260 | — |
-| Coquitlam | `/areas/coquitlam` | painters coquitlam | 260 | 4 |
+| Burnaby | `/burnaby` | painters burnaby | 320 | — |
+| North Vancouver | `/north-vancouver` | painters north vancouver | 260 | — |
+| Coquitlam | `/coquitlam` | painters coquitlam | 260 | 4 |
 
 **Title Tag Pattern:** `Painters [City] BC | Interior & Exterior | Shape of Paint`
 **H1 Pattern:** `House Painters in [City], BC`
@@ -305,20 +305,20 @@ Create individual pages for each municipality to capture "[service] [city]" sear
 
 | City | URL | Primary Keyword | Vol/mo | KD |
 |------|-----|-----------------|--------|-----|
-| Surrey | `/areas/surrey` | painters surrey bc | 480 | 4 |
-| Langley | `/areas/langley` | painters langley bc | 210 | — |
-| Port Moody | `/areas/port-moody` | house painters port moody | 90 | — |
-| New Westminster | `/areas/new-westminster` | painters new westminster | 70 | — |
+| Surrey | `/surrey` | painters surrey bc | 480 | 4 |
+| Langley | `/langley` | painters langley bc | 210 | — |
+| Port Moody | `/port-moody` | house painters port moody | 90 | — |
+| New Westminster | `/new-westminster` | painters new westminster | 70 | — |
 
 ### Priority Tier 3 — Create Later
 
 | City | URL | Primary Keyword | Vol/mo |
 |------|-----|-----------------|--------|
-| West Vancouver | `/areas/west-vancouver` | painters west vancouver | 50 |
-| Pitt Meadows | `/areas/pitt-meadows` | house painters pitt meadows | 70 |
-| Port Coquitlam | `/areas/port-coquitlam` | house painters port coquitlam | 20 |
-| Richmond | `/areas/richmond` | painters richmond bc | 30 |
-| Delta | `/areas/delta` | painters delta bc | 30 |
+| West Vancouver | `/west-vancouver` | painters west vancouver | 50 |
+| Pitt Meadows | `/pitt-meadows` | house painters pitt meadows | 70 |
+| Port Coquitlam | `/port-coquitlam` | house painters port coquitlam | 20 |
+| Richmond | `/richmond` | painters richmond bc | 30 |
+| Delta | `/delta` | painters delta bc | 30 |
 
 **Service Area Page Requirements:**
 - 500+ words of unique content per city (NOT copied from main service pages)
@@ -340,15 +340,15 @@ Each supporting blog post follows these strict rules:
 
 ### Silo 1: Interior Painting
 
-**Target Page:** `/services/interior`
+**Target Page:** `/vancouver/interior-painting`
 
 | # | Blog Post Title | URL | Target Keyword | Vol | Links To |
 |---|----------------|-----|----------------|-----|----------|
-| 1 | Interior Painting Cost in Vancouver: What to Expect in 2026 | `/blog/interior-painting-cost-vancouver` | interior painting cost per square foot (90/mo) | 90 | TARGET, Post 2 |
-| 2 | How to Choose the Right Interior Paint Colours for Vancouver Homes | `/blog/interior-paint-colours-vancouver` | interior paint colours vancouver | ~10 | TARGET, Post 3 |
-| 3 | Level 5 Drywall Finish: Why It Matters for Your Vancouver Home | `/blog/level-5-finish-vancouver` | level 5 finish painting | ~10 | TARGET, Post 4 |
-| 4 | Low-VOC Paint Options for Vancouver Families | `/blog/low-voc-paint-vancouver` | eco friendly paint vancouver | ~10 | TARGET, Post 1 |
-| 5 | How to Prepare Your Home for Interior Painting | `/blog/prepare-home-interior-painting` | how to prepare for interior painting | ~20 | TARGET, Post 3 |
+| 1 | Interior Painting Cost in Vancouver: What to Expect in 2026 | `/paint-guides/interior-painting-cost-vancouver` | interior painting cost per square foot (90/mo) | 90 | TARGET, Post 2 |
+| 2 | How to Choose the Right Interior Paint Colours for Vancouver Homes | `/paint-guides/interior-paint-colours-vancouver` | interior paint colours vancouver | ~10 | TARGET, Post 3 |
+| 3 | Level 5 Drywall Finish: Why It Matters for Your Vancouver Home | `/paint-guides/level-5-finish-vancouver` | level 5 finish painting | ~10 | TARGET, Post 4 |
+| 4 | Low-VOC Paint Options for Vancouver Families | `/paint-guides/low-voc-paint-vancouver` | eco friendly paint vancouver | ~10 | TARGET, Post 1 |
+| 5 | How to Prepare Your Home for Interior Painting | `/paint-guides/prepare-home-interior-painting` | how to prepare for interior painting | ~20 | TARGET, Post 3 |
 
 **Linking Matrix:**
 ```
@@ -358,22 +358,22 @@ Post 3 → TARGET + Post 4
 Post 4 → TARGET + Post 1
 Post 5 → TARGET + Post 3
          ↓
-    [/services/interior]
+    [/vancouver/interior-painting]
 ```
 
 ---
 
 ### Silo 2: Exterior Painting
 
-**Target Page:** `/services/exterior`
+**Target Page:** `/vancouver/exterior-painting`
 
 | # | Blog Post Title | URL | Target Keyword | Vol | Links To |
 |---|----------------|-----|----------------|-----|----------|
-| 1 | How Much Does It Cost to Paint a House Exterior in Vancouver? | `/blog/exterior-painting-cost-vancouver` | how much to paint a house vancouver | ~10 | TARGET, Post 2 |
-| 2 | Best Exterior Paint for Vancouver's Rain and Moisture | `/blog/best-exterior-paint-vancouver-weather` | best exterior paint for vancouver weather | ~10 | TARGET, Post 3 |
-| 3 | When Is the Best Time to Paint Your House Exterior in BC? | `/blog/best-time-exterior-painting-bc` | best time to paint exterior bc | ~10 | TARGET, Post 4 |
-| 4 | Stucco vs. Siding: Exterior Painting Differences in Vancouver | `/blog/stucco-vs-siding-painting-vancouver` | stucco painting vancouver (20/mo) | 20 | TARGET, Post 1 |
-| 5 | How to Spot Exterior Paint Failure Before It's Too Late | `/blog/exterior-paint-failure-signs` | peeling paint exterior | ~10 | TARGET, Post 3 |
+| 1 | How Much Does It Cost to Paint a House Exterior in Vancouver? | `/paint-guides/exterior-painting-cost-vancouver` | how much to paint a house vancouver | ~10 | TARGET, Post 2 |
+| 2 | Best Exterior Paint for Vancouver's Rain and Moisture | `/paint-guides/best-exterior-paint-vancouver-weather` | best exterior paint for vancouver weather | ~10 | TARGET, Post 3 |
+| 3 | When Is the Best Time to Paint Your House Exterior in BC? | `/paint-guides/best-time-exterior-painting-bc` | best time to paint exterior bc | ~10 | TARGET, Post 4 |
+| 4 | Stucco vs. Siding: Exterior Painting Differences in Vancouver | `/paint-guides/stucco-vs-siding-painting-vancouver` | stucco painting vancouver (20/mo) | 20 | TARGET, Post 1 |
+| 5 | How to Spot Exterior Paint Failure Before It's Too Late | `/paint-guides/exterior-paint-failure-signs` | peeling paint exterior | ~10 | TARGET, Post 3 |
 
 **Linking Matrix:**
 ```
@@ -383,22 +383,22 @@ Post 3 → TARGET + Post 4
 Post 4 → TARGET + Post 1
 Post 5 → TARGET + Post 3
          ↓
-    [/services/exterior]
+    [/vancouver/exterior-painting]
 ```
 
 ---
 
 ### Silo 3: Cabinet Painting
 
-**Target Page:** `/services/cabinets`
+**Target Page:** `/vancouver/cabinet-painting`
 
 | # | Blog Post Title | URL | Target Keyword | Vol | Links To |
 |---|----------------|-----|----------------|-----|----------|
-| 1 | Cabinet Painting vs. Replacing: Which Saves You More in Vancouver? | `/blog/cabinet-painting-vs-replacing` | cabinet painting vs replacing | ~10 | TARGET, Post 2 |
-| 2 | Kitchen Cabinet Painting Cost in Vancouver (2026 Guide) | `/blog/kitchen-cabinet-painting-cost-vancouver` | kitchen cabinet painting vancouver (70/mo) | 70 | TARGET, Post 3 |
-| 3 | Spray vs. Brush: Why Spray-Finished Cabinets Look Better | `/blog/spray-vs-brush-cabinet-painting` | spray painting cabinets | ~10 | TARGET, Post 4 |
-| 4 | How to Choose the Best Paint for Kitchen Cabinets | `/blog/best-paint-kitchen-cabinets` | best paint for kitchen cabinets | ~40 | TARGET, Post 1 |
-| 5 | Cabinet Refinishing vs. Refacing: What's the Difference? | `/blog/cabinet-refinishing-vs-refacing` | cabinet refinishing vancouver (90/mo) | 90 | TARGET, Post 3 |
+| 1 | Cabinet Painting vs. Replacing: Which Saves You More in Vancouver? | `/paint-guides/cabinet-painting-vs-replacing` | cabinet painting vs replacing | ~10 | TARGET, Post 2 |
+| 2 | Kitchen Cabinet Painting Cost in Vancouver (2026 Guide) | `/paint-guides/kitchen-cabinet-painting-cost-vancouver` | kitchen cabinet painting vancouver (70/mo) | 70 | TARGET, Post 3 |
+| 3 | Spray vs. Brush: Why Spray-Finished Cabinets Look Better | `/paint-guides/spray-vs-brush-cabinet-painting` | spray painting cabinets | ~10 | TARGET, Post 4 |
+| 4 | How to Choose the Best Paint for Kitchen Cabinets | `/paint-guides/best-paint-kitchen-cabinets` | best paint for kitchen cabinets | ~40 | TARGET, Post 1 |
+| 5 | Cabinet Refinishing vs. Refacing: What's the Difference? | `/paint-guides/cabinet-refinishing-vs-refacing` | cabinet refinishing vancouver (90/mo) | 90 | TARGET, Post 3 |
 
 **Linking Matrix:**
 ```
@@ -408,7 +408,7 @@ Post 3 → TARGET + Post 4
 Post 4 → TARGET + Post 1
 Post 5 → TARGET + Post 3
          ↓
-    [/services/cabinets]
+    [/vancouver/cabinet-painting]
 ```
 
 ---

@@ -35,10 +35,75 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
       <ScrollToHash />
       <PageHero
-        heading="Get Your Vancouver Painting Estimate"
+        heading="Tell Us About Your Project"
+        description="You will get a fixed written quote, a clear start window, and prep standards defined before anything is scheduled. No surprises, no open-ended estimates."
         image="/images/contact-cta.webp"
         imageAlt="Get in touch with Shape of Paint"
       />
+
+      <SectionWrapper className="py-10 md:py-14 lg:py-16">
+        <div className="mx-auto max-w-content">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Process card */}
+            <div className="rounded-[24px] border border-border-subtle bg-background p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+                How It Works
+              </p>
+              <h2 className="mt-3 text-2xl font-normal leading-[1.2] md:text-3xl">
+                Three steps to your firm quote
+              </h2>
+              <div className="mt-6 space-y-5">
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-warm text-sm font-semibold text-foreground">1</span>
+                  <div>
+                    <p className="font-medium text-foreground">Submit your project details</p>
+                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">Tell us about the rooms, surfaces, and timeline you have in mind.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-warm text-sm font-semibold text-foreground">2</span>
+                  <div>
+                    <p className="font-medium text-foreground">Get your firm quote in 48 hours</p>
+                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">Your quote is fixed. The price we send is the price you pay. No adjustments after the fact.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-warm text-sm font-semibold text-foreground">3</span>
+                  <div>
+                    <p className="font-medium text-foreground">Pick your start date</p>
+                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">You choose when the work begins. Your prep standards and daily schedule are written down before day one.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust card */}
+            <div className="rounded-[24px] border border-border-subtle bg-warm-light p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Local Proof
+              </p>
+              <p className="mt-3 text-4xl font-normal leading-none text-foreground">4.9 / 5</p>
+              <p className="mt-2 text-base leading-relaxed text-text-secondary">
+                Google rating across 200+ homeowner reviews in Vancouver and the Lower Mainland.
+              </p>
+              <div className="mt-6 space-y-4">
+                <blockquote className="border-l-2 border-brand-secondary pl-4 text-base italic leading-relaxed text-text-secondary">
+                  "They quoted a number, stuck to it, and finished on the day they said they would. That never happens with contractors."
+                </blockquote>
+                <blockquote className="border-l-2 border-brand-secondary pl-4 text-base italic leading-relaxed text-text-secondary">
+                  "The prep work was thorough and the final result was exactly what we discussed. No shortcuts."
+                </blockquote>
+              </div>
+              <Link
+                href="/reviews"
+                className="mt-5 inline-flex min-h-[48px] items-center text-sm font-semibold uppercase tracking-[0.14em] text-foreground transition-colors duration-300 hover:text-link-hover"
+              >
+                Read All Reviews
+              </Link>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
 
       <SectionWrapper variant="warm-light" className="py-10 md:py-14 lg:py-16">
         <div className="mx-auto max-w-content rounded-[24px] border border-border-subtle bg-background p-6 md:p-8">
@@ -70,7 +135,7 @@ export default function ContactPage() {
       <SectionWrapper variant="warm">
         <div className="mx-auto max-w-content">
           <p className="text-lg md:text-xl font-normal leading-relaxed text-text-secondary">
-            Firm quotes - no surprises. The price we quote is the price you pay. No hidden fees, ever. We are licensed, insured, and have finished 400+ homes across Vancouver and the Lower Mainland. You pay a 30% deposit when the quote is accepted. The balance is due after your final walkthrough. We accept credit, e-transfer, or cash.
+            Firm quotes -- no surprises. The price you see is the price you pay. No hidden fees, ever. Licensed, insured, and 400+ homes finished across Vancouver and the Lower Mainland. You pay a 30% deposit when the quote is accepted. The balance is due after your final walkthrough.
           </p>
         </div>
       </SectionWrapper>

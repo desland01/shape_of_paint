@@ -142,6 +142,11 @@ export default async function CityPage({ params }: CityPageProps) {
               {cityData.summary}
             </p>
           </SlideUp>
+          <SlideUp delay={0.15}>
+            <p className="mt-4 text-lg font-normal leading-relaxed text-text-secondary">
+              {cityData.weatherContext}
+            </p>
+          </SlideUp>
         </div>
       </SectionWrapper>
 
@@ -160,19 +165,20 @@ export default async function CityPage({ params }: CityPageProps) {
 
               return (
                 <SlideUp key={serviceSlug}>
-                  <article className="group h-full rounded-2xl border border-border-subtle bg-background p-6 transition-all duration-500 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-[0_20px_40px_-30px_rgba(32,42,68,0.55)]">
+                  <Link
+                    href={getCityServicePath(city, serviceSlug)}
+                    aria-label={`View ${service.name} in ${cityData.name}`}
+                    className="group block h-full rounded-2xl border border-border-subtle bg-background p-6 transition-all duration-500 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-[0_20px_40px_-30px_rgba(32,42,68,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 focus-visible:ring-offset-4"
+                  >
                     <p className="mb-3 inline-flex rounded-full bg-warm px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
                       {keyword}
                     </p>
                     <h3 className="mb-3 text-2xl font-normal leading-[1.2]">{service.name}</h3>
                     <p className="mb-4 text-base leading-relaxed text-text-secondary">{service.summary}</p>
-                    <Link
-                      href={getCityServicePath(city, serviceSlug)}
-                      className="inline-flex min-h-[48px] items-center text-sm font-medium uppercase tracking-[0.12em] text-foreground transition-colors duration-300 hover:text-link-hover"
-                    >
+                    <span className="inline-flex min-h-[48px] items-center text-sm font-medium uppercase tracking-[0.12em] text-foreground transition-colors duration-300 group-hover:text-link-hover">
                       View {service.name}
-                    </Link>
-                  </article>
+                    </span>
+                  </Link>
                 </SlideUp>
               );
             })}
@@ -199,6 +205,11 @@ export default async function CityPage({ params }: CityPageProps) {
                 </span>
               ))}
             </div>
+            <SlideUp delay={0.1}>
+              <p className="mt-5 text-lg font-normal leading-relaxed text-text-secondary">
+                {cityData.neighborhoodDetails}
+              </p>
+            </SlideUp>
           </div>
 
           <div className="rounded-2xl border border-border-subtle bg-warm-light p-6">
@@ -243,6 +254,21 @@ export default async function CityPage({ params }: CityPageProps) {
         </SectionWrapper>
       )}
 
+      <SectionWrapper variant="warm">
+        <div className="mx-auto max-w-content">
+          <SlideUp>
+            <h2 className="mb-5 text-3xl font-normal leading-[1.2] md:text-4xl">
+              Why {cityData.name} homeowners choose Shape of Paint
+            </h2>
+          </SlideUp>
+          <SlideUp delay={0.05}>
+            <p className="text-lg font-normal leading-relaxed text-text-secondary">
+              {cityData.localContext}
+            </p>
+          </SlideUp>
+        </div>
+      </SectionWrapper>
+
       <SectionWrapper variant="warm-light">
         <div className="mx-auto max-w-content">
           <h2 className="mb-8 text-3xl font-normal leading-[1.2] md:text-4xl">
@@ -262,7 +288,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <FeatureSection
         eyebrow={`${cityData.name} Painting Team`}
         heading={`Ready to plan your ${cityData.name} project?`}
-        description="Book a walkthrough and get a clear scope with start dates, prep standards, and fixed pricing. We respond quickly and keep communication simple from day one."
+        description={`Book a walkthrough and get a clear scope with start dates, prep standards, and fixed pricing. We respond quickly and keep communication simple from day one. ${cityData.seasonalNote}`}
         ctaText="Request Your Estimate"
         ctaHref="/contact#contact-form"
         image="/images/about-team.webp"

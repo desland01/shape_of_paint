@@ -5,7 +5,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { SlideUp, StaggerContainer } from "@/components/ui/motion";
-import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 import { siteConfig } from "@/config/site";
 import { faqCategories } from "@/config/faq";
 
@@ -23,11 +23,18 @@ export default function FAQHubPage() {
     ])
   );
 
+  const allFaqItems = faqCategories.flatMap((category) => category.items);
+  const faqJsonLd = JSON.stringify(generateFAQSchema(allFaqItems));
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqJsonLd }}
       />
 
       <PageHero heading="Vancouver Painting Questions, Answered" />

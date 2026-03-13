@@ -7,17 +7,18 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { siteConfig } from "@/config/site";
 import { generateLocalBusinessSchema } from "@/lib/schema";
+import { PaintSplatterParticles } from "@/components/effects/PaintSplatterParticles";
 
 const heading = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   variable: "--font-cormorant",
   display: "swap",
 });
 
 const body = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-nunito",
   display: "swap",
 });
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <PaintSplatterParticles />
         <MobileCTABar />
         {/* <!-- CHAT_WIDGET --> */}
       </body>
